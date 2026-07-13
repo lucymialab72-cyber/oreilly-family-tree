@@ -534,7 +534,7 @@ export const familyLines: FamilyLine[] = [
             born: "August 30, 1922",
             bornPlace: "Chicago, Illinois",
             died: "August 29, 2015",
-            occupation: "Various — see WWII service",
+            occupation: "Printer Foreman, R.R. Donnelley & Sons (per family); USCG WWII veteran",
             spouse: "Helen Marie Jakubicek",
             burial: "Abraham Lincoln National Cemetery",
             notes: [
@@ -549,6 +549,7 @@ export const familyLines: FamilyLine[] = [
               "Married Helen Marie Jakubicek on January 20, 1951",
               "5 children: Alan (firstborn), Calvin, twins Cary & Cheryl, Andrea (youngest — Dave's mom)",
               "Valedictorian of Gage Park High School, 1940",
+              "Post-war career: Printer Foreman at R.R. Donnelley & Sons, Chicago (per Dave O'Reilly — family oral history, not yet confirmed in public records)",
               "Author of memoir: 'The Rime of an Ancient Mariner'",
             ],
           },

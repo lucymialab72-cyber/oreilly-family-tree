@@ -151,7 +151,7 @@ export default function TreePage() {
                 }}
               />
               <div className="flex flex-wrap justify-center gap-2 mt-2">
-                {["Landon", "Chase", "Kaylee"].map((child) => (
+                {["Landon", "Chace", "Kaylee"].map((child) => (
                   <div key={child} className="border border-border-light rounded-sm px-3 py-1.5 text-center bg-white/50 text-sm">
                     <p className="font-medium" style={{ fontFamily: "var(--font-display)" }}>{child}</p>
                   </div>
@@ -207,7 +207,7 @@ export default function TreePage() {
           </div>
 
           <p className="text-center text-[10px] text-ink-muted italic mb-4" style={{ fontFamily: "var(--font-sans)" }}>
-            9 grandchildren: Landon, Chase &amp; Kaylee · Elliot, Simon, Quentin &amp; Conrad · Max &amp; Skyler
+            9 grandchildren: Landon, Chace &amp; Kaylee · Elliot, Simon, Quentin &amp; Conrad · Max &amp; Skyler
           </p>
         </div>
 
