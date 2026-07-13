@@ -128,7 +128,7 @@ export default function TreePage() {
       </section>
 
       {/* Tree */}
-      <section className="max-w-6xl mx-auto px-4 py-8 overflow-x-auto">
+      <section className="max-w-5xl mx-auto px-4 py-8">
         {/* ═══ DAVE ═══ */}
         <div className="flex justify-center mb-4">
           <motion.div
@@ -154,28 +154,28 @@ export default function TreePage() {
           <CoupleCard
             index={1}
             couple={{
-              left: { name: "Tom O'Reilly", note: "Dave's Dad" },
-              right: { name: "— (née Linnerud)", note: "Dave's Mom" },
+              left: { name: "Terry O'Reilly", note: "Dave's Dad (Terrence Patrick)" },
+              right: { name: "Andrea O'Reilly", note: "Dave's Mom (née Linnerud line)" },
             }}
           />
         </div>
 
         <BranchSplit />
 
-        {/* ═══ GRANDPARENTS — Two couples side by side ═══ */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* Dad's parents */}
-          <div className="text-center">
-            <p className="text-xs text-ink-muted mb-3 uppercase tracking-wider" style={{ fontFamily: "var(--font-sans)" }}>
-              Paternal Grandparents
-            </p>
+        {/* ═══ GRANDPARENTS ═══ */}
+        {/* PATERNAL */}
+        <div className="mb-12">
+          <p className="text-center text-xs text-gold uppercase tracking-widest mb-6 font-semibold" style={{ fontFamily: "var(--font-sans)" }}>
+            🇮🇪 Paternal Side — O&apos;Reilly &amp; Coffey
+          </p>
+          <div className="flex justify-center mb-4">
             <CoupleCard
               index={2}
               couple={{
                 left: {
                   name: 'Edward J. "Bud" O\'Reilly',
                   years: "1921–2002",
-                  origin: "Chicago",
+                  origin: "Chicago (Cork heritage)",
                   flag: "🇮🇪",
                   note: "WWII Veteran",
                 },
@@ -188,131 +188,41 @@ export default function TreePage() {
                 married: "~1948",
               }}
             />
-
-            <ConnectorDown />
-
-            {/* Edward's parents */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <p className="text-[10px] text-ink-muted mb-2 uppercase tracking-wider" style={{ fontFamily: "var(--font-sans)" }}>
-                  O&apos;Reilly Line
-                </p>
-                <CoupleCard
-                  index={3}
-                  couple={{
-                    left: {
-                      name: "William O'Reilly",
-                      years: "1893–?",
-                      origin: "Newmarket, Cork 🇮🇪",
-                      note: "WWI Vet",
-                    },
-                    right: {
-                      name: "Anna M. Madden",
-                      years: "1893–1971",
-                      origin: "Chicago",
-                    },
-                    married: "1918",
-                  }}
-                />
-                <ConnectorDown />
-                <div className="space-y-3">
-                  <CoupleCard
-                    index={4}
-                    couple={{
-                      left: {
-                        name: "Michael O'Reilly",
-                        years: "~1863–?",
-                        origin: "Meelin, Cork 🇮🇪",
-                      },
-                      right: {
-                        name: "Ellen Ryan",
-                        years: "~1864–?",
-                        origin: "Meelin, Cork 🇮🇪",
-                      },
-                      married: "1888",
-                    }}
-                  />
-                  <CoupleCard
-                    index={5}
-                    couple={{
-                      left: {
-                        name: "Michael G. Madden",
-                        years: "1858–1944",
-                        origin: "Tipperary 🇮🇪",
-                        note: "Chicago Cop",
-                      },
-                      right: {
-                        name: "Bridget Powell",
-                        years: "1869–1940",
-                        origin: "Tipperary 🇮🇪",
-                      },
-                      married: "~1882",
-                    }}
-                  />
-                </div>
-              </div>
-              <div>
-                <p className="text-[10px] text-ink-muted mb-2 uppercase tracking-wider" style={{ fontFamily: "var(--font-sans)" }}>
-                  Coffey Line
-                </p>
-                <CoupleCard
-                  index={6}
-                  couple={{
-                    left: {
-                      name: "John J. Coffey",
-                      years: "1875–1957",
-                      origin: "Ballydarrig, Kerry 🇮🇪",
-                      note: "WWI Vet",
-                    },
-                    right: {
-                      name: "Julia Sheehan",
-                      years: "1889–1965",
-                      origin: "Cahirciveen, Kerry 🇮🇪",
-                    },
-                    married: "1913",
-                  }}
-                />
-                <ConnectorDown />
-                <div className="space-y-3">
-                  <CoupleCard
-                    index={7}
-                    couple={{
-                      left: {
-                        name: "Jeremiah Coffey",
-                        years: "~1841–?",
-                        origin: "Kerry 🇮🇪",
-                      },
-                      right: {
-                        name: "Wife (unknown)",
-                        origin: "Kerry 🇮🇪",
-                      },
-                    }}
-                  />
-                  <CoupleCard
-                    index={8}
-                    couple={{
-                      left: {
-                        name: "Florence Sheehan",
-                        years: "~1849–?",
-                        origin: "Cahirciveen, Kerry 🇮🇪",
-                      },
-                      right: {
-                        name: "Debbie Sheehan",
-                        years: "~1851–?",
-                        origin: "Kerry 🇮🇪",
-                      },
-                    }}
-                  />
-                </div>
-              </div>
+          </div>
+          <ConnectorDown />
+          <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12">
+            <div className="flex flex-col items-center gap-2">
+              <p className="text-[10px] text-ink-muted uppercase tracking-wider mb-1" style={{ fontFamily: "var(--font-sans)" }}>O&apos;Reilly Line</p>
+              <CoupleCard index={3} couple={{ left: { name: "William O'Reilly", years: "1893–?", origin: "Newmarket, Cork 🇮🇪", note: "WWI Vet" }, right: { name: "Anna M. Madden", years: "1893–1971", origin: "Chicago" }, married: "1918" }} />
+              <ConnectorDown />
+              <CoupleCard index={4} couple={{ left: { name: "Michael O'Reilly", years: "~1863–?", origin: "Meelin, Cork 🇮🇪" }, right: { name: "Ellen Ryan", years: "~1864–?", origin: "Meelin, Cork 🇮🇪" }, married: "1888" }} />
+              <ConnectorDown />
+              <CoupleCard index={5} couple={{ left: { name: "Michael G. Madden", years: "1858–1944", origin: "Tipperary 🇮🇪", note: "Chicago Cop" }, right: { name: "Bridget Powell", years: "1869–1940", origin: "Tipperary 🇮🇪" }, married: "~1882" }} />
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <p className="text-[10px] text-ink-muted uppercase tracking-wider mb-1" style={{ fontFamily: "var(--font-sans)" }}>Coffey Line</p>
+              <CoupleCard index={6} couple={{ left: { name: "John J. Coffey", years: "1875–1957", origin: "Ballydarrig, Kerry 🇮🇪", note: "WWI Vet" }, right: { name: "Julia Sheehan", years: "1889–1965", origin: "Cahirciveen, Kerry 🇮🇪" }, married: "1913" }} />
+              <ConnectorDown />
+              <CoupleCard index={7} couple={{ left: { name: "Jeremiah Coffey", years: "~1841–?", origin: "Kerry 🇮🇪" }, right: { name: "Wife (unknown)", origin: "Kerry 🇮🇪" } }} />
+              <ConnectorDown />
+              <CoupleCard index={8} couple={{ left: { name: "Florence Sheehan", years: "~1849–?", origin: "Cahirciveen 🇮🇪" }, right: { name: "Debbie Sheehan", years: "~1851–?", origin: "Kerry 🇮🇪" } }} />
             </div>
           </div>
+        </div>
 
-          {/* Mom's parents */}
-          <div className="text-center">
-            <p className="text-xs text-ink-muted mb-3 uppercase tracking-wider" style={{ fontFamily: "var(--font-sans)" }}>
-              Maternal Grandparents
-            </p>
+        <div className="flex justify-center my-8">
+          <div className="h-px w-full max-w-2xl bg-border-light" />
+        </div>
+
+        {/* MATERNAL */}
+        <div className="mb-8">
+          <p className="text-center text-xs text-gold uppercase tracking-widest mb-6 font-semibold" style={{ fontFamily: "var(--font-sans)" }}>
+            🇳🇴 🇨🇿 Maternal Side — Linnerud &amp; Jakubicek
+          </p>
+          <p className="text-center text-[11px] text-ink-muted mb-4 italic" style={{ fontFamily: "var(--font-sans)" }}>
+            Andrea O&apos;Reilly (née Linnerud line) — Lyle Linnerud&apos;s granddaughter. Exact parentage TBD.
+          </p>
+          <div className="flex justify-center mb-4">
             <CoupleCard
               index={2}
               couple={{
@@ -332,118 +242,33 @@ export default function TreePage() {
                 married: "1951",
               }}
             />
-
-            <ConnectorDown />
-
-            {/* Lyle's parents */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <p className="text-[10px] text-ink-muted mb-2 uppercase tracking-wider" style={{ fontFamily: "var(--font-sans)" }}>
-                  Linnerud Line
-                </p>
-                <CoupleCard
-                  index={9}
-                  couple={{
-                    left: {
-                      name: "Andrew O. Linnerud",
-                      years: "1885–1948",
-                      origin: "Vinger, Hedmark 🇳🇴",
-                      note: "The servant girl's son",
-                    },
-                    right: {
-                      name: "Anna Gudrun Lee",
-                      years: "1893–1987",
-                      origin: "Boone County, IL",
-                    },
-                    married: "1911",
-                  }}
-                />
-                <ConnectorDown />
-                <div className="space-y-3">
-                  <div className="flex flex-col items-center gap-2">
-                    <PersonBadge
-                      person={{
-                        name: "Marthe Arnesdatter",
-                        years: "?",
-                        origin: "Vinger, Norway 🇳🇴",
-                        note: "Unmarried servant",
-                      }}
-                    />
-                    <p className="text-[10px] text-ink-muted italic">Birth father: Anders Pedersen</p>
-                  </div>
-                  <CoupleCard
-                    index={10}
-                    couple={{
-                      left: {
-                        name: "Sigvart S. Lee",
-                        years: "1859–1943",
-                        origin: "Vinger, Hedmark 🇳🇴",
-                      },
-                      right: {
-                        name: "Berthea Arneson",
-                        years: "~1862–1921",
-                        origin: "Vinger, Hedmark 🇳🇴",
-                      },
-                      married: "1892",
-                    }}
-                  />
-                  <div className="text-center">
-                    <p className="text-[10px] text-ink-muted italic">
-                      Deepest ancestor: <strong>Sigri Andersdatter</strong> (b. ~1797) — Dave&apos;s 5× great-grandmother
-                    </p>
-                  </div>
-                </div>
+          </div>
+          <p className="text-center text-[10px] text-ink-muted italic mb-4" style={{ fontFamily: "var(--font-sans)" }}>
+            5 children: Cary (confirmed) + 4 others (unconfirmed). Andrea is likely a grandchild of Lyle.
+          </p>
+          <ConnectorDown />
+          <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12">
+            <div className="flex flex-col items-center gap-2">
+              <p className="text-[10px] text-ink-muted uppercase tracking-wider mb-1" style={{ fontFamily: "var(--font-sans)" }}>Linnerud Line</p>
+              <CoupleCard index={9} couple={{ left: { name: "Andrew O. Linnerud", years: "1885–1948", origin: "Vinger, Hedmark 🇳🇴", note: "The servant girl's son" }, right: { name: "Anna Gudrun Lee", years: "1893–1987", origin: "Boone County, IL" }, married: "1911" }} />
+              <ConnectorDown />
+              <div className="flex flex-col items-center gap-1">
+                <PersonBadge person={{ name: "Marthe Arnesdatter", origin: "Vinger, Norway 🇳🇴", note: "Unmarried servant — Andrew's mother" }} />
+                <p className="text-[10px] text-ink-muted italic">Birth father: Anders Pedersen</p>
               </div>
-              <div>
-                <p className="text-[10px] text-ink-muted mb-2 uppercase tracking-wider" style={{ fontFamily: "var(--font-sans)" }}>
-                  Jakubicek Line
-                </p>
-                <CoupleCard
-                  index={11}
-                  couple={{
-                    left: {
-                      name: "Thomas Jakubicek",
-                      years: "1886–1963",
-                      origin: "Lipov, Moravia 🇨🇿",
-                    },
-                    right: {
-                      name: "Marie Melka",
-                      years: "1896–1989",
-                      origin: "Meremice, Bohemia 🇨🇿",
-                    },
-                    married: "1922",
-                  }}
-                />
-                <ConnectorDown />
-                <div className="space-y-3">
-                  <CoupleCard
-                    index={12}
-                    couple={{
-                      left: {
-                        name: "George Jakubicek",
-                        origin: "Moravia 🇨🇿",
-                      },
-                      right: {
-                        name: "Marie Jakubicek",
-                        origin: "Moravia 🇨🇿",
-                      },
-                    }}
-                  />
-                  <CoupleCard
-                    index={13}
-                    couple={{
-                      left: {
-                        name: "Ludvik Melka",
-                        origin: "Czech Republic 🇨🇿",
-                      },
-                      right: {
-                        name: "Klara Marc",
-                        origin: "Czech Republic 🇨🇿",
-                      },
-                    }}
-                  />
-                </div>
-              </div>
+              <ConnectorDown />
+              <CoupleCard index={10} couple={{ left: { name: "Sigvart S. Lee", years: "1859–1943", origin: "Vinger, Hedmark 🇳🇴" }, right: { name: "Berthea Arneson", years: "~1862–1921", origin: "Vinger, Hedmark 🇳🇴" }, married: "1892" }} />
+              <p className="text-[10px] text-ink-muted italic text-center mt-1">
+                Deepest: <strong>Sigri Andersdatter</strong> (b. ~1797) — Dave&apos;s 5× great-grandmother
+              </p>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <p className="text-[10px] text-ink-muted uppercase tracking-wider mb-1" style={{ fontFamily: "var(--font-sans)" }}>Jakubicek Line</p>
+              <CoupleCard index={11} couple={{ left: { name: "Thomas Jakubicek", years: "1886–1963", origin: "Lipov, Moravia 🇨🇿" }, right: { name: "Marie Melka", years: "1896–1989", origin: "Meremice, Bohemia 🇨🇿" }, married: "1922" }} />
+              <ConnectorDown />
+              <CoupleCard index={12} couple={{ left: { name: "George Jakubicek", origin: "Moravia 🇨🇿" }, right: { name: "Marie Jakubicek", origin: "Moravia 🇨🇿" } }} />
+              <ConnectorDown />
+              <CoupleCard index={13} couple={{ left: { name: "Ludvik Melka", origin: "Czech Republic 🇨🇿" }, right: { name: "Klara Marc", origin: "Czech Republic 🇨🇿" } }} />
             </div>
           </div>
         </div>

@@ -1,0 +1,335 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.1, duration: 0.5, ease: "easeOut" as const },
+  }),
+};
+
+// Timeline events from Lyle's memoir
+const voyageTimeline = [
+  { date: "December 1942", event: "Enlists in U.S. Coast Guard at age 20. Pay: $66/month." },
+  { date: "March 1945", event: "Assigned to USS Admiral E.W. Eberle (AP-123). Comes aboard in Los Angeles." },
+  { date: "July 25, 1945", event: "The Eberle departs Marseilles, France. 5,000 troops aboard. Destination: Manila." },
+  { date: "August 6, 1945", event: "Atomic bomb falls on Hiroshima. Lyle is at sea, somewhere in the Atlantic or Caribbean." },
+  { date: "August 9, 1945", event: "Atomic bomb falls on Nagasaki. The Eberle continues its course through the Panama Canal." },
+  { date: "August 14, 1945", event: "Japan surrenders. The war ends. The Eberle is still crossing the Pacific." },
+  { date: "August 26, 1945", event: "The Eberle arrives in Manila, Philippines. 32 days. 16,000 miles." },
+  { date: "Mid-voyage", event: "Bow lookout spots a floating mine. Helmsman swerves. 40mm gun crew detonates it." },
+  { date: "May 1946", event: "Honorably discharged. Total service: 41 months. Total miles at sea: 85,000." },
+];
+
+const portsList = [
+  "Le Havre, France", "Marseille, France", "Naples, Italy", "Norfolk, Virginia",
+  "Port of Spain, Trinidad", "Panama City, Panama", "Ulithi Atoll", "Manila, Philippines",
+  "Naha, Okinawa", "Seoul, Korea", "Nagoya, Japan (×2)", "Los Angeles (×2)", "Seattle (×3)", "Tacoma, Washington",
+];
+
+const fastFacts = [
+  { label: "Ship", value: "USS Admiral E.W. Eberle (AP-123)" },
+  { label: "Length", value: "610 feet" },
+  { label: "Armament", value: "5-inch guns, twin 40mm guns, 20mm guns" },
+  { label: "Capacity", value: "Up to 5,000 troops" },
+  { label: "Lyle's Role", value: "Deckhand, mess cook, crow's nest lookout" },
+  { label: "Crow's Nest", value: "100 feet above the ocean (\"size of an outdoor garbage can\")" },
+  { label: "Total Miles", value: "85,000 miles in approximately one year" },
+  { label: "Atlantic Crossings", value: "6 times" },
+  { label: "Pacific Crossings", value: "8 times" },
+  { label: "Panama Canal", value: "2 transits" },
+  { label: "Epic Voyage", value: "Marseilles → Manila, July 25–August 26, 1945 (32 days, 16,000 miles)" },
+  { label: "Enlisted", value: "December 1942, age 20" },
+  { label: "Discharged", value: "May 1946 (honorable)" },
+];
+
+export default function LyleStoryPage() {
+  return (
+    <main className="min-h-screen">
+      {/* Nav */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-parchment/90 backdrop-blur-sm border-b border-border-light">
+        <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between" style={{ fontFamily: "var(--font-sans)" }}>
+          <Link href="/family/linnerud" className="text-sm text-ink-muted hover:text-ink transition-colors">
+            ← Linnerud Line
+          </Link>
+          <span className="text-sm font-medium text-gold">Lyle Linnerud · WWII Service</span>
+          <Link href="/" className="text-sm text-ink-muted hover:text-ink transition-colors">
+            Home
+          </Link>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="pt-32 pb-16 px-6 text-center">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+          <span className="text-5xl mb-6 block">⚓</span>
+          <p className="text-ink-muted tracking-[0.3em] uppercase text-xs mb-4" style={{ fontFamily: "var(--font-sans)" }}>
+            U.S. Coast Guard · 1942–1946
+          </p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4" style={{ fontFamily: "var(--font-display)" }}>
+            Lyle Andrew Linnerud
+          </h1>
+          <p className="text-xl md:text-2xl text-gold italic mb-6" style={{ fontFamily: "var(--font-serif)" }}>
+            85,000 Miles at Sea
+          </p>
+          <p className="text-ink-muted max-w-2xl mx-auto text-lg leading-relaxed" style={{ fontFamily: "var(--font-serif)" }}>
+            Dave O&apos;Reilly&apos;s maternal grandfather. A 20-year-old from Chicago who sailed across every ocean
+            while the atomic age began — and lived to bowl a 290 at age 79.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Key photo */}
+      <section className="max-w-2xl mx-auto px-6 pb-8">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
+          <div className="border border-border bg-white p-3 rounded-sm shadow-sm">
+            <img
+              src="/docs/linnerud/Lyle-Andrew-Linnerud-1922-2015-PHOTO-Obituary-FindAGrave.png"
+              alt="Lyle Andrew Linnerud (1922–2015)"
+              className="w-full object-contain max-h-80"
+            />
+            <p className="text-center text-xs text-ink-muted mt-2" style={{ fontFamily: "var(--font-sans)" }}>
+              Lyle Andrew Linnerud (August 30, 1922 – August 29, 2015) · Find a Grave memorial
+            </p>
+          </div>
+        </motion.div>
+      </section>
+
+      <div className="max-w-3xl mx-auto px-6">
+        <div className="heritage-divider"><span className="text-gold">✦</span></div>
+      </div>
+
+      {/* The Ship */}
+      <section className="max-w-3xl mx-auto px-6 py-16">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} custom={0}>
+          <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "var(--font-display)" }}>
+            The Ship: USS Admiral E.W. Eberle (AP-123)
+          </h2>
+          <p className="text-lg leading-relaxed text-ink-light mb-6">
+            The USS Admiral E.W. Eberle was 610 feet long — longer than two football fields — and built
+            to carry troops. An armed transport vessel, she carried 5-inch naval guns, twin 40mm anti-aircraft
+            guns, and 20mm guns. She was designed to move men and supplies to the Pacific, and that is exactly
+            what she did.
+          </p>
+          <p className="text-lg leading-relaxed text-ink-light">
+            Lyle came aboard in Los Angeles in March 1945. He was 22 years old. He had enlisted in December 1942
+            at age 20 — $66 a month, U.S. Coast Guard. He would serve 41 months total, traversing every major
+            ocean on earth.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Fast facts */}
+      <section className="max-w-3xl mx-auto px-6 py-8">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} custom={0}>
+          <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "var(--font-display)" }}>
+            By the Numbers
+          </h2>
+          <div className="border border-border rounded-sm overflow-hidden">
+            <table className="w-full text-sm" style={{ fontFamily: "var(--font-sans)" }}>
+              <tbody>
+                {fastFacts.map((fact, i) => (
+                  <tr key={i} className={`border-b border-border-light ${i % 2 === 0 ? "bg-cream/20" : ""}`}>
+                    <td className="px-4 py-3 font-semibold text-ink-muted w-1/3">{fact.label}</td>
+                    <td className="px-4 py-3 text-ink">{fact.value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* The crow's nest */}
+      <section className="max-w-3xl mx-auto px-6 py-16">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} custom={0}>
+          <div className="pull-quote">
+            <p>&ldquo;The crow&apos;s nest was 100 feet above the ocean. The size of an outdoor garbage can.
+            You had binoculars and a phone line to the bridge. You looked for everything — enemy ships,
+            aircraft, submarines, floating mines.&rdquo;</p>
+          </div>
+          <p className="text-lg leading-relaxed text-ink-light mt-6">
+            Among Lyle&apos;s duties: lookout in the foremast crow&apos;s nest, 100 feet above the ocean surface.
+            The crow&apos;s nest was barely large enough to stand in — described by Lyle in his memoir as the
+            size of an outdoor garbage can. Armed with binoculars and a phone line to the bridge, he watched
+            the horizon for threats: enemy aircraft, submarines, mines, other vessels.
+          </p>
+          <p className="text-lg leading-relaxed text-ink-light mt-4">
+            The threats were real.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* The mine */}
+      <section className="max-w-3xl mx-auto px-6 py-8">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} custom={0}>
+          <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "var(--font-display)" }}>
+            The Floating Mine
+          </h2>
+          <p className="text-lg leading-relaxed text-ink-light mb-4">
+            Somewhere in the Pacific, the bow lookout spotted it first: a floating contact mine drifting
+            in the ship&apos;s path. A sphere of steel packed with explosives, designed to sink ships.
+          </p>
+          <p className="text-lg leading-relaxed text-ink-light mb-4">
+            The helmsman swerved. The 40mm gun crew came to the rail. They detonated it at a safe distance.
+          </p>
+          <p className="text-lg leading-relaxed text-ink-light">
+            The ship continued. Five thousand troops never knew how close they came.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Epic voyage timeline */}
+      <section className="max-w-3xl mx-auto px-6 py-16">
+        <div className="heritage-divider"><span className="text-gold">✦</span></div>
+
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} custom={0} className="mt-12">
+          <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: "var(--font-display)" }}>
+            The Voyage
+          </h2>
+          <p className="text-ink-muted text-sm mb-8" style={{ fontFamily: "var(--font-sans)" }}>
+            July 25 – August 26, 1945 · Marseilles → Manila · 16,000 miles · 32 days
+          </p>
+
+          <div className="pull-quote mb-8">
+            <p>
+              The atomic bombs fell on Hiroshima and Nagasaki while Lyle was at sea, crossing from the
+              Atlantic through the Caribbean, through the Panama Canal, and into the Pacific.
+              Japan surrendered while he was still aboard. The war ended at sea.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {voyageTimeline.map((event, i) => (
+              <motion.div
+                key={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+                custom={i}
+                className="flex items-start gap-4"
+              >
+                <div className="w-2 h-2 rounded-full bg-gold mt-2 shrink-0" />
+                <div>
+                  <p className="text-sm font-semibold text-gold" style={{ fontFamily: "var(--font-sans)" }}>
+                    {event.date}
+                  </p>
+                  <p className="text-ink-light mt-0.5">{event.event}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Route map label */}
+      <section className="max-w-3xl mx-auto px-6 py-8">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} custom={0}>
+          <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "var(--font-display)" }}>
+            Ports Visited
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {portsList.map((port, i) => (
+              <span
+                key={i}
+                className="px-3 py-1.5 border border-border-light bg-white/50 rounded-sm text-sm text-ink-light"
+                style={{ fontFamily: "var(--font-sans)" }}
+              >
+                {port}
+              </span>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* The man behind the service */}
+      <section className="max-w-3xl mx-auto px-6 py-16">
+        <div className="heritage-divider"><span className="text-gold">✦</span></div>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} custom={0} className="mt-12">
+          <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "var(--font-display)" }}>
+            The Man
+          </h2>
+          <p className="text-lg leading-relaxed text-ink-light mb-4">
+            Lyle Andrew Linnerud was born August 30, 1922 in Chicago, Illinois. He was the valedictorian
+            of Gage Park High School in 1940 — the same year he would have been 18, too young to know
+            that two years later he would enlist in a war that was already consuming the world.
+          </p>
+          <p className="text-lg leading-relaxed text-ink-light mb-4">
+            He married Helen Marie Jakubicek on January 20, 1951 — a Czech-American girl from Chicago,
+            whose own father Thomas had arrived at Ellis Island on the famous Kronprinz Wilhelm in 1903.
+            Two immigrant lines, converging in one marriage.
+          </p>
+          <p className="text-lg leading-relaxed text-ink-light mb-4">
+            He had five children. He was a gardener. He carved figures from fence posts — Vikings,
+            cadets, Uncle Sam. He was a calligrapher. He was a Cubs fan.
+          </p>
+          <p className="text-lg leading-relaxed text-ink-light mb-4">
+            He bowled a 290 at age 79. One pin short of perfect.
+          </p>
+          <p className="text-lg leading-relaxed text-ink-light">
+            He died August 29, 2015 — one day before his 93rd birthday. He was buried at Abraham
+            Lincoln National Cemetery with full military honors.
+          </p>
+
+          <div className="pull-quote mt-8">
+            <p>
+              His first cousin was Lyle Conway — the puppeteer who created Miss Piggy and Audrey II.
+              The Muppet character &ldquo;Lyle the Dog&rdquo; was named after him.
+            </p>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Marriage document */}
+      <section className="max-w-3xl mx-auto px-6 py-8">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} custom={0}>
+          <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "var(--font-display)" }}>
+            Documents
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { src: "/docs/linnerud/Lyle-Linnerud-Helen-Jakubicek-Marriage-Jan20-1951-Winnebago-County.png", caption: "Marriage Record — Lyle & Helen, Jan 20 1951" },
+              { src: "/docs/linnerud/Lyle-Andrew-Linnerud-1922-2015-PHOTO-Obituary-FindAGrave.png", caption: "Find a Grave — Lyle Andrew Linnerud (1922–2015)" },
+              { src: "/docs/linnerud/Helen-Marie-Jakubicek-Linnerud-1925-2010-OBITUARY-FindAGrave.png", caption: "Find a Grave — Helen Marie Linnerud (1925–2010)" },
+            ].map((doc, i) => (
+              <div key={i} className="border border-border bg-white p-2 rounded-sm">
+                <img src={doc.src} alt={doc.caption} className="w-full object-contain max-h-48" />
+                <p className="text-[10px] text-ink-muted mt-2 text-center" style={{ fontFamily: "var(--font-sans)" }}>{doc.caption}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Navigation */}
+      <section className="max-w-3xl mx-auto px-6 py-16">
+        <div className="heritage-divider"><span className="text-gold">✦</span></div>
+        <div className="flex justify-between items-center mt-12" style={{ fontFamily: "var(--font-sans)" }}>
+          <Link href="/family/linnerud" className="text-sm text-ink-muted hover:text-gold transition-colors">
+            ← Linnerud Line
+          </Link>
+          <Link href="/tree" className="text-sm text-ink-muted hover:text-gold transition-colors">
+            🌳 Full Family Tree
+          </Link>
+          <Link href="/" className="text-sm text-ink-muted hover:text-gold transition-colors">
+            Home →
+          </Link>
+        </div>
+      </section>
+
+      <footer className="border-t border-border-light py-8 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-ink-muted text-xs" style={{ fontFamily: "var(--font-sans)" }}>
+            Sources: Lyle A. Linnerud&apos;s Coast Guard Experience (personal memoir) · Eulogy for Lyle A. Linnerud ·
+            Find a Grave · Abraham Lincoln National Cemetery records
+          </p>
+        </div>
+      </footer>
+    </main>
+  );
+}

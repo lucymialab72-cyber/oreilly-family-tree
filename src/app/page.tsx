@@ -4,6 +4,32 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { familyLines, immigrationTimeline } from "@/data/families";
 
+// ═══ TOP NAV ═══
+function TopNav() {
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-parchment/90 backdrop-blur-sm border-b border-border-light">
+      <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between" style={{ fontFamily: "var(--font-sans)" }}>
+        <span className="text-sm font-semibold text-ink" style={{ fontFamily: "var(--font-display)" }}>
+          O&apos;Reilly Family Tree
+        </span>
+        <div className="flex items-center gap-6 text-sm">
+          {familyLines.map((l) => (
+            <Link key={l.id} href={`/family/${l.id}`} className="hidden md:block text-ink-muted hover:text-ink transition-colors">
+              {l.flag} {l.name}
+            </Link>
+          ))}
+          <Link
+            href="/tree"
+            className="text-gold font-semibold hover:text-gold-light transition-colors flex items-center gap-1"
+          >
+            🌳 <span>Family Tree</span>
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: (i: number) => ({
@@ -16,6 +42,7 @@ const fadeIn = {
 export default function HomePage() {
   return (
     <main className="min-h-screen">
+      <TopNav />
       {/* ═══ HERO ═══ */}
       <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
         {/* Background pattern */}
@@ -61,6 +88,23 @@ export default function HomePage() {
           <p className="text-ink-muted mt-12 text-sm" style={{ fontFamily: "var(--font-sans)" }}>
             Ireland · Norway · Czech Republic · Chicago
           </p>
+
+          <div className="flex flex-wrap gap-4 justify-center mt-10">
+            <Link
+              href="/tree"
+              className="px-8 py-3 bg-gold text-white font-semibold rounded-sm hover:bg-gold-dark transition-colors text-sm"
+              style={{ fontFamily: "var(--font-sans)" }}
+            >
+              🌳 View Full Family Tree
+            </Link>
+            <Link
+              href="/family/oreilly"
+              className="px-8 py-3 border border-border bg-white/50 hover:bg-white rounded-sm transition-colors text-sm text-ink"
+              style={{ fontFamily: "var(--font-sans)" }}
+            >
+              Explore the Lines →
+            </Link>
+          </div>
         </motion.div>
 
         <motion.div

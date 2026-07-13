@@ -6,6 +6,8 @@ import Link from "next/link";
 import { familyLines } from "@/data/families";
 import type { Person } from "@/data/families";
 import { notFound } from "next/navigation";
+import DocumentGallery from "@/components/DocumentGallery";
+import { getDocsByFamily } from "@/data/documents";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -15,6 +17,43 @@ const fadeIn = {
     transition: { delay: i * 0.1, duration: 0.5, ease: "easeOut" as const },
   }),
 };
+
+// Photo mapping for key people
+const personPhotos: Record<string, { src: string; alt: string }[]> = {
+  'Edward Joseph "Bud" O\'Reilly': [
+    { src: "/docs/family-photos/Grandpa O.jpg", alt: "Grandpa O — Edward J. O'Reilly" },
+    { src: "/docs/family-photos/Wedding photo.jpg", alt: "Wedding Photo — Edward & Eileen O'Reilly" },
+  ],
+  "Lyle Andrew Linnerud": [
+    { src: "/docs/family-photos/Lyle-Andrew-Linnerud-1922-2015-PHOTO-Obituary-FindAGrave.png", alt: "Lyle Andrew Linnerud (1922–2015)" },
+  ],
+  "Sigvart S. Lee": [
+    { src: "/docs/family-photos/PHOTO-Sigvart-Lee-Sorensen-Portrait-2xGreatGrandfather.png", alt: "Sigvart Lee Portrait" },
+    { src: "/docs/family-photos/PHOTO-Lee-Family-Full-Portrait-Sigvart-Berthea-8-Children-CLEAN.png", alt: "Lee Family Portrait" },
+  ],
+  "Berthea S. Lee": [
+    { src: "/docs/family-photos/PHOTO-Lee-Family-Full-Portrait-Sigvart-Berthea-8-Children-CLEAN.png", alt: "Lee Family Portrait" },
+  ],
+};
+
+function PersonPhotoDisplay({ personName }: { personName: string }) {
+  const photos = personPhotos[personName];
+  if (!photos || photos.length === 0) return null;
+  return (
+    <div className="flex gap-3 mb-4 flex-wrap">
+      {photos.map((photo, i) => (
+        <div key={i} className="border border-border-light rounded-sm overflow-hidden bg-white shadow-sm" style={{ width: 96, height: 120 }}>
+          <img
+            src={photo.src}
+            alt={photo.alt}
+            className="w-full h-full object-cover"
+            onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
 
 function PersonCard({ person, index }: { person: Person; index: number }) {
   return (
@@ -26,6 +65,7 @@ function PersonCard({ person, index }: { person: Person; index: number }) {
       custom={index}
       className="border border-border rounded-sm p-6 bg-white/50 hover:bg-white transition-colors"
     >
+      <PersonPhotoDisplay personName={person.name} />
       <h4 className="text-xl font-bold mb-1" style={{ fontFamily: "var(--font-display)" }}>
         {person.name}
       </h4>
@@ -137,6 +177,12 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
                 {l.flag} {l.name}
               </Link>
             ))}
+            <Link
+              href="/tree"
+              className="hidden md:block text-gold font-medium hover:text-gold-dark transition-colors"
+            >
+              🌳 Tree
+            </Link>
           </div>
         </div>
       </nav>
@@ -311,6 +357,86 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
             The Stories
           </motion.h2>
 
+          {/* Albert newspaper article — featured for Linnerud page */}
+          {id === "linnerud" && (
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              custom={0}
+              className="mb-12"
+            >
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-display)" }}>
+                Albert — The Newspaper
+              </h3>
+              <div className="border border-border bg-white/50 rounded-sm overflow-hidden">
+                <div className="p-4 border-b border-border-light">
+                  <p className="text-xs text-ink-muted uppercase tracking-wider font-semibold" style={{ fontFamily: "var(--font-sans)" }}>
+                    Belvidere Daily Republican · June 8, 1933
+                  </p>
+                  <p className="text-xl font-bold text-ink mt-1" style={{ fontFamily: "var(--font-display)" }}>
+                    KILLED IN STORM
+                  </p>
+                  <p className="text-sm text-ink-muted mt-1" style={{ fontFamily: "var(--font-sans)" }}>
+                    Albert S. Linnerud · Age 20 · Chicago, Illinois
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-0">
+                  <div className="p-4">
+                    <img
+                      src="/docs/linnerud/Albert-Linnerud-KILLED-IN-STORM-Belvidere-Daily-Republican-Jun8-1933.png"
+                      alt="Albert Linnerud — KILLED IN STORM — Belvidere Daily Republican"
+                      className="w-full object-contain border border-border-light"
+                    />
+                    <p className="text-[10px] text-ink-muted mt-2 text-center" style={{ fontFamily: "var(--font-sans)" }}>
+                      Belvidere Daily Republican, Jun 8, 1933 — original newspaper clipping
+                    </p>
+                  </div>
+                  <div className="p-4 flex flex-col justify-center">
+                    <img
+                      src="/docs/linnerud/Albert-S-Linnerud-1913-1933-Gravestone-Jefferson-Prairie-Cemetery.png"
+                      alt="Albert S. Linnerud Gravestone"
+                      className="w-full object-contain border border-border-light mb-3"
+                    />
+                    <p className="text-[10px] text-ink-muted text-center" style={{ fontFamily: "var(--font-sans)" }}>
+                      Gravestone — Jefferson Prairie Cemetery, Clinton, WI · &quot;SON&quot;
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Special Lyle WWII story CTA for Linnerud page */}
+          {id === "linnerud" && (
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              custom={0}
+              className="mb-12 p-6 border border-gold/30 bg-gold/5 rounded-sm"
+            >
+              <span className="text-2xl mb-2 block">⚓</span>
+              <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "var(--font-display)" }}>
+                Lyle Linnerud — Full WWII Story
+              </h3>
+              <p className="text-ink-light mb-4">
+                Lyle served 41 months in the U.S. Coast Guard during WWII. He crossed the Atlantic 6 times,
+                the Pacific 8 times, survived a floating mine, and was at sea when the atomic bombs fell.
+                He sailed 85,000 miles in approximately one year.
+              </p>
+              <Link
+                href="/lyle-story"
+                className="inline-flex items-center gap-2 text-gold font-semibold hover:text-gold-dark transition-colors text-sm"
+                style={{ fontFamily: "var(--font-sans)" }}
+              >
+                Read the full story →
+              </Link>
+            </motion.div>
+          )}
+
           {line.stories.map((story, i) => (
             <motion.div
               key={i}
@@ -336,6 +462,17 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
           ))}
         </section>
       )}
+
+      {/* ═══ DOCUMENT GALLERY ═══ */}
+      <section className="max-w-5xl mx-auto px-6 py-8">
+        <div className="heritage-divider">
+          <span className="text-gold">✦</span>
+        </div>
+        <DocumentGallery
+          personDocs={getDocsByFamily(id)}
+          title="Primary Source Documents"
+        />
+      </section>
 
       {/* ═══ NAVIGATION ═══ */}
       <section className="max-w-3xl mx-auto px-6 py-16">
