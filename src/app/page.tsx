@@ -19,6 +19,18 @@ function TopNav() {
             </Link>
           ))}
           <Link
+            href="/stories"
+            className="hidden md:block text-ink-muted hover:text-ink transition-colors"
+          >
+            📖 Stories
+          </Link>
+          <Link
+            href="/map"
+            className="hidden md:block text-ink-muted hover:text-ink transition-colors"
+          >
+            🗺️ Map
+          </Link>
+          <Link
             href="/tree"
             className="text-gold font-semibold hover:text-gold-light transition-colors flex items-center gap-1"
           >
@@ -412,6 +424,20 @@ export default function HomePage() {
                 {line.flag} {line.name}
               </Link>
             ))}
+            <Link
+              href="/stories"
+              className="px-6 py-3 border border-border rounded-sm hover:border-gold hover:bg-white transition-all text-sm"
+              style={{ fontFamily: "var(--font-sans)" }}
+            >
+              📖 Stories
+            </Link>
+            <Link
+              href="/map"
+              className="px-6 py-3 border border-border rounded-sm hover:border-gold hover:bg-white transition-all text-sm"
+              style={{ fontFamily: "var(--font-sans)" }}
+            >
+              🗺️ Origins Map
+            </Link>
             <Link
               href="/tree"
               className="px-6 py-3 border border-gold bg-gold/5 rounded-sm hover:bg-gold/10 transition-all text-sm text-gold-dark font-medium"
