@@ -284,7 +284,7 @@ export default function TreePage() {
             🇳🇴 🇨🇿 Maternal Side — Linnerud &amp; Jakubicek
           </p>
           <p className="text-center text-[11px] text-ink-muted mb-4 italic" style={{ fontFamily: "var(--font-sans)" }}>
-            Andrea O&apos;Reilly (née Linnerud line) — Lyle Linnerud&apos;s granddaughter. Exact parentage TBD.
+            Andrea O&apos;Reilly (née Linnerud) — youngest daughter of Lyle &amp; Helen Linnerud.
           </p>
           <div className="flex justify-center mb-4">
             <CoupleCard
@@ -308,7 +308,7 @@ export default function TreePage() {
             />
           </div>
           <p className="text-center text-[10px] text-ink-muted italic mb-4" style={{ fontFamily: "var(--font-sans)" }}>
-            5 children: Cary (confirmed) + 4 others (unconfirmed). Andrea is likely a grandchild of Lyle.
+            Children: Alan, Calvin, twins Cary &amp; Cheryl, Andrea (youngest). Andrea is Dave&apos;s mom.
           </p>
           <ConnectorDown />
           <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12">

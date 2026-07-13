@@ -243,12 +243,12 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
                   transition={{ delay: 0.3 + i * 0.15 }}
                   className="text-center"
                 >
-                  <div className="border-2 border-border bg-white p-2 rounded-sm shadow-md inline-block">
+                  <div className="border-2 border-border bg-white p-3 rounded-sm shadow-md inline-block">
                     <img
                       src={photo.src}
                       alt={photo.alt}
-                      className="max-h-64 object-contain"
-                      style={{ maxWidth: "240px" }}
+                      className="max-h-96 object-contain"
+                      style={{ maxWidth: "360px" }}
                       onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }}
                     />
                   </div>
@@ -443,23 +443,27 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
                 </div>
                 <div className="grid md:grid-cols-2 gap-0">
                   <div className="p-4">
-                    <img
-                      src="/docs/linnerud/Albert-Linnerud-KILLED-IN-STORM-Belvidere-Daily-Republican-Jun8-1933.png"
-                      alt="Albert Linnerud — KILLED IN STORM — Belvidere Daily Republican"
-                      className="w-full object-contain border border-border-light"
-                    />
+                    <a href="/docs/linnerud/Albert-Linnerud-KILLED-IN-STORM-Belvidere-Daily-Republican-Jun8-1933.png" target="_blank" rel="noopener noreferrer" className="block cursor-zoom-in hover:opacity-90 transition-opacity">
+                      <img
+                        src="/docs/linnerud/Albert-Linnerud-KILLED-IN-STORM-Belvidere-Daily-Republican-Jun8-1933.png"
+                        alt="Albert Linnerud — KILLED IN STORM — Belvidere Daily Republican"
+                        className="w-full object-contain border border-border-light"
+                      />
+                    </a>
                     <p className="text-[10px] text-ink-muted mt-2 text-center" style={{ fontFamily: "var(--font-sans)" }}>
-                      Belvidere Daily Republican, Jun 8, 1933 — original newspaper clipping
+                      Belvidere Daily Republican, Jun 8, 1933 — click to view full size
                     </p>
                   </div>
                   <div className="p-4 flex flex-col justify-center">
-                    <img
-                      src="/docs/linnerud/Albert-S-Linnerud-1913-1933-Gravestone-Jefferson-Prairie-Cemetery.png"
-                      alt="Albert S. Linnerud Gravestone"
-                      className="w-full object-contain border border-border-light mb-3"
-                    />
+                    <a href="/docs/linnerud/Albert-S-Linnerud-1913-1933-Gravestone-Jefferson-Prairie-Cemetery.png" target="_blank" rel="noopener noreferrer" className="block cursor-zoom-in hover:opacity-90 transition-opacity">
+                      <img
+                        src="/docs/linnerud/Albert-S-Linnerud-1913-1933-Gravestone-Jefferson-Prairie-Cemetery.png"
+                        alt="Albert S. Linnerud Gravestone"
+                        className="w-full object-contain border border-border-light mb-3"
+                      />
+                    </a>
                     <p className="text-[10px] text-ink-muted text-center" style={{ fontFamily: "var(--font-sans)" }}>
-                      Gravestone — Jefferson Prairie Cemetery, Clinton, WI · &quot;SON&quot;
+                      Gravestone — Jefferson Prairie Cemetery, Clinton, WI · click to view full size
                     </p>
                   </div>
                 </div>

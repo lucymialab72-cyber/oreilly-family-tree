@@ -41,7 +41,7 @@ function Lightbox({ doc, allDocs, onClose, onNext, onPrev }: LightboxProps) {
       onClick={onClose}
     >
       <div
-        className="relative max-w-5xl w-full mx-4 flex flex-col items-center"
+        className="relative max-w-7xl w-full mx-2 flex flex-col items-center"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
@@ -76,14 +76,32 @@ function Lightbox({ doc, allDocs, onClose, onNext, onPrev }: LightboxProps) {
         )}
 
         {/* Document image */}
-        <div className="bg-white p-3 shadow-2xl rounded-sm max-h-[75vh] overflow-hidden">
+        <div className="bg-white p-3 shadow-2xl rounded-sm max-h-[90vh] overflow-auto cursor-zoom-in"
+          onClick={(e) => {
+            // Toggle zoom on click
+            const img = e.currentTarget.querySelector('img');
+            if (img) {
+              if (img.style.maxHeight === 'none') {
+                img.style.maxHeight = '85vh';
+                img.style.maxWidth = '100%';
+                e.currentTarget.style.cursor = 'zoom-in';
+              } else {
+                img.style.maxHeight = 'none';
+                img.style.maxWidth = 'none';
+                e.currentTarget.style.cursor = 'zoom-out';
+              }
+            }
+            e.stopPropagation();
+          }}
+        >
           <img
             src={`/docs/${doc.file}`}
             alt={doc.caption}
-            className="max-h-[70vh] max-w-full object-contain"
-            style={{ display: "block" }}
+            className="object-contain"
+            style={{ display: "block", maxHeight: "85vh", maxWidth: "100%" }}
           />
         </div>
+        <p className="text-white/50 text-xs mt-2 text-center">Click image to zoom in · Click again to zoom out</p>
 
         {/* Caption */}
         <div className="mt-4 text-center">

@@ -547,6 +547,7 @@ export const familyLines: FamilyLine[] = [
               "Japan surrendered while he was at sea (August 14, 1945)",
               "Honorably discharged May 1946",
               "Married Helen Marie Jakubicek on January 20, 1951",
+              "5 children: Alan (firstborn), Calvin, twins Cary & Cheryl, Andrea (youngest — Dave's mom)",
               "Valedictorian of Gage Park High School, 1940",
               "Author of memoir: 'The Rime of an Ancient Mariner'",
             ],
