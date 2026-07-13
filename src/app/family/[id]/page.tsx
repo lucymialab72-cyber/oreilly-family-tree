@@ -40,17 +40,22 @@ function PersonPhotoDisplay({ personName }: { personName: string }) {
   const photos = personPhotos[personName];
   if (!photos || photos.length === 0) return null;
   return (
-    <div className="flex gap-3 mb-4 flex-wrap">
+    <div className="flex gap-4 mb-6 flex-wrap">
       {photos.map((photo, i) => (
-        <div key={i} className="border border-border-light rounded-sm overflow-hidden bg-white shadow-sm" style={{ width: 96, height: 120 }}>
+        <div key={i} className="border-2 border-border rounded-sm overflow-hidden bg-white shadow-md" style={{ width: 160, height: 200 }}>
           <img
             src={photo.src}
             alt={photo.alt}
             className="w-full h-full object-cover"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
           />
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-2">
+          </div>
         </div>
       ))}
+      <p className="w-full text-[10px] text-ink-muted -mt-2" style={{ fontFamily: "var(--font-sans)" }}>
+        {photos.map(p => p.alt).join(" · ")}
+      </p>
     </div>
   );
 }
@@ -202,6 +207,60 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
           </motion.div>
         </div>
       </section>
+
+      {/* ═══ FEATURED PHOTOS (if any exist for this line) ═══ */}
+      {(() => {
+        const linePhotos: { src: string; alt: string; person: string }[] = [];
+        Object.entries(personPhotos).forEach(([name, photos]) => {
+          const familyId = id === "oreilly" ? "oreilly" : id === "coffey" ? "coffey" : id === "linnerud" ? "linnerud" : id === "jakubicek" ? "jakubicek" : "";
+          // Map person names to family lines
+          const personLineMap: Record<string, string> = {
+            'Edward Joseph "Bud" O\'Reilly': "oreilly",
+            "Lyle Andrew Linnerud": "linnerud",
+            "Sigvart S. Lee": "linnerud",
+            "Berthea S. Lee": "linnerud",
+          };
+          if (personLineMap[name] === familyId) {
+            photos.forEach(p => linePhotos.push({ ...p, person: name }));
+          }
+        });
+        // Deduplicate by src
+        const seen = new Set<string>();
+        const unique = linePhotos.filter(p => {
+          if (seen.has(p.src)) return false;
+          seen.add(p.src);
+          return true;
+        });
+        if (unique.length === 0) return null;
+        return (
+          <section className="max-w-4xl mx-auto px-6 py-8">
+            <div className="flex flex-wrap justify-center gap-6">
+              {unique.map((photo, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 + i * 0.15 }}
+                  className="text-center"
+                >
+                  <div className="border-2 border-border bg-white p-2 rounded-sm shadow-md inline-block">
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      className="max-h-64 object-contain"
+                      style={{ maxWidth: "240px" }}
+                      onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display = 'none'; }}
+                    />
+                  </div>
+                  <p className="text-xs text-ink-muted mt-2 max-w-[240px] mx-auto" style={{ fontFamily: "var(--font-sans)" }}>
+                    {photo.alt}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </section>
+        );
+      })()}
 
       {/* ═══ THE VILLAGE ═══ */}
       <section className="max-w-3xl mx-auto px-6 py-16">

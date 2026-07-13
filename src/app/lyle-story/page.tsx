@@ -21,6 +21,7 @@ const voyageTimeline = [
   { date: "August 9, 1945", event: "Atomic bomb falls on Nagasaki. The Eberle continues its course through the Panama Canal." },
   { date: "August 14, 1945", event: "Japan surrenders. The war ends. The Eberle is still crossing the Pacific." },
   { date: "August 26, 1945", event: "The Eberle arrives in Manila, Philippines. 32 days. 16,000 miles." },
+  { date: "March 25, 1945", event: "A Navy plane doing aerobatics for troops loses control during a loop. Rather than crash into the main deck full of soldiers watching, the pilot noses down into the ship's side. Both occupants of the plane are killed. 1 dead, 5 wounded on the ship. Lyle is aboard." },
   { date: "Mid-voyage", event: "Bow lookout spots a floating mine. Helmsman swerves. 40mm gun crew detonates it." },
   { date: "May 1946", event: "Honorably discharged. Total service: 41 months. Total miles at sea: 85,000." },
 ];
@@ -180,6 +181,32 @@ export default function LyleStoryPage() {
           <p className="text-lg leading-relaxed text-ink-light">
             The ship continued. Five thousand troops never knew how close they came.
           </p>
+        </motion.div>
+      </section>
+
+      {/* The plane crash */}
+      <section className="max-w-3xl mx-auto px-6 py-8">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} custom={0}>
+          <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "var(--font-display)" }}>
+            The Plane Crash
+          </h2>
+          <p className="text-lg leading-relaxed text-ink-light mb-4">
+            On March 25, 1945, the Eberle was at Manus Island in Papua New Guinea. A Navy pilot decided
+            to put on a show for the troops — aerobatics over the ship. During a loop, he lost control.
+          </p>
+          <p className="text-lg leading-relaxed text-ink-light mb-4">
+            Rather than crash into the main deck, where hundreds of soldiers stood watching, the pilot
+            made a choice. He nosed the plane down into the ship&apos;s side.
+          </p>
+          <p className="text-lg leading-relaxed text-ink-light mb-4">
+            Both occupants of the plane were killed. One man died on the ship. Five more were wounded.
+          </p>
+          <div className="pull-quote">
+            <p>
+              Two weeks after Lyle came aboard, a plane crashed into his ship. He hadn&apos;t even left port yet.
+              He still had 85,000 miles ahead of him.
+            </p>
+          </div>
         </motion.div>
       </section>
 

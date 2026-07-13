@@ -129,22 +129,86 @@ export default function TreePage() {
 
       {/* Tree */}
       <section className="max-w-5xl mx-auto px-4 py-8">
-        {/* ═══ DAVE ═══ */}
-        <div className="flex justify-center mb-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <PersonBadge
-              person={{
-                name: "DAVE O'REILLY",
-                flag: "🇺🇸",
-                highlight: true,
-                note: "You are here",
-              }}
-            />
-          </motion.div>
+        {/* ═══ CURRENT GENERATION — THE O'REILLY BROTHERS ═══ */}
+        <div className="mb-8">
+          <p className="text-center text-xs text-gold uppercase tracking-widest mb-6 font-semibold" style={{ fontFamily: "var(--font-sans)" }}>
+            The Current Generation
+          </p>
+
+          <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-8 mb-6">
+            {/* Dave's Family */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col items-center gap-2"
+            >
+              <CoupleCard
+                index={0}
+                couple={{
+                  left: { name: "David Lyle O'Reilly", flag: "🇺🇸", highlight: true, note: "You are here" },
+                  right: { name: "Michelle O'Reilly" },
+                }}
+              />
+              <div className="flex flex-wrap justify-center gap-2 mt-2">
+                {["Landon", "Chase", "Kaylee"].map((child) => (
+                  <div key={child} className="border border-border-light rounded-sm px-3 py-1.5 text-center bg-white/50 text-sm">
+                    <p className="font-medium" style={{ fontFamily: "var(--font-display)" }}>{child}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Mike's Family */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="flex flex-col items-center gap-2"
+            >
+              <CoupleCard
+                index={0}
+                couple={{
+                  left: { name: "Michael Edward O'Reilly" },
+                  right: { name: "Michaela O'Reilly" },
+                }}
+              />
+              <div className="flex flex-wrap justify-center gap-2 mt-2">
+                {["Elliot", "Simon", "Quentin", "Conrad"].map((child) => (
+                  <div key={child} className="border border-border-light rounded-sm px-3 py-1.5 text-center bg-white/50 text-sm">
+                    <p className="font-medium" style={{ fontFamily: "var(--font-display)" }}>{child}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Adam's Family */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="flex flex-col items-center gap-2"
+            >
+              <CoupleCard
+                index={0}
+                couple={{
+                  left: { name: "Adam Michael O'Reilly" },
+                  right: { name: "Marianela O'Reilly" },
+                }}
+              />
+              <div className="flex flex-wrap justify-center gap-2 mt-2">
+                {["Max", "Skyler"].map((child) => (
+                  <div key={child} className="border border-border-light rounded-sm px-3 py-1.5 text-center bg-white/50 text-sm">
+                    <p className="font-medium" style={{ fontFamily: "var(--font-display)" }}>{child}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+
+          <p className="text-center text-[10px] text-ink-muted italic mb-4" style={{ fontFamily: "var(--font-sans)" }}>
+            9 grandchildren: Landon, Chase &amp; Kaylee · Elliot, Simon, Quentin &amp; Conrad · Max &amp; Skyler
+          </p>
         </div>
 
         <ConnectorDown />

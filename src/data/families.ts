@@ -543,7 +543,7 @@ export const familyLines: FamilyLine[] = [
               "Assigned to USS Admiral E.W. Eberle (AP-123) in March 1945",
               "Seaman 1st Class, 41 months service, $66/month",
               "Traveled 85,000 miles in one year — Atlantic 6×, Pacific 8×, Panama Canal 2×",
-              "Survived a floating mine and a plane crash on the ship",
+              "Survived a plane crash on the ship (March 25, 1945, Manus Island — Navy pilot lost control during aerobatics, 2 killed in plane, 1 dead + 5 wounded on ship) and a floating mine in the Pacific",
               "Japan surrendered while he was at sea (August 14, 1945)",
               "Honorably discharged May 1946",
               "Married Helen Marie Jakubicek on January 20, 1951",
