@@ -218,10 +218,38 @@ export default function TreePage() {
           <CoupleCard
             index={1}
             couple={{
-              left: { name: "Terry O'Reilly", note: "Dave's Dad (Terrence Patrick)" },
-              right: { name: "Andrea O'Reilly", note: "Dave's Mom (née Linnerud line)" },
+              left: { name: "Terrence O'Reilly", note: "Dave's Dad" },
+              right: { name: "Andrea O'Reilly", note: "Dave's Mom (née Linnerud)" },
             }}
           />
+        </div>
+
+        {/* ═══ PARENTS' SIBLINGS ═══ */}
+        <div className="flex flex-col md:flex-row justify-center gap-8 mb-4">
+          <div className="text-center">
+            <p className="text-[10px] text-ink-muted uppercase tracking-wider mb-2" style={{ fontFamily: "var(--font-sans)" }}>
+              Terrence&apos;s siblings (children of Edward &amp; Eileen)
+            </p>
+            <div className="flex flex-wrap justify-center gap-1.5">
+              {["Mary Sue", "Joanne", "Tom", "Terrence", "Patrick", "Hugh"].map((name) => (
+                <div key={name} className={`border rounded-sm px-2 py-1 text-xs ${name === "Terrence" ? "border-gold bg-gold/5 font-semibold" : "border-border-light bg-white/50"}`}>
+                  {name}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="text-center">
+            <p className="text-[10px] text-ink-muted uppercase tracking-wider mb-2" style={{ fontFamily: "var(--font-sans)" }}>
+              Andrea&apos;s siblings (children of Lyle &amp; Helen)
+            </p>
+            <div className="flex flex-wrap justify-center gap-1.5">
+              {["Alan", "Calvin", "Cary", "Cheryl", "Andrea"].map((name) => (
+                <div key={name} className={`border rounded-sm px-2 py-1 text-xs ${name === "Andrea" ? "border-gold bg-gold/5 font-semibold" : "border-border-light bg-white/50"}`}>
+                  {name}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <BranchSplit />
