@@ -1,0 +1,577 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.08, duration: 0.5, ease: "easeOut" as const },
+  }),
+};
+
+interface TreePerson {
+  name: string;
+  years?: string;
+  origin?: string;
+  flag?: string;
+  highlight?: boolean;
+  note?: string;
+}
+
+interface TreeCouple {
+  left: TreePerson;
+  right: TreePerson;
+  married?: string;
+}
+
+function CoupleCard({ couple, index }: { couple: TreeCouple; index: number }) {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeIn}
+      custom={index}
+      className="flex flex-col md:flex-row items-center gap-2 md:gap-4"
+    >
+      <PersonBadge person={couple.left} />
+      <div className="text-center">
+        <span className="text-gold text-xs">✦</span>
+        {couple.married && (
+          <p className="text-[10px] text-ink-muted" style={{ fontFamily: "var(--font-sans)" }}>
+            m. {couple.married}
+          </p>
+        )}
+      </div>
+      <PersonBadge person={couple.right} />
+    </motion.div>
+  );
+}
+
+function PersonBadge({ person }: { person: TreePerson }) {
+  return (
+    <div
+      className={`border rounded-sm px-4 py-3 text-center min-w-[180px] transition-colors ${
+        person.highlight
+          ? "border-gold bg-gold/5"
+          : "border-border bg-white/50 hover:bg-white"
+      }`}
+    >
+      <p className="font-bold text-sm" style={{ fontFamily: "var(--font-display)" }}>
+        {person.flag && <span className="mr-1">{person.flag}</span>}
+        {person.name}
+      </p>
+      {person.years && (
+        <p className="text-[11px] text-ink-muted mt-0.5" style={{ fontFamily: "var(--font-sans)" }}>
+          {person.years}
+        </p>
+      )}
+      {person.origin && (
+        <p className="text-[10px] text-ink-muted italic mt-0.5">{person.origin}</p>
+      )}
+      {person.note && (
+        <p className="text-[10px] text-gold mt-1 font-medium" style={{ fontFamily: "var(--font-sans)" }}>
+          {person.note}
+        </p>
+      )}
+    </div>
+  );
+}
+
+function ConnectorDown() {
+  return (
+    <div className="flex justify-center py-2">
+      <div className="w-px h-8 bg-border" />
+    </div>
+  );
+}
+
+function BranchSplit() {
+  return (
+    <div className="flex justify-center py-2">
+      <div className="relative w-full max-w-lg">
+        <div className="absolute left-1/4 right-1/4 top-0 h-px bg-border" />
+        <div className="absolute left-1/4 top-0 w-px h-6 bg-border" />
+        <div className="absolute right-1/4 top-0 w-px h-6 bg-border" />
+        <div className="h-6" />
+      </div>
+    </div>
+  );
+}
+
+export default function TreePage() {
+  return (
+    <main className="min-h-screen">
+      {/* Nav */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-parchment/90 backdrop-blur-sm border-b border-border-light">
+        <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between" style={{ fontFamily: "var(--font-sans)" }}>
+          <Link href="/" className="text-sm text-ink-muted hover:text-ink transition-colors">
+            ← Home
+          </Link>
+          <span className="text-sm font-medium text-gold">Full Family Tree</span>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="pt-28 pb-12 px-6 text-center">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "var(--font-display)" }}>
+            The Complete Tree
+          </h1>
+          <p className="text-ink-muted text-lg">
+            Six generations. Four countries. One family.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Tree */}
+      <section className="max-w-6xl mx-auto px-4 py-8 overflow-x-auto">
+        {/* ═══ DAVE ═══ */}
+        <div className="flex justify-center mb-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <PersonBadge
+              person={{
+                name: "DAVE O'REILLY",
+                flag: "🇺🇸",
+                highlight: true,
+                note: "You are here",
+              }}
+            />
+          </motion.div>
+        </div>
+
+        <ConnectorDown />
+
+        {/* ═══ PARENTS ═══ */}
+        <div className="flex justify-center mb-4">
+          <CoupleCard
+            index={1}
+            couple={{
+              left: { name: "Tom O'Reilly", note: "Dave's Dad" },
+              right: { name: "— (née Linnerud)", note: "Dave's Mom" },
+            }}
+          />
+        </div>
+
+        <BranchSplit />
+
+        {/* ═══ GRANDPARENTS — Two couples side by side ═══ */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          {/* Dad's parents */}
+          <div className="text-center">
+            <p className="text-xs text-ink-muted mb-3 uppercase tracking-wider" style={{ fontFamily: "var(--font-sans)" }}>
+              Paternal Grandparents
+            </p>
+            <CoupleCard
+              index={2}
+              couple={{
+                left: {
+                  name: 'Edward J. "Bud" O\'Reilly',
+                  years: "1921–2002",
+                  origin: "Chicago",
+                  flag: "🇮🇪",
+                  note: "WWII Veteran",
+                },
+                right: {
+                  name: "Eileen M. Coffey",
+                  years: "1923–2013",
+                  origin: "Chicago (Kerry parents)",
+                  flag: "🇮🇪",
+                },
+                married: "~1948",
+              }}
+            />
+
+            <ConnectorDown />
+
+            {/* Edward's parents */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <p className="text-[10px] text-ink-muted mb-2 uppercase tracking-wider" style={{ fontFamily: "var(--font-sans)" }}>
+                  O&apos;Reilly Line
+                </p>
+                <CoupleCard
+                  index={3}
+                  couple={{
+                    left: {
+                      name: "William O'Reilly",
+                      years: "1893–?",
+                      origin: "Newmarket, Cork 🇮🇪",
+                      note: "WWI Vet",
+                    },
+                    right: {
+                      name: "Anna M. Madden",
+                      years: "1893–1971",
+                      origin: "Chicago",
+                    },
+                    married: "1918",
+                  }}
+                />
+                <ConnectorDown />
+                <div className="space-y-3">
+                  <CoupleCard
+                    index={4}
+                    couple={{
+                      left: {
+                        name: "Michael O'Reilly",
+                        years: "~1863–?",
+                        origin: "Meelin, Cork 🇮🇪",
+                      },
+                      right: {
+                        name: "Ellen Ryan",
+                        years: "~1864–?",
+                        origin: "Meelin, Cork 🇮🇪",
+                      },
+                      married: "1888",
+                    }}
+                  />
+                  <CoupleCard
+                    index={5}
+                    couple={{
+                      left: {
+                        name: "Michael G. Madden",
+                        years: "1858–1944",
+                        origin: "Tipperary 🇮🇪",
+                        note: "Chicago Cop",
+                      },
+                      right: {
+                        name: "Bridget Powell",
+                        years: "1869–1940",
+                        origin: "Tipperary 🇮🇪",
+                      },
+                      married: "~1882",
+                    }}
+                  />
+                </div>
+              </div>
+              <div>
+                <p className="text-[10px] text-ink-muted mb-2 uppercase tracking-wider" style={{ fontFamily: "var(--font-sans)" }}>
+                  Coffey Line
+                </p>
+                <CoupleCard
+                  index={6}
+                  couple={{
+                    left: {
+                      name: "John J. Coffey",
+                      years: "1875–1957",
+                      origin: "Ballydarrig, Kerry 🇮🇪",
+                      note: "WWI Vet",
+                    },
+                    right: {
+                      name: "Julia Sheehan",
+                      years: "1889–1965",
+                      origin: "Cahirciveen, Kerry 🇮🇪",
+                    },
+                    married: "1913",
+                  }}
+                />
+                <ConnectorDown />
+                <div className="space-y-3">
+                  <CoupleCard
+                    index={7}
+                    couple={{
+                      left: {
+                        name: "Jeremiah Coffey",
+                        years: "~1841–?",
+                        origin: "Kerry 🇮🇪",
+                      },
+                      right: {
+                        name: "Wife (unknown)",
+                        origin: "Kerry 🇮🇪",
+                      },
+                    }}
+                  />
+                  <CoupleCard
+                    index={8}
+                    couple={{
+                      left: {
+                        name: "Florence Sheehan",
+                        years: "~1849–?",
+                        origin: "Cahirciveen, Kerry 🇮🇪",
+                      },
+                      right: {
+                        name: "Debbie Sheehan",
+                        years: "~1851–?",
+                        origin: "Kerry 🇮🇪",
+                      },
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mom's parents */}
+          <div className="text-center">
+            <p className="text-xs text-ink-muted mb-3 uppercase tracking-wider" style={{ fontFamily: "var(--font-sans)" }}>
+              Maternal Grandparents
+            </p>
+            <CoupleCard
+              index={2}
+              couple={{
+                left: {
+                  name: "Lyle A. Linnerud",
+                  years: "1922–2015",
+                  origin: "Chicago",
+                  flag: "🇳🇴",
+                  note: "USCG WWII · 85,000 mi",
+                },
+                right: {
+                  name: "Helen M. Jakubicek",
+                  years: "1925–2010",
+                  origin: "Chicago",
+                  flag: "🇨🇿",
+                },
+                married: "1951",
+              }}
+            />
+
+            <ConnectorDown />
+
+            {/* Lyle's parents */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <p className="text-[10px] text-ink-muted mb-2 uppercase tracking-wider" style={{ fontFamily: "var(--font-sans)" }}>
+                  Linnerud Line
+                </p>
+                <CoupleCard
+                  index={9}
+                  couple={{
+                    left: {
+                      name: "Andrew O. Linnerud",
+                      years: "1885–1948",
+                      origin: "Vinger, Hedmark 🇳🇴",
+                      note: "The servant girl's son",
+                    },
+                    right: {
+                      name: "Anna Gudrun Lee",
+                      years: "1893–1987",
+                      origin: "Boone County, IL",
+                    },
+                    married: "1911",
+                  }}
+                />
+                <ConnectorDown />
+                <div className="space-y-3">
+                  <div className="flex flex-col items-center gap-2">
+                    <PersonBadge
+                      person={{
+                        name: "Marthe Arnesdatter",
+                        years: "?",
+                        origin: "Vinger, Norway 🇳🇴",
+                        note: "Unmarried servant",
+                      }}
+                    />
+                    <p className="text-[10px] text-ink-muted italic">Birth father: Anders Pedersen</p>
+                  </div>
+                  <CoupleCard
+                    index={10}
+                    couple={{
+                      left: {
+                        name: "Sigvart S. Lee",
+                        years: "1859–1943",
+                        origin: "Vinger, Hedmark 🇳🇴",
+                      },
+                      right: {
+                        name: "Berthea Arneson",
+                        years: "~1862–1921",
+                        origin: "Vinger, Hedmark 🇳🇴",
+                      },
+                      married: "1892",
+                    }}
+                  />
+                  <div className="text-center">
+                    <p className="text-[10px] text-ink-muted italic">
+                      Deepest ancestor: <strong>Sigri Andersdatter</strong> (b. ~1797) — Dave&apos;s 5× great-grandmother
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p className="text-[10px] text-ink-muted mb-2 uppercase tracking-wider" style={{ fontFamily: "var(--font-sans)" }}>
+                  Jakubicek Line
+                </p>
+                <CoupleCard
+                  index={11}
+                  couple={{
+                    left: {
+                      name: "Thomas Jakubicek",
+                      years: "1886–1963",
+                      origin: "Lipov, Moravia 🇨🇿",
+                    },
+                    right: {
+                      name: "Marie Melka",
+                      years: "1896–1989",
+                      origin: "Meremice, Bohemia 🇨🇿",
+                    },
+                    married: "1922",
+                  }}
+                />
+                <ConnectorDown />
+                <div className="space-y-3">
+                  <CoupleCard
+                    index={12}
+                    couple={{
+                      left: {
+                        name: "George Jakubicek",
+                        origin: "Moravia 🇨🇿",
+                      },
+                      right: {
+                        name: "Marie Jakubicek",
+                        origin: "Moravia 🇨🇿",
+                      },
+                    }}
+                  />
+                  <CoupleCard
+                    index={13}
+                    couple={{
+                      left: {
+                        name: "Ludvik Melka",
+                        origin: "Czech Republic 🇨🇿",
+                      },
+                      right: {
+                        name: "Klara Marc",
+                        origin: "Czech Republic 🇨🇿",
+                      },
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ STATS ═══ */}
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <div className="heritage-divider">
+          <span className="text-gold">✦</span>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 text-center">
+          {[
+            { number: "40+", label: "Ancestors Identified" },
+            { number: "4", label: "Countries of Origin" },
+            { number: "6", label: "Generations Deep" },
+            { number: "133", label: "Source Documents" },
+          ].map((stat, i) => (
+            <motion.div
+              key={i}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              custom={i}
+            >
+              <p className="text-3xl font-bold text-gold" style={{ fontFamily: "var(--font-display)" }}>
+                {stat.number}
+              </p>
+              <p className="text-sm text-ink-muted mt-1" style={{ fontFamily: "var(--font-sans)" }}>
+                {stat.label}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* ═══ DEEPEST LINES TABLE ═══ */}
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <h2 className="text-2xl font-bold mb-8 text-center" style={{ fontFamily: "var(--font-display)" }}>
+          How Deep Each Line Goes
+        </h2>
+
+        <div className="border border-border rounded-sm overflow-hidden">
+          <table className="w-full text-sm" style={{ fontFamily: "var(--font-sans)" }}>
+            <thead>
+              <tr className="bg-cream/50 border-b border-border">
+                <th className="text-left px-4 py-3 font-semibold">Line</th>
+                <th className="text-left px-4 py-3 font-semibold">Depth</th>
+                <th className="text-left px-4 py-3 font-semibold">Earliest Ancestor</th>
+                <th className="text-left px-4 py-3 font-semibold">Year</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { line: "🇳🇴 Lee/Sørensen", depth: "6 gen", ancestor: "Sigri Andersdatter", year: "~1797", best: true },
+                { line: "🇮🇪 O'Reilly", depth: "5 gen", ancestor: "Michael O'Reilly Sr, Meelin", year: "pre-1863" },
+                { line: "🇮🇪 Madden/Powell", depth: "4 gen", ancestor: "Thomas Madden & Mary Griffin", year: "~1830s" },
+                { line: "🇮🇪 Coffey", depth: "4 gen", ancestor: "Jeremiah Coffey, Ballydarrig", year: "~1841" },
+                { line: "🇮🇪 Sheehan", depth: "3 gen", ancestor: "Florence & Debbie Sheehan", year: "~1849" },
+                { line: "🇳🇴 Linnerud", depth: "3 gen", ancestor: "Anders Pedersen", year: "~1860s" },
+                { line: "🇨🇿 Jakubicek", depth: "3 gen", ancestor: "George & Marie Jakubicek", year: "~1860s" },
+                { line: "🇨🇿 Melka", depth: "3 gen", ancestor: "Ludvik & Klara Melka", year: "~1870s" },
+              ].map((row, i) => (
+                <tr key={i} className={`border-b border-border-light ${row.best ? "bg-gold/5" : ""}`}>
+                  <td className="px-4 py-3 font-medium">{row.line}</td>
+                  <td className="px-4 py-3">{row.depth}</td>
+                  <td className="px-4 py-3">{row.ancestor}</td>
+                  <td className="px-4 py-3 text-gold font-medium">{row.year}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p className="text-center text-ink-muted text-xs mt-4" style={{ fontFamily: "var(--font-sans)" }}>
+          Deepest confirmed ancestor: Sigri Andersdatter, born ~1797 in Norway — Dave&apos;s 5× great-grandmother
+        </p>
+      </section>
+
+      {/* ═══ CEMETERIES ═══ */}
+      <section className="max-w-3xl mx-auto px-6 py-16">
+        <h2 className="text-2xl font-bold mb-8 text-center" style={{ fontFamily: "var(--font-display)" }}>
+          Where They Rest
+        </h2>
+
+        <div className="space-y-4">
+          {[
+            { cemetery: "Holy Sepulchre Catholic Cemetery", location: "Alsip, IL", who: "Edward J. O'Reilly, Eileen M. O'Reilly, Julia Coffey (Sheehan)" },
+            { cemetery: "Mount Olivet Catholic Cemetery", location: "Chicago, IL", who: "John J. Coffey" },
+            { cemetery: "Mount Carmel Catholic Cemetery", location: "Hillside, IL", who: "Michael G. Madden, Bridget Powell Madden" },
+            { cemetery: "Jefferson Prairie / Bergen Cemetery", location: "Clinton, WI", who: "Andrew Linnerud, Anna Gudrun Linnerud, Albert S. Linnerud, Evelyn Conway" },
+            { cemetery: "Borgen Cemetery", location: "Clinton, WI", who: "Sigvart S. Lee" },
+            { cemetery: "Bohemian National Cemetery", location: "Chicago, IL", who: "Thomas Jakubicek, Marie Melka Jakubicek" },
+            { cemetery: "Abraham Lincoln National Cemetery", location: "Elwood, IL", who: "Lyle Andrew Linnerud, Helen Jakubicek Linnerud" },
+          ].map((c, i) => (
+            <motion.div
+              key={i}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              custom={i}
+              className="flex items-start gap-4 p-4 border border-border-light rounded-sm bg-white/30"
+            >
+              <span className="text-lg mt-0.5">🪦</span>
+              <div>
+                <p className="font-semibold text-sm" style={{ fontFamily: "var(--font-display)" }}>
+                  {c.cemetery}
+                </p>
+                <p className="text-xs text-ink-muted" style={{ fontFamily: "var(--font-sans)" }}>
+                  {c.location}
+                </p>
+                <p className="text-sm text-ink-light mt-1">{c.who}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-border-light py-8 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <Link href="/" className="text-sm text-ink-muted hover:text-gold transition-colors" style={{ fontFamily: "var(--font-sans)" }}>
+            ← Back to Home
+          </Link>
+        </div>
+      </footer>
+    </main>
+  );
+}
