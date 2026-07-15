@@ -53,8 +53,30 @@ const fadeIn = {
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pb-20 md:pb-0">
       <TopNav />
+      {/* ═══ MOBILE BOTTOM NAV ═══ */}
+      <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-parchment/95 backdrop-blur-sm border-t border-border-light safe-area-bottom" style={{ fontFamily: "var(--font-sans)" }}>
+        <div className="flex items-stretch justify-around px-2 py-1">
+          {familyLines.map((l) => (
+            <Link
+              key={l.id}
+              href={`/family/${l.id}`}
+              className="flex flex-col items-center justify-center py-2 px-1 rounded-sm transition-colors min-w-0 flex-1 text-ink-muted active:bg-ink/5"
+            >
+              <span className="text-lg leading-none">{l.flag}</span>
+              <span className="text-[10px] mt-0.5 truncate max-w-full">{l.name}</span>
+            </Link>
+          ))}
+          <Link
+            href="/tree"
+            className="flex flex-col items-center justify-center py-2 px-1 rounded-sm transition-colors min-w-0 flex-1 text-gold active:bg-gold/5"
+          >
+            <span className="text-lg leading-none">🌳</span>
+            <span className="text-[10px] mt-0.5 font-semibold">Tree</span>
+          </Link>
+        </div>
+      </nav>
       {/* ═══ HERO ═══ */}
       <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
         {/* Background pattern */}
