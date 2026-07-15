@@ -34,17 +34,16 @@ interface OriginPoint {
 
 const origins: OriginPoint[] = [
   {
-    id: "meelin",
-    label: "Meelin, Cork",
-    place: "Newmarket & Meelin",
+    id: "kilkenny",
+    label: "Thomastown, Kilkenny",
+    place: "Thomastown",
     country: "Ireland",
     flag: "🇮🇪",
-    x: 175,
-    y: 275,
+    x: 215,
+    y: 265,
     color: "#2D5A27",
-    people: ["William O'Reilly (1915)", "Daniel O'Reilly"],
-    year: 1915,
-    ship: "SS New York",
+    people: ["Patrick Joseph O'Reilly (1906)"],
+    year: 1906,
     familyId: "oreilly",
   },
   {
@@ -70,8 +69,8 @@ const origins: OriginPoint[] = [
     x: 195,
     y: 270,
     color: "#704214",
-    people: ["Michael G. Madden (1882)", "Bridget Powell"],
-    year: 1882,
+    people: ["Sheehy & Woulfe families (origins TBD)"],
+    year: 1870,
     familyId: "oreilly",
   },
   {
@@ -601,11 +600,11 @@ export default function MapPage() {
               },
               {
                 neighborhood: "West Side — Ferdinand St & Madison St",
-                families: "O'Reilly (William & Anna), Madden",
+                families: "O'Reilly (Patrick & Catherine)",
                 address:
-                  "Ferdinand St (1920s-1940s) · 121 Iowa St (Madden, 1900)",
+                  "727 E 50th St (1917-1918, Patrick J. O'Reilly)",
                 flag: "🇮🇪",
-                note: "Michael Madden was a Chicago cop on the West Side during Prohibition.",
+                note: "Patrick J. O'Reilly lived on the South Side, near the Coffey family on S. Langley Ave.",
               },
               {
                 neighborhood:

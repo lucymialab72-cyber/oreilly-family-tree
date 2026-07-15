@@ -29,7 +29,7 @@ const bonusStories = [
   {
     title: "Al Capone's Neighbor",
     content:
-      "Al Capone's Chicago home was at 7244 S. Prairie Avenue. John J. Coffey's 1918 WWI draft card lists his address as 7141 Vernon Avenue — literally one block away. The Coffey household at 7748 S. Langley was six blocks from Capone. John Coffey was a railroad freight clerk raising seven children in the same neighborhood as the most famous gangster in American history. Meanwhile, Michael Madden — Dave's 2× great-grandfather on the O'Reilly side — was a Chicago cop during the same era.",
+      "Al Capone's Chicago home was at 7244 S. Prairie Avenue. John J. Coffey's 1918 WWI draft card lists his address as 7141 Vernon Avenue — literally one block away. The Coffey household at 7748 S. Langley was six blocks from Capone. John Coffey was a railroad freight clerk raising seven children in the same neighborhood as the most famous gangster in American history. Meanwhile, Patrick Joseph O'Reilly — Dave's great-grandfather on the O'Reilly side — was living at 727 E 50th Street, just a few miles north on the South Side.",
     pullQuote:
       "A railroad clerk, a Chicago cop, and America's most famous gangster — all within six blocks.",
     familyId: "coffey",

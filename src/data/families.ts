@@ -59,33 +59,33 @@ export interface FamilyLine {
 
 export const familyLines: FamilyLine[] = [
   // ═══════════════════════════════════════════════
-  // O'REILLY LINE — County Cork, Ireland
+  // O'REILLY LINE — County Kilkenny, Ireland
   // ═══════════════════════════════════════════════
   {
     id: "oreilly",
     name: "O'Reilly",
-    subtitle: "From Meelin to Chicago",
+    subtitle: "From Thomastown to Chicago",
     country: "Ireland",
     flag: "🇮🇪",
     color: "cork-green",
     colorAccent: "#2D5A27",
     village: {
-      name: "Newmarket & Meelin",
-      region: "County Cork",
+      name: "Thomastown",
+      region: "County Kilkenny",
       country: "Ireland",
-      description: "The O'Reilly family came from Meelin parish, near the town of Newmarket in County Cork. Knockahely and Knockdaff — the townlands of Michael O'Reilly and Ellen Ryan — are neighboring farming communities in the rolling hills of north Cork, near the borders of Counties Limerick and Kerry. The area was heavily affected by the Great Famine (1845-1852) and the Land War (1879-1882).",
+      description: "The O'Reilly family came from Thomastown, a medieval market town on the River Nore in County Kilkenny. Thomastown sits in the heart of Ireland's southeast — just miles from Jerpoint Abbey, the 12th-century Cistercian monastery where Dave's great-great-grandfather Edward O'Reilly is buried. The area has deep roots: Norman, Gaelic, and Catholic, with parish records at the Church of the Assumption dating back centuries.",
     },
     crossing: [
       {
-        person: "William O'Reilly",
-        ship: "SS New York",
-        departed: "Liverpool, England",
-        departurePort: "Liverpool",
-        arrived: "April 26, 1915",
-        arrivalPort: "New York",
-        age: 22,
-        year: 1915,
-        details: "William left Cork during the Great War. His brother Daniel had already emigrated to Chicago. The ship manifest records him as 5'10\", brown hair, brown eyes, fair complexion. His father Michael was still alive in Newmarket — William would return to visit in 1927 on the SS Franconia.",
+        person: "Patrick Joseph O'Reilly",
+        ship: "Unknown (arrived 1906)",
+        departed: "Ireland",
+        departurePort: "Unknown",
+        arrived: "1906",
+        arrivalPort: "Unknown",
+        age: 23,
+        year: 1906,
+        details: "Patrick left Thomastown, Kilkenny around age 23 and arrived in the United States in 1906, settling in Chicago. His father Edward had died in 1892 when Patrick was just 9 years old. His mother Johanna Hanrahan remained in Thomastown until her death in 1949 at age 90. Per the 1920 Census, he was living in Chicago Ward 7 by 1917 at 727 E 50th Street.",
       },
     ],
     generations: [
@@ -94,18 +94,23 @@ export const familyLines: FamilyLine[] = [
         relation: "Dave's 3× Great-Grandparents",
         people: [
           {
-            name: "Michael O'Reilly Sr",
-            bornPlace: "Knockahely, Meelin, Cork, Ireland",
-            occupation: "Farmer",
-            died: "Before 1888",
-            notes: ["Known only from his son's 1888 marriage certificate", "Farmer at Knockahely — a townland in Meelin parish"],
+            name: "James O'Reilly",
+            bornPlace: "Thomastown, Kilkenny, Ireland",
+            notes: [
+              "Known from an Ancestry family tree (O'Reilly Family Tree by Thoma O'Reilly)",
+              "No birth or death dates recorded — further research needed in Kilkenny parish records",
+              "Father of Edward (Edmond) O'Reilly",
+            ],
           },
           {
-            name: "Daniel Ryan",
-            bornPlace: "Knockdaff, Meelin, Cork, Ireland",
-            occupation: "Farmer",
-            died: "Before 1888",
-            notes: ["Father of the bride (Ellen Ryan)", "Knockdaff neighbors Knockahely — the families literally lived next door"],
+            name: "Ellen Walsh",
+            bornPlace: "Thomastown, Kilkenny, Ireland",
+            spouse: "James O'Reilly",
+            notes: [
+              "Known from the same Ancestry family tree",
+              "No birth or death dates recorded",
+              "Mother of Edward (Edmond) O'Reilly",
+            ],
           },
         ],
       },
@@ -114,69 +119,79 @@ export const familyLines: FamilyLine[] = [
         relation: "Dave's 2× Great-Grandparents",
         people: [
           {
-            name: "Michael O'Reilly",
-            born: "~1863",
-            bornPlace: "Knockahely, Meelin, Cork, Ireland",
-            occupation: "Farmer (employed a servant by 1901)",
-            spouse: "Ellen Ryan",
+            name: "Edward (Edmond) O'Reilly",
+            born: "October 13, 1839",
+            bornPlace: "Thomastown, Kilkenny, Ireland",
+            died: "February 28, 1892",
+            diedPlace: "Thomastown, Kilkenny, Ireland",
+            burial: "Jerpoint Abbey Graveyard, Thomastown, Kilkenny",
+            spouse: "Johanna Hanrahan",
             notes: [
-              "Married December 1, 1888 at the Roman Catholic Chapel of Meelin",
-              "By 1901, prosperous enough to employ a servant (John Mulcahy, 20)",
-              "9 children — 5 emigrated to America, others stayed in Ireland",
-              "Still in Newmarket in 1911 at 14 Church Street",
+              "Died at age 52 — his son Patrick was only 9 years old",
+              "Buried at Jerpoint Abbey — a 12th-century Cistercian monastery, a significant and historic burial site",
+              "Married Johanna Hanrahan in 1879 at either the Church of the Assumption in Thomastown or St. Columba's Church in Inistioge",
+              "Sources: Uncle Tom's ourclann.org research + Ancestry family trees",
             ],
           },
           {
-            name: "Ellen Ryan",
-            born: "~1864",
-            bornPlace: "Knockdaff, Meelin, Cork, Ireland",
-            spouse: "Michael O'Reilly",
+            name: "Johanna Hanrahan",
+            born: "October 13, 1858",
+            bornPlace: "Kilkenny, Ireland",
+            died: "March 6, 1949",
+            diedPlace: "Thomastown, Kilkenny, Ireland",
+            spouse: "Edward (Edmond) O'Reilly",
             notes: [
-              "Maiden name confirmed from 1888 civil marriage register",
-              "Her father Daniel was a deceased farmer by the time she married",
+              "Lived to age 90 — survived her husband by 57 years",
+              "Remained in Thomastown her entire life",
+              "Her brother John Hanrahan and sister Bridget Hanrahan were baptism sponsors for Patrick",
             ],
           },
         ],
-        notes: ["Their 9 children: Michael Jr (~1889), Daniel (~1891), William (~1894), Charles (~1896), Kate (~1898), Elizabeth/Eliza (~1901), Eilleen (~1902), Margaret Joseph (~1905), Francis (~1909)"],
       },
       {
         label: "Generation 2",
         relation: "Dave's Great-Grandparents",
         people: [
           {
-            name: "William O'Reilly",
-            born: "August 12, 1893",
-            bornPlace: "Newmarket, County Cork, Ireland",
-            died: "Before 1971",
-            diedPlace: "Chicago",
-            occupation: "Salesman, Real Estate",
-            spouse: "Anna Margaret Madden",
-            immigrated: "1915 (age 22)",
-            ship: "SS New York",
-            physical: "5'10\", brown hair, brown eyes",
+            name: "Patrick Joseph O'Reilly",
+            born: "March 6, 1883",
+            bornPlace: "Thomastown, Kilkenny, Ireland",
+            died: "October 25, 1972",
+            diedPlace: "Chicago, Cook County, Illinois",
+            occupation: "Unknown",
+            spouse: "Catherine Loretta Sheehy",
+            immigrated: "1906 (age 23)",
+            physical: 'Medium build, black hair, blue eyes',
+            burial: "St. Mary's Cemetery, Evergreen Park, IL (buried October 25, 1972)",
             notes: [
-              "WWI Veteran — served in US Army after immigrating",
-              "Married Anna Margaret Madden on November 5, 1918",
-              "Returned to Ireland in 1927 on SS Franconia to visit family",
-              "Brother Daniel emigrated first, was already in Chicago",
-              "Named his son Charles and daughter Eileen after siblings in Ireland",
+              "Christened March 8, 1883 at the Church of the Assumption, Thomastown, by Rev. John Walsh",
+              "Baptism sponsors: John Hanrahan and Bridget Hanrahan (his mother's siblings)",
+              "Father died when Patrick was 9 — grew up fatherless in Thomastown",
+              "Emigrated to the US in 1906, settled in Chicago",
+              "Married Catherine Loretta Sheehy on August 28, 1918 in Chicago",
+              "WWI Draft Card: registered at 727 E 50th St, Chicago (Draft Board 13)",
+              "Lived to age 89 — Dave's father Terrence would have been ~16 when Patrick died",
+              "Sources: Irish Civil Registration (Mar 1883), Church baptism, 1920 Census, 1940 Census, SSDI (SSN 319-07-3960), Cook County Marriage Index, WWI Draft Card",
             ],
           },
           {
-            name: "Anna Margaret Madden",
-            born: "~1893",
-            bornPlace: "Chicago, Illinois",
-            died: "April 11, 1971",
-            diedPlace: "Cook County, Illinois",
-            occupation: "Homemaker",
-            spouse: "William O'Reilly",
+            name: "Catherine Loretta Sheehy",
+            born: "September 30, 1894",
+            bornPlace: "Chicago, Cook County, Illinois",
+            died: "October 9, 1990",
+            diedPlace: "Arlington Heights, Cook County, Illinois",
+            spouse: "Patrick Joseph O'Reilly",
             notes: [
-              "Father: Michael G. Madden — Chicago Police Officer from Tipperary",
-              "Mother: Bridget 'Biddie' Powell — also from Tipperary",
-              "Had 6 Madden siblings: Thomas, George, Dennis, Edward, Joseph, Mary",
-              "11 grandchildren (from obituary)",
+              "Born in Chicago — an Irish-American, not an immigrant",
+              "Father: Richard Joseph Sheehy (1860-1931)",
+              "Mother: Anna Woulfe (1875-1967)",
+              "Lived to age 96 — Dave's father would have known her well",
+              "Married Patrick on August 28, 1918 in Chicago",
             ],
           },
+        ],
+        notes: [
+          "Their 5 children: Loretta Josephine (1919-2000), Edward Joseph 'Bud' (1921-2002), Richard Joseph (1923-1980, died at 56), James Patrick (1924-2012, bachelor missionary in Deming, NM), Jerome (b. 1932, possibly still living)",
         ],
       },
       {
@@ -193,12 +208,15 @@ export const familyLines: FamilyLine[] = [
             physical: '5\'11", 165 lbs, black hair, blue eyes, ruddy complexion',
             burial: "Holy Sepulchre Cemetery, Alsip, IL",
             notes: [
+              "Second of 5 children — older sister Loretta was born 1919",
               "WWII Veteran — enlisted ~1942, Service Number 16070923",
               "Army records show Air Corps; family says Patton's 3rd Army, Battle of the Bulge",
               "Brought home a captured German pistol",
-              "Known children: Mary Sue, Mike, Kathy, Tom, Eileen, Pat — Terry (Terrence Patrick) also a child, may not appear in obituary",
-              "Tom and Mike are twins. Terry is Dave's father.",
+              "Post-war career: Printer Foreman at R.R. Donnelley & Sons, then Food Salesman",
+              "Known children: Mary Sue, Joanne, Tom, Terrence (Terry), Patrick, Hugh",
+              "Tom is Dave's uncle. Terry (Terrence Patrick) is Dave's father.",
               "Funeral at St. Catherine of Alexandria Church, Oak Lawn",
+              "Inherited his father Patrick's black hair and blue eyes",
             ],
           },
           {
@@ -221,12 +239,21 @@ export const familyLines: FamilyLine[] = [
     stories: [
       {
         title: "One Block Apart",
-        content: "Edward O'Reilly's 1942 draft card lists his address as 7341 S. St. Lawrence Avenue. Eileen Coffey grew up at 7748 S. Langley Avenue. These streets are one block apart on Chicago's South Side. The O'Reilly boy from the West Side and the Coffey girl from Kerry stock — they were neighbors before they were sweethearts.",
+        content: "Edward O'Reilly's 1942 draft card lists his address as 7341 S. St. Lawrence Avenue. Eileen Coffey grew up at 7748 S. Langley Avenue. These streets are one block apart on Chicago's South Side. The O'Reilly boy and the Coffey girl from Kerry stock — they were neighbors before they were sweethearts.",
         pullQuote: "Two Irish families, one block apart on Chicago's South Side. Some things are not coincidence.",
       },
       {
-        title: "The Naming Tradition",
-        content: "William O'Reilly named his daughter Eileen after his sister Eilleen back in Newmarket, Cork. Decades later, his son Edward married a woman also named Eileen — Eileen Coffey. The name crossed the Atlantic and came back around.",
+        title: "Father Remembered",
+        content: "Dave's father Terrence remembered his great-grandfather's name as Patrick — not William, as earlier research had incorrectly suggested. He was right. Patrick Joseph O'Reilly was born in 1883 and died in 1972, when Terrence was about 16 years old. Old enough to remember the man, and the name. Sometimes the best genealogical source is the family member who was there.",
+      },
+      {
+        title: "Buried at the Abbey",
+        content: "Edward O'Reilly — Patrick's father and Dave's 2× great-grandfather — is buried at Jerpoint Abbey in Thomastown, Kilkenny. Founded in 1180 by Cistercian monks, the abbey is one of Ireland's finest medieval ruins. Its carved cloister arcade features knights and saints and dragons. Edward died at 52 in 1892, leaving 9-year-old Patrick fatherless. Fourteen years later, Patrick would leave Thomastown for America.",
+        pullQuote: "A medieval abbey in Kilkenny. That's where the O'Reilly story begins — and where it rests.",
+      },
+      {
+        title: "The Five Children of Patrick & Catherine",
+        content: "Patrick and Catherine raised five children in Chicago: Loretta Josephine (1919), Edward 'Bud' (1921), Richard Joseph (1923), James Patrick (1924), and Jerome (1932). Richard died at just 56. James Patrick — 'Uncle Jay' — never married, becoming a lifelong bookworm and eventually a missionary in Deming, New Mexico. Jerome, the baby, may still be living at age 94. A photo from the early 1950s shows the four older children together: Richard, James, Edward, and Loretta.",
       },
     ],
   },
@@ -356,8 +383,8 @@ export const familyLines: FamilyLine[] = [
         pullQuote: "She was the only survivor.",
       },
       {
-        title: "Two Sides of the Border",
-        content: "Dave's grandparents united both sides of Ireland. The O'Reilly line came from Northern Ireland (as recorded in the 1930 Census). The Coffey and Sheehan lines came from the Irish Free State — County Kerry, deep in the Catholic south. When Edward married Eileen, North met South in a Chicago parish.",
+        title: "Kilkenny Meets Kerry",
+        content: "Dave's grandparents united two different corners of Ireland. The O'Reilly line came from County Kilkenny in the southeast — medieval Norman country, the heart of the Pale's edge. The Coffey and Sheehan lines came from County Kerry in the southwest — deep Gaelic territory, remote and wild. When Edward married Eileen, the southeast met the southwest in a Chicago parish.",
       },
     ],
   },
@@ -710,7 +737,10 @@ export const familyLines: FamilyLine[] = [
 ];
 
 // ═══════════════════════════════════════════════
-// MADDEN/POWELL LINE DATA
+// MADDEN/POWELL LINE DATA — NOT PART OF DAVE'S FAMILY
+// These records belong to a different O'Reilly family (William O'Reilly from Cork).
+// Kept for reference but not displayed. The real O'Reilly great-grandmother is
+// Catherine Loretta Sheehy (née Sheehy), not Anna Margaret Madden.
 // ═══════════════════════════════════════════════
 
 export const maddenLine = {
@@ -763,20 +793,20 @@ export const maddenLine = {
 // ═══════════════════════════════════════════════
 
 export const immigrationTimeline = [
-  { year: 1882, person: "Michael G. Madden", from: "Tipperary, Ireland", to: "Chicago", flag: "🇮🇪", line: "Madden" },
+  // Michael G. Madden removed — belongs to a different O'Reilly family (William O'Reilly from Cork, not our line)
   { year: 1885, person: "Sigvart Sørensen (Lee)", from: "Vinger, Norway", to: "Boone County, IL", flag: "🇳🇴", line: "Lee" },
   { year: 1902, person: "John J. Coffey", from: "Kerry, Ireland", to: "Boston → Chicago", flag: "🇮🇪", line: "Coffey" },
   { year: 1903, person: "Thomas Jakubicek", from: "Lipov, Moravia", to: "Ellis Island → Chicago", flag: "🇨🇿", line: "Jakubicek" },
   { year: 1906, person: "Andrew Olaus Linnerud", from: "Hedmark, Norway", to: "New York → Chicago", flag: "🇳🇴", line: "Linnerud" },
   { year: 1906, person: "Julia Sheehan", from: "Kerry, Ireland", to: "Boston → Chicago", flag: "🇮🇪", line: "Sheehan" },
   { year: 1913, person: "Marie Melka", from: "Meremice, Bohemia", to: "New York → Chicago", flag: "🇨🇿", line: "Melka" },
-  { year: 1915, person: "William O'Reilly", from: "Cork, Ireland", to: "New York → Chicago", flag: "🇮🇪", line: "O'Reilly" },
+  { year: 1906, person: "Patrick Joseph O'Reilly", from: "Kilkenny, Ireland", to: "Chicago", flag: "🇮🇪", line: "O'Reilly" },
 ];
 
 export const convergenceEvents = [
   { year: 1911, event: "Andrew Linnerud marries Anna Gudrun Lee in Boone County, IL", lines: ["Linnerud", "Lee"] },
   { year: 1913, event: "John J. Coffey marries Julia Sheehan in Cook County", lines: ["Coffey", "Sheehan"] },
-  { year: 1918, event: "William O'Reilly marries Anna Margaret Madden in Cook County", lines: ["O'Reilly", "Madden"] },
+  { year: 1918, event: "Patrick Joseph O'Reilly marries Catherine Loretta Sheehy in Cook County", lines: ["O'Reilly", "Sheehy"] },
   { year: 1922, event: "Thomas Jakubicek marries Marie Melka in Cook County", lines: ["Jakubicek", "Melka"] },
   { year: 1948, event: "Edward O'Reilly marries Eileen Coffey — O'Reilly meets Coffey", lines: ["O'Reilly", "Coffey"] },
   { year: 1951, event: "Lyle Linnerud marries Helen Jakubicek — Norwegian meets Czech", lines: ["Linnerud", "Jakubicek"] },

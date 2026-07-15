@@ -196,7 +196,7 @@ export default function HomePage() {
           className="text-lg md:text-xl leading-relaxed text-ink-light"
         >
           This document traces every line. Every ship. Every address. Every census record. From
-          a farmhouse in Meelin, Cork to a stone cottage in Ballydarrig, Kerry. From the Linnerud
+          a medieval town in Thomastown, Kilkenny to a stone cottage in Ballydarrig, Kerry. From the Linnerud
           farm in Hedmark to the vineyards of Lipov, Moravia. All the way to a family on
           Chicago&apos;s South Side.
         </motion.p>
@@ -384,7 +384,7 @@ export default function HomePage() {
             {[
               { year: 1911, text: "Andrew Linnerud marries Anna Lee — Norwegian farm boy meets Norwegian-American girl in Boone County" },
               { year: 1913, text: "John Coffey marries Julia Sheehan — two Kerry immigrants unite on Chicago's South Side" },
-              { year: 1918, text: "William O'Reilly marries Anna Madden — Cork meets Tipperary in wartime Chicago" },
+              { year: 1918, text: "Patrick Joseph O'Reilly marries Catherine Loretta Sheehy — Kilkenny meets Chicago" },
               { year: 1922, text: "Thomas Jakubicek marries Marie Melka — two Kronprinz Wilhelm passengers find each other in Pilsen" },
               { year: "~1948", text: "Edward O'Reilly marries Eileen Coffey — the boy from one block over marries the girl from Kerry stock" },
               { year: 1951, text: "Lyle Linnerud marries Helen Jakubicek — the servant girl's grandson marries the Moravian printer's daughter" },
@@ -419,8 +419,8 @@ export default function HomePage() {
             draft card lists his address as 7141 Vernon Avenue — literally one block away. The
             Coffey household at 7748 S. Langley was six blocks from Capone. John Coffey was a
             railroad freight clerk raising seven children in the same neighborhood as the most
-            famous gangster in American history. Michael Madden was a Chicago cop during the
-            same era.
+            famous gangster in American history. Patrick Joseph O&apos;Reilly — Dave&apos;s great-grandfather —
+            was living just a few miles north at 727 E 50th Street.
           </p>
         </div>
       </section>

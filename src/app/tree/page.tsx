@@ -285,17 +285,17 @@ export default function TreePage() {
           <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12">
             <div className="flex flex-col items-center gap-2">
               <p className="text-[10px] text-ink-muted uppercase tracking-wider mb-1" style={{ fontFamily: "var(--font-sans)" }}>O&apos;Reilly Line</p>
-              <CoupleCard index={3} couple={{ left: { name: "William O'Reilly", years: "1893–?", origin: "Newmarket, Cork 🇮🇪", note: "WWI Vet" }, right: { name: "Anna M. Madden", years: "1893–1971", origin: "Chicago" }, married: "1918" }} />
+              <CoupleCard index={3} couple={{ left: { name: "Patrick J. O'Reilly", years: "1883–1972", origin: "Thomastown, Kilkenny 🇮🇪" }, right: { name: "Catherine L. Sheehy", years: "1894–1990", origin: "Chicago" }, married: "1918" }} />
               <ConnectorDown />
-              <CoupleCard index={4} couple={{ left: { name: "Michael O'Reilly", years: "~1863–?", origin: "Meelin, Cork 🇮🇪" }, right: { name: "Ellen Ryan", years: "~1864–?", origin: "Meelin, Cork 🇮🇪" }, married: "1888" }} />
+              <CoupleCard index={4} couple={{ left: { name: "Edward O'Reilly", years: "1839–1892", origin: "Thomastown, Kilkenny 🇮🇪" }, right: { name: "Johanna Hanrahan", years: "1858–1949", origin: "Kilkenny 🇮🇪" }, married: "1879" }} />
               <ConnectorDown />
-              <CoupleCard index={5} couple={{ left: { name: "Michael G. Madden", years: "1858–1944", origin: "Tipperary 🇮🇪", note: "Chicago Cop" }, right: { name: "Bridget Powell", years: "1869–1940", origin: "Tipperary 🇮🇪" }, married: "~1882" }} />
+              <CoupleCard index={5} couple={{ left: { name: "James O'Reilly", origin: "Thomastown, Kilkenny 🇮🇪" }, right: { name: "Ellen Walsh", origin: "Thomastown, Kilkenny 🇮🇪" } }} />
             </div>
             <div className="flex flex-col items-center gap-2">
               <p className="text-[10px] text-ink-muted uppercase tracking-wider mb-1" style={{ fontFamily: "var(--font-sans)" }}>Coffey Line</p>
               <CoupleCard index={6} couple={{ left: { name: "John J. Coffey", years: "1875–1957", origin: "Ballydarrig, Kerry 🇮🇪", note: "WWI Vet" }, right: { name: "Julia Sheehan", years: "1889–1965", origin: "Cahirciveen, Kerry 🇮🇪" }, married: "1913" }} />
               <ConnectorDown />
-              <CoupleCard index={7} couple={{ left: { name: "Jeremiah Coffey", years: "~1841–?", origin: "Kerry 🇮🇪" }, right: { name: "Wife (unknown)", origin: "Kerry 🇮🇪" } }} />
+              <CoupleCard index={7} couple={{ left: { name: "Jeremiah Coffey", years: "1836–?", origin: "Kerry 🇮🇪" }, right: { name: "Janet Clifford", years: "~1895–?", origin: "Kerry 🇮🇪" } }} />
               <ConnectorDown />
               <CoupleCard index={8} couple={{ left: { name: "Florence Sheehan", years: "~1849–?", origin: "Cahirciveen 🇮🇪" }, right: { name: "Debbie Sheehan", years: "~1851–?", origin: "Kerry 🇮🇪" } }} />
             </div>
@@ -417,8 +417,8 @@ export default function TreePage() {
             <tbody>
               {[
                 { line: "🇳🇴 Lee/Sørensen", depth: "6 gen", ancestor: "Sigri Andersdatter", year: "~1797", best: true },
-                { line: "🇮🇪 O'Reilly", depth: "5 gen", ancestor: "Michael O'Reilly Sr, Meelin", year: "pre-1863" },
-                { line: "🇮🇪 Madden/Powell", depth: "4 gen", ancestor: "Thomas Madden & Mary Griffin", year: "~1830s" },
+                { line: "🇮🇪 O'Reilly", depth: "5 gen", ancestor: "James O'Reilly & Ellen Walsh, Thomastown", year: "pre-1839" },
+                { line: "🇮🇪 Sheehy/Woulfe", depth: "3 gen", ancestor: "Richard J. Sheehy & Anna Woulfe", year: "~1860" },
                 { line: "🇮🇪 Coffey", depth: "4 gen", ancestor: "Jeremiah Coffey, Ballydarrig", year: "~1841" },
                 { line: "🇮🇪 Sheehan", depth: "3 gen", ancestor: "Florence & Debbie Sheehan", year: "~1849" },
                 { line: "🇳🇴 Linnerud", depth: "3 gen", ancestor: "Anders Pedersen", year: "~1860s" },
@@ -451,7 +451,8 @@ export default function TreePage() {
           {[
             { cemetery: "Holy Sepulchre Catholic Cemetery", location: "Alsip, IL", who: "Edward J. O'Reilly, Eileen M. O'Reilly, Julia Coffey (Sheehan)" },
             { cemetery: "Mount Olivet Catholic Cemetery", location: "Chicago, IL", who: "John J. Coffey" },
-            { cemetery: "Mount Carmel Catholic Cemetery", location: "Hillside, IL", who: "Michael G. Madden, Bridget Powell Madden" },
+            { cemetery: "St. Mary's Cemetery", location: "Evergreen Park, IL", who: "Patrick Joseph O'Reilly" },
+            { cemetery: "Jerpoint Abbey Graveyard", location: "Thomastown, Kilkenny, Ireland", who: "Edward (Edmond) O'Reilly" },
             { cemetery: "Jefferson Prairie / Bergen Cemetery", location: "Clinton, WI", who: "Andrew Linnerud, Anna Gudrun Linnerud, Albert S. Linnerud, Evelyn Conway" },
             { cemetery: "Borgen Cemetery", location: "Clinton, WI", who: "Sigvart S. Lee" },
             { cemetery: "Bohemian National Cemetery", location: "Chicago, IL", who: "Thomas Jakubicek, Marie Melka Jakubicek" },

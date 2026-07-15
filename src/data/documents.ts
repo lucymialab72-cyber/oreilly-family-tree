@@ -38,38 +38,12 @@ export const personDocuments: PersonDocuments[] = [
   },
 
   {
-    personName: "William O'Reilly",
+    personName: "Patrick Joseph O'Reilly",
     familyId: "oreilly",
     docs: [
-      { file: "oreilly/William-OReilly-WWI-Draft-Card-Born-Aug12-1893-Ireland.png", caption: "WWI Draft Card — William O'Reilly" },
-      { file: "oreilly/William-OReilly-WWI-Draft-Card-HANDWRITTEN-Original.png", caption: "WWI Draft Card — Handwritten Original" },
-      { file: "oreilly/William-OReilly-SS-New-York-Liverpool-1915-Age22-Cork.png", caption: "Ship Record — SS New York, Liverpool, 1915 (Age 22)" },
-      { file: "oreilly/William-OReilly-SS-Franconia-Cobh-1927-Return-From-Ireland.png", caption: "Ship Record — SS Franconia, Return from Ireland, 1927" },
-      { file: "oreilly/1901-Census-Willie-OReilly-Newmarket-Cork.png", caption: "1901 Irish Census — Willie O'Reilly, Newmarket, Cork" },
-      { file: "oreilly/1911-Census-William-OReilly-Church-St-Newmarket-Cork.png", caption: "1911 Irish Census — William O'Reilly, Church St, Newmarket" },
-      { file: "oreilly/1920-Census-William-Anna-Baby-Edward-Daniel-OReilly-Madison-St.png", caption: "1920 US Census — William, Anna, Baby Edward & Daniel, Madison St, Chicago" },
-      { file: "oreilly/1930-Census-William-OReilly-Head-Ferdinand-St.png", caption: "1930 Census — William O'Reilly, Head of Household, Ferdinand St" },
-      { file: "oreilly/William-Oreilly-Anna-Madden-Marriage-1918-Cook-County.png", caption: "Marriage Record — William O'Reilly & Anna Madden, 1918" },
-    ],
-  },
-
-  {
-    personName: "Michael O'Reilly",
-    familyId: "oreilly",
-    docs: [
-      { file: "oreilly/1888-HANDWRITTEN-Marriage-Certificate-Michael-OReilly-Ellen-Ryan-Meelin-Cork.png", caption: "1888 Handwritten Marriage Certificate — Michael O'Reilly & Ellen Ryan, Meelin, Cork" },
-      { file: "oreilly/1888-Civil-Marriage-Michael-OReilly-Ellen-Ryan-Kanturk-Cork.png", caption: "1888 Civil Marriage Record — Kanturk, Cork" },
-    ],
-  },
-
-  {
-    personName: "Anna Margaret Madden",
-    familyId: "oreilly",
-    docs: [
-      { file: "oreilly/Ann-M-OReilly-nee-Madden-Obituary-1971-ChicagoTribune.png", caption: "Obituary — Ann M. O'Reilly (née Madden), Chicago Tribune 1971" },
-      { file: "oreilly/Ann-M-OReilly-Obituary-ChicagoTribune-Apr13-1971.png", caption: "Obituary — Ann M. O'Reilly, Apr 13 1971" },
-      { file: "oreilly/1940-Census-Ann-OReilly-Madden-Ferdinand-St.png", caption: "1940 Census — Ann O'Reilly Madden, Ferdinand St, Chicago" },
-      { file: "oreilly/1930-Census-Edward-William-Ann-OReilly-Ferdinand-St.png", caption: "1930 Census — Edward, William & Ann O'Reilly, Ferdinand St" },
+      // Note: Documents for Patrick are on Uncle Tom's ourclann.org site (marriage certificate, photos, bio)
+      // Ancestry records confirmed: WWI Draft Card (Chicago, Catherine O'Reilly as relative), SSDI, 1920/1940 Census, Irish Civil Registration
+      // Physical document images to be added when obtained from Tom's site
     ],
   },
 
