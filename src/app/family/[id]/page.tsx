@@ -86,59 +86,59 @@ function PersonCard({ person, index }: { person: Person; index: number }) {
         </p>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 mt-4" style={{ fontFamily: "var(--font-sans)" }}>
+      <div className="flex flex-col gap-1 mt-4 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-2" style={{ fontFamily: "var(--font-sans)" }}>
         {person.born && (
-          <div className="text-sm">
+          <div className="text-sm min-w-0">
             <span className="text-ink-muted">Born:</span>{" "}
-            <span className="text-ink">{person.born}</span>
+            <span className="text-ink break-words">{person.born}</span>
           </div>
         )}
         {person.bornPlace && (
-          <div className="text-sm">
+          <div className="text-sm min-w-0">
             <span className="text-ink-muted">Place:</span>{" "}
-            <span className="text-ink">{person.bornPlace}</span>
+            <span className="text-ink break-words">{person.bornPlace}</span>
           </div>
         )}
         {person.died && (
-          <div className="text-sm">
+          <div className="text-sm min-w-0">
             <span className="text-ink-muted">Died:</span>{" "}
-            <span className="text-ink">{person.died}</span>
+            <span className="text-ink break-words">{person.died}</span>
           </div>
         )}
         {person.occupation && (
-          <div className="text-sm">
+          <div className="text-sm min-w-0">
             <span className="text-ink-muted">Occupation:</span>{" "}
-            <span className="text-ink">{person.occupation}</span>
+            <span className="text-ink break-words">{person.occupation}</span>
           </div>
         )}
         {person.spouse && (
-          <div className="text-sm">
+          <div className="text-sm min-w-0">
             <span className="text-ink-muted">Spouse:</span>{" "}
-            <span className="text-ink">{person.spouse}</span>
+            <span className="text-ink break-words">{person.spouse}</span>
           </div>
         )}
         {person.ship && (
-          <div className="text-sm">
+          <div className="text-sm min-w-0">
             <span className="text-ink-muted">Ship:</span>{" "}
-            <span className="text-ink italic">{person.ship}</span>
+            <span className="text-ink italic break-words">{person.ship}</span>
           </div>
         )}
         {person.immigrated && (
-          <div className="text-sm">
+          <div className="text-sm min-w-0">
             <span className="text-ink-muted">Immigrated:</span>{" "}
-            <span className="text-ink">{person.immigrated}</span>
+            <span className="text-ink break-words">{person.immigrated}</span>
           </div>
         )}
         {person.physical && (
-          <div className="text-sm">
+          <div className="text-sm min-w-0">
             <span className="text-ink-muted">Physical:</span>{" "}
-            <span className="text-ink">{person.physical}</span>
+            <span className="text-ink break-words">{person.physical}</span>
           </div>
         )}
         {person.burial && (
-          <div className="text-sm col-span-2">
+          <div className="text-sm min-w-0 lg:col-span-2">
             <span className="text-ink-muted">Burial:</span>{" "}
-            <span className="text-ink">{person.burial}</span>
+            <span className="text-ink break-words">{person.burial}</span>
           </div>
         )}
       </div>
@@ -347,7 +347,7 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
             className="mb-12 last:mb-0"
           >
             <div className="border border-border rounded-sm p-8 bg-white/30">
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
                 <div>
                   <h3 className="text-xl font-bold" style={{ fontFamily: "var(--font-display)" }}>
                     {crossing.person}
@@ -486,7 +486,7 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
                     Albert S. Linnerud · Age 20 · Chicago, Illinois
                   </p>
                 </div>
-                <div className="grid md:grid-cols-2 gap-0">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   <div className="p-4">
                     <a href="/docs/linnerud/Albert-Linnerud-KILLED-IN-STORM-Belvidere-Daily-Republican-Jun8-1933.png" target="_blank" rel="noopener noreferrer" className="block cursor-zoom-in hover:opacity-90 transition-opacity">
                       <img

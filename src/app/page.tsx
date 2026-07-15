@@ -286,7 +286,7 @@ export default function HomePage() {
           Each grandparent traces back to a different country.
         </motion.p>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {familyLines.map((line, i) => (
             <motion.div
               key={line.id}
