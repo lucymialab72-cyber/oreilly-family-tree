@@ -120,6 +120,7 @@ export const personDocuments: PersonDocuments[] = [
       { file: "linnerud/1891-Norway-Census-Anders-Olaus-Anderson-Vinger-Hedmark.png", caption: "1891 Norwegian Census — 'The Servant Girl's Son'" },
       { file: "linnerud/1900-Norway-Census-Anders-Andersen-Linnerud-Farm-Vinger.png", caption: "1900 Norwegian Census — Linnerud Farm, Vinger" },
       { file: "linnerud/Andreas-Linerud-SS-Caronia-1906-Ellis-Island.png", caption: "Immigration Record — SS Caronia, Ellis Island, 1906" },
+      { file: "linnerud/Andrew-O-Linnerud-Family-Portrait-1915-Anna-Grace-Albert-Evelyn.jpg", caption: "FAMILY PHOTO: Andrew & Anna Linnerud with Grace, Albert & Evelyn — 1915 (annotated by Lyle Linnerud)", isPhoto: true },
       { file: "linnerud/Andrew-Linnerud-WWI-Draft-Card-Record.png", caption: "WWI Draft Card — Andrew Linnerud" },
       { file: "linnerud/1920-Census-Andrew-Linnerud-Family-Oakley-Chicago.png", caption: "1920 Census — Andrew Linnerud Family, Oakley Ave, Chicago" },
       { file: "linnerud/1930-Census-Andrew-Linnerud-Family-Washtenaw-Chicago.png", caption: "1930 Census — Andrew Linnerud Family, Washtenaw, Chicago" },

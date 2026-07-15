@@ -24,6 +24,12 @@ const personPhotos: Record<string, { src: string; alt: string }[]> = {
     { src: "/docs/family-photos/Grandpa O.jpg", alt: "Grandpa O — Edward J. O'Reilly" },
     { src: "/docs/family-photos/Wedding photo.jpg", alt: "Wedding Photo — Edward & Eileen O'Reilly" },
   ],
+  "Andrew Olaus Linnerud": [
+    { src: "/docs/linnerud/Andrew-O-Linnerud-Family-Portrait-1915-Anna-Grace-Albert-Evelyn.jpg", alt: "Andrew & Anna Linnerud Family — 1915 (annotated by grandson Lyle)" },
+  ],
+  "Anna Gudrun Lee": [
+    { src: "/docs/linnerud/Andrew-O-Linnerud-Family-Portrait-1915-Anna-Grace-Albert-Evelyn.jpg", alt: "Andrew & Anna Linnerud Family — 1915" },
+  ],
   "Lyle Andrew Linnerud": [
     { src: "/docs/family-photos/Lyle-Andrew-Linnerud-1922-2015-PHOTO-Obituary-FindAGrave.png", alt: "Lyle Andrew Linnerud (1922–2015)" },
   ],

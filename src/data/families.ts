@@ -522,7 +522,7 @@ export const familyLines: FamilyLine[] = [
           },
         ],
         notes: [
-          "Their 4 children: Grace Mabel/Margis (1911-1998), Albert S. (1913-1933, killed in storm), Evelyn Bernice/Conway (1916-1969), Lyle Andrew (1922-2015)",
+          "Their 4 children: Grace Mable Othelia (1911-1998), Albert Siegel (1913-1933, killed in storm at 19), Evelyn Bernice/Conway (1915-1969), Lyle Andrew (1922-2015)",
         ],
       },
       {
@@ -582,7 +582,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         title: "Albert — Killed in the Storm",
-        content: "Albert S. Linnerud was 20 years old and working as a printer in Chicago when he was killed on June 4, 1933. The family story says a roof piece fell on him while driving with his girlfriend, who survived. The Belvidere Daily Republican from June 8, 1933 tells a different story: 'KILLED IN STORM' — Albert died when a factory wall collapsed during a violent storm. He was buried three days later at Bergen Cemetery in Wisconsin, next to where his father Andrew would be buried fifteen years later. His gravestone says simply: SON.",
+        content: "Albert Siegel Linnerud was 19 years old and working as a printer in Chicago when he was killed on June 4, 1933. The family story says a roof piece fell on him while driving with his girlfriend, who survived. The Belvidere Daily Republican from June 8, 1933 tells a different story: 'KILLED IN STORM' — Albert died when a factory wall collapsed during a violent storm. He was buried three days later at Bergen Cemetery in Wisconsin, next to where his father Andrew would be buried fifteen years later. His gravestone says simply: SON.",
         pullQuote: "SON.",
       },
       {
