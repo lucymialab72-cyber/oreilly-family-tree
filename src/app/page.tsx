@@ -31,6 +31,12 @@ function TopNav() {
             🗺️ Map
           </Link>
           <Link
+            href="/documents"
+            className="hidden md:block text-ink-muted hover:text-ink transition-colors"
+          >
+            🗂️ Documents
+          </Link>
+          <Link
             href="/tree"
             className="text-gold font-semibold hover:text-gold-light transition-colors flex items-center gap-1"
           >
