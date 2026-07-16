@@ -404,9 +404,9 @@ export const familyLines: FamilyLine[] = [
     ],
     stories: [
       {
-        title: "The Shipwreck Story",
-        content: "Two to three weeks before Eileen O'Reilly (née Coffey) died in 2013, she told Dave a story: her mother — or grandmother — had left Ireland for a better life, and the ship she was on sank. She was the only survivor. The identity of this woman and the ship remains a mystery. Julia Sheehan arrived safely on the SS Arabic in 1906. The story may refer to Julia's mother, or to a more distant relative, or it may be a family legend polished by decades of retelling. Either way, it was important enough for Eileen to share in her final days.",
-        pullQuote: "She was the only survivor.",
+        title: "The Ship That Sank",
+        content: "In June 2013, just weeks before she passed away at 90, Eileen O'Reilly told her grandson Dave and his wife a story she'd carried for decades: a woman in her family — her mother, or perhaps her grandmother — had left Ireland for a better life in America. The ship she was on sank. She survived.\n\nThe story has a remarkable anchor in fact. Eileen's mother, Julia Therese Sheehan, emigrated from County Kerry to Boston in 1906 aboard the SS Arabic — a White Star Line ocean liner on the Liverpool-Queenstown-Boston route. Julia arrived safely, married John J. Coffey in 1913, and raised seven children on Chicago's South Side.\n\nBut the SS Arabic did not survive. On August 19, 1915, a German submarine torpedoed the ship 50 miles off the coast of Kinsale, Ireland. It sank in under ten minutes. Forty-four people died. Three hundred and eighty survived.\n\nThe Arabic was the Sheehan family's ship. Between 1905 and 1914, at least five Sheehans from County Kerry sailed on it — including a Mary Sheehan in 1912 whose father was also named Patrick Sheehan, possibly Julia's own sister. Whether a Sheehan was aboard that final, fatal voyage remains unconfirmed. But the family knew the Arabic. They trusted it. And when it went down, the story entered the family's memory.\n\nEileen carried it for nearly a century. She passed it on just before she left.",
+        pullQuote: "The family knew the Arabic. They trusted it. And when it went down, the story entered the family's memory.",
       },
       {
         title: "Kilkenny Meets Kerry",
