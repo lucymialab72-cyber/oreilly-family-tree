@@ -293,11 +293,11 @@ export default function TreePage() {
             </div>
             <div className="flex flex-col items-center gap-2">
               <p className="text-[10px] text-ink-muted uppercase tracking-wider mb-1" style={{ fontFamily: "var(--font-sans)" }}>Coffey Line</p>
-              <CoupleCard index={6} couple={{ left: { name: "John J. Coffey", years: "1875–1957", origin: "Ballydarrig, Kerry 🇮🇪", note: "WWI Vet" }, right: { name: "Julia Sheehan", years: "1889–1965", origin: "Cahirciveen, Kerry 🇮🇪" }, married: "1913" }} />
+              <CoupleCard index={6} couple={{ left: { name: "John J. Coffey", years: "1875–1957", origin: "Ballydarrig, Kerry 🇮🇪", note: "WWI Vet" }, right: { name: "Julia T. Sheehan", years: "1889–1965", origin: "Dromod, Waterville, Kerry 🇮🇪" }, married: "1913" }} />
               <ConnectorDown />
-              <CoupleCard index={7} couple={{ left: { name: "Jeremiah Coffey", years: "1836–?", origin: "Kerry 🇮🇪" }, right: { name: "Janet Clifford", years: "~1895–?", origin: "Kerry 🇮🇪" } }} />
+              <CoupleCard index={7} couple={{ left: { name: "Jeremiah Coffey", years: "~1836–?", origin: "Kerry 🇮🇪" }, right: { name: "Janet Clifford", origin: "Kerry 🇮🇪" } }} />
               <ConnectorDown />
-              <CoupleCard index={8} couple={{ left: { name: "Florence Sheehan", years: "~1849–?", origin: "Cahirciveen 🇮🇪" }, right: { name: "Debbie Sheehan", years: "~1851–?", origin: "Kerry 🇮🇪" } }} />
+              <CoupleCard index={8} couple={{ left: { name: "Patrick Sheehan", years: "~1846–?", origin: "Kerry 🇮🇪" }, right: { name: "Mary Fitzgerald", years: "?–1931", origin: "Kerry 🇮🇪" } }} />
             </div>
           </div>
         </div>

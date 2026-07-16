@@ -220,7 +220,7 @@ export const familyLines: FamilyLine[] = [
             ],
           },
           {
-            name: "Eileen M. Coffey",
+            name: "Eileen Marie Coffey",
             born: "May 18, 1923",
             bornPlace: "Chicago, Illinois",
             died: "June 20, 2013",
@@ -273,7 +273,7 @@ export const familyLines: FamilyLine[] = [
       name: "Ballydarrig & Cahirciveen",
       region: "County Kerry",
       country: "Ireland",
-      description: "John J. Coffey came from Ballydarrig, a townland near Castlequin in County Kerry — the wild, beautiful southwest corner of Ireland. His wife Julia Sheehan grew up on the Old Road in Cahirciveen, about 30 miles away along the Ring of Kerry. Both families were farming people, Roman Catholic, Irish-speaking.",
+      description: "John J. Coffey came from Ballydarrig, a townland near Castlequin in County Kerry — the wild, beautiful southwest corner of Ireland. His wife Julia Sheehan came from Dromod Parish near Waterville, about 30 miles away along the Ring of Kerry. Both families were farming people, Roman Catholic, Irish-speaking.",
     },
     crossing: [
       {
@@ -306,24 +306,47 @@ export const familyLines: FamilyLine[] = [
         people: [
           {
             name: "Jeremiah (Jerry) Coffey",
-            born: "~1841",
-            bornPlace: "Ireland",
+            born: "~1836",
+            bornPlace: "County Kerry, Ireland",
             occupation: "Farmer",
+            spouse: "Janet Clifford",
             notes: [
               "Head of family at Ballydarrig, Castlequin, Kerry in 1901 Census",
               "Age 60 in 1901, Roman Catholic",
-              "6 children: John (~1877), Mary (~1879), Daniel (~1885), Timothy (~1887), Michael (~1888), Debbie (~1890)",
+              "6 children: John (~1875), Mary (~1879), Daniel (~1885), Timothy (~1887), Michael (~1888), Debbie (~1890)",
             ],
           },
           {
-            name: "Florence Sheehan",
-            born: "~1849",
+            name: "Janet Clifford",
             bornPlace: "County Kerry, Ireland",
-            spouse: "Debbie Sheehan",
+            spouse: "Jeremiah (Jerry) Coffey",
             notes: [
-              "Head of family at Old Road, Cahirciveen, Kerry in 1901 Census",
-              "Large family — 7+ children",
-              "Still at same address in 1911 Census (age 70)",
+              "John J. Coffey's mother",
+              "Source: Uncle Tom's ourclann.org research",
+              "No further details known — Kerry parish records may reveal more",
+            ],
+          },
+          {
+            name: "Patrick Sheehan",
+            born: "~1846",
+            bornPlace: "County Kerry, Ireland",
+            spouse: "Mary Fitzgerald",
+            notes: [
+              "Julia's father — from the Waterville/Dromod area of Kerry",
+              "Source: Uncle Tom's ourclann.org research",
+              "⚠️ Note: 1901/1911 Census lists Florence Sheehan as head of Julia's household at Old Road, Cahirciveen — Florence may be an uncle or grandfather, with Patrick deceased before the census",
+            ],
+          },
+          {
+            name: "Mary Fitzgerald Sheehan",
+            died: "1931",
+            bornPlace: "County Kerry, Ireland",
+            spouse: "Patrick Sheehan",
+            notes: [
+              "Julia's mother — maiden name Fitzgerald",
+              "Died 1931 — whether in Ireland or America is unknown",
+              "⚠️ Note: 1901/1911 Census lists 'Debbie Sheehan' as Florence's wife — may be a different generation",
+              "Source: Uncle Tom's ourclann.org research",
             ],
           },
         ],
@@ -346,7 +369,7 @@ export const familyLines: FamilyLine[] = [
             burial: "Mount Olivet Catholic Cemetery, Chicago",
             notes: [
               "WWI Veteran — registered September 12, 1918 (Old Man's Registration, age 43)",
-              "Married Julia Sheehan on June 25, 1913 in Cook County",
+              "Married Julia Sheehan on June 25, 1913 at St. Cyril Church, Chicago",
               "Nickel Plate Railroad clerk (from obituary)",
               "Funeral at St. Dorothy's Church",
               "Owned home at 7748 S. Langley Ave for 20+ years (1920-1940+)",
@@ -356,7 +379,7 @@ export const familyLines: FamilyLine[] = [
           {
             name: "Julia Therese Sheehan",
             born: "April 6, 1889",
-            bornPlace: "Cahirciveen area, County Kerry, Ireland",
+            bornPlace: "Dromod Parish, Waterville, County Kerry, Ireland",
             died: "April 25, 1965",
             diedPlace: "Evergreen Park, Cook County, IL",
             spouse: "John J. Coffey",
@@ -364,10 +387,13 @@ export const familyLines: FamilyLine[] = [
             ship: "SS Arabic",
             burial: "Holy Sepulchre Catholic Cemetery, Alsip, IL",
             notes: [
-              "Father: Florence Sheehan, Mother: Debbie Sheehan",
+              "Father: Patrick Sheehan (b. 1846), Mother: Mary Fitzgerald Sheehan (d. 1931)",
+              "Born in Dromod Parish, near Waterville — about 30 miles from John's home in Castlequin",
               "Still in Ireland at age 23 in the 1911 Census",
               "Emigrated from Killahane, Kerry at 18 with $10",
+              "Married John at St. Cyril Church, Chicago on June 25, 1913",
               "7 children, raised at 7748 S. Langley Ave",
+              "Died April 25, 1965 in Evergreen Park, IL at age 76",
             ],
           },
         ],
