@@ -160,8 +160,12 @@ export default function LyleConwayPage() {
             what he saw on screen.
           </p>
           <p className="text-lg leading-relaxed text-ink-light mb-4">
-            He attended art school, where he won multiple awards from the Art Institute of Chicago. He
-            worked as a social worker for four years — then left it all behind for Hollywood.
+            He attended the Chicago Academy of Fine Arts, where he won multiple awards from the Art
+            Institute of Chicago. His work was reportedly provocative and dark — family members recall
+            him describing pieces from this period, including a baby bottle nipple with needles
+            protruding from it. The kind of work that wins awards at art school and gets remembered
+            by everyone who saw it. He worked as a social worker for four years — then left it all
+            behind for Hollywood.
           </p>
           <p className="text-lg leading-relaxed text-ink-light">
             He started with Gene Warren and David Allen in the special effects world, which led him
@@ -311,36 +315,36 @@ export default function LyleConwayPage() {
             Colonel Claghound, a Texas businessman), and <em>The Muppets at Walt Disney World</em>.
           </p>
 
+          <div className="border border-gold/30 bg-gold/5 rounded-sm p-4 mt-4 mb-2 text-sm" style={{ fontFamily: "var(--font-sans)" }}>
+            <strong>🔍 Which puppet is Lyle?</strong> The real Lyle the Dog is the distinguished-looking
+            terrier with <strong>short, upright pointy ears</strong>, tan/beige face, a tuft of gray hair
+            on top, and a suit jacket with bow tie. Some images online show long-eared shaggy white dogs
+            from the same &ldquo;Pass That Peace Pipe&rdquo; scene — those are <em>other</em> Muppet dog
+            characters (Muppy, Baskerville, the Wolfhound) who sang alongside Lyle.
+          </div>
+
           {/* More Lyle the Dog images */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
-            <div className="border border-border bg-white p-2 rounded-sm">
-              <img
-                src="/docs/conway/lyle-peace-pipe.webp"
-                alt="Lyle the Dog in 'Pass That Peace Pipe' — The Muppet Show"
-                className="w-full object-contain max-h-40"
-              />
-              <p className="text-[10px] text-ink-muted mt-2 text-center" style={{ fontFamily: "var(--font-sans)" }}>
-                &ldquo;Pass That Peace Pipe&rdquo; — Muppet Show S4E14
-              </p>
-            </div>
+          <div className="grid grid-cols-2 gap-4 mt-4">
             <div className="border border-border bg-white p-2 rounded-sm">
               <img
                 src="/docs/conway/lyle-claghound.webp"
-                alt="Lyle as Colonel Claghound — Dog City"
+                alt="Lyle the Dog as Colonel Claghound — Dog City series"
                 className="w-full object-contain max-h-40"
               />
               <p className="text-[10px] text-ink-muted mt-2 text-center" style={{ fontFamily: "var(--font-sans)" }}>
-                As Colonel Claghound — Dog City
+                Lyle as Colonel Claghound (Dog City) — same puppet, different role.
+                Note the short pointy ears and bow tie.
               </p>
             </div>
             <div className="border border-border bg-white p-2 rounded-sm">
               <img
-                src="/docs/conway/lyle-dogginit.webp"
-                alt="Lyle the Dog in other appearances"
+                src="/docs/conway/lyle-peace-pipe.webp"
+                alt="The Pass That Peace Pipe number — The Muppet Show Season 4, Ep 14 (Liza Minnelli)"
                 className="w-full object-contain max-h-40"
               />
               <p className="text-[10px] text-ink-muted mt-2 text-center" style={{ fontFamily: "var(--font-sans)" }}>
-                Lyle the Dog — various appearances
+                &ldquo;Pass That Peace Pipe&rdquo; — Muppet Show S4E14 with Liza Minnelli.
+                Lyle debuted here alongside Muppy, Baskerville, and the Wolfhound.
               </p>
             </div>
           </div>
