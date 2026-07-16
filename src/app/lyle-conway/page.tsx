@@ -195,6 +195,95 @@ export default function LyleConwayPage() {
         </motion.div>
       </section>
 
+      {/* Creations Gallery */}
+      <section className="max-w-3xl mx-auto px-6 py-8">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} custom={0}>
+          <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "var(--font-display)" }}>
+            📸 His Most Famous Creations
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="border border-border bg-white p-2 rounded-sm shadow-sm">
+              <img
+                src="/docs/conway/creations/miss-piggy-1979.jpg"
+                alt="Miss Piggy — sculpted by Lyle Conway for The Muppet Show Season 5, 1979"
+                className="w-full object-cover object-top max-h-48"
+              />
+              <p className="text-[11px] text-ink-muted mt-2 text-center font-semibold" style={{ fontFamily: "var(--font-sans)" }}>
+                Miss Piggy (1979)
+              </p>
+              <p className="text-[10px] text-ink-muted text-center" style={{ fontFamily: "var(--font-sans)" }}>
+                Conway sculpted her face for Season 5 of The Muppet Show
+              </p>
+            </div>
+            <div className="border border-border bg-white p-2 rounded-sm shadow-sm">
+              <img
+                src="/docs/conway/creations/skeksis-display.jpg"
+                alt="Skeksis puppet on display — The Dark Crystal (1982), designed by Lyle Conway"
+                className="w-full object-contain max-h-48"
+              />
+              <p className="text-[11px] text-ink-muted mt-2 text-center font-semibold" style={{ fontFamily: "var(--font-sans)" }}>
+                Skeksis — The Dark Crystal (1982)
+              </p>
+              <p className="text-[10px] text-ink-muted text-center" style={{ fontFamily: "var(--font-sans)" }}>
+                Conway was design & fabrication supervisor
+              </p>
+            </div>
+            <div className="border border-border bg-white p-2 rounded-sm shadow-sm">
+              <img
+                src="/docs/conway/creations/little-shop-poster.jpg"
+                alt="Little Shop of Horrors (1986) — Lyle Conway created Audrey II"
+                className="w-full object-contain max-h-48"
+              />
+              <p className="text-[11px] text-ink-muted mt-2 text-center font-semibold" style={{ fontFamily: "var(--font-sans)" }}>
+                Little Shop of Horrors (1986)
+              </p>
+              <p className="text-[10px] text-ink-muted text-center" style={{ fontFamily: "var(--font-sans)" }}>
+                Conway created all versions of Audrey II — Oscar / Saturn / BAFTA nominated
+              </p>
+            </div>
+            <div className="border border-border bg-white p-2 rounded-sm shadow-sm">
+              <img
+                src="/docs/conway/creations/dark-crystal-poster.jpg"
+                alt="The Dark Crystal (1982) movie poster"
+                className="w-full object-contain max-h-48"
+              />
+              <p className="text-[11px] text-ink-muted mt-2 text-center font-semibold" style={{ fontFamily: "var(--font-sans)" }}>
+                The Dark Crystal (1982)
+              </p>
+              <p className="text-[10px] text-ink-muted text-center" style={{ fontFamily: "var(--font-sans)" }}>
+                Designed Aughra, Skeksis, Urskeks. Also voiced the Urskeks.
+              </p>
+            </div>
+            <div className="border border-border bg-white p-2 rounded-sm shadow-sm">
+              <img
+                src="/docs/conway/creations/return-to-oz-poster.jpg"
+                alt="Return to Oz (1985) movie poster — Lyle Conway led creature design and voiced the Gump"
+                className="w-full object-contain max-h-48"
+              />
+              <p className="text-[11px] text-ink-muted mt-2 text-center font-semibold" style={{ fontFamily: "var(--font-sans)" }}>
+                Return to Oz (1985)
+              </p>
+              <p className="text-[10px] text-ink-muted text-center" style={{ fontFamily: "var(--font-sans)" }}>
+                Led creature design. Created Jack Pumpkinhead + the Gump. Voiced the Gump.
+              </p>
+            </div>
+            <div className="border border-border bg-white p-2 rounded-sm shadow-sm">
+              <img
+                src="/docs/conway/lyle-the-dog-muppet.png"
+                alt="Lyle the Dog — the Muppet character named after Lyle Conway"
+                className="w-full object-contain max-h-48"
+              />
+              <p className="text-[11px] text-ink-muted mt-2 text-center font-semibold" style={{ fontFamily: "var(--font-sans)" }}>
+                Lyle the Dog
+              </p>
+              <p className="text-[10px] text-ink-muted text-center" style={{ fontFamily: "var(--font-sans)" }}>
+                Conway designed and named this Muppet dog after himself
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
       <div className="max-w-3xl mx-auto px-6">
         <div className="heritage-divider"><span className="text-gold">✦</span></div>
       </div>
