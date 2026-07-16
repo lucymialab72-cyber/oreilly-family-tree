@@ -36,6 +36,13 @@ function TopNav() {
           >
             🗂️ Documents
           </Link>
+          <a
+            href="/oreilly-family-tree-print.pdf"
+            download="OReilly-Family-Tree.pdf"
+            className="hidden md:block text-ink-muted hover:text-ink transition-colors"
+          >
+            🖨️ Print
+          </a>
           <Link
             href="/tree"
             className="text-gold font-semibold hover:text-gold-light transition-colors flex items-center gap-1"
@@ -472,6 +479,21 @@ export default function HomePage() {
               style={{ fontFamily: "var(--font-sans)" }}
             >
               🌳 Full Family Tree
+            </Link>
+            <a
+              href="/oreilly-family-tree-print.pdf"
+              download="OReilly-Family-Tree.pdf"
+              className="px-6 py-3 border border-border rounded-sm hover:border-gold hover:bg-white transition-all text-sm"
+              style={{ fontFamily: "var(--font-sans)" }}
+            >
+              🖨️ Download Print Version
+            </a>
+            <Link
+              href="/documents"
+              className="px-6 py-3 border border-border rounded-sm hover:border-gold hover:bg-white transition-all text-sm"
+              style={{ fontFamily: "var(--font-sans)" }}
+            >
+              🗂️ Source Documents
             </Link>
           </div>
         </div>
