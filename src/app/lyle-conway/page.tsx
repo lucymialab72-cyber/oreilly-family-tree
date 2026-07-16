@@ -195,6 +195,78 @@ export default function LyleConwayPage() {
         </motion.div>
       </section>
 
+      {/* Newspaper Article Section */}
+      <section className="max-w-3xl mx-auto px-6 py-16">
+        <div className="heritage-divider"><span className="text-gold">✦</span></div>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} custom={0} className="mt-12">
+          <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: "var(--font-display)" }}>
+            📰 Found in the Chicago Tribune — March 3, 1967
+          </h2>
+          <p className="text-sm text-gold font-semibold mb-6" style={{ fontFamily: "var(--font-sans)" }}>
+            70th Annual Chicago and Vicinity Exhibition · Art Institute of Chicago
+          </p>
+          <p className="text-lg leading-relaxed text-ink-light mb-6">
+            The Chicago Tribune art critic reviewed the 70th Annual Chicago and Vicinity Exhibition at the
+            Art Institute of Chicago — and singled out Lyle Conway&apos;s work by name. His piece,{" "}
+            <em>&ldquo;Birth of Venus,&rdquo;</em> was shown alongside works by notable Chicago-area
+            artists of the era.
+          </p>
+
+          <div className="pull-quote my-6">
+            <p>
+              &ldquo;Lyle A. Conway&apos;s &lsquo;Birth of Venus&rsquo; shows a partly peeled banana
+              touched up to resemble&hellip;&rdquo;
+            </p>
+            <cite className="block text-sm text-ink-muted mt-2 not-italic" style={{ fontFamily: "var(--font-sans)" }}>
+              — Chicago Tribune, March 3, 1967, Page 53
+            </cite>
+          </div>
+
+          <p className="text-ink-light text-base leading-relaxed mb-6">
+            The Tribune critic noted the show contained &ldquo;sexual imagery.&rdquo; Conway&apos;s
+            banana piece fit squarely in that category — dark, surrealist, deliberately provocative.
+            He was 21 years old. His family told stories about work like this for the rest of his life.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+            <div className="border border-border bg-white p-2 rounded-sm shadow-sm">
+              <img
+                src="/docs/conway/newspaper/chicago-tribune-1967-lyle-name.png"
+                alt="Chicago Tribune March 3 1967 — Lyle A. Conway name highlighted in 70th Chicago and Vicinity Art Show review"
+                className="w-full object-contain"
+              />
+              <p className="text-[10px] text-ink-muted mt-2 text-center" style={{ fontFamily: "var(--font-sans)" }}>
+                Chicago Tribune · Fri, Mar 03, 1967 · Page 53 — &ldquo;Lyle A. Conway&apos;s &lsquo;Birth of Venus&rsquo;&rdquo; highlighted
+              </p>
+            </div>
+            <div className="border border-border bg-white p-2 rounded-sm shadow-sm">
+              <img
+                src="/docs/conway/newspaper/chicago-tribune-1967-context.png"
+                alt="Chicago Tribune March 3 1967 — Full article context showing Conway alongside other notable Chicago artists"
+                className="w-full object-contain"
+              />
+              <p className="text-[10px] text-ink-muted mt-2 text-center" style={{ fontFamily: "var(--font-sans)" }}>
+                Full article context — Conway in the left column alongside Suellen Rocca, James Barbee, Vincent Arcilesi, and others
+              </p>
+            </div>
+          </div>
+
+          <div className="border border-border rounded-sm p-5 bg-white/30 mt-6" style={{ fontFamily: "var(--font-sans)" }}>
+            <h3 className="text-sm font-bold text-ink-muted uppercase tracking-wider mb-3">What This Confirms</h3>
+            <ul className="space-y-2 text-sm text-ink-light">
+              <li>✅ Lyle Conway exhibited at the Art Institute of Chicago Annual Show in <strong>1967</strong>, age 21</li>
+              <li>✅ His piece <strong>&ldquo;Birth of Venus&rdquo;</strong> was named by the Chicago Tribune art critic</li>
+              <li>✅ The work was deliberately provocative — a peeled banana altered to resemble something else</li>
+              <li>✅ He was shown alongside serious Chicago artists: Vincent Arcilesi, Jim Hayes, Suellen Rocca, James Barbee, Harry Bouras</li>
+              <li>📚 The Smithsonian Archives of American Art holds the Art Institute&apos;s exhibition files — including artists&apos; own biographical data sheets. Lyle may have filled one out in his own handwriting. Contact: <a href="https://www.aaa.si.edu" className="text-gold hover:underline" target="_blank" rel="noreferrer">aaa.si.edu</a></li>
+            </ul>
+          </div>
+          <p className="text-xs text-ink-muted mt-3 italic" style={{ fontFamily: "var(--font-sans)" }}>
+            Source: Chicago Tribune · Friday March 3, 1967 · Page 53 · Via Newspapers.com / Ancestry
+          </p>
+        </motion.div>
+      </section>
+
       {/* Creations Gallery */}
       <section className="max-w-3xl mx-auto px-6 py-8">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} custom={0}>
