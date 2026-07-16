@@ -343,8 +343,8 @@ export default function LyleStoryPage() {
             🐔 Mike the Headless Chicken
           </h2>
           <p className="text-lg leading-relaxed text-ink-light mb-4">
-            Family story, passed down through Dave&apos;s brother: somewhere on the West Coast, probably
-            during a shore leave in Los Angeles or Long Beach, Grandpa Lyle saw a headless chicken.
+            Grandpa Lyle told his kids and grandkids about the time he saw a headless chicken —
+            somewhere on the West Coast, probably during a shore leave in Los Angeles or Long Beach.
           </p>
           <p className="text-lg leading-relaxed text-ink-light mb-4">
             This sounds like a tall tale. It&apos;s not.
@@ -368,6 +368,32 @@ export default function LyleStoryPage() {
               $4,500 a month.
             </p>
           </div>
+          {/* Mike photos */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+            <div className="border border-border bg-white p-3 rounded-sm shadow-sm">
+              <img
+                src="/docs/mike-chicken/mike-on-display.png"
+                alt="Mike the Headless Chicken — standing alive without his head, 1945"
+                className="w-full object-contain max-h-64"
+              />
+              <p className="text-center text-xs text-ink-muted mt-2" style={{ fontFamily: "var(--font-sans)" }}>
+                Mike the Headless Chicken standing at the sideshow, 1945.
+                He lived for 18 months after the axe fell. Photo: Bob Landry / LIFE Magazine (public domain)
+              </p>
+            </div>
+            <div className="border border-border bg-white p-3 rounded-sm shadow-sm">
+              <img
+                src="/docs/mike-chicken/mike-with-head.jpg"
+                alt="Mike the Headless Chicken displayed with his severed head preserved in a jar, 1945"
+                className="w-full object-contain max-h-64"
+              />
+              <p className="text-center text-xs text-ink-muted mt-2" style={{ fontFamily: "var(--font-sans)" }}>
+                Lloyd Olsen holding Mike alongside his preserved severed head (red circle).
+                Olsen kept the head in a jar of alcohol. Photo: Bob Landry / LIFE Magazine (public domain)
+              </p>
+            </div>
+          </div>
+
           <p className="text-lg leading-relaxed text-ink-light mb-4">
             The Eberle docked in Los Angeles twice. After the war ended, the ship made three voyages
             from the West Coast to Japan and Korea between October 1945 and March 1946 — meaning
