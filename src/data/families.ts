@@ -213,7 +213,7 @@ export const familyLines: FamilyLine[] = [
               "Army records show Air Corps; family says Patton's 3rd Army, Battle of the Bulge",
               "Brought home a captured German pistol",
               "Post-war career: Printer Foreman at R.R. Donnelley & Sons, then Food Salesman",
-              "Known children: Mary Sue, Joanne, Tom, Terrence (Terry), Patrick, Hugh",
+              "Children (per Uncle Tom): MarySue, JoAnn, Tom, Terry, Patrick, Hugh",
               "Tom is Dave's uncle. Terry (Terrence Patrick) is Dave's father.",
               "Funeral at St. Catherine of Alexandria Church, Oak Lawn",
               "Inherited his father Patrick's black hair and blue eyes",
