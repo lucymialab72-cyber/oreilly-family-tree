@@ -209,8 +209,8 @@ export const familyLines: FamilyLine[] = [
             burial: "Holy Sepulchre Cemetery, Alsip, IL",
             notes: [
               "Second of 5 children — older sister Loretta was born 1919",
-              "WWII Veteran — enlisted ~1942, Service Number 16070923",
-              "Army records show Air Corps; family says Patton's 3rd Army, Battle of the Bulge",
+              "WWII Veteran — U.S. Army. Enlisted January 21, 1942 (45 days after Pearl Harbor, 3 days before his 21st birthday). Discharged January 5, 1946. Nearly 4 years of service. Service Number 16070923.",
+              "Family says Patton's 3rd Army, Battle of the Bulge (unverified — Army personnel files largely destroyed in 1973 NPRC fire)",
               "Brought home a captured German pistol",
               "Post-war career: Printer Foreman at R.R. Donnelley & Sons, then Food Salesman",
               "Children (per Uncle Tom): MarySue, JoAnn, Tom, Terry, Patrick, Hugh",
@@ -255,6 +255,11 @@ export const familyLines: FamilyLine[] = [
         title: "Black Hair, Blue Eyes",
         content: "Patrick Joseph O'Reilly's 1918 WWI draft card describes him simply: medium build, medium height, black hair, blue eyes. His son Edward 'Bud' inherited the same features — the 1942 WWII draft card records black hair, blue eyes, ruddy complexion. Dave's father Terry carries the same coloring. Three generations of O'Reilly men, the same black hair and blue eyes, passed down from a stone town in Kilkenny to Chicago's South Side.\n\nPatrick registered on September 12, 1918 — the 'Old Man's Registration' for men 18 to 45 who hadn't previously registered. He was 35, married to Catherine, with a baby on the way (Loretta would arrive in 1919). The war ended just two months later. Patrick almost certainly never served. But he signed up.",
         pullQuote: "Three generations of O'Reilly men. The same black hair and blue eyes from Kilkenny.",
+      },
+      {
+        title: "Two Immigrants, One Draft",
+        content: "In 1917, the United States entered World War I. Every man between 18 and 45 was required to register for the draft. Two of Dave's great-grandfathers — strangers to each other, from opposite corners of Europe — both walked into registration offices in Illinois and signed their names.\n\nPatrick Joseph O'Reilly, age 35, registered at Draft Board 13 in Chicago. Born in Thomastown, Kilkenny, Ireland. Medium build, black hair, blue eyes. Wife: Catherine O'Reilly. Address: 727 East 50th Street.\n\nAndrew Olaus Linnerud, age 32, registered in Boone County, 80 miles northwest of Chicago. Born in Vinger, Hedmark, Norway. Medium build, dark hair, blue eyes. Wife: Annie Linnerud. Living on a farm.\n\nNeither man likely served. Patrick was 35 with a baby on the way. Andrew was 32 with a young family in rural Illinois. The war ended two months after Patrick's registration. But both signed up. Two immigrants — one Irish, one Norwegian — who had left everything behind for America, and were willing to fight for it.\n\nA generation later, their sons would answer the call for real. Patrick's son Edward 'Bud' enlisted in the Army 45 days after Pearl Harbor. Andrew's son Lyle enlisted in the Coast Guard a year later. Both served the entire war. The fathers registered. The sons went.",
+        pullQuote: "Two immigrants who had left everything behind for America, and were willing to fight for it.",
       },
       {
         title: "The Five Children of Patrick & Catherine",
@@ -558,6 +563,7 @@ export const familyLines: FamilyLine[] = [
               "Born to an unmarried servant — 'the servant girl's son'",
               "Took his surname from the Linnerud farm where he grew up",
               "Married Anna Gudrun Lee in 1911, Boone County, IL (she was 18, he was 26)",
+              "WWI Draft Card (1917-1918): registered in Boone County, IL. Medium build, medium height, dark hair, blue eyes. Listed wife Annie Linnerud as relative. Age 32, married farmer — registered but almost certainly never served.",
               "Obituary: Chicago Tribune, Dec 6, 1948 — funeral at Bergen, Wisconsin",
               "4 children: Grace, Albert (died age 20), Evelyn, Lyle",
             ],
