@@ -124,6 +124,64 @@ export default function LyleStoryPage() {
         </motion.div>
       </section>
 
+      {/* Ship Photos */}
+      <section className="max-w-3xl mx-auto px-6 py-8">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} custom={0}>
+          <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "var(--font-display)" }}>
+            📸 The Ship in Photographs
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="border border-border bg-white p-3 rounded-sm shadow-sm">
+              <img
+                src="/docs/eberle/eberle-ap123-wwii.jpg"
+                alt="USS Admiral E.W. Eberle (AP-123) — halftone photograph from 1945"
+                className="w-full object-contain max-h-64"
+              />
+              <p className="text-center text-xs text-ink-muted mt-2" style={{ fontFamily: "var(--font-sans)" }}>
+                USS Admiral E.W. Eberle (AP-123), 1945 — the ship Lyle served on.
+                610 feet long, carrying up to 5,000 troops. U.S. Navy photo.
+              </p>
+            </div>
+            <div className="border border-border bg-white p-3 rounded-sm shadow-sm">
+              <img
+                src="/docs/eberle/eberle-usat-broadside.jpg"
+                alt="USS Admiral E.W. Eberle (AP-123) — broadside view at sea"
+                className="w-full object-contain max-h-64"
+              />
+              <p className="text-center text-xs text-ink-muted mt-2" style={{ fontFamily: "var(--font-sans)" }}>
+                Broadside view of the Eberle at sea — one of eleven Admiral W.S. Benson-class
+                troop transports manned by the U.S. Coast Guard during WWII.
+              </p>
+            </div>
+            <div className="border border-border bg-white p-3 rounded-sm shadow-sm">
+              <img
+                src="/docs/eberle/eberle-aerial-underway.jpg"
+                alt="USS Admiral E.W. Eberle (AP-123) — aerial view underway"
+                className="w-full object-contain max-h-64"
+              />
+              <p className="text-center text-xs text-ink-muted mt-2" style={{ fontFamily: "var(--font-sans)" }}>
+                Aerial view underway — showing the deck layout, cargo booms,
+                and the twin funnels. The Eberle traveled 85,000 miles in one year.
+              </p>
+            </div>
+            <div className="border border-border bg-white p-3 rounded-sm shadow-sm">
+              <img
+                src="/docs/eberle/eberle-color-1950s.jpg"
+                alt="USS Admiral E.W. Eberle (AP-123) — color photograph"
+                className="w-full object-contain max-h-64"
+              />
+              <p className="text-center text-xs text-ink-muted mt-2" style={{ fontFamily: "var(--font-sans)" }}>
+                Rare color photograph of the same vessel, later renamed USNS General
+                Simon B. Buckner (T-AP-123). Gray hull with buff upper works.
+              </p>
+            </div>
+          </div>
+          <p className="text-sm text-ink-muted mt-4 italic" style={{ fontFamily: "var(--font-sans)" }}>
+            Photos: U.S. Naval History and Heritage Command · Wikimedia Commons (public domain)
+          </p>
+        </motion.div>
+      </section>
+
       {/* Fast facts */}
       <section className="max-w-3xl mx-auto px-6 py-8">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} custom={0}>
@@ -305,7 +363,8 @@ export default function LyleStoryPage() {
 
           <div className="pull-quote mt-8">
             <p>
-              His first cousin was Lyle Conway — the puppeteer who created Miss Piggy and Audrey II.
+              His first cousin was <Link href="/lyle-conway" className="text-gold hover:text-gold-light underline">Lyle Conway</Link> —
+              the puppeteer who created Miss Piggy and Audrey II.
               The Muppet character &ldquo;Lyle the Dog&rdquo; was named after him.
             </p>
           </div>

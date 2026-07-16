@@ -180,19 +180,22 @@ export default function StoriesPage() {
               {story.content}
             </p>
 
-            {/* Link to family page */}
+            {/* Link to family page or dedicated story page */}
             {story.familyId !== "all" && (
               <Link
                 href={
-                  story.familyId === "linnerud" &&
                   story.title === "85,000 Miles at Sea"
                     ? "/lyle-story"
+                    : story.title === "Lyle Conway — The Puppeteer"
+                    ? "/lyle-conway"
                     : `/family/${story.familyId}`
                 }
                 className="inline-flex items-center gap-1 text-gold text-sm font-medium mt-4 hover:text-gold-dark transition-colors"
                 style={{ fontFamily: "var(--font-sans)" }}
               >
-                Read the full {story.familyName} line →
+                {story.title === "Lyle Conway — The Puppeteer"
+                  ? "See his full career & creations →"
+                  : `Read the full ${story.familyName} line →`}
               </Link>
             )}
 
