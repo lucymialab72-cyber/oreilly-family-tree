@@ -23,6 +23,9 @@ const voyageTimeline = [
   { date: "August 26, 1945", event: "The Eberle arrives in Manila, Philippines. 32 days. 16,000 miles." },
   { date: "March 25, 1945", event: "A Navy plane doing aerobatics for troops loses control during a loop. Rather than crash into the main deck full of soldiers watching, the pilot noses down into the ship's side. Both occupants of the plane are killed. 1 dead, 5 wounded on the ship. Lyle is aboard." },
   { date: "Mid-voyage", event: "Bow lookout spots a floating mine. Helmsman swerves. 40mm gun crew detonates it." },
+  { date: "September 10, 1945", event: "The same day the Eberle is making its way back to the West Coast: In Fruita, Colorado, a farmer named Lloyd Olsen chops the head off a chicken named Mike. The chicken does not die." },
+  { date: "September 23, 1945", event: "The Eberle docks at Tacoma, Washington, carrying 4,369 troops — the first soldiers to land there after the war." },
+  { date: "October 1945", event: "Between voyages to Japan and Korea, the Eberle makes port calls in Los Angeles. Around this same time, Mike the Headless Chicken — now a national sensation — is being exhibited at a sideshow in Long Beach, California. Family story holds that Lyle saw him." },
   { date: "May 1946", event: "Honorably discharged. Total service: 41 months. Total miles at sea: 85,000." },
 ];
 
@@ -328,6 +331,81 @@ export default function LyleStoryPage() {
                 {port}
               </span>
             ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Mike the Headless Chicken */}
+      <section className="max-w-3xl mx-auto px-6 py-16">
+        <div className="heritage-divider"><span className="text-gold">✦</span></div>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn} custom={0} className="mt-12">
+          <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "var(--font-display)" }}>
+            🐔 Mike the Headless Chicken
+          </h2>
+          <p className="text-lg leading-relaxed text-ink-light mb-4">
+            Family story, passed down through Dave&apos;s brother: somewhere on the West Coast, probably
+            during a shore leave in Los Angeles or Long Beach, Grandpa Lyle saw a headless chicken.
+          </p>
+          <p className="text-lg leading-relaxed text-ink-light mb-4">
+            This sounds like a tall tale. It&apos;s not.
+          </p>
+          <p className="text-lg leading-relaxed text-ink-light mb-4">
+            On September 10, 1945 — three days before the Eberle docked at Tacoma with its returning
+            troops — a farmer named Lloyd Olsen in Fruita, Colorado, attempted to behead a five-month-old
+            Wyandotte rooster named Mike for supper. The axe missed the jugular vein. The brain stem
+            stayed mostly intact. A blood clot stopped the bleeding. Mike didn&apos;t die.
+          </p>
+          <p className="text-lg leading-relaxed text-ink-light mb-4">
+            Mike stumbled around the yard, attempting to preen and peck. Olsen started feeding him
+            corn and worms through an eyedropper down his exposed neck. Mike kept living. Olsen realized
+            he had something and took Mike on the road.
+          </p>
+          <div className="pull-quote my-6">
+            <p>
+              By early October 1945, Mike the Headless Chicken was being exhibited at a sideshow
+              in <strong>Long Beach, California</strong> — charging 25 cents a look. He would go on to
+              tour Los Angeles, San Diego, New York, and Atlantic City, earning his owner
+              $4,500 a month.
+            </p>
+          </div>
+          <p className="text-lg leading-relaxed text-ink-light mb-4">
+            The Eberle docked in Los Angeles twice. After the war ended, the ship made three voyages
+            from the West Coast to Japan and Korea between October 1945 and March 1946 — meaning
+            there were multiple LA port calls right when Mike was touring Southern California.
+          </p>
+          <p className="text-lg leading-relaxed text-ink-light mb-4">
+            Mike was featured in <em>LIFE</em> and <em>TIME</em> magazines. He was a national
+            sensation. Any sailor with a few hours of shore leave in LA or Long Beach in the fall
+            of 1945 would have seen the signs.
+          </p>
+          <p className="text-lg leading-relaxed text-ink-light mb-4">
+            Mike lived for 18 months headless before choking on mucus in a Phoenix motel room in
+            March 1947. His hometown of Fruita, Colorado, still holds an annual &ldquo;Mike the
+            Headless Chicken Day&rdquo; every May.
+          </p>
+          <div className="border border-border rounded-sm p-5 bg-white/30 mt-6" style={{ fontFamily: "var(--font-sans)" }}>
+            <h3 className="text-sm font-bold text-ink-muted uppercase tracking-wider mb-3">Timeline Overlap</h3>
+            <div className="space-y-2 text-sm">
+              <div className="flex gap-3">
+                <span className="text-gold font-semibold w-32 shrink-0">Sept 10, 1945</span>
+                <span className="text-ink-light">Mike the Headless Chicken survives beheading in Fruita, Colorado</span>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-gold font-semibold w-32 shrink-0">Sept 23, 1945</span>
+                <span className="text-ink-light">Eberle docks at Tacoma, Washington — war is over, troops coming home</span>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-gold font-semibold w-32 shrink-0">Oct 1945</span>
+                <span className="text-ink-light">Mike exhibited in Long Beach, CA — Eberle making West Coast port calls before voyages to Japan</span>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-gold font-semibold w-32 shrink-0">Oct 1945–Mar 1946</span>
+                <span className="text-ink-light">Three Eberle voyages: West Coast → Japan/Korea, with LA stops between runs</span>
+              </div>
+            </div>
+            <p className="text-xs text-ink-muted mt-4 italic">
+              The geography and timing match. This family story holds up.
+            </p>
           </div>
         </motion.div>
       </section>
