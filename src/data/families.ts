@@ -349,7 +349,7 @@ export const familyLines: FamilyLine[] = [
             occupation: "Food Salesman",
             spouse: "Eileen M. Coffey",
             physical: '5\'11", 165 lbs, black hair, blue eyes, ruddy complexion',
-            burial: "Holy Sepulchre Cemetery, Alsip, IL",
+            burial: "Holy Sepulchre Catholic Cemetery, Alsip, Cook County, Illinois — CONFIRMED (Find A Grave memorial #50749310). Same cemetery as John J. Coffey and Julia Coffey. The O'Reilly and Coffey families are buried together at Holy Sepulchre.",
             notes: [
               "Source: Uncle Tom's ourclann.org site (Person ID: P8)",
               "Born Edward Francis — adopted confirmation name Joseph, thereafter went by Edward Joseph O'Reilly (EJ O'Reilly)",
