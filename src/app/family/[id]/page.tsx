@@ -20,10 +20,40 @@ const fadeIn = {
 
 // Photo mapping for key people
 const personPhotos: Record<string, { src: string; alt: string }[]> = {
+  // ── O'Reilly Branch ──────────────────────────────────────────
   'Edward Joseph "Bud" O\'Reilly': [
     { src: "/docs/family-photos/Grandpa O.jpg", alt: "Grandpa O — Edward J. O'Reilly" },
     { src: "/docs/family-photos/Wedding photo.jpg", alt: "Wedding Photo — Edward & Eileen O'Reilly" },
+    { src: "/photos/oreilly/oreilly-family-1952.jpg", alt: "O'Reilly Family, 1952 — Eileen, Catherine Loretta, James Patrick, Edward Joseph, Patrick J., Jerome" },
+    { src: "/photos/oreilly/richard-oreilly-gloria-maloney-wedding-1952.jpg", alt: "Richard Joseph O'Reilly & Gloria Maloney Wedding, April 19, 1952" },
   ],
+  "Eileen Marie Coffey": [
+    { src: "/photos/coffey/eileen-coffey-bud-oreilly-wedding.jpg", alt: "Eileen Coffey & Edward O'Reilly — Wedding Photo" },
+    { src: "/photos/oreilly/oreilly-family-1952.jpg", alt: "O'Reilly Family, 1952" },
+  ],
+  "Johanna Hanrahan": [
+    { src: "/photos/oreilly/johanna-hanrahan.jpg", alt: "Johanna Hanrahan (1858–1949) — portrait" },
+  ],
+  "Patrick Joseph O'Reilly": [
+    { src: "/photos/oreilly/patrick-joseph-oreilly.jpg", alt: "Patrick Joseph O'Reilly — portrait, c.1905–1920" },
+    { src: "/photos/oreilly/patrick-catherine-50th-anniversary.jpg", alt: "Patrick & Catherine O'Reilly — 50th Wedding Anniversary, 1968" },
+    { src: "/photos/oreilly/oreilly-children-richard-james-edward-loretta.jpg", alt: "Children of Patrick & Catherine O'Reilly — Richard, James, Edward, Loretta, c.1920s" },
+  ],
+  "Catherine Loretta Sheehy": [
+    { src: "/photos/oreilly/patrick-catherine-50th-anniversary.jpg", alt: "Patrick & Catherine O'Reilly — 50th Wedding Anniversary, 1968" },
+    { src: "/photos/oreilly/oreilly-children-richard-james-edward-loretta.jpg", alt: "Children of Patrick & Catherine O'Reilly — Richard, James, Edward, Loretta, c.1920s" },
+  ],
+  "Anna Woulfe": [
+    { src: "/photos/oreilly/anna-woulfe.jpg", alt: "Anna Woulfe (1875–1967), known as 'Grandma Shug'" },
+  ],
+  // ── Coffey Branch ────────────────────────────────────────────
+  "John J. Coffey": [
+    { src: "/photos/coffey/john-joseph-coffey-wedding.jpg", alt: "John Joseph Coffey at son's wedding, c. late 1940s" },
+  ],
+  "Julia Therese Sheehan": [
+    { src: "/photos/coffey/julia-sheehan-coffey.jpg", alt: "Julia Sheehan Coffey (1889–1965)" },
+  ],
+  // ── Linnerud Branch ──────────────────────────────────────────
   "Andrew Olaus Linnerud": [
     { src: "/docs/linnerud/Andrew-O-Linnerud-Family-Portrait-1915-Anna-Grace-Albert-Evelyn.jpg", alt: "Andrew & Anna Linnerud Family — 1915 (annotated by grandson Lyle)" },
   ],
