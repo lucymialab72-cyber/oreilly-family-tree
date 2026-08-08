@@ -292,7 +292,7 @@ export const familyLines: FamilyLine[] = [
             bornPlace: "Thomastown, Kilkenny, Ireland",
             died: "October 25, 1972",
             diedPlace: "Chicago, Cook County, Illinois",
-            occupation: "Unknown",
+            occupation: "City Railway Conductor (streetcar driver), Chicago",
             spouse: "Catherine Loretta Sheehy",
             immigrated: "1906 (age 23)",
             physical: 'Medium build, black hair, blue eyes',
@@ -403,7 +403,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         title: "Black Hair, Blue Eyes",
-        content: "Patrick Joseph O'Reilly's 1918 WWI draft card describes him simply: medium build, medium height, black hair, blue eyes. His son Edward 'Bud' inherited the same features — the 1942 WWII draft card records black hair, blue eyes, ruddy complexion. Dave's father Terry carries the same coloring. Three generations of O'Reilly men, the same black hair and blue eyes, passed down from a stone town in Kilkenny to Chicago's South Side.\n\nPatrick registered on September 12, 1918 — the 'Old Man's Registration' for men 18 to 45 who hadn't previously registered. He was 35, married to Catherine, with a baby on the way (Loretta would arrive in 1919). The war ended just two months later. Patrick almost certainly never served. But he signed up.",
+        content: "Patrick Joseph O'Reilly's 1918 WWI draft card describes him simply: medium build, medium height, black hair, blue eyes. His son Edward 'Bud' inherited the same features — the 1942 WWII draft card records black hair, blue eyes, ruddy complexion. Dave's father Terry carries the same coloring. Three generations of O'Reilly men, the same black hair and blue eyes, passed down from a stone town in Kilkenny to Chicago's South Side.\n\nPatrick registered on September 12, 1918 — the 'Old Man's Registration' for men 18 to 45 who hadn't previously registered. He was 35, married to Catherine, with a baby on the way (Loretta would arrive in 1920). The war ended just two months later. Patrick almost certainly never served. But he signed up.",
         pullQuote: "Three generations of O'Reilly men. The same black hair and blue eyes from Kilkenny.",
       },
       {
@@ -419,6 +419,11 @@ export const familyLines: FamilyLine[] = [
         title: "Five Dollars and an Aunt in Newark",
         content: "On September 2, 1906, a 22-year-old man named Patrick Oreilly walked through Ellis Island and into America.\n\nHe had sailed from Queenstown — the main Irish emigrant port, now called Cobh — on the SS Celtic. In his pocket: five dollars. His marital status: single. His declared destination: not Chicago, but Newark, New Jersey. His contact: an aunt named Annia Hoggins.\n\nAnnia Hoggins. The name appears on no other family record. She was not an O'Reilly — the name Hoggins suggests she may have been a relation through the Hanrahan side, Patrick's mother's family, already established in America. She was waiting for him in New Jersey.\n\nWe don't know how long he stayed in Newark, or what he did there. What we know is that by 1918, Patrick Joseph O'Reilly was in Chicago — and on August 28 of that year, he married Catherine Loretta Sheehy at a Chicago church. Somewhere in the twelve years between Newark and Chicago, he had found his way to the city where he would spend the rest of his life.\n\nHe arrived with five dollars. He died in 1972 at age 88 or 89, after raising five children and watching his grandchildren grow up in the American suburbs he could not have imagined as a young man on a ship from Queenstown.\n\nSources: Ellis Island / New York Passenger Lists, SS Celtic, 2 Sep 1906. Record ID 4013498907, Ancestry.com collection 7488.",
         pullQuote: "His declared destination: not Chicago, but Newark, New Jersey. His contact: an aunt named Annia Hoggins — a name that appears on no other family record.",
+      },
+      {
+        title: "The Man on the Streetcar",
+        content: "By 1920, Patrick O'Reilly had made it to Chicago.\n\nThe 1920 Federal Census finds him at an address on 65th Street, in Chicago's Ward 7 on the South Side — not far from the Irish working-class neighborhoods that had been absorbing immigrants from County Kerry and County Kilkenny for decades. He was 35. He had been in America for fourteen years.\n\nHis occupation: Conductor. City Railway.\n\nPatrick O'Reilly drove streetcars. He worked the Chicago surface lines — the clanging, open-sided cars that carried factory workers, shoppers, and schoolchildren across the South Side grid. It was solid union work. Regular hours, regular pay. The kind of job an Irish immigrant with no college education could hold with dignity for decades.\n\nIn the house with him: his wife Catherine, age 25. And a daughter — Loretta O'Reilly, listed in the census as age 0. An infant. Born in 1920.\n\nThe following year, on January 24, 1921, they would have another child: Edward Francis O'Reilly — the boy who would grow up to be called 'Bud,' who would enlist in the Army 45 days after Pearl Harbor, who would serve in Patton's Third Army, who would come home and become Dave O'Reilly's grandfather.\n\nAlso in the house: a lodger named Mary Driscoll, age 20. Probably another Irish immigrant taking a room. The O'Reillys were renting, not owning. Five dollars when he arrived, a streetcar route on the South Side, a baby daughter, and another child on the way.\n\nHe was building something.\n\nSources: 1920 United States Federal Census, Chicago Ward 7, Cook County, Illinois. Roll T625_315, Page 5A, Enumeration District 422.",
+        pullQuote: "His occupation: Conductor. City Railway. Patrick O'Reilly drove streetcars across Chicago's South Side — the man who arrived with five dollars had built something.",
       },
       {
         title: "The River Between Them",
