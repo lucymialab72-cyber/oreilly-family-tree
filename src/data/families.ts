@@ -379,7 +379,9 @@ export const familyLines: FamilyLine[] = [
               "Parents were Irish immigrants from County Kerry",
               "Grew up at 7748 S. Langley Ave — ONE BLOCK from Edward's address on St. Lawrence Ave",
               "Told Dave a shipwreck story 2-3 weeks before she died",
-              "Siblings: John Patrick (b.1915), Mary Ellen (b.c.1918), Jeremiah (b.c.1920), Paul T. (b.1920), Daniel (b.1923, her twin), Loretta (b.1924)",
+              "Siblings: John Patrick (b.1915), Mary Ellen (b.c.1918), Jeremiah 'Jerry' (b.c.1920), Paul T. (b.c.1921), Daniel (b.1923, her twin — CONFIRMED by 1940 Census: both listed age 16), Loretta (b.c.1924)",
+              "1930 Census: Eileen listed as 'Jean M. Coffey, age 6' — name mangled by census taker. Twin Daniel listed as 'Donald J. Coffey, age 6'",
+              "1940 Census: Eileen listed as 'Eillen Coffey, age 16' — Daniel listed as 'Daniel Coffey, age 16'. Twin status CONFIRMED.",
               "1940 Census confirms presence in Chicago household at age ~17",
             ],
           },
@@ -716,6 +718,11 @@ export const familyLines: FamilyLine[] = [
         title: "From Killorglin to Ballydarrig: The Coffey Roots",
         content: "The Coffey story begins at Killorglin — a market town at the mouth of the Laune River in County Kerry, home to the famous Puck Fair. It was there, in 1824, that Mary Cronin married Jeremiah Coffey Sr., and began raising the family that would eventually reach Chicago.\n\nTheir son Jeremiah Coffey (born 1836 in the townland of Koilclohir near Killorglin) married Janet Clifford on June 10, 1875 at Cahirciveen — the very day their son John Joseph Coffey was born. The witnesses were Daniel Clifford and Patrick Coffey; the priest was Rev. J. Harding.\n\nJanet died in 1895, leaving Jeremiah a widower. By 1911, the Census records show him still in Kerry — widowed, 75 years old, having had 12 children born alive, 7 still living.\n\nJohn Joseph Coffey — Eileen's father and Dave's great-grandfather — had already been gone from Kerry for nearly a decade by then. He had sailed from Queenstown in 1902 on the SS Ivernia, bound for Boston, carrying next to nothing. He would build a life on Chicago's South Side, work the railroads, marry Julia Sheehan from Waterville, and raise seven children at 7748 S. Langley Avenue — one block from where the O'Reilly boy lived.",
         pullQuote: "Jeremiah Coffey married Janet Clifford on June 10, 1875 — the very day their son John Joseph was born.",
+      },
+      {
+        title: "Seven Children at 7748 Langley",
+        content: "The 1940 Federal Census finds the Coffey family exactly where they've been for twenty years: 7748 S. Langley Avenue, Chicago's South Side. The house is still owned. Still valued at $5,000 — the same as in 1930, the Depression having flattened everything.\n\nJohn J. Coffey is 64. He's still working — freight checker on the steam railroad, 48 hours a week, 40 weeks in 1939, earning $1,800 a year. Eighth-grade education. The same job, the same house, the same street.\n\nJulia is 52. They have seven children. In 1940, five are still at home:\n\nJohn P., 25. Mary Ellen, 22. Jerry, 20. Paul, 19. Eileen and Daniel, 16 — twins, both still in the house. Loretta, 15.\n\nEileen is 16 years old. In one year — 1941 — Pearl Harbor will be attacked. In two years, the boy from one block over on St. Lawrence Avenue will have been in the Army. In six or seven years, Eileen Coffey and Edward 'Bud' O'Reilly will be married.\n\nBut in April 1940, she's a teenager in a house full of siblings on Langley Avenue. Her father checks freight for the railroad. Her twin brother Daniel is right beside her — same age, same bedroom, same South Side block.\n\nThe 1930 Census transcriber mangled both their names: Eileen became 'Jean M.' and Daniel became 'Donald J.' The 1940 transcriber got closer: 'Eillen' and 'Daniel.' Two different government workers, ten years apart, trying to write down names in an Irish Catholic Chicago household through a screen door.\n\nSources: 1930 Federal Census, Chicago, Cook, Illinois, ED 0354; 1940 Federal Census, Chicago, Cook, Illinois, ED 103-540.",
+        pullQuote: "Eileen and Daniel Coffey — the twins — are both 16 in 1940. In 1930 the census taker called them 'Jean' and 'Donald.' In 1940: 'Eillen' and 'Daniel.' Two government workers, ten years apart, writing Irish names through a screen door on the South Side.",
       },
       {
         title: "The Sheehan Family of Waterville",
