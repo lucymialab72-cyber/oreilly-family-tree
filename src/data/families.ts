@@ -412,6 +412,20 @@ export const familyLines: FamilyLine[] = [
         title: "The Five Children of Patrick & Catherine",
         content: "Patrick and Catherine raised five children in Chicago: Loretta Josephine (1919), Edward 'Bud' (1921), Richard Joseph (1923), James Patrick (1924), and Jerome (1932). Richard died at just 56. James Patrick — 'Uncle Jay' — never married, becoming a lifelong bookworm and eventually a missionary in Deming, New Mexico. Jerome, the baby, may still be living at age 94. A photo from the early 1950s shows the four older children together: Richard, James, Edward, and Loretta.",
       },
+      {
+        title: "The River Between Them",
+        content: "Before Edward O'Reilly married Johanna Hanrahan in 1879, there was a river between their families.\n\nThe O'Reillys farmed at Powerswood, a small townland outside Thomastown on the Kilkenny side of the Arrigle River. The Hanrahans lived across the water, on the Inistioge side. To visit the Hanrahan home, Edward only had to cross the Arrigle at the bottom of his family's farm.\n\nIt is not a wide river. But it divided two townlands, two parishes, two ways of life. The O'Reillys were Thomastown people. The Hanrahans were Inistioge people. When they married — either at the Church of the Assumption in Thomastown or at St. Columba's in Inistioge — they united both banks.\n\nEdward died in 1892 at 52. Johanna outlived him by 57 years, dying in Thomastown in 1949 at age 90 or 93 — the records vary, as they often do for women of that era. She is buried in St. Mary's Cemetery on the road to Dublin. A widow for half a century, in the same county where she was born.",
+        pullQuote: "To visit the Hanrahan home, Edward only had to cross the Arrigle at the bottom of his family's farm.",
+      },
+      {
+        title: "From Abbeyfeale to Chicago: The Sheehy-Woulfe Line",
+        content: "Catherine Loretta Sheehy was born in Chicago in 1894 — but her roots ran deep into County Limerick. Her father Richard Joseph Sheehy came from Newcastle West, a market town in western Limerick. His father William Joseph Sheehy had married Catherine Barrett there in 1856 at the Immaculate Conception Church. William died young at 33, leaving Richard to grow up fatherless — just as Patrick O'Reilly would lose his father at 9.\n\nRichard emigrated to Chicago sometime in the 1880s and married Anna Woulfe in 1894 — the same year their daughter Catherine was born. Anna came from an even more remote corner of Limerick: Cratloe West, near the town of Abbeyfeale, close to the Kerry border. She had emigrated at age 12 with her parents Patrick Woulfe and Bridget Roche.\n\nAnna lived to 92. She was known to her great-grandchildren as 'Grandma Shug.' She died in 1967 on the south side of Chicago, and is buried at Holy Sepulcher Cemetery in Worth, Illinois — alongside her husband Richard, who preceded her by 36 years.\n\nFour Irish emigrants — from Newcastle West and Abbeyfeale and Cratloe West — converged on Chicago's South Side, married, and produced Catherine Loretta, who married Patrick O'Reilly, who produced Edward 'Bud', who married Eileen Coffey, who produced Terrence — Dave's father.",
+        pullQuote: "Anna Woulfe was known to her great-grandchildren as 'Grandma Shug.' She died in Chicago at 92, never having forgotten Abbeyfeale.",
+      },
+      {
+        title: "The 50th Anniversary",
+        content: "In 1968, Patrick Joseph O'Reilly and Catherine Loretta Sheehy celebrated their 50th wedding anniversary. They had married on August 28, 1918 — the year the Great War ended, the year the Spanish flu swept through Chicago, the year Patrick was 35 and Catherine was 23.\n\nFifty years later, a photograph was taken. Three panels: Patrick and Catherine as a young couple, as a middle-aged pair, and as elders — the long arc of a life together compressed into a single composite image. Patrick died four years later in 1972 at 89. Catherine would live another 18 years, dying in 1990 at 96 in Arlington Heights.\n\nTogether they had crossed from immigrant tenement to Chicago suburb across five decades — and raised five children who went on to build their own lives across the American Midwest.",
+      },
     ],
   },
 
@@ -659,6 +673,15 @@ export const familyLines: FamilyLine[] = [
       {
         title: "Kilkenny Meets Kerry",
         content: "Dave's grandparents united two different corners of Ireland. The O'Reilly line came from County Kilkenny in the southeast — medieval Norman country, the heart of the Pale's edge. The Coffey and Sheehan lines came from County Kerry in the southwest — deep Gaelic territory, remote and wild. When Edward married Eileen, the southeast met the southwest in a Chicago parish.",
+      },
+      {
+        title: "From Killorglin to Ballydarrig: The Coffey Roots",
+        content: "The Coffey story begins at Killorglin — a market town at the mouth of the Laune River in County Kerry, home to the famous Puck Fair. It was there, in 1824, that Mary Cronin married Jeremiah Coffey Sr., and began raising the family that would eventually reach Chicago.\n\nTheir son Jeremiah Coffey (born 1836 in the townland of Koilclohir near Killorglin) married Janet Clifford on June 10, 1875 at Cahirciveen — the very day their son John Joseph Coffey was born. The witnesses were Daniel Clifford and Patrick Coffey; the priest was Rev. J. Harding.\n\nJanet died in 1895, leaving Jeremiah a widower. By 1911, the Census records show him still in Kerry — widowed, 75 years old, having had 12 children born alive, 7 still living.\n\nJohn Joseph Coffey — Eileen's father and Dave's great-grandfather — had already been gone from Kerry for nearly a decade by then. He had sailed from Queenstown in 1902 on the SS Ivernia, bound for Boston, carrying next to nothing. He would build a life on Chicago's South Side, work the railroads, marry Julia Sheehan from Waterville, and raise seven children at 7748 S. Langley Avenue — one block from where the O'Reilly boy lived.",
+        pullQuote: "Jeremiah Coffey married Janet Clifford on June 10, 1875 — the very day their son John Joseph was born.",
+      },
+      {
+        title: "The Sheehan Family of Waterville",
+        content: "Julia Sheehan's family came from the Dromod Parish near Waterville — a remote and beautiful stretch of the Ring of Kerry where the mountains meet the Atlantic. Her father Patrick Sheehan was born in 1846. Her mother, Mary Fitzgerald, came from the same area. Together they had 12 children, including Julia and her sister Deborah — who would live to 97 — and Nellie Thompson, who made it to 102.\n\nLongevity was in the Sheehan blood. Julia herself lived to 76 despite the hardship of emigrating at 18 with $10 in her pocket. Her mother Mary died in Kerry in 1931. Her grandparents Daniel Sheehan (1798–1870) and Ellen Fitzgerald Sheehan (1810–1887) are the oldest confirmed ancestors on this branch of the family.\n\nJulia came to America on the SS Arabic in 1906, the same ship that would be torpedoed by a German submarine nine years later. She married John J. Coffey in 1913. Their daughter Eileen — born May 18, 1923, a twin — would grow up to marry Edward 'Bud' O'Reilly and become Dave's grandmother.",
       },
     ],
   },
