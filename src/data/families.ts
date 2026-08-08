@@ -302,7 +302,10 @@ export const familyLines: FamilyLine[] = [
               "Christened March 8, 1883 at the Church of the Assumption, Thomastown, by Rev. John Walsh",
               "Baptism sponsors: John Hanrahan and Bridget Hanrahan (his mother's siblings)",
               "Father died when Patrick was 9 — grew up fatherless in Thomastown",
-              "Emigrated to the US in 1906, settled in Chicago",
+              "Emigrated to the US in 1906 on the SS Celtic, departing Queenstown (Cobh), Ireland",
+              "Ellis Island arrival: September 2, 1906 — age 22, single, $5.00 in his pocket",
+              "Initial destination: Newark, New Jersey — going to his AUNT Annia Hoggins (unknown branch of family)",
+              "At some point between 1906 and 1918, moved to Chicago where he married Catherine",
               "Married Catherine Loretta Sheehy on August 28, 1918 in Chicago",
               "WWI Draft Card (1917-1918): registered at 727 E 50th St, Chicago, Draft Board 13. Medium build, medium height, black hair, blue eyes. Listed wife Catherine O'Reilly as relative. Registered in the September 12, 1918 'Old Man's Registration' at age 35 — the war ended just 2 months later. Likely never served.",
               "Lived to age 89 — Dave's father Terrence would have been ~16 when Patrick died",
@@ -411,6 +414,11 @@ export const familyLines: FamilyLine[] = [
       {
         title: "The Five Children of Patrick & Catherine",
         content: "Patrick and Catherine raised five children in Chicago: Loretta Josephine (1919), Edward 'Bud' (1921), Richard Joseph (1923), James Patrick (1924), and Jerome (1932). Richard died at just 56. James Patrick — 'Uncle Jay' — never married, becoming a lifelong bookworm and eventually a missionary in Deming, New Mexico. Jerome, the baby, may still be living at age 94. A photo from the early 1950s shows the four older children together: Richard, James, Edward, and Loretta.",
+      },
+      {
+        title: "Five Dollars and an Aunt in Newark",
+        content: "On September 2, 1906, a 22-year-old man named Patrick Oreilly walked through Ellis Island and into America.\n\nHe had sailed from Queenstown — the main Irish emigrant port, now called Cobh — on the SS Celtic. In his pocket: five dollars. His marital status: single. His declared destination: not Chicago, but Newark, New Jersey. His contact: an aunt named Annia Hoggins.\n\nAnnia Hoggins. The name appears on no other family record. She was not an O'Reilly — the name Hoggins suggests she may have been a relation through the Hanrahan side, Patrick's mother's family, already established in America. She was waiting for him in New Jersey.\n\nWe don't know how long he stayed in Newark, or what he did there. What we know is that by 1918, Patrick Joseph O'Reilly was in Chicago — and on August 28 of that year, he married Catherine Loretta Sheehy at a Chicago church. Somewhere in the twelve years between Newark and Chicago, he had found his way to the city where he would spend the rest of his life.\n\nHe arrived with five dollars. He died in 1972 at age 88 or 89, after raising five children and watching his grandchildren grow up in the American suburbs he could not have imagined as a young man on a ship from Queenstown.\n\nSources: Ellis Island / New York Passenger Lists, SS Celtic, 2 Sep 1906. Record ID 4013498907, Ancestry.com collection 7488.",
+        pullQuote: "His declared destination: not Chicago, but Newark, New Jersey. His contact: an aunt named Annia Hoggins — a name that appears on no other family record.",
       },
       {
         title: "The River Between Them",
