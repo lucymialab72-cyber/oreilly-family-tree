@@ -292,10 +292,10 @@ export const familyLines: FamilyLine[] = [
             bornPlace: "Thomastown, Kilkenny, Ireland",
             died: "October 25, 1972",
             diedPlace: "Chicago, Cook County, Illinois",
-            occupation: "City Railway Conductor (streetcar driver), Chicago",
+            occupation: "City Railway Conductor → Chicago Transit Authority Conductor (1920–1950+). Drove South Side streetcars for 30+ years. Still conducting at age 67 in 1950 when the CTA had replaced the old City Surface Lines.",
             spouse: "Catherine Loretta Sheehy",
             immigrated: "1906 (age 23)",
-            physical: 'Medium build, black hair, blue eyes',
+            physical: 'Medium build, black hair, grey eyes (WWI Draft Card 1917-18, Cook County Draft Board 20)',
             burial: "St. Mary's Cemetery, Evergreen Park, IL (buried October 25, 1972)",
             notes: [
               "Source: Uncle Tom's ourclann.org site (Person ID: P15)",
@@ -436,6 +436,11 @@ export const familyLines: FamilyLine[] = [
         title: "The House on St. Lawrence",
         content: "By 1930, the O'Reilly family had moved.\n\nThe 1930 Federal Census finds them at 7341 St. Lawrence Avenue, in Chicago's 8th Ward. Patrick is still a conductor on the City Surface lines — the same streetcar job he'd held for at least a decade. He's 46 years old. His wife Katharine is 34.\n\nBut one thing has changed: they are no longer renters.\n\nThe house at 7341 St. Lawrence is listed as owned — valued at $12,000. The man who walked through Ellis Island in 1906 with five dollars in his pocket now owned a home.\n\nAnd the house was full. In the 1930 Census, Patrick and Katharine are listed with four children:\n\nLoretta, 11. Edward, 9. Richard, 7. James, 5.\n\nEdward — the boy who would be called Bud — is nine years old. He's growing up on the South Side of Chicago, in a house his father bought, in a neighborhood of Irish and Polish and Italian families who had all come across the same ocean and made the same bet. Eleven years later, Pearl Harbor will be attacked. The boy in that house will enlist.\n\nJerome, the youngest, hasn't arrived yet. He'll come in 1932.\n\nPatrick's immigration year is listed as 1906. The census taker confirmed it. Twenty-four years after the SS Celtic dropped anchor in New York Harbor, the man who arrived with five dollars and an aunt's address in Newark owned a house in Chicago worth $12,000, and had four children sleeping upstairs.\n\nHe built it.\n\nSources: 1930 United States Federal Census, Chicago, Cook County, Illinois. Page 21B, Enumeration District 0341.",
         pullQuote: "The house at 7341 St. Lawrence is listed as owned — valued at $12,000. The man who arrived with five dollars now owned a home, and had four children sleeping upstairs. By 1940, all five were still there — including a 19-year-old named Edward, one year before Pearl Harbor.",
+      },
+      {
+        title: "Still on the Line — 1950",
+        content: "In April 1950, a census taker knocked on the door at 7341 St. Lawrence Avenue.\n\nPatrick O'Reilly was 67 years old. He answered the door.\n\nHe was still working. Forty hours a week. His occupation: Conductor. His employer: the Chicago Transit Authority — the CTA, which in 1947 had absorbed the old Chicago Surface Lines and become a government agency. The same routes. The same cars. A new name on the paycheck.\n\nPatrick had been driving those routes for over thirty years.\n\nIn the house with him: Katharine, 55. Three of their five children were still at home — Richard (27), James (25, though the census transcriber bizarrely wrote 75), and Jerome (19). Loretta and Bud were gone. Both married.\n\nBud — Edward Joseph O'Reilly — had already married Eileen Coffey by this point. We know because when Eileen's father John Coffey died in January 1951, the Chicago Tribune obituary listed her as 'Eileen O'Reilly.'\n\nPatrick had arrived with five dollars in 1906. He was still driving the same South Side routes in 1950. He would keep going until he simply couldn't anymore.\n\nHe died in 1972, at approximately age 89. He spent 66 years in America. He drove streetcars — and then CTA buses and cars — for at least three decades of it.\n\nSources: 1950 United States Federal Census, Chicago, Cook County, Illinois. Roll 5819, Page 12, Enumeration District 103-966. Ancestry collection 62308, record 219901243.",
+        pullQuote: "Patrick O'Reilly was still driving for the Chicago Transit Authority in 1950 — 40 hours a week, at age 67. He had driven the South Side routes for more than 30 years. The man who arrived with five dollars never stopped working.",
       },
       {
         title: "The River Between Them",
