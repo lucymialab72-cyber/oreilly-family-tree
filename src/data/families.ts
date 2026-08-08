@@ -455,7 +455,7 @@ export const familyLines: FamilyLine[] = [
       {
         title: "The Man Who Straightened the Chicago River",
         content: "In 1885, a young man named Richard White Wolfe left the Glen — a farm in the townland of Cratloe, parish of Athea, County Limerick — and sailed from Queenstown to America.\n\nHis father was Richard Edmond Woulfe, known locally as 'Dicky Ned' — a Catholic farmer and celebrated storyteller whose tales were recorded by Ireland's National Folklore Project. The Glen in Cratloe was the Woulfe family seat. It sat on the border of western Limerick and northern Kerry, not far from Abbeyfeale.\n\nNot far from where Anna Woulfe grew up.\n\nBy 1900, Richard Wolfe was in Chicago. He became a naturalized citizen in Cook County. He sold real estate. He reported for the Stockyards Daily Sun. He lectured on economics. He served as treasurer of the Irish Freedom Fund, which advocated for an Irish republic. He was a member of the Sheridan Club — a fraternal organization of Irish Americans headquartered on Michigan Avenue at 41st Street, deep in the South Side.\n\nAnd then he became Commissioner of Public Works for the City of Chicago under Mayor William Hale 'Big Bill' Thompson.\n\nAs commissioner, Richard Wolfe straightened the Chicago River — redirecting its course from the North Shore Channel to Belmont Street. He established Chicago's water filtration system. He served as Thompson's 'orator and wordsmith,' writing campaign material with the memorable line: 'Capitol Hill is influenced by the king of England.' His tenure was marked by controversies over city streets, accusations of corruption, and Irish nationalist fire.\n\nHe died in 1951. His New York Times obituary noted that he 'was a descendant of Gen. James Wolfe, conqueror of Quebec.'\n\nAnd Anna Woulfe — born in 1875 in Cratloe West near Abbeyfeale, the same townland — lived on the same South Side until she died in 1967, at age 92, known to her great-grandchildren as 'Grandma Shug.'\n\nCousin and cousin. One straightened the river. The other raised a family. The same farm in Limerick produced both.\n\nSources: thewolfes.family/richard-w-wolfe-18661951; Chicago Tribune archives.",
-        pullQuote: "As Commissioner of Public Works, Richard 'Dick' Wolfe straightened the Chicago River. He was born in the townland of Cratloe, Athea, Limerick — the same townlands as Anna Woulfe's family. The exact genealogical relationship is unproven, but the origin is the same.",
+        pullQuote: "Richard 'Dick' Wolfe straightened the Chicago River as Commissioner of Public Works. He was born in the townland of Cratloe, parish of Athea, Limerick — the same geographic area as Anna Woulfe's family. Whether they share a common ancestor is unproven, but they came from the same small corner of Ireland.",
       },
       {
         title: "The Woulfe Who Died Fighting Fascists in Spain",
@@ -652,14 +652,14 @@ export const familyLines: FamilyLine[] = [
             name: "John J. Coffey",
             born: "June 17, 1875",
             bornPlace: "Ballydarrig, Castlequin, County Kerry, Ireland",
-            died: "January 4, 1951",
+            died: "November 26, 1957 (per family records — see discrepancy note below)",
             diedPlace: "Chicago, Illinois",
             occupation: "Railroad Freight Clerk → Gas Co. Superintendent → Freight Checker (1930 Census confirmed: 'Freightman, Steam Railroad')",
             spouse: "Julia Sheehan",
             immigrated: "1902 — CONFIRMED by 1930 Census (immigration year field). SS Ivernia from Queenstown was correct. A separate 1904 'Jno Coffey' on SS Arabic was a different person.",
             ship: "SS Ivernia",
             physical: "Medium build, black hair, gray eyes",
-            burial: "Holy Sepulchre Catholic Cemetery, Alsip, Cook County, Illinois — Sect. 22 Blk. 11 Lot 25 Grave 2 (confirmed: Find A Grave memorial #74618781). NOTE: Uncle Tom's records had Nov 26 1957 / Mount Olivet — Find A Grave overrides with verified plot number.",
+            burial: "Mount Olivet Catholic Cemetery, Chicago (per family records — see discrepancy note)",
             notes: [
               "Source: Uncle Tom's ourclann.org site (Person ID: P25)",
               "Parents: Jeremiah Coffey (b.28 Aug 1836) and Janet Clifford (b. FILEMORE, Kerry; d.1895)",
@@ -669,6 +669,7 @@ export const familyLines: FamilyLine[] = [
               "Nickel Plate Railroad clerk (from obituary)",
               "Funeral at St. Dorothy's Church",
               "Owned home at 7748 S. Langley Ave for 20+ years (1920-1940+)",
+              "⚠️ DISCREPANCY — Death date/burial: Family records (Uncle Tom) say Nov 26, 1957 / Mount Olivet Cemetery. Find A Grave (#74618781) says Jan 4, 1951 / Holy Sepulchre Cemetery, Alsip, plot Sect.22 Blk.11 Lot 25 Gr.2. Find A Grave is user-contributed (not a government record). Cook County Death Index would resolve this — needs verification. DO NOT treat either as final until confirmed.",
               "Siblings in Chicago: Timothy, Michael, Mary Keating, Mrs. McIlvaney",
               "Documents: Certificate of Marriage (John & Julia Coffey); John Coffey Naturalization Record",
               "7 children: John Patrick (b.1915, d.1996), Mary Ellen (b.c.1918), Jeremiah (b.c.1920), Paul T. (b.1920, d.1996), Eileen & Daniel (b.18 May 1923, TWINS), Loretta (b.2 Dec 1924)",
