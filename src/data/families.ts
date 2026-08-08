@@ -453,7 +453,7 @@ export const familyLines: FamilyLine[] = [
       {
         title: "The Man Who Straightened the Chicago River",
         content: "In 1885, a young man named Richard White Wolfe left the Glen — a farm in the townland of Cratloe, parish of Athea, County Limerick — and sailed from Queenstown to America.\n\nHis father was Richard Edmond Woulfe, known locally as 'Dicky Ned' — a Catholic farmer and celebrated storyteller whose tales were recorded by Ireland's National Folklore Project. The Glen in Cratloe was the Woulfe family seat. It sat on the border of western Limerick and northern Kerry, not far from Abbeyfeale.\n\nNot far from where Anna Woulfe grew up.\n\nBy 1900, Richard Wolfe was in Chicago. He became a naturalized citizen in Cook County. He sold real estate. He reported for the Stockyards Daily Sun. He lectured on economics. He served as treasurer of the Irish Freedom Fund, which advocated for an Irish republic. He was a member of the Sheridan Club — a fraternal organization of Irish Americans headquartered on Michigan Avenue at 41st Street, deep in the South Side.\n\nAnd then he became Commissioner of Public Works for the City of Chicago under Mayor William Hale 'Big Bill' Thompson.\n\nAs commissioner, Richard Wolfe straightened the Chicago River — redirecting its course from the North Shore Channel to Belmont Street. He established Chicago's water filtration system. He served as Thompson's 'orator and wordsmith,' writing campaign material with the memorable line: 'Capitol Hill is influenced by the king of England.' His tenure was marked by controversies over city streets, accusations of corruption, and Irish nationalist fire.\n\nHe died in 1951. His New York Times obituary noted that he 'was a descendant of Gen. James Wolfe, conqueror of Quebec.'\n\nAnd Anna Woulfe — born in 1875 in Cratloe West near Abbeyfeale, the same townland — lived on the same South Side until she died in 1967, at age 92, known to her great-grandchildren as 'Grandma Shug.'\n\nCousin and cousin. One straightened the river. The other raised a family. The same farm in Limerick produced both.\n\nSources: thewolfes.family/richard-w-wolfe-18661951; Chicago Tribune archives.",
-        pullQuote: "As Commissioner of Public Works, Richard 'Dick' Wolfe straightened the Chicago River. He was almost certainly Anna Woulfe's cousin — born in the same townland of Cratloe, parish of Athea, County Limerick.",
+        pullQuote: "As Commissioner of Public Works, Richard 'Dick' Wolfe straightened the Chicago River. He was born in the townland of Cratloe, Athea, Limerick — the same townlands as Anna Woulfe's family. The exact genealogical relationship is unproven, but the origin is the same.",
       },
       {
         title: "The Woulfe Who Died Fighting Fascists in Spain",
@@ -652,9 +652,9 @@ export const familyLines: FamilyLine[] = [
             bornPlace: "Ballydarrig, Castlequin, County Kerry, Ireland",
             died: "November 26, 1957",
             diedPlace: "Chicago",
-            occupation: "Railroad Freight Clerk → Gas Co. Superintendent → Freight Checker",
+            occupation: "Railroad Freight Clerk → Gas Co. Superintendent → Freight Checker (1930 Census confirmed: 'Freightman, Steam Railroad')",
             spouse: "Julia Sheehan",
-            immigrated: "1902",
+            immigrated: "1902 — CONFIRMED by 1930 Census (immigration year field). SS Ivernia from Queenstown was correct. A separate 1904 'Jno Coffey' on SS Arabic was a different person.",
             ship: "SS Ivernia",
             physical: "Medium build, black hair, gray eyes",
             burial: "Mount Olivet Catholic Cemetery, Chicago",
