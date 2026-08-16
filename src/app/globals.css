@@ -137,6 +137,18 @@ main > footer {
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
+/* Pedigree chart highlight animation */
+@keyframes pedigree-flash {
+  0% { background-color: rgba(184, 134, 11, 0.15); }
+  50% { background-color: rgba(184, 134, 11, 0.25); }
+  100% { background-color: transparent; }
+}
+
+.pedigree-highlight {
+  animation: pedigree-flash 2s ease-out;
+  border-radius: 4px;
+}
+
 /* Decorative divider */
 .heritage-divider {
   display: flex;

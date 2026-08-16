@@ -10,6 +10,16 @@ import DocumentGallery from "@/components/DocumentGallery";
 import { getDocsByFamily } from "@/data/documents";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import PedigreeChart from "@/components/PedigreeChart";
+import { pedigreeTrees } from "@/data/pedigree-data";
+
+function slugify(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/['"()]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -106,7 +116,8 @@ function PersonCard({ person, index }: { person: Person; index: number }) {
       viewport={{ once: true }}
       variants={fadeIn}
       custom={index}
-      className="border border-border rounded-sm p-6 bg-white/50 hover:bg-white transition-colors"
+      id={slugify(person.name)}
+      className="border border-border rounded-sm p-6 bg-white/50 hover:bg-white transition-colors scroll-mt-20"
     >
       <PersonPhotoDisplay personName={person.name} />
       <h4 className="text-xl font-bold mb-1" style={{ fontFamily: "var(--font-display)" }}>
@@ -273,6 +284,14 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
           </section>
         );
       })()}
+
+      {/* ═══ PEDIGREE CHART ═══ */}
+      {pedigreeTrees[id] && (
+        <PedigreeChart
+          tree={pedigreeTrees[id]}
+          colorAccent={line.colorAccent}
+        />
+      )}
 
       {/* ═══ THE VILLAGE ═══ */}
       <section className="max-w-3xl mx-auto px-6 py-16">
