@@ -205,74 +205,12 @@ export const personDocuments: PersonDocuments[] = [
   // MADDEN LINE (shown on oreilly page)
   // ═══════════════════════════
 
-  {
-    personName: "Michael G. Madden",
-    familyId: "oreilly",
-    docs: [
-      { file: "madden/1858-Catholic-Baptism-Record-Michael-Madden-Templederry-Tipperary.png", caption: "1858 Catholic Baptism — Michael Madden, Templederry, County Tipperary" },
-      { file: "madden/1900-Census-Michael-Bridget-Madden-Family-121-Iowa-St-Chicago.png", caption: "1900 Census — Michael & Bridget Madden Family, 121 Iowa St, Chicago" },
-      { file: "madden/1910-Census-Michael-J-Madden-Head-Policeman-1933-W-Superior-St.png", caption: "1910 Census — Michael J. Madden, Head/Policeman, W. Superior St" },
-      { file: "madden/FindAGrave-Michael-G-Madden-1858-1944-Lisgoriff-Tipperary.png", caption: "Find a Grave — Michael G. Madden (1858–1944), Lisgoriff, Tipperary" },
-    ],
-  },
-
-  {
-    personName: 'Bridget "Biddie" Powell',
-    familyId: "oreilly",
-    docs: [
-      { file: "madden/FindAGrave-Bridget-Biddie-Powell-Madden-1869-1940-Tipperary.png", caption: "Find a Grave — Bridget 'Biddie' Powell Madden (1869–1940)" },
-      { file: "madden/1910-Census-Michael-Bridget-Madden-Family-W-Superior-St-Chicago.png", caption: "1910 Census — Michael & Bridget Madden Family, W. Superior St" },
-    ],
-  },
-
   // ═══════════════════════════
-  // ADDITIONAL O'REILLY DOCUMENTS
+  // REMOVED: William O'Reilly (Cork) family — different O'Reilly line, not ours.
+  // Removed: Michael G. Madden, Bridget Powell, William O'Reilly, Ann Madden,
+  //          Michael O'Reilly & Ellen Ryan (Cork), James & Isabella Reilly.
+  // Files kept on disk for reference but not displayed in gallery.
   // ═══════════════════════════
-
-  {
-    personName: "William O'Reilly (Generation 2)",
-    familyId: "oreilly",
-    docs: [
-      { file: "oreilly/William-OReilly-SS-New-York-Liverpool-1915-Age22-Cork.png", caption: "Ship Record — SS New York, Liverpool, 1915, Age 22, Cork" },
-      { file: "oreilly/William-OReilly-SS-Franconia-Cobh-1927-Return-From-Ireland.png", caption: "Ship Record — SS Franconia, Cobh, 1927 (Return from Ireland)" },
-      { file: "oreilly/William-OReilly-WWI-Draft-Card-Born-Aug12-1893-Ireland.png", caption: "WWI Draft Card — William O'Reilly (b. Aug 12, 1893, Ireland)" },
-      { file: "oreilly/1901-Census-Willie-OReilly-Newmarket-Cork.png", caption: "1901 Irish Census — Willie O'Reilly, Newmarket, Cork" },
-      { file: "oreilly/1911-Census-William-OReilly-Church-St-Newmarket-Cork.png", caption: "1911 Irish Census — William O'Reilly, Church St, Newmarket, Cork" },
-      { file: "oreilly/1920-Census-William-Anna-Baby-Edward-Daniel-OReilly-Madison-St.png", caption: "1920 Census — William, Anna, Baby Edward & Daniel O'Reilly" },
-      { file: "oreilly/1930-Census-William-OReilly-Head-Ferdinand-St.png", caption: "1930 Census — William O'Reilly, Ferdinand St, Chicago" },
-    ],
-  },
-
-  {
-    personName: "Ann M. O'Reilly (née Madden)",
-    familyId: "oreilly",
-    docs: [
-      { file: "oreilly/William-Oreilly-Anna-Madden-Marriage-1918-Cook-County.png", caption: "Marriage Record — William O'Reilly & Anna Madden, 1918, Cook County" },
-      { file: "oreilly/Ann-M-OReilly-Obituary-ChicagoTribune-Apr13-1971.png", caption: "Obituary — Ann M. O'Reilly, Chicago Tribune, Apr 13 1971" },
-      { file: "oreilly/Ann-M-OReilly-nee-Madden-Obituary-1971-ChicagoTribune.png", caption: "Obituary Detail — Ann M. O'Reilly (née Madden), 1971" },
-      { file: "oreilly/1930-Census-Edward-William-Ann-OReilly-Chicago.png", caption: "1930 Census — Edward, William & Ann O'Reilly, Chicago" },
-      { file: "oreilly/1930-Census-Edward-William-Ann-OReilly-Ferdinand-St.png", caption: "1930 Census — Ferdinand St Detail" },
-      { file: "oreilly/1940-Census-Ann-OReilly-Madden-Ferdinand-St.png", caption: "1940 Census — Ann O'Reilly Madden, Ferdinand St" },
-    ],
-  },
-
-  {
-    personName: "Michael O'Reilly & Ellen Ryan (Cork)",
-    familyId: "oreilly",
-    docs: [
-      { file: "oreilly/1888-Civil-Marriage-Michael-OReilly-Ellen-Ryan-Kanturk-Cork.png", caption: "Civil Marriage Record — Michael O'Reilly & Ellen Ryan, 1888, Kanturk, Cork" },
-      { file: "oreilly/1888-HANDWRITTEN-Marriage-Certificate-Michael-OReilly-Ellen-Ryan-Meelin-Cork.png", caption: "Handwritten Marriage Certificate — 1888, Meelin, Cork" },
-    ],
-  },
-
-  {
-    personName: "James & Isabella Reilly",
-    familyId: "oreilly",
-    docs: [
-      { file: "oreilly/1900-Census-James-Bell-Riely-Dickson-St.png", caption: "1900 Census — James & 'Bell' Riely, Dickson St" },
-      { file: "oreilly/1910-Census-James-Isabelle-Reilly-Dickson-St.png", caption: "1910 Census — James & Isabelle Reilly, Dickson St" },
-    ],
-  },
 
   // ═══════════════════════════
   // ADDITIONAL COFFEY DOCUMENTS

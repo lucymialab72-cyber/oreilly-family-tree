@@ -50,7 +50,7 @@ const bonusStories = [
   {
     title: "The Convergence",
     content:
-      "All roads led to Chicago's South Side. The Irish families settled in Chatham and Grand Crossing. The Norwegians made their home in Marquette Park and Chicago Lawn. The Czechs rooted in Pilsen. Over decades, these neighborhoods — separated by just a few miles of city blocks — brought the families together. An Irish cop's granddaughter married a Norwegian servant girl's grandson. A Kerry farmer's son raised his family one block from a Cork immigrant's boy. Two Czech teenagers who sailed on the same famous ship a decade apart found each other in Pilsen. By the 1950s, all four lines had converged into one family.",
+      "All roads led to Chicago's South Side. The Irish families settled in Chatham and Grand Crossing. The Norwegians made their home in Marquette Park and Chicago Lawn. The Czechs rooted in Pilsen. Over decades, these neighborhoods — separated by just a few miles of city blocks — brought the families together. An Irish cop's granddaughter married a Norwegian servant girl's grandson. A Kerry farmer's son raised his family one block from a Kilkenny immigrant's boy. Two Czech teenagers who sailed on the same famous ship a decade apart found each other in Pilsen. By the 1950s, all four lines had converged into one family.",
     pullQuote:
       "Four countries. Six generations. Separated by just a few miles of city blocks.",
     familyId: "all",

@@ -267,7 +267,7 @@ export default function TreePage() {
                 left: {
                   name: 'Edward J. "Bud" O\'Reilly',
                   years: "1921–2002",
-                  origin: "Chicago (Cork heritage)",
+                  origin: "Chicago (Kilkenny heritage)",
                   flag: "🇮🇪",
                   note: "WWII Veteran",
                 },

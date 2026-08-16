@@ -191,7 +191,7 @@ export default function HomePage() {
             Over three generations, their families converged — on the same streets, in the same
             parishes, at the same stockyards and railroad yards. An Irish cop&apos;s granddaughter
             married a Norwegian servant girl&apos;s grandson. A Kerry farmer&apos;s son raised his
-            family one block from a Cork immigrant&apos;s boy. Two Czech teenagers who sailed on
+            family one block from a Kilkenny immigrant&apos;s boy. Two Czech teenagers who sailed on
             the same famous ship a decade apart found each other in Pilsen.
           </p>
         </motion.div>

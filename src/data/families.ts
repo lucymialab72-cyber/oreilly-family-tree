@@ -1087,56 +1087,10 @@ export const familyLines: FamilyLine[] = [
 ];
 
 // ═══════════════════════════════════════════════
-// MADDEN/POWELL LINE DATA — NOT PART OF DAVE'S FAMILY
-// These records belong to a different O'Reilly family (William O'Reilly from Cork).
-// Kept for reference but not displayed. The real O'Reilly great-grandmother is
-// Catherine Loretta Sheehy (née Sheehy), not Anna Margaret Madden.
+// NOTE: Madden/Powell line data REMOVED — belonged to a different O'Reilly family
+// (William O'Reilly from Cork, not our line from Kilkenny).
+// Files kept on disk for reference only.
 // ═══════════════════════════════════════════════
-
-export const maddenLine = {
-  id: "madden",
-  name: "Madden & Powell",
-  subtitle: "From Tipperary to the Chicago Police",
-  country: "Ireland",
-  flag: "🇮🇪",
-  village: {
-    name: "Lisgoriff & Templederry",
-    region: "County Tipperary",
-    country: "Ireland",
-  },
-  generations: [
-    {
-      label: "Generation 1 — 3× Great-Grandparents",
-      people: [
-        { name: "Thomas Madden", origin: "Templederry, Tipperary" },
-        { name: "Mary Griffin", origin: "Tipperary" },
-        { name: "George Powell", origin: "Tipperary" },
-        { name: "Mary Butler", origin: "Tipperary" },
-      ],
-    },
-    {
-      label: "Generation 2 — 2× Great-Grandparents",
-      people: [
-        {
-          name: "Michael G. Madden",
-          born: "May 11, 1858",
-          bornPlace: "Lisgoriff, Templederry, County Tipperary",
-          died: "July 7, 1944",
-          occupation: "Chicago Police Officer",
-          immigrated: "1882",
-          notes: "Baptized May 13, 1858 at Templederry Catholic Church. Irish immigrant who became a cop during Prohibition. Owned home free and clear by 1910. Buried Mount Carmel Catholic Cemetery.",
-        },
-        {
-          name: 'Bridget "Biddie" Powell',
-          born: "May 29, 1869",
-          bornPlace: "County Tipperary, Ireland",
-          died: "February 15, 1940",
-          notes: "Married Michael ~1882. 7 children. Father: George Powell, Mother: Mary Butler. Buried Mount Carmel alongside Michael.",
-        },
-      ],
-    },
-  ],
-};
 
 // ═══════════════════════════════════════════════
 // CONVERGENCE TIMELINE DATA
