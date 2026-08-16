@@ -1,10 +1,25 @@
 "use client";
 
+import { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { familyLines } from "@/data/families";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import ScopedNav from "@/components/ScopedNav";
+import ScopedFooter from "@/components/ScopedFooter";
+
+const SIDE_FAMILIES: Record<string, string[]> = {
+  dad: ["oreilly", "coffey"],
+  mom: ["linnerud", "jakubicek"],
+};
+
+// "all" familyId stories are shared — show for dad only to avoid duplication
+const SIDE_ALL_STORIES: Record<string, boolean> = {
+  dad: false, // "The Convergence" mentions all families — skip on filtered views
+  mom: false,
+};
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -64,10 +79,18 @@ const bonusStories = [
 
 const stories = [...allStories, ...bonusStories];
 
-export default function StoriesPage() {
+function StoriesPageInner() {
+  const searchParams = useSearchParams();
+  const side = searchParams.get("side") as "dad" | "mom" | null;
+  const sideFilter = side && SIDE_FAMILIES[side] ? SIDE_FAMILIES[side] : null;
+
+  const filteredStories = sideFilter
+    ? stories.filter((s) => sideFilter.includes(s.familyId))
+    : stories;
+
   return (
-    <main className="min-h-screen">
-      <SiteNav />
+    <main className="min-h-screen pb-20 md:pb-0">
+      {side ? <ScopedNav side={side} /> : <SiteNav />}
 
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 text-center">
@@ -108,7 +131,7 @@ export default function StoriesPage() {
 
       {/* Stories */}
       <section className="max-w-3xl mx-auto px-6 py-12">
-        {stories.map((story, i) => (
+        {filteredStories.map((story, i) => (
           <motion.article
             key={i}
             initial="hidden"
@@ -172,7 +195,7 @@ export default function StoriesPage() {
             )}
 
             {/* Divider between stories */}
-            {i < stories.length - 1 && (
+            {i < filteredStories.length - 1 && (
               <div className="heritage-divider mt-16">
                 <span className="text-gold text-xs">✦</span>
               </div>
@@ -181,8 +204,8 @@ export default function StoriesPage() {
         ))}
       </section>
 
-      {/* Lyle WWII CTA */}
-      <section className="max-w-3xl mx-auto px-6 py-8">
+      {/* Lyle WWII CTA — only for mom's side or full view */}
+      {side !== "dad" && <section className="max-w-3xl mx-auto px-6 py-8">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -211,7 +234,7 @@ export default function StoriesPage() {
             Read the Full Story →
           </Link>
         </motion.div>
-      </section>
+      </section>}
 
       {/* Navigation */}
       <section className="max-w-3xl mx-auto px-6 py-16">
@@ -224,27 +247,35 @@ export default function StoriesPage() {
           style={{ fontFamily: "var(--font-sans)" }}
         >
           <Link
-            href="/"
+            href={side ? `/${side}` : "/"}
             className="text-sm text-ink-muted hover:text-gold transition-colors"
           >
-            ← Home
+            ← {side === "dad" ? "Dad\u2019s Side" : side === "mom" ? "Mom\u2019s Side" : "Home"}
           </Link>
           <Link
-            href="/map"
+            href={side ? `/map?side=${side}` : "/map"}
             className="text-sm text-ink-muted hover:text-gold transition-colors"
           >
-            🗺️ Interactive Map
+            🗺️ Map
           </Link>
           <Link
-            href="/tree"
+            href={side ? `/documents?side=${side}` : "/tree"}
             className="text-sm text-ink-muted hover:text-gold transition-colors"
           >
-            🌳 Full Tree →
+            {side ? "🗂️ Documents" : "🌳 Full Tree →"}
           </Link>
         </div>
       </section>
 
-      <SiteFooter />
+      {side ? <ScopedFooter side={side} /> : <SiteFooter />}
     </main>
+  );
+}
+
+export default function StoriesPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-parchment" />}>
+      <StoriesPageInner />
+    </Suspense>
   );
 }

@@ -1,11 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { familyLines, immigrationTimeline } from "@/data/families";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import ScopedNav from "@/components/ScopedNav";
+import ScopedFooter from "@/components/ScopedFooter";
+
+const SIDE_FAMILIES: Record<string, string[]> = {
+  dad: ["oreilly", "coffey"],
+  mom: ["linnerud", "jakubicek"],
+};
+
+const SIDE_TIMELINE_LINES: Record<string, string[]> = {
+  dad: ["O'Reilly", "Coffey", "Sheehan"],
+  mom: ["Linnerud", "Lee", "Jakubicek", "Melka"],
+};
+
+const SIDE_NEIGHBORHOODS: Record<string, string[]> = {
+  dad: ["Coffey", "O'Reilly", "Patrick"],
+  mom: ["Linnerud", "Jakubicek", "Melka", "Lee", "Sørensen"],
+};
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -117,14 +135,26 @@ const ports = [
   { name: "Boston", x: 800, y: 285, type: "arrival" as const },
 ];
 
-export default function MapPage() {
+function MapPageInner() {
+  const searchParams = useSearchParams();
+  const side = searchParams.get("side") as "dad" | "mom" | null;
+  const sideFilter = side && SIDE_FAMILIES[side] ? SIDE_FAMILIES[side] : null;
+
+  const filteredOrigins = sideFilter
+    ? origins.filter((o) => sideFilter.includes(o.familyId))
+    : origins;
+
+  const filteredTimeline = side && SIDE_TIMELINE_LINES[side]
+    ? immigrationTimeline.filter((e) => SIDE_TIMELINE_LINES[side].some((l) => e.line === l))
+    : immigrationTimeline;
+
   const [selectedOrigin, setSelectedOrigin] = useState<OriginPoint | null>(null);
   const [hoveredOrigin, setHoveredOrigin] = useState<string | null>(null);
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pb-20 md:pb-0">
       {/* Nav */}
-      <SiteNav />
+      {side ? <ScopedNav side={side} /> : <SiteNav />}
 
       {/* Hero */}
       <section className="pt-28 pb-8 px-6 text-center">
@@ -241,7 +271,7 @@ export default function MapPage() {
             />
 
             {/* Travel routes — curved paths from origins to Chicago */}
-            {origins.map((origin) => {
+            {filteredOrigins.map((origin) => {
               const isHovered = hoveredOrigin === origin.id;
               const isSelected =
                 selectedOrigin?.id === origin.id;
@@ -261,7 +291,7 @@ export default function MapPage() {
                   animate={{ pathLength: 1 }}
                   transition={{
                     duration: 2,
-                    delay: 0.5 + origins.indexOf(origin) * 0.3,
+                    delay: 0.5 + filteredOrigins.indexOf(origin) * 0.3,
                     ease: "easeInOut",
                   }}
                 />
@@ -269,7 +299,7 @@ export default function MapPage() {
             })}
 
             {/* Origin points */}
-            {origins.map((origin) => {
+            {filteredOrigins.map((origin) => {
               const isHovered = hoveredOrigin === origin.id;
               const isSelected =
                 selectedOrigin?.id === origin.id;
@@ -389,8 +419,8 @@ export default function MapPage() {
             </g>
 
             {/* Year labels along routes */}
-            {immigrationTimeline.map((event, i) => {
-              const origin = origins.find(
+            {filteredTimeline.map((event, i) => {
+              const origin = filteredOrigins.find(
                 (o) =>
                   o.people.some((p) =>
                     p.toLowerCase().includes(event.person.split(" ")[0].toLowerCase())
@@ -429,7 +459,7 @@ export default function MapPage() {
 
           {/* Legend */}
           <div className="flex flex-wrap justify-center gap-4 mt-6">
-            {origins.map((origin) => (
+            {filteredOrigins.map((origin) => (
               <button
                 key={origin.id}
                 onClick={() =>
@@ -578,6 +608,7 @@ export default function MapPage() {
                   "7748 S. Langley Ave (Coffey) · 7341 S. St. Lawrence Ave (O'Reilly)",
                 flag: "🇮🇪",
                 note: "One block apart. Al Capone lived at 7244 S. Prairie — six blocks away.",
+                forSide: "dad" as const,
               },
               {
                 neighborhood: "West Side — Ferdinand St & Madison St",
@@ -586,6 +617,7 @@ export default function MapPage() {
                   "727 E 50th St (1917-1918, Patrick J. O'Reilly)",
                 flag: "🇮🇪",
                 note: "Patrick J. O'Reilly lived on the South Side, near the Coffey family on S. Langley Ave.",
+                forSide: "dad" as const,
               },
               {
                 neighborhood:
@@ -595,6 +627,7 @@ export default function MapPage() {
                   "7007 S. Artesian Ave (1940) · 7306 S. Talman Ave (Andrew's death, 1948)",
                 flag: "🇳🇴",
                 note: "Norwegian community. Andrew worked as a blacksmith, then railroad mechanic, then carpenter.",
+                forSide: "mom" as const,
               },
               {
                 neighborhood: "Pilsen — Heart of Bohemian Chicago",
@@ -603,6 +636,7 @@ export default function MapPage() {
                   "1157 W. 18th St (1930) · S. May St (1940) · 1864 S. Throop (1942)",
                 flag: "🇨🇿",
                 note: "Thomas worked at Storkline Furniture Corp — now a National Historic Landmark.",
+                forSide: "mom" as const,
               },
               {
                 neighborhood:
@@ -611,8 +645,9 @@ export default function MapPage() {
                 address: "Manchester Township, near Belvidere",
                 flag: "🇳🇴",
                 note: "Sigvart farmed here 30+ years. Anna Gudrun was born here in 1893. Andrew came here from Norway and married her.",
+                forSide: "mom" as const,
               },
-            ].map((n, i) => (
+            ].filter((n) => !side || n.forSide === side).map((n, i) => (
               <motion.div
                 key={i}
                 initial="hidden"
@@ -678,7 +713,7 @@ export default function MapPage() {
           </h2>
 
           <div className="space-y-4">
-            {immigrationTimeline.map((event, i) => (
+            {filteredTimeline.map((event, i) => (
               <motion.div
                 key={i}
                 initial="hidden"
@@ -722,27 +757,35 @@ export default function MapPage() {
           style={{ fontFamily: "var(--font-sans)" }}
         >
           <Link
-            href="/stories"
+            href={side ? `/stories?side=${side}` : "/stories"}
             className="text-sm text-ink-muted hover:text-gold transition-colors"
           >
             ← Stories
           </Link>
           <Link
-            href="/"
+            href={side ? `/${side}` : "/"}
             className="text-sm text-ink-muted hover:text-gold transition-colors"
           >
-            Home
+            {side === "dad" ? "Dad\u2019s Side" : side === "mom" ? "Mom\u2019s Side" : "Home"}
           </Link>
           <Link
-            href="/tree"
+            href={side ? `/documents?side=${side}` : "/tree"}
             className="text-sm text-ink-muted hover:text-gold transition-colors"
           >
-            🌳 Full Tree →
+            {side ? "🗂️ Documents" : "🌳 Full Tree →"}
           </Link>
         </div>
       </section>
 
-      <SiteFooter />
+      {side ? <ScopedFooter side={side} /> : <SiteFooter />}
     </main>
+  );
+}
+
+export default function MapPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-parchment" />}>
+      <MapPageInner />
+    </Suspense>
   );
 }
