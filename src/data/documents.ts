@@ -328,8 +328,6 @@ export const personDocuments: PersonDocuments[] = [
     personName: "Mike the Headless Chicken — Fruita, CO",
     familyId: "linnerud",
     docs: [
-      { file: "mike-chicken/mike-official-1200.jpg", caption: "Mike the Headless Chicken — Official Photo", isPhoto: true },
-      { file: "mike-chicken/mike-official-site.jpg", caption: "Mike — Official Site Image", isPhoto: true },
       { file: "mike-chicken/mike-on-display.png", caption: "Mike — On Display", isPhoto: true },
       { file: "mike-chicken/mike-with-head.jpg", caption: "Mike — With Head", isPhoto: true },
     ],
