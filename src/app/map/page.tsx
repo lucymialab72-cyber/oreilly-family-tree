@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { familyLines, immigrationTimeline } from "@/data/families";
 import SiteNav from "@/components/SiteNav";
+import SiteFooter from "@/components/SiteFooter";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -741,18 +742,7 @@ export default function MapPage() {
         </div>
       </section>
 
-      <footer className="border-t border-border-light py-8 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <p
-            className="text-ink-muted text-xs"
-            style={{ fontFamily: "var(--font-sans)" }}
-          >
-            Map positions approximate. Sources: ship manifests, census records,
-            draft cards, naturalization petitions, 1901/1911 Irish Census,
-            Norwegian Digital Archives.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

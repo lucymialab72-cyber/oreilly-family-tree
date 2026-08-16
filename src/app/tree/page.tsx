@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import SiteNav from "@/components/SiteNav";
+import SiteFooter from "@/components/SiteFooter";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -476,14 +477,7 @@ export default function TreePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border-light py-8 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <Link href="/" className="text-sm text-ink-muted hover:text-gold transition-colors" style={{ fontFamily: "var(--font-sans)" }}>
-            ← Back to Home
-          </Link>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

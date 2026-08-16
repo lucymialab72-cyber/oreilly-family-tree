@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { familyLines } from "@/data/families";
 import SiteNav from "@/components/SiteNav";
+import SiteFooter from "@/components/SiteFooter";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -243,19 +244,7 @@ export default function StoriesPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border-light py-8 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <p
-            className="text-ink-muted text-xs"
-            style={{ fontFamily: "var(--font-sans)" }}
-          >
-            Compiled July 2026 · Stories drawn from census records, ship
-            manifests, draft cards, obituaries, family memoirs, and original
-            research.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

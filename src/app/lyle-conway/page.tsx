@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import SiteNav from "@/components/SiteNav";
+import SiteFooter from "@/components/SiteFooter";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -603,14 +604,7 @@ export default function LyleConwayPage() {
         </div>
       </section>
 
-      <footer className="border-t border-border-light py-8 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-ink-muted text-xs" style={{ fontFamily: "var(--font-sans)" }}>
-            Sources: Wikipedia · Muppet Wiki · ToughPigs · The Muppet Mindset · IMDB · Little Shop of Horrors Wiki ·
-            Dark Crystal Wiki · EverybodyWiki · Classic Horror Film Board
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

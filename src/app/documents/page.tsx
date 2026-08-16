@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import SiteNav from "@/components/SiteNav";
+import SiteFooter from "@/components/SiteFooter";
 
 const GALLERY: {
   src: string;
@@ -181,22 +183,21 @@ export default function DocumentsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-parchment">
+    <div className="min-h-screen bg-parchment pb-20 md:pb-0">
+      <SiteNav />
+
       {/* Header */}
-      <header className="bg-ink text-parchment py-12 px-6 text-center">
-        <Link href="/" className="text-gold text-sm hover:underline mb-4 block" style={{ fontFamily: "var(--font-sans)" }}>
-          ← Back to Home
-        </Link>
-        <h1 className="text-4xl font-bold mb-2" style={{ fontFamily: "var(--font-display)" }}>
+      <div className="pt-24 pb-10 px-6 text-center">
+        <h1 className="text-4xl font-bold text-ink mb-2" style={{ fontFamily: "var(--font-display)" }}>
           🗂️ Source Documents
         </h1>
-        <p className="text-parchment/70 text-lg" style={{ fontFamily: "var(--font-sans)" }}>
+        <p className="text-ink-muted text-lg" style={{ fontFamily: "var(--font-sans)" }}>
           {GALLERY.length} primary source documents — census records, ship manifests, draft cards, marriage certificates, and more
         </p>
-      </header>
+      </div>
 
       {/* Filters */}
-      <div className="sticky top-0 z-10 bg-white/95 backdrop-blur border-b border-border shadow-sm">
+      <div className="sticky top-[52px] z-10 bg-white/95 backdrop-blur border-b border-border shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-3">
           {/* Family line tabs */}
           <div className="flex flex-wrap gap-2 mb-3">
@@ -289,6 +290,8 @@ export default function DocumentsPage() {
           </div>
         )}
       </main>
+
+      <SiteFooter />
 
       {/* Lightbox */}
       <AnimatePresence>
