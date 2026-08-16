@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { familyLines, immigrationTimeline } from "@/data/families";
+import SiteNav from "@/components/SiteNav";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -122,28 +123,7 @@ export default function MapPage() {
   return (
     <main className="min-h-screen">
       {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-parchment/90 backdrop-blur-sm border-b border-border-light">
-        <div
-          className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between"
-          style={{ fontFamily: "var(--font-sans)" }}
-        >
-          <Link
-            href="/"
-            className="text-sm text-ink-muted hover:text-ink transition-colors"
-          >
-            ← Home
-          </Link>
-          <span className="text-sm font-medium text-gold">
-            🗺️ Origins Map
-          </span>
-          <Link
-            href="/tree"
-            className="text-sm text-ink-muted hover:text-ink transition-colors"
-          >
-            🌳 Tree
-          </Link>
-        </div>
-      </nav>
+      <SiteNav />
 
       {/* Hero */}
       <section className="pt-28 pb-8 px-6 text-center">

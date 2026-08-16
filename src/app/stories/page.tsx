@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { familyLines } from "@/data/families";
+import SiteNav from "@/components/SiteNav";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -65,37 +66,7 @@ const stories = [...allStories, ...bonusStories];
 export default function StoriesPage() {
   return (
     <main className="min-h-screen">
-      {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-parchment/90 backdrop-blur-sm border-b border-border-light">
-        <div
-          className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between"
-          style={{ fontFamily: "var(--font-sans)" }}
-        >
-          <Link
-            href="/"
-            className="text-sm text-ink-muted hover:text-ink transition-colors"
-          >
-            ← Home
-          </Link>
-          <div className="flex items-center gap-6 text-sm">
-            {familyLines.map((l) => (
-              <Link
-                key={l.id}
-                href={`/family/${l.id}`}
-                className="hidden md:block text-ink-muted hover:text-ink transition-colors"
-              >
-                {l.flag} {l.name}
-              </Link>
-            ))}
-            <Link
-              href="/tree"
-              className="text-gold font-semibold hover:text-gold-light transition-colors"
-            >
-              🌳 Tree
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <SiteNav />
 
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 text-center">

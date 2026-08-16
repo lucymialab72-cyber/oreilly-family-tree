@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import SiteNav from "@/components/SiteNav";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -55,17 +56,7 @@ export default function LyleStoryPage() {
   return (
     <main className="min-h-screen">
       {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-parchment/90 backdrop-blur-sm border-b border-border-light">
-        <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between" style={{ fontFamily: "var(--font-sans)" }}>
-          <Link href="/family/linnerud" className="text-sm text-ink-muted hover:text-ink transition-colors">
-            ← Linnerud Line
-          </Link>
-          <span className="text-sm font-medium text-gold">Lyle Linnerud · WWII Service</span>
-          <Link href="/" className="text-sm text-ink-muted hover:text-ink transition-colors">
-            Home
-          </Link>
-        </div>
-      </nav>
+      <SiteNav />
 
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 text-center">

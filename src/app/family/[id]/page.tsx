@@ -8,6 +8,7 @@ import type { Person } from "@/data/families";
 import { notFound } from "next/navigation";
 import DocumentGallery from "@/components/DocumentGallery";
 import { getDocsByFamily } from "@/data/documents";
+import SiteNav from "@/components/SiteNav";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -200,66 +201,7 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
 
   return (
     <main className="min-h-screen pb-20 md:pb-0">
-      {/* ═══ TOP NAVIGATION BAR ═══ */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-parchment/90 backdrop-blur-sm border-b border-border-light">
-        <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between" style={{ fontFamily: "var(--font-sans)" }}>
-          <Link href="/" className="text-sm text-ink-muted hover:text-ink transition-colors">
-            ← Home
-          </Link>
-          <div className="flex items-center gap-4 text-sm">
-            {familyLines.map((l) => (
-              <Link
-                key={l.id}
-                href={`/family/${l.id}`}
-                className={`hidden md:block transition-colors ${
-                  l.id === id ? "text-gold font-medium" : "text-ink-muted hover:text-ink"
-                }`}
-              >
-                {l.flag} {l.name}
-              </Link>
-            ))}
-            <Link href="/tree" className="hidden md:block text-gold font-medium hover:text-gold-dark transition-colors">🌳 Tree</Link>
-            <Link href="/stories" className="hidden md:block text-ink-muted hover:text-ink transition-colors">📖 Stories</Link>
-            <Link href="/map" className="hidden md:block text-ink-muted hover:text-ink transition-colors">🗺️ Map</Link>
-            <Link href="/documents" className="hidden md:block text-ink-muted hover:text-ink transition-colors">🗂️ Docs</Link>
-            {/* Mobile: show current family + key links */}
-            <span className="md:hidden text-gold font-medium text-xs">
-              {line.flag} {line.name}
-            </span>
-            <Link href="/tree" className="md:hidden text-gold font-medium hover:text-gold-dark transition-colors">🌳</Link>
-            <Link href="/documents" className="md:hidden text-ink-muted hover:text-ink transition-colors text-xs">🗂️</Link>
-          </div>
-        </div>
-      </nav>
-
-      {/* ═══ MOBILE BOTTOM FAMILY SWITCHER ═══ */}
-      <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-parchment/95 backdrop-blur-sm border-t border-border-light safe-area-bottom" style={{ fontFamily: "var(--font-sans)" }}>
-        <div className="flex items-stretch justify-around px-2 py-1">
-          {familyLines.map((l) => (
-            <Link
-              key={l.id}
-              href={`/family/${l.id}`}
-              className={`flex flex-col items-center justify-center py-2 px-1 rounded-sm transition-colors min-w-0 flex-1 ${
-                l.id === id
-                  ? "text-gold bg-gold/10"
-                  : "text-ink-muted active:bg-ink/5"
-              }`}
-            >
-              <span className="text-lg leading-none">{l.flag}</span>
-              <span className={`text-[10px] mt-0.5 truncate max-w-full ${l.id === id ? "font-semibold" : ""}`}>
-                {l.name}
-              </span>
-            </Link>
-          ))}
-          <Link
-            href="/tree"
-            className="flex flex-col items-center justify-center py-2 px-1 rounded-sm transition-colors min-w-0 flex-1 text-ink-muted active:bg-ink/5"
-          >
-            <span className="text-lg leading-none">🌳</span>
-            <span className="text-[10px] mt-0.5">Tree</span>
-          </Link>
-        </div>
-      </nav>
+      <SiteNav />
 
       {/* ═══ HERO ═══ */}
       <section className="pt-32 pb-16 px-6">
