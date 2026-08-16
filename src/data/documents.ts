@@ -310,8 +310,8 @@ export const personDocuments: PersonDocuments[] = [
   // ═══════════════════════════
 
   {
-    personName: "USS Eberle (DD-430) — WWII Transport",
-    familyId: "oreilly",
+    personName: "USS Eberle (DD-430) — Lyle Linnerud's WWII Transport",
+    familyId: "linnerud",
     docs: [
       { file: "eberle/eberle-aerial-underway.jpg", caption: "USS Eberle — Aerial View Underway", isPhoto: true },
       { file: "eberle/eberle-ap123-wwii.jpg", caption: "USS Eberle (AP-123) — WWII Transport Configuration", isPhoto: true },
