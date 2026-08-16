@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { familyLines } from "@/data/families";
+import ScopedNav from "@/components/ScopedNav";
+import ScopedFooter from "@/components/ScopedFooter";
 
 const DAD_FAMILIES = ["oreilly", "coffey"];
 
@@ -10,22 +12,31 @@ export default function DadSidePage() {
   const families = familyLines.filter((f) => DAD_FAMILIES.includes(f.id));
 
   return (
-    <div className="min-h-screen bg-parchment flex flex-col items-center justify-center px-6 py-16">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-center max-w-xl"
-      >
-        <div className="text-5xl mb-4">☘️</div>
-        <h1 className="text-3xl font-bold text-ink mb-3" style={{ fontFamily: "var(--font-display)" }}>
-          O&apos;Reilly, Coffey &amp; Sheehan Heritage
-        </h1>
-        <p className="text-ink-muted text-base mb-10">
-          From County Kilkenny and County Kerry, Ireland, to Chicago&apos;s South Side.
-        </p>
+    <div className="min-h-screen bg-parchment pb-20 md:pb-0">
+      <ScopedNav side="dad" />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+      <main className="pt-24 px-6">
+        <div className="max-w-2xl mx-auto text-center mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="text-5xl mb-4">☘️</div>
+            <h1
+              className="text-3xl font-bold text-ink mb-3"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              O&apos;Reilly, Coffey &amp; Sheehan Heritage
+            </h1>
+            <p className="text-ink-muted text-base">
+              From County Kilkenny and County Kerry, Ireland, to Chicago&apos;s South Side.
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Family cards */}
+        <div className="max-w-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16">
           {families.map((family, i) => (
             <motion.div
               key={family.id}
@@ -34,23 +45,65 @@ export default function DadSidePage() {
               transition={{ delay: 0.2 + i * 0.15, duration: 0.5 }}
             >
               <Link href={`/family/${family.id}`}>
-                <div className="bg-white border border-border-light rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer text-left">
+                <div className="bg-white border border-border-light rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer text-left h-full">
                   <div className="text-3xl mb-2">{family.flag}</div>
-                  <h2 className="text-lg font-bold text-ink mb-1" style={{ fontFamily: "var(--font-display)" }}>
+                  <h2
+                    className="text-lg font-bold text-ink mb-1"
+                    style={{ fontFamily: "var(--font-display)" }}
+                  >
                     {family.name}
                   </h2>
-                  <p className="text-ink-muted text-xs leading-relaxed">{family.subtitle}</p>
-                  <div className="mt-3 text-xs text-amber-700 font-medium">View family →</div>
+                  <p className="text-ink-muted text-xs leading-relaxed">
+                    {family.subtitle}
+                  </p>
+                  <div className="mt-3 text-xs text-amber-700 font-medium">
+                    View family →
+                  </div>
                 </div>
               </Link>
             </motion.div>
           ))}
         </div>
 
-        <Link href="/" className="text-sm text-ink-muted hover:text-ink transition-colors">
-          ← Back to Full Family Tree
-        </Link>
-      </motion.div>
+        {/* Quick links */}
+        <div className="max-w-2xl mx-auto mb-16">
+          <h2
+            className="text-xl font-bold text-ink mb-6 text-center"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Explore Dad&apos;s Side
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {[
+              { href: "/stories?side=dad", icon: "📖", label: "Stories" },
+              { href: "/map?side=dad", icon: "🗺️", label: "Map" },
+              { href: "/documents?side=dad", icon: "🗂️", label: "Documents" },
+              { href: "/tree", icon: "🌳", label: "Family Tree" },
+            ].map((link, i) => (
+              <motion.div
+                key={link.href}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 + i * 0.1, duration: 0.4 }}
+              >
+                <Link href={link.href}>
+                  <div className="text-center p-4 bg-white/60 border border-border-light rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-pointer">
+                    <div className="text-2xl mb-1">{link.icon}</div>
+                    <div
+                      className="text-sm text-ink-muted font-medium"
+                      style={{ fontFamily: "var(--font-sans)" }}
+                    >
+                      {link.label}
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </main>
+
+      <ScopedFooter side="dad" />
     </div>
   );
 }

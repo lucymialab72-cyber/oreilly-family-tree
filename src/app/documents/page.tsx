@@ -1,10 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import ScopedNav from "@/components/ScopedNav";
+import ScopedFooter from "@/components/ScopedFooter";
 
 const GALLERY: {
   src: string;
@@ -157,13 +161,30 @@ const TYPE_COLORS: Record<string, string> = {
   "Document": "bg-slate-100 text-slate-700",
 };
 
-export default function DocumentsPage() {
+const SIDE_FAMILIES: Record<string, string[]> = {
+  dad: ["oreilly", "coffey"],
+  mom: ["linnerud", "jakubicek", "lee"],
+};
+
+function DocumentsPageInner() {
+  const searchParams = useSearchParams();
+  const side = searchParams.get("side") as "dad" | "mom" | null;
+  const sideFilter = side && SIDE_FAMILIES[side] ? SIDE_FAMILIES[side] : null;
+
+  const scopedGallery = sideFilter
+    ? GALLERY.filter((d) => sideFilter.includes(d.line))
+    : GALLERY;
+
+  const scopedLines = sideFilter
+    ? LINES.filter((l) => l.key === "all" || sideFilter.includes(l.key))
+    : LINES;
+
   const [activeLine, setActiveLine] = useState("all");
   const [activeType, setActiveType] = useState("All Types");
   const [lightbox, setLightbox] = useState<null | typeof GALLERY[0]>(null);
   const [lightboxIdx, setLightboxIdx] = useState(0);
 
-  const filtered = GALLERY.filter((doc) => {
+  const filtered = scopedGallery.filter((doc) => {
     const lineMatch = activeLine === "all" || doc.line === activeLine;
     const typeMatch = activeType === "All Types" || doc.docType === activeType;
     return lineMatch && typeMatch;
@@ -184,15 +205,15 @@ export default function DocumentsPage() {
 
   return (
     <div className="min-h-screen bg-parchment pb-20 md:pb-0">
-      <SiteNav />
+      {side ? <ScopedNav side={side} /> : <SiteNav />}
 
       {/* Header */}
       <div className="pt-24 pb-10 px-6 text-center">
         <h1 className="text-4xl font-bold text-ink mb-2" style={{ fontFamily: "var(--font-display)" }}>
-          🗂️ Source Documents
+          🗂️ {side === "dad" ? "Dad\u2019s Side — " : side === "mom" ? "Mom\u2019s Side — " : ""}Source Documents
         </h1>
         <p className="text-ink-muted text-lg" style={{ fontFamily: "var(--font-sans)" }}>
-          {GALLERY.length} primary source documents — census records, ship manifests, draft cards, marriage certificates, and more
+          {scopedGallery.length} primary source documents — census records, ship manifests, draft cards, marriage certificates, and more
         </p>
       </div>
 
@@ -201,8 +222,8 @@ export default function DocumentsPage() {
         <div className="max-w-7xl mx-auto px-6 py-3">
           {/* Family line tabs */}
           <div className="flex flex-wrap gap-2 mb-3">
-            {LINES.map((line) => {
-              const count = line.key === "all" ? GALLERY.length : GALLERY.filter((d) => d.line === line.key).length;
+            {scopedLines.map((line) => {
+              const count = line.key === "all" ? scopedGallery.length : scopedGallery.filter((d) => d.line === line.key).length;
               return (
                 <button
                   key={line.key}
@@ -291,7 +312,7 @@ export default function DocumentsPage() {
         )}
       </main>
 
-      <SiteFooter />
+      {side ? <ScopedFooter side={side} /> : <SiteFooter />}
 
       {/* Lightbox */}
       <AnimatePresence>
@@ -358,5 +379,13 @@ export default function DocumentsPage() {
         )}
       </AnimatePresence>
     </div>
+  );
+}
+
+export default function DocumentsPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-parchment" />}>
+      <DocumentsPageInner />
+    </Suspense>
   );
 }
