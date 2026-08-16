@@ -18,7 +18,7 @@ export default function SiteNav() {
   return (
     <>
       {/* Desktop top nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-parchment/90 backdrop-blur-sm border-b border-border-light">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-parchment border-b border-border-light">
         <div
           className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between"
           style={{ fontFamily: "var(--font-sans)" }}
@@ -79,7 +79,7 @@ export default function SiteNav() {
 
       {/* Mobile bottom nav */}
       <nav
-        className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-parchment/95 backdrop-blur-sm border-t border-border-light safe-area-bottom"
+        className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-parchment border-t border-border-light safe-area-bottom"
         style={{ fontFamily: "var(--font-sans)" }}
       >
         <div className="flex items-stretch justify-around px-2 py-1">
