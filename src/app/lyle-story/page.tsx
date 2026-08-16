@@ -81,7 +81,7 @@ export default function LyleStoryPage() {
             85,000 Miles at Sea
           </p>
           <p className="text-ink-muted max-w-2xl mx-auto text-lg leading-relaxed" style={{ fontFamily: "var(--font-serif)" }}>
-            Dave O&apos;Reilly&apos;s maternal grandfather. A 20-year-old from Chicago who sailed across every ocean
+            Andrea&apos;s father and the family&apos;s maternal grandfather (Generation 4). A 20-year-old from Chicago who sailed across every ocean
             while the atomic age began — and lived to bowl a 290 at age 79.
           </p>
         </motion.div>

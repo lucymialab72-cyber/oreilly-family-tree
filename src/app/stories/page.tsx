@@ -29,7 +29,7 @@ const bonusStories = [
   {
     title: "Al Capone's Neighbor",
     content:
-      "Al Capone's Chicago home was at 7244 S. Prairie Avenue. John J. Coffey's 1918 WWI draft card lists his address as 7141 Vernon Avenue — literally one block away. The Coffey household at 7748 S. Langley was six blocks from Capone. John Coffey was a railroad freight clerk raising seven children in the same neighborhood as the most famous gangster in American history. Meanwhile, Patrick Joseph O'Reilly — Dave's great-grandfather on the O'Reilly side — was living at 727 E 50th Street, just a few miles north on the South Side.",
+      "Al Capone's Chicago home was at 7244 S. Prairie Avenue. John J. Coffey's 1918 WWI draft card lists his address as 7141 Vernon Avenue — literally one block away. The Coffey household at 7748 S. Langley was six blocks from Capone. John Coffey was a railroad freight clerk raising seven children in the same neighborhood as the most famous gangster in American history. Meanwhile, Patrick Joseph O'Reilly — great-grandfather on the O'Reilly side (Generation 3) — was living at 727 E 50th Street, just a few miles north on the South Side.",
     pullQuote:
       "A railroad clerk, a Chicago cop, and America's most famous gangster — all within six blocks.",
     familyId: "coffey",
@@ -40,7 +40,7 @@ const bonusStories = [
   {
     title: "Lyle Conway — The Puppeteer",
     content:
-      "Dave's mom's first cousin Lyle Conway — son of Evelyn Bernice Linnerud Conway — became one of Hollywood's most acclaimed puppet and creature designers. He sculpted Miss Piggy for The Muppet Show. He created the terrifying Audrey II plant puppet for Little Shop of Horrors, earning an Academy Award nomination. He was the design and fabrication supervisor on Jim Henson's The Dark Crystal, bringing Aughra and the Skeksis to life. He created Jack Pumpkinhead for Return to Oz. The Muppet character 'Lyle the Dog' was literally named after him. He was found dead in his California apartment in March 2026. Those who knew him called him 'a very private man.'",
+      "Andrea's first cousin Lyle Conway — son of Evelyn Bernice Linnerud Conway — became one of Hollywood's most acclaimed puppet and creature designers. He sculpted Miss Piggy for The Muppet Show. He created the terrifying Audrey II plant puppet for Little Shop of Horrors, earning an Academy Award nomination. He was the design and fabrication supervisor on Jim Henson's The Dark Crystal, bringing Aughra and the Skeksis to life. He created Jack Pumpkinhead for Return to Oz. The Muppet character 'Lyle the Dog' was literally named after him. He was found dead in his California apartment in March 2026. Those who knew him called him 'a very private man.'",
     pullQuote: "The Muppet character 'Lyle the Dog' was named after him.",
     familyId: "linnerud",
     familyName: "Linnerud",

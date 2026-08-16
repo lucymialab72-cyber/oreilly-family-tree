@@ -136,7 +136,7 @@ export default function TreePage() {
           </p>
 
           <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-8 mb-6">
-            {/* Dave's Family */}
+            {/* O'Reilly-Linnerud Family */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -197,7 +197,7 @@ export default function TreePage() {
                 }}
               />
               <div className="flex flex-wrap justify-center gap-2 mt-2">
-                {["Max", "Skyler"].map((child) => (
+                {["Max", "Skylar"].map((child) => (
                   <div key={child} className="border border-border-light rounded-sm px-3 py-1.5 text-center bg-white/50 text-sm">
                     <p className="font-medium" style={{ fontFamily: "var(--font-display)" }}>{child}</p>
                   </div>
@@ -207,7 +207,7 @@ export default function TreePage() {
           </div>
 
           <p className="text-center text-[10px] text-ink-muted italic mb-4" style={{ fontFamily: "var(--font-sans)" }}>
-            9 grandchildren: Landon, Chace &amp; Kaylee · Elliot, Simon, Quentin &amp; Conrad · Max &amp; Skyler
+            9 grandchildren: Landon, Chace &amp; Kaylee · Elliot, Simon, Quentin &amp; Conrad · Max &amp; Skylar
           </p>
         </div>
 
@@ -218,8 +218,8 @@ export default function TreePage() {
           <CoupleCard
             index={1}
             couple={{
-              left: { name: "Terrence O'Reilly", note: "Dave's Dad" },
-              right: { name: "Andrea O'Reilly", note: "Dave's Mom (née Linnerud)" },
+              left: { name: "Terrence O'Reilly", note: "Generation 5 (Paternal)" },
+              right: { name: "Andrea O'Reilly", note: "Generation 5 (Maternal, née Linnerud)" },
             }}
           />
         </div>
@@ -336,7 +336,7 @@ export default function TreePage() {
             />
           </div>
           <p className="text-center text-[10px] text-ink-muted italic mb-4" style={{ fontFamily: "var(--font-sans)" }}>
-            Children: Alan, Calvin, twins Cary &amp; Cheryl, Andrea (youngest). Andrea is Dave&apos;s mom.
+            Children: Alan, Calvin, twins Cary &amp; Cheryl, Andrea (youngest). Andrea is Generation 5 (maternal side).
           </p>
           <ConnectorDown />
           <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12">
@@ -351,7 +351,7 @@ export default function TreePage() {
               <ConnectorDown />
               <CoupleCard index={10} couple={{ left: { name: "Sigvart S. Lee", years: "1859–1943", origin: "Vinger, Hedmark 🇳🇴" }, right: { name: "Berthea Arneson", years: "~1862–1921", origin: "Vinger, Hedmark 🇳🇴" }, married: "1892" }} />
               <p className="text-[10px] text-ink-muted italic text-center mt-1">
-                Deepest: <strong>Sigri Andersdatter</strong> (b. ~1797) — Dave&apos;s 5× great-grandmother
+                Deepest: <strong>Sigri Andersdatter</strong> (b. ~1797) — the family's 5× great-grandmother (Generation 0)
               </p>
             </div>
             <div className="flex flex-col items-center gap-2">
@@ -437,7 +437,7 @@ export default function TreePage() {
         </div>
 
         <p className="text-center text-ink-muted text-xs mt-4" style={{ fontFamily: "var(--font-sans)" }}>
-          Deepest confirmed ancestor: Sigri Andersdatter, born ~1797 in Norway — Dave&apos;s 5× great-grandmother
+          Deepest confirmed ancestor: Sigri Andersdatter, born ~1797 in Norway — the family's 5× great-grandmother (Generation 0)
         </p>
       </section>
 

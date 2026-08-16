@@ -73,7 +73,7 @@ export const familyLines: FamilyLine[] = [
       name: "Thomastown",
       region: "County Kilkenny",
       country: "Ireland",
-      description: "The O'Reilly family came from Thomastown, a medieval market town on the River Nore in County Kilkenny. Thomastown sits in the heart of Ireland's southeast — just miles from Jerpoint Abbey, the 12th-century Cistercian monastery where Dave's great-great-grandfather Edward O'Reilly is buried. The area has deep roots: Norman, Gaelic, and Catholic, with parish records at the Church of the Assumption dating back centuries.",
+      description: "The O'Reilly family came from Thomastown, a medieval market town on the River Nore in County Kilkenny. Thomastown sits in the heart of Ireland's southeast — just miles from Jerpoint Abbey, the 12th-century Cistercian monastery where the family's great-great-grandfather Edward O'Reilly is buried. The area has deep roots: Norman, Gaelic, and Catholic, with parish records at the Church of the Assumption dating back centuries.",
     },
     crossing: [
       {
@@ -91,7 +91,7 @@ export const familyLines: FamilyLine[] = [
     generations: [
       {
         label: "Generation 0",
-        relation: "Dave's 3× Great-Grandparents",
+        relation: "Generation 1 — 3× Great-Grandparents",
         people: [
           {
             name: "James O'Reilly",
@@ -99,7 +99,7 @@ export const familyLines: FamilyLine[] = [
             bornPlace: "Thomastown, Kilkenny, Ireland (Powerswood area)",
             spouse: "Ellen Walsh",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: I25)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I25)",
               "Born c.1780 in the Thomastown/Powerswood area of County Kilkenny",
               "Father of Edward (or Edmond) O'Reilly (b.1839)",
               "Note on Irish naming: the Mac and O prefixes were dropped and added at will — in early records he may appear as 'Reilly' without the O",
@@ -112,7 +112,7 @@ export const familyLines: FamilyLine[] = [
             died: "Thomastown, Kilkenny, Ireland",
             spouse: "James O'Reilly",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P45)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P45)",
               "Born in Inistioge — the village on the River Nore near Thomastown, Co. Kilkenny",
               "Mother of Edward (or Edmond) O'Reilly (b.1839)",
             ],
@@ -125,7 +125,7 @@ export const familyLines: FamilyLine[] = [
             diedPlace: "Callan, Thomastown, Co. Kilkenny, Ireland",
             spouse: "Ellen Cassin",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P48)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P48)",
               "Parents: Thomas Hanrahan (b.1810) and Honora Shunny (b.1810)",
               "Baptism (LDS): 4 Apr 1831, Windgap, Kilkenny",
               "Married Ellen Cassin on February 23, 1840 at Inistioge, Co. Kilkenny",
@@ -142,7 +142,7 @@ export const familyLines: FamilyLine[] = [
             diedPlace: "Thomastown, Co. Kilkenny, Ireland",
             spouse: "Patrick Hanrahan",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P47)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P47)",
               "Baptized 29 Apr 1836 at St. John's, Kilkenny",
               "Married Patrick Hanrahan on February 23, 1840 at Inistioge",
               "Mother of Johanna Hanrahan (b.1858)",
@@ -158,7 +158,7 @@ export const familyLines: FamilyLine[] = [
             spouse: "Anna Woulfe",
             burial: "Holy Sepulchre Cemetery, Worth, IL — Lot #39, Section 10",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P22)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P22)",
               "Parents: William Joseph Sheehy (b.Dec 1824) and Catherine Barrett (b.1830), Newcastle West, Limerick",
               "Married Anna Woulfe on September 25, 1894 in Chicago",
               "Arrived in US ~1882-1890 (census sources vary)",
@@ -176,7 +176,7 @@ export const familyLines: FamilyLine[] = [
             spouse: "Richard Joseph Sheehy",
             burial: "Holy Sepulcher Cemetery, Worth, IL (alongside husband Richard)",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P23)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P23)",
               "Nickname: Hanna. Known to great-grandchildren as 'Grandma Shug'",
               "Parents: Patrick Woulfe and Bridget Roche — both from Cratloe West near Abbeyfeale, Limerick",
               "Came to the US with her parents at age 12 (1887)",
@@ -194,12 +194,12 @@ export const familyLines: FamilyLine[] = [
             died: "September 29, 1868",
             spouse: "Catherine Barrett",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P57)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P57)",
               "Parents: Richard Sheehy and Hanora Hough — both from Newcastle West, Limerick",
               "Married Catherine Barrett on November 16, 1856 at the Immaculate Conception Church, Newcastle West, Co. Limerick",
               "Children: John Sheehy (c.1857), Richard Joseph Sheehy (b.1860), Mary Sheehy",
               "Died young at age ~33 on September 29, 1868",
-              "Father of Richard Joseph Sheehy (Dave's 2× great-grandfather)",
+              "Father of Richard Joseph Sheehy (2× great-grandfather, Generation 2)",
             ],
           },
           {
@@ -208,7 +208,7 @@ export const familyLines: FamilyLine[] = [
             bornPlace: "Newcastle West, Limerick, Ireland",
             spouse: "William Joseph Sheehy",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P56)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P56)",
               "Married William Joseph Sheehy on November 16, 1856 at the Immaculate Conception Church, Newcastle West",
               "Husband William died September 29, 1868 at age 33",
               "Mother of Richard Joseph Sheehy (b.1860), who emigrated to Chicago",
@@ -219,9 +219,9 @@ export const familyLines: FamilyLine[] = [
             bornPlace: "Cratloe West near Abbeyfeale, Limerick, Ireland",
             spouse: "Bridget Roche",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P50)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P50)",
               "Lived in the Cratloe West area of Abbeyfeale, County Limerick",
-              "Father of Anna Woulfe (b.1875) — Dave's 2× great-grandmother",
+              "Father of Anna Woulfe (b.1875) — 2× great-grandmother, Generation 2",
               "Brought family to America when Anna was 12 (1887)",
             ],
           },
@@ -231,8 +231,8 @@ export const familyLines: FamilyLine[] = [
             bornPlace: "Cratloe West near Abbeyfeale, Limerick, Ireland",
             spouse: "Patrick Woulfe",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P49)",
-              "Mother of Anna Woulfe (b.1875) — Dave's 2× great-grandmother",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P49)",
+              "Mother of Anna Woulfe (b.1875) — 2× great-grandmother, Generation 2",
               "Came to America with family when Anna was 12 (1887)",
             ],
           },
@@ -240,7 +240,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 1",
-        relation: "Dave's 2× Great-Grandparents",
+        relation: "Generation 2 — 2× Great-Grandparents",
         people: [
           {
             name: "Edward (Edmond) O'Reilly",
@@ -251,7 +251,7 @@ export const familyLines: FamilyLine[] = [
             burial: "Jerpoint Abbey Graveyard, Thomastown, Kilkenny",
             spouse: "Johanna Hanrahan",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P17)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P17)",
               "Died at age 52 — his son Patrick was only 9 years old",
               "Buried at Jerpoint Abbey — a 12th-century Cistercian monastery, a significant and historic burial site",
               "Married Johanna Hanrahan in 1879 at either the Church of the Assumption in Thomastown or St. Columba's Church in Inistioge",
@@ -269,7 +269,7 @@ export const familyLines: FamilyLine[] = [
             spouse: "Edward (Edmond) O'Reilly",
             burial: "St. Mary Cemetery, Thomastown (new cemetery, road to Dublin)",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P16)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P16)",
               "Nickname: Judy — all certificates list her as Judy",
               "Christened October 13, 1858 at Inistioge, Kilkenny — baptized by Rev. P. Doyle",
               "Birth certificate: parents Pat Hanrahan, Powerswood + Ellen Cassin; sponsors Thomas Rafter and Cathirine Rafter",
@@ -284,7 +284,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 2",
-        relation: "Dave's Great-Grandparents",
+        relation: "Generation 3 — Great-Grandparents",
         people: [
           {
             name: "Patrick Joseph O'Reilly",
@@ -298,7 +298,7 @@ export const familyLines: FamilyLine[] = [
             physical: 'Medium build, black hair, grey eyes (WWI Draft Card 1917-18, Cook County Draft Board 20)',
             burial: "St. Mary's Cemetery, Evergreen Park, IL (buried October 25, 1972)",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P15)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P15)",
               "Christened March 8, 1883 at the Church of the Assumption, Thomastown, by Rev. John Walsh",
               "Baptism sponsors: John Hanrahan and Bridget Hanrahan (his mother's siblings)",
               "Father died when Patrick was 9 — grew up fatherless in Thomastown",
@@ -308,7 +308,7 @@ export const familyLines: FamilyLine[] = [
               "At some point between 1906 and 1918, moved to Chicago where he married Catherine",
               "Married Catherine Loretta Sheehy on August 28, 1918 in Chicago",
               "WWI Draft Card (1917-1918): registered at 727 E 50th St, Chicago, Draft Board 13. Medium build, medium height, black hair, blue eyes. Listed wife Catherine O'Reilly as relative. Registered in the September 12, 1918 'Old Man's Registration' at age 35 — the war ended just 2 months later. Likely never served.",
-              "Lived to age 89 — Dave's father Terrence would have been ~16 when Patrick died",
+              "Lived to age 89 — his grandson Terrence (Generation 5) would have been ~16 when Patrick died",
               "Ancestry sources: Irish Civil Registration (Mar 1883), Church baptism, 1920 Census, 1940 Census, SSDI (SSN 319-07-3900), Cook County Marriage Index, WWI Draft Card",
               "5 children: Loretta Josephine (1919-2000), Edward 'Bud' (1921-2002), Richard Joseph (1923-1980), James Patrick 'Uncle Jay' (1924-2012), Jerome (b.1932, possibly still living)",
             ],
@@ -322,11 +322,11 @@ export const familyLines: FamilyLine[] = [
             spouse: "Patrick Joseph O'Reilly",
             burial: "St. Mary's Cemetery, Evergreen Park, IL",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P14)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P14)",
               "Born in Chicago — an Irish-American, not an immigrant",
               "Father: Richard Joseph Sheehy (1860-1931); Mother: Anna Woulfe (1875-1967)",
               "Home address: 2821 W. 85th Place, Chicago, IL",
-              "Lived to age 96 — Dave's father would have known her well",
+              "Lived to age 96 — her grandson Terrence (Generation 5) would have known her well",
               "Married Patrick on August 28, 1918 in Chicago",
               "Sisters: Marie Sheehy (b.1898, d.1993, age 94) and Anna V. Sheehy (b.1902, d.1975, Chicago, age 73)",
               "Ancestry sources: Cook County Marriage Index, 1920/1940 Census, SSDI (722-03-2283), 1910 Census",
@@ -339,7 +339,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 3",
-        relation: "Dave's Grandparents",
+        relation: "Generation 4 — Grandparents",
         people: [
           {
             name: 'Edward Joseph "Bud" O\'Reilly',
@@ -351,7 +351,7 @@ export const familyLines: FamilyLine[] = [
             physical: '5\'11", 165 lbs, black hair, blue eyes, ruddy complexion',
             burial: "Holy Sepulchre Catholic Cemetery, Alsip, Cook County, Illinois — CONFIRMED (Find A Grave memorial #50749310). Same cemetery as John J. Coffey and Julia Coffey. The O'Reilly and Coffey families are buried together at Holy Sepulchre.",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P8)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P8)",
               "Born Edward Francis — adopted confirmation name Joseph, thereafter went by Edward Joseph O'Reilly (EJ O'Reilly)",
               "Second of 5 children — older sister Loretta was born 1919",
               "Leo High School, class of 1938 (yearbook photo confirmed)",
@@ -359,7 +359,7 @@ export const familyLines: FamilyLine[] = [
               "Family says Patton's 3rd Army, Battle of the Bulge (unverified — Army personnel files largely destroyed in 1973 NPRC fire)",
               "Brought home a captured German pistol",
               "Post-war career details pending family verification",
-              "Children (per Uncle Tom): MarySue, JoAnn, Tom, Terry, Patrick, Hugh. Tom is Dave's uncle. Terry (Terrence Patrick) is Dave's father.",
+              "Children (per O'Reilly family archive): MarySue, JoAnn, Tom, Terry, Patrick, Hugh. Terrence Patrick is Generation 5.",
               "Died April 7, 2002 in Oak Lawn, Illinois, age 81",
               "Funeral at St. Catherine of Alexandria Church, Oak Lawn",
               "Inherited his father Patrick's black hair and blue eyes",
@@ -374,11 +374,11 @@ export const familyLines: FamilyLine[] = [
             spouse: 'Edward Joseph "Bud" O\'Reilly',
             burial: "Holy Sepulchre Cemetery, Alsip, IL — Section 19, Block 19, Lot 22, Grave 1",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P7)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P7)",
               "Had a twin brother Daniel Coffey — both born May 18, 1923, Chicago",
               "Parents were Irish immigrants from County Kerry",
               "Grew up at 7748 S. Langley Ave — ONE BLOCK from Edward's address on St. Lawrence Ave",
-              "Told Dave a shipwreck story 2-3 weeks before she died",
+              "Told her grandchildren a shipwreck story 2-3 weeks before she died",
               "Siblings: John Patrick (b.1915), Mary Ellen (b.c.1918), Jeremiah 'Jerry' (b.c.1920), Paul T. (b.c.1921), Daniel (b.1923, her twin — CONFIRMED by 1940 Census: both listed age 16), Loretta (b.c.1924)",
               "1930 Census: Eileen listed as 'Jean M. Coffey, age 6' — name mangled by census taker. Twin Daniel listed as 'Donald J. Coffey, age 6'",
               "1940 Census: Eileen listed as 'Eillen Coffey, age 16' — Daniel listed as 'Daniel Coffey, age 16'. Twin status CONFIRMED.",
@@ -396,21 +396,21 @@ export const familyLines: FamilyLine[] = [
       },
       {
         title: "Father Remembered",
-        content: "Dave's father Terrence remembered his great-grandfather's name as Patrick — not William, as earlier research had incorrectly suggested. He was right. Patrick Joseph O'Reilly was born in 1883 and died in 1972, when Terrence was about 16 years old. Old enough to remember the man, and the name. Sometimes the best genealogical source is the family member who was there.",
+        content: "Terrence O'Reilly (Generation 5) remembered his great-grandfather's name as Patrick — not William, as earlier research had incorrectly suggested. He was right. Patrick Joseph O'Reilly was born in 1883 and died in 1972, when Terrence was about 16 years old. Old enough to remember the man, and the name. Sometimes the best genealogical source is the family member who was there.",
       },
       {
         title: "Buried at the Abbey",
-        content: "Edward O'Reilly — Patrick's father and Dave's 2× great-grandfather — is buried at Jerpoint Abbey in Thomastown, Kilkenny. Founded in 1180 by Cistercian monks, the abbey is one of Ireland's finest medieval ruins. Its carved cloister arcade features knights and saints and dragons. Edward died at 52 in 1892, leaving 9-year-old Patrick fatherless. Fourteen years later, Patrick would leave Thomastown for America.",
+        content: "Edward O'Reilly — Patrick's father and the family's 2× great-grandfather (Generation 1) — is buried at Jerpoint Abbey in Thomastown, Kilkenny. Founded in 1180 by Cistercian monks, the abbey is one of Ireland's finest medieval ruins. Its carved cloister arcade features knights and saints and dragons. Edward died at 52 in 1892, leaving 9-year-old Patrick fatherless. Fourteen years later, Patrick would leave Thomastown for America.",
         pullQuote: "A medieval abbey in Kilkenny. That's where the O'Reilly story begins — and where it rests.",
       },
       {
         title: "Black Hair, Blue Eyes",
-        content: "Patrick Joseph O'Reilly's 1918 WWI draft card describes him simply: medium build, medium height, black hair, blue eyes. His son Edward 'Bud' inherited the same features — the 1942 WWII draft card records black hair, blue eyes, ruddy complexion. Dave's father Terry carries the same coloring. Three generations of O'Reilly men, the same black hair and blue eyes, passed down from a stone town in Kilkenny to Chicago's South Side.\n\nPatrick registered on September 12, 1918 — the 'Old Man's Registration' for men 18 to 45 who hadn't previously registered. He was 35, married to Catherine, with a baby on the way (Loretta would arrive in 1920). The war ended just two months later. Patrick almost certainly never served. But he signed up.",
+        content: "Patrick Joseph O'Reilly's 1918 WWI draft card describes him simply: medium build, medium height, black hair, blue eyes. His son Edward 'Bud' inherited the same features — the 1942 WWII draft card records black hair, blue eyes, ruddy complexion. The next generation carries the same coloring. Three generations of O'Reilly men, the same black hair and blue eyes, passed down from a stone town in Kilkenny to Chicago's South Side.\n\nPatrick registered on September 12, 1918 — the 'Old Man's Registration' for men 18 to 45 who hadn't previously registered. He was 35, married to Catherine, with a baby on the way (Loretta would arrive in 1920). The war ended just two months later. Patrick almost certainly never served. But he signed up.",
         pullQuote: "Three generations of O'Reilly men. The same black hair and blue eyes from Kilkenny.",
       },
       {
         title: "Two Immigrants, One Draft",
-        content: "In 1917, the United States entered World War I. Every man between 18 and 45 was required to register for the draft. Two of Dave's great-grandfathers — strangers to each other, from opposite corners of Europe — both walked into registration offices in Illinois and signed their names.\n\nPatrick Joseph O'Reilly, age 35, registered at Draft Board 13 in Chicago. Born in Thomastown, Kilkenny, Ireland. Medium build, black hair, blue eyes. Wife: Catherine O'Reilly. Address: 727 East 50th Street.\n\nAndrew Olaus Linnerud, age 32, registered in Boone County, 80 miles northwest of Chicago. Born in Vinger, Hedmark, Norway. Medium build, dark hair, blue eyes. Wife: Annie Linnerud. Living on a farm.\n\nNeither man likely served. Patrick was 35 with a baby on the way. Andrew was 32 with a young family in rural Illinois. The war ended two months after Patrick's registration. But both signed up. Two immigrants — one Irish, one Norwegian — who had left everything behind for America, and were willing to fight for it.\n\nA generation later, their sons would answer the call for real. Patrick's son Edward 'Bud' enlisted in the Army 45 days after Pearl Harbor. Andrew's son Lyle enlisted in the Coast Guard a year later. Both served the entire war. The fathers registered. The sons went.",
+        content: "In 1917, the United States entered World War I. Every man between 18 and 45 was required to register for the draft. Two of the family's great-grandfathers — strangers to each other, from opposite corners of Europe — both walked into registration offices in Illinois and signed their names.\n\nPatrick Joseph O'Reilly, age 35, registered at Draft Board 13 in Chicago. Born in Thomastown, Kilkenny, Ireland. Medium build, black hair, blue eyes. Wife: Catherine O'Reilly. Address: 727 East 50th Street.\n\nAndrew Olaus Linnerud, age 32, registered in Boone County, 80 miles northwest of Chicago. Born in Vinger, Hedmark, Norway. Medium build, dark hair, blue eyes. Wife: Annie Linnerud. Living on a farm.\n\nNeither man likely served. Patrick was 35 with a baby on the way. Andrew was 32 with a young family in rural Illinois. The war ended two months after Patrick's registration. But both signed up. Two immigrants — one Irish, one Norwegian — who had left everything behind for America, and were willing to fight for it.\n\nA generation later, their sons would answer the call for real. Patrick's son Edward 'Bud' enlisted in the Army 45 days after Pearl Harbor. Andrew's son Lyle enlisted in the Coast Guard a year later. Both served the entire war. The fathers registered. The sons went.",
         pullQuote: "Two immigrants who had left everything behind for America, and were willing to fight for it.",
       },
       {
@@ -424,7 +424,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         title: "The Man on the Streetcar",
-        content: "By 1920, Patrick O'Reilly had made it to Chicago.\n\nThe 1920 Federal Census finds him at an address on 65th Street, in Chicago's Ward 7 on the South Side — not far from the Irish working-class neighborhoods that had been absorbing immigrants from County Kerry and County Kilkenny for decades. He was 35. He had been in America for fourteen years.\n\nHis occupation: Conductor. City Railway.\n\nPatrick O'Reilly drove streetcars. He worked the Chicago surface lines — the clanging, open-sided cars that carried factory workers, shoppers, and schoolchildren across the South Side grid. It was solid union work. Regular hours, regular pay. The kind of job an Irish immigrant with no college education could hold with dignity for decades.\n\nIn the house with him: his wife Catherine, age 25. And a daughter — Loretta O'Reilly, listed in the census as age 0. An infant. Born in 1920.\n\nThe following year, on January 24, 1921, they would have another child: Edward Joseph O'Reilly — born Edward Francis, he would take Joseph as his confirmation name — the boy who would grow up to be called 'Bud,' who would enlist in the Army just weeks after Pearl Harbor, who would serve in Patton's Third Army, who would come home and become Dave O'Reilly's grandfather.\n\nAlso in the house: a lodger named Mary Driscoll, age 20. Probably another Irish immigrant taking a room. The O'Reillys were renting, not owning. Five dollars when he arrived, a streetcar route on the South Side, a baby daughter, and another child on the way.\n\nHe was building something.\n\nSources: 1920 United States Federal Census, Chicago Ward 7, Cook County, Illinois. Roll T625_315, Page 5A, Enumeration District 422.",
+        content: "By 1920, Patrick O'Reilly had made it to Chicago.\n\nThe 1920 Federal Census finds him at an address on 65th Street, in Chicago's Ward 7 on the South Side — not far from the Irish working-class neighborhoods that had been absorbing immigrants from County Kerry and County Kilkenny for decades. He was 35. He had been in America for fourteen years.\n\nHis occupation: Conductor. City Railway.\n\nPatrick O'Reilly drove streetcars. He worked the Chicago surface lines — the clanging, open-sided cars that carried factory workers, shoppers, and schoolchildren across the South Side grid. It was solid union work. Regular hours, regular pay. The kind of job an Irish immigrant with no college education could hold with dignity for decades.\n\nIn the house with him: his wife Catherine, age 25. And a daughter — Loretta O'Reilly, listed in the census as age 0. An infant. Born in 1920.\n\nThe following year, on January 24, 1921, they would have another child: Edward Joseph O'Reilly — born Edward Francis, he would take Joseph as his confirmation name — the boy who would grow up to be called 'Bud,' who would enlist in the Army just weeks after Pearl Harbor, who would serve in Patton's Third Army, who would come home and become the grandfather of the current generation.\n\nAlso in the house: a lodger named Mary Driscoll, age 20. Probably another Irish immigrant taking a room. The O'Reillys were renting, not owning. Five dollars when he arrived, a streetcar route on the South Side, a baby daughter, and another child on the way.\n\nHe was building something.\n\nSources: 1920 United States Federal Census, Chicago Ward 7, Cook County, Illinois. Roll T625_315, Page 5A, Enumeration District 422.",
         pullQuote: "His occupation: Conductor. City Railway. Patrick O'Reilly drove streetcars across Chicago's South Side. In the summer of 1919, those streetcars became the front lines of one of the worst race riots in American history.",
       },
       {
@@ -449,12 +449,12 @@ export const familyLines: FamilyLine[] = [
       },
       {
         title: "From Abbeyfeale to Chicago: The Sheehy-Woulfe Line",
-        content: "Catherine Loretta Sheehy was born in Chicago in 1894 — but her roots ran deep into County Limerick. Her father Richard Joseph Sheehy came from Newcastle West, a market town in western Limerick. His father William Joseph Sheehy had married Catherine Barrett there in 1856 at the Immaculate Conception Church. William died young at 33, leaving Richard to grow up fatherless — just as Patrick O'Reilly would lose his father at 9.\n\nRichard emigrated to Chicago sometime in the 1880s and married Anna Woulfe in 1894 — the same year their daughter Catherine was born. Anna came from an even more remote corner of Limerick: Cratloe West, near the town of Abbeyfeale, close to the Kerry border. She had emigrated at age 12 with her parents Patrick Woulfe and Bridget Roche.\n\nAnna lived to 92. She was known to her great-grandchildren as 'Grandma Shug.' She died in 1967 on the south side of Chicago, and is buried at Holy Sepulcher Cemetery in Worth, Illinois — alongside her husband Richard, who preceded her by 36 years.\n\nFour Irish emigrants — from Newcastle West and Abbeyfeale and Cratloe West — converged on Chicago's South Side, married, and produced Catherine Loretta, who married Patrick O'Reilly, who produced Edward 'Bud', who married Eileen Coffey, who produced Terrence — Dave's father.",
+        content: "Catherine Loretta Sheehy was born in Chicago in 1894 — but her roots ran deep into County Limerick. Her father Richard Joseph Sheehy came from Newcastle West, a market town in western Limerick. His father William Joseph Sheehy had married Catherine Barrett there in 1856 at the Immaculate Conception Church. William died young at 33, leaving Richard to grow up fatherless — just as Patrick O'Reilly would lose his father at 9.\n\nRichard emigrated to Chicago sometime in the 1880s and married Anna Woulfe in 1894 — the same year their daughter Catherine was born. Anna came from an even more remote corner of Limerick: Cratloe West, near the town of Abbeyfeale, close to the Kerry border. She had emigrated at age 12 with her parents Patrick Woulfe and Bridget Roche.\n\nAnna lived to 92. She was known to her great-grandchildren as 'Grandma Shug.' She died in 1967 on the south side of Chicago, and is buried at Holy Sepulcher Cemetery in Worth, Illinois — alongside her husband Richard, who preceded her by 36 years.\n\nFour Irish emigrants — from Newcastle West and Abbeyfeale and Cratloe West — converged on Chicago's South Side, married, and produced Catherine Loretta, who married Patrick O'Reilly, who produced Edward 'Bud', who married Eileen Coffey, who produced Terrence (Generation 5).",
         pullQuote: "Anna Woulfe was known to her great-grandchildren as 'Grandma Shug.' She died in Chicago at 92, never having forgotten Abbeyfeale.",
       },
       {
         title: "The Woulfe Who Built a Printing Empire on Streetcar Pads",
-        content: "In August 1990, the Chicago Tribune ran an obituary for John V. Woulfe Sr., 83, who had just died in Palos Heights, Illinois — the same southwest Chicago suburb where the O'Reilly and Coffey families had settled.\n\nJohn V. Woulfe Sr. was a native of Chicago. He attended the University of Notre Dame in the late 1920s. He lived on Clyde Avenue in the South Shore neighborhood — the same South Side of Chicago where Anna Woulfe (née from Cratloe West, Abbeyfeale) had spent her life. He died Catholic. His funeral was held at Thompson & Kuenster Funeral Home on West 95th Street in Oak Lawn.\n\nAnd he had founded one of Chicago's oldest family-owned printing companies — named Clyde Printing Co., after his street — in the 1940s. The company began as a supplier of 'take-one' pads on Chicago streetcars.\n\nStreetcars again. The same City Surface Lines that Patrick O'Reilly conducted for three decades. The same cars that rumbled down 65th Street and St. Lawrence Avenue.\n\nAnna Woulfe was born in 1875 in Cratloe West, Limerick, and emigrated to Chicago as a child with her parents Patrick Woulfe and Bridget Roche. John V. Woulfe Sr. was a native Chicagoan — likely born around 1907, making him almost certainly the son or nephew of another Woulfe from the same Abbeyfeale/Cratloe West emigrant wave. The shared surnames, the shared South Side geography, the shared Catholic funeral home, the shared suburb at the end of life — these are not coincidences. They are the fingerprints of the same Limerick family, scattered across the same city.\n\nIf confirmed, John V. Woulfe Sr. was Dave's great-grandmother Anna's nephew. Clyde Printing's clients included the Chicago White Sox, the Chicago Cubs, the Chicago Bears, WGN, and Wrigley Company. A Woulfe from Abbeyfeale built a Chicago institution — from a cart of streetcar pads to the Cubs' printing vendor.\n\nThe obituary deserves a follow-up. The connection is not confirmed. But it is very, very likely.\n\nSources: Chicago Tribune, August 19, 1990 (obituary, John V. Woulfe Sr.).",
+        content: "In August 1990, the Chicago Tribune ran an obituary for John V. Woulfe Sr., 83, who had just died in Palos Heights, Illinois — the same southwest Chicago suburb where the O'Reilly and Coffey families had settled.\n\nJohn V. Woulfe Sr. was a native of Chicago. He attended the University of Notre Dame in the late 1920s. He lived on Clyde Avenue in the South Shore neighborhood — the same South Side of Chicago where Anna Woulfe (née from Cratloe West, Abbeyfeale) had spent her life. He died Catholic. His funeral was held at Thompson & Kuenster Funeral Home on West 95th Street in Oak Lawn.\n\nAnd he had founded one of Chicago's oldest family-owned printing companies — named Clyde Printing Co., after his street — in the 1940s. The company began as a supplier of 'take-one' pads on Chicago streetcars.\n\nStreetcars again. The same City Surface Lines that Patrick O'Reilly conducted for three decades. The same cars that rumbled down 65th Street and St. Lawrence Avenue.\n\nAnna Woulfe was born in 1875 in Cratloe West, Limerick, and emigrated to Chicago as a child with her parents Patrick Woulfe and Bridget Roche. John V. Woulfe Sr. was a native Chicagoan — likely born around 1907, making him almost certainly the son or nephew of another Woulfe from the same Abbeyfeale/Cratloe West emigrant wave. The shared surnames, the shared South Side geography, the shared Catholic funeral home, the shared suburb at the end of life — these are not coincidences. They are the fingerprints of the same Limerick family, scattered across the same city.\n\nIf confirmed, John V. Woulfe Sr. was the family's great-grandmother Anna's nephew. Clyde Printing's clients included the Chicago White Sox, the Chicago Cubs, the Chicago Bears, WGN, and Wrigley Company. A Woulfe from Abbeyfeale built a Chicago institution — from a cart of streetcar pads to the Cubs' printing vendor.\n\nThe obituary deserves a follow-up. The connection is not confirmed. But it is very, very likely.\n\nSources: Chicago Tribune, August 19, 1990 (obituary, John V. Woulfe Sr.).",
         pullQuote: "He founded Clyde Printing Co. — started as a supplier of 'take-one' pads on Chicago streetcars. A Woulfe from Abbeyfeale, supplying paper to the same cars Patrick O'Reilly drove.",
       },
       {
@@ -518,7 +518,7 @@ export const familyLines: FamilyLine[] = [
     generations: [
       {
         label: "Generation 0",
-        relation: "Dave's 3× Great-Grandparents",
+        relation: "Generation 1 — 3× Great-Grandparents",
         people: [
           {
             name: "Jeremiah (Jerry) Coffey",
@@ -527,7 +527,7 @@ export const familyLines: FamilyLine[] = [
             occupation: "Farmer",
             spouse: "Janet Clifford",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P30)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P30)",
               "Mother: Mary Cronin (b.18 Mar 1805, Killorglin; d.1885, Killorglin)",
               "Head of family at Ballydarrig, Castlequin, Kerry in 1901 Census",
               "1911 Census: widowed, had been married 23 years, 12 children born alive, 7 still living",
@@ -541,7 +541,7 @@ export const familyLines: FamilyLine[] = [
             died: "1895",
             spouse: "Jeremiah (Jerry) Coffey",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P29)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P29)",
               "Father: James Clifford (no dates known)",
               "Born in the FILEMORE townland of Kerry",
               "Died 1895 — before the 1901 Census (which shows Jeremiah as widowed)",
@@ -553,7 +553,7 @@ export const familyLines: FamilyLine[] = [
             name: "James Clifford",
             bornPlace: "County Kerry, Ireland",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P68)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P68)",
               "Father of Janet Clifford, who married Jeremiah Coffey",
               "No dates or further details known",
             ],
@@ -565,7 +565,7 @@ export const familyLines: FamilyLine[] = [
             died: "1885",
             diedPlace: "Killorglin, Kerry, Ireland",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: I29)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I29)",
               "Christened March 18, 1805 at Killarney, Kerry",
               "Parents: Mary and Michael Cronin",
               "Married Jeremiah Coffey Sr. on February 7, 1824 in Killorglin, Kerry",
@@ -581,7 +581,7 @@ export const familyLines: FamilyLine[] = [
             died: "Waterville, County Kerry, Ireland",
             spouse: "Mary Fitzgerald Sheehan",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P34)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P34)",
               "Parents: Jeremia Sheehan (b.1820) and Genita Thomas (b.1820, Waterville)",
               "Julia's father — from the Waterville/Dromod area of Kerry",
               "12 children including Julia (b.1889), Deborah/Abby (b.1898, d.1995 age 97), Brigid/Brennan (b.1891, d.1972), Nellie/Thompson (b.1891, d.1993 age 102), Patrick John (b.1894, d.1962)",
@@ -595,7 +595,7 @@ export const familyLines: FamilyLine[] = [
             diedPlace: "Kerry, Ireland",
             spouse: "Patrick Sheehan",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P35)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P35)",
               "Parents: Daniel Sheehan (b.1798, d.20 Aug 1870) and Ellen Fitzgerald Sheehan (b.1810, d.1887)",
               "Julia's mother — maiden name Fitzgerald",
               "Had 12 children in ~16 years with Patrick Sheehan",
@@ -608,7 +608,7 @@ export const familyLines: FamilyLine[] = [
             born: "1820",
             spouse: "Genita Thomas",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: I41)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I41)",
               "Father of Patrick Sheehan (b.1846, Waterville) — Julia Sheehan's grandfather",
             ],
           },
@@ -618,7 +618,7 @@ export const familyLines: FamilyLine[] = [
             bornPlace: "Waterville, County Kerry, Ireland",
             spouse: "Jeremia Sheehan",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: I40)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I40)",
               "Mother of Patrick Sheehan (b.1846, Waterville) — Julia Sheehan's grandmother",
             ],
           },
@@ -630,7 +630,7 @@ export const familyLines: FamilyLine[] = [
             diedPlace: "County Kerry, Ireland",
             spouse: "Ellen Fitzgerald Sheehan",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: I38)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I38)",
               "Father of Mary Fitzgerald Sheehan — Julia Sheehan's great-grandfather",
               "Died August 20, 1870, County Kerry, age 72",
             ],
@@ -642,7 +642,7 @@ export const familyLines: FamilyLine[] = [
             diedPlace: "Tralee, Kerry, Ireland (per notes)",
             spouse: "Daniel Sheehan",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: I39)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I39)",
               "Mother of Mary Fitzgerald Sheehan — Julia Sheehan's great-grandmother",
               "Died 1887, age 77",
             ],
@@ -651,22 +651,22 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 1",
-        relation: "Dave's Great-Grandparents",
+        relation: "Generation 3 — Great-Grandparents",
         people: [
           {
             name: "John J. Coffey",
             born: "June 17, 1875",
             bornPlace: "Ballydarrig, Castlequin, County Kerry, Ireland",
-            died: "January 4, 1951 — CONFIRMED by Chicago Tribune obituary published January 6, 1951 (Ancestry/Newspapers.com collection 61843, record 497888864). Note: Uncle Tom's records say Nov 26, 1957 — the Tribune obit overrides this as a primary source.",
+            died: "January 4, 1951 — CONFIRMED by Chicago Tribune obituary published January 6, 1951 (Ancestry/Newspapers.com collection 61843, record 497888864). Note: ourclann.org records indicate Nov 26, 1957 — the Tribune obit overrides this as a primary source.",
             diedPlace: "Chicago, Illinois",
             occupation: "Railroad Freight Clerk → Gas Co. Superintendent → Freight Checker (1930 Census confirmed: 'Freightman, Steam Railroad')",
             spouse: "Julia Sheehan",
             immigrated: "1902 — CONFIRMED by 1930 Census (immigration year field). SS Ivernia from Queenstown was correct. A separate 1904 'Jno Coffey' on SS Arabic was a different person.",
             ship: "SS Ivernia",
             physical: "Medium build, black hair, gray eyes",
-            burial: "Holy Sepulchre Catholic Cemetery, Alsip, IL — Sect. 22 Blk. 11 Lot 25 Grave 2 (Find A Grave #74618781 — consistent with 1951 death date). Note: Uncle Tom's records say Mount Olivet — likely an error given the confirmed 1951 death date.",
+            burial: "Holy Sepulchre Catholic Cemetery, Alsip, IL — Sect. 22 Blk. 11 Lot 25 Grave 2 (Find A Grave #74618781 — consistent with 1951 death date). Note: ourclann.org records indicate Mount Olivet — likely an error given the confirmed 1951 death date.",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P25)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P25)",
               "Parents: Jeremiah Coffey (b.28 Aug 1836) and Janet Clifford (b. FILEMORE, Kerry; d.1895)",
               "Parents' marriage: June 10, 1875 at Cahirciveen, Kerry — witnessed by Daniel Clifford and Patrick Coffey",
               "WWI Veteran — registered September 12, 1918 (Old Man's Registration, age 43)",
@@ -674,7 +674,7 @@ export const familyLines: FamilyLine[] = [
               "Nickel Plate Railroad clerk (from obituary)",
               "Funeral at St. Dorothy's Church",
               "Owned home at 7748 S. Langley Ave for 20+ years (1920-1940+)",
-              "⚠️ DISCREPANCY RESOLVED: Chicago Tribune obituary (Jan 6, 1951) confirms death in 1951, NOT 1957. Uncle Tom's Nov 26, 1957 date is incorrect — the Tribune is a primary source. Children listed in Tribune obit: John P., Mary Bering, Jerry, Paul, Daniel, Eileen O'Reilly, Loretta. EILEEN LISTED AS 'O'REILLY' — confirming she married Bud BEFORE Jan 1951.",
+              "⚠️ DISCREPANCY RESOLVED: Chicago Tribune obituary (Jan 6, 1951) confirms death in 1951, NOT 1957. The ourclann.org Nov 26, 1957 date is incorrect — the Tribune is a primary source. Children listed in Tribune obit: John P., Mary Bering, Jerry, Paul, Daniel, Eileen O'Reilly, Loretta. EILEEN LISTED AS 'O'REILLY' — confirming she married Bud BEFORE Jan 1951.",
               "Siblings named in Tribune obit: Timothy Coffey, A. Dole McIlvaney, Mary Keating, Michael Coffey",
               "Siblings in Chicago: Timothy, Michael, Mary Keating, Mrs. McIlvaney",
               "Documents: Certificate of Marriage (John & Julia Coffey); John Coffey Naturalization Record",
@@ -693,7 +693,7 @@ export const familyLines: FamilyLine[] = [
             ship: "SS Arabic",
             burial: "Holy Sepulchre Catholic Cemetery, Alsip, IL",
             notes: [
-              "Source: Uncle Tom's ourclann.org site (Person ID: P24)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P24)",
               "Father: Patrick Sheehan (b.20 Feb 1846, Waterville); Mother: Mary Fitzgerald Sheehan (d. Jun 1931, Kerry)",
               "Born in Dromod Parish, near Waterville — about 30 miles from John's home in Castlequin",
               "Still in Ireland at age 23 in the 1911 Census",
@@ -702,7 +702,7 @@ export const familyLines: FamilyLine[] = [
               "7 children, raised at 7748 S. Langley Ave",
               "Died April 25, 1965 in Evergreen Park, IL at age 76",
               "Documents: Julia Coffey 1920 Census Record; Certificate of Marriage",
-              "⚠️ Minor discrepancy: notes on Uncle Tom's site say 'born April 6, 1886' vs. personal info showing 1889 — 1889 is consistent with US Census records",
+              "⚠️ Minor discrepancy: ourclann.org records indicate 'born April 6, 1886' vs. personal info showing 1889 — 1889 is consistent with US Census records",
             ],
           },
         ],
@@ -714,16 +714,16 @@ export const familyLines: FamilyLine[] = [
     stories: [
       {
         title: "The Ship That Sank",
-        content: "In June 2013, just weeks before she passed away at 90, Eileen O'Reilly told her grandson Dave and his wife a story she'd carried for decades: a woman in her family — her mother, or perhaps her grandmother — had left Ireland for a better life in America. The ship she was on sank. She survived.\n\nThe story has a remarkable anchor in fact. Eileen's mother, Julia Therese Sheehan, emigrated from County Kerry to Boston in 1906 aboard the SS Arabic — a White Star Line ocean liner on the Liverpool-Queenstown-Boston route. Julia arrived safely, married John J. Coffey in 1913, and raised seven children on Chicago's South Side.\n\nBut the SS Arabic did not survive. On August 19, 1915, a German submarine torpedoed the ship 50 miles off the coast of Kinsale, Ireland. It sank in under ten minutes. Forty-four people died. Three hundred and eighty survived.\n\nThe Arabic was the Sheehan family's ship. Between 1905 and 1914, at least five Sheehans from County Kerry sailed on it — including a Mary Sheehan in 1912 whose father was also named Patrick Sheehan, possibly Julia's own sister. Whether a Sheehan was aboard that final, fatal voyage remains unconfirmed. But the family knew the Arabic. They trusted it. And when it went down, the story entered the family's memory.\n\nEileen carried it for nearly a century. She passed it on just before she left.",
+        content: "In June 2013, just weeks before she passed away at 90, Eileen O'Reilly told her grandchildren a story she'd carried for decades: a woman in her family — her mother, or perhaps her grandmother — had left Ireland for a better life in America. The ship she was on sank. She survived.\n\nThe story has a remarkable anchor in fact. Eileen's mother, Julia Therese Sheehan, emigrated from County Kerry to Boston in 1906 aboard the SS Arabic — a White Star Line ocean liner on the Liverpool-Queenstown-Boston route. Julia arrived safely, married John J. Coffey in 1913, and raised seven children on Chicago's South Side.\n\nBut the SS Arabic did not survive. On August 19, 1915, a German submarine torpedoed the ship 50 miles off the coast of Kinsale, Ireland. It sank in under ten minutes. Forty-four people died. Three hundred and eighty survived.\n\nThe Arabic was the Sheehan family's ship. Between 1905 and 1914, at least five Sheehans from County Kerry sailed on it — including a Mary Sheehan in 1912 whose father was also named Patrick Sheehan, possibly Julia's own sister. Whether a Sheehan was aboard that final, fatal voyage remains unconfirmed. But the family knew the Arabic. They trusted it. And when it went down, the story entered the family's memory.\n\nEileen carried it for nearly a century. She passed it on just before she left.",
         pullQuote: "The family knew the Arabic. They trusted it. And when it went down, the story entered the family's memory.",
       },
       {
         title: "Kilkenny Meets Kerry",
-        content: "Dave's grandparents united two different corners of Ireland. The O'Reilly line came from County Kilkenny in the southeast — medieval Norman country, the heart of the Pale's edge. The Coffey and Sheehan lines came from County Kerry in the southwest — deep Gaelic territory, remote and wild. When Edward married Eileen, the southeast met the southwest in a Chicago parish.",
+        content: "The Generation 4 grandparents united two different corners of Ireland. The O'Reilly line came from County Kilkenny in the southeast — medieval Norman country, the heart of the Pale's edge. The Coffey and Sheehan lines came from County Kerry in the southwest — deep Gaelic territory, remote and wild. When Edward married Eileen, the southeast met the southwest in a Chicago parish.",
       },
       {
         title: "From Killorglin to Ballydarrig: The Coffey Roots",
-        content: "The Coffey story begins at Killorglin — a market town at the mouth of the Laune River in County Kerry, home to the famous Puck Fair. It was there, in 1824, that Mary Cronin married Jeremiah Coffey Sr., and began raising the family that would eventually reach Chicago.\n\nTheir son Jeremiah Coffey (born 1836 in the townland of Koilclohir near Killorglin) married Janet Clifford on June 10, 1875 at Cahirciveen — the very day their son John Joseph Coffey was born. The witnesses were Daniel Clifford and Patrick Coffey; the priest was Rev. J. Harding.\n\nJanet died in 1895, leaving Jeremiah a widower. By 1911, the Census records show him still in Kerry — widowed, 75 years old, having had 12 children born alive, 7 still living.\n\nJohn Joseph Coffey — Eileen's father and Dave's great-grandfather — had already been gone from Kerry for nearly a decade by then. He had sailed from Queenstown in 1902 on the SS Ivernia, bound for Boston, carrying next to nothing. He would build a life on Chicago's South Side, work the railroads, marry Julia Sheehan from Waterville, and raise seven children at 7748 S. Langley Avenue — one block from where the O'Reilly boy lived.",
+        content: "The Coffey story begins at Killorglin — a market town at the mouth of the Laune River in County Kerry, home to the famous Puck Fair. It was there, in 1824, that Mary Cronin married Jeremiah Coffey Sr., and began raising the family that would eventually reach Chicago.\n\nTheir son Jeremiah Coffey (born 1836 in the townland of Koilclohir near Killorglin) married Janet Clifford on June 10, 1875 at Cahirciveen — the very day their son John Joseph Coffey was born. The witnesses were Daniel Clifford and Patrick Coffey; the priest was Rev. J. Harding.\n\nJanet died in 1895, leaving Jeremiah a widower. By 1911, the Census records show him still in Kerry — widowed, 75 years old, having had 12 children born alive, 7 still living.\n\nJohn Joseph Coffey — Eileen's father and the family's great-grandfather (Generation 3) — had already been gone from Kerry for nearly a decade by then. He had sailed from Queenstown in 1902 on the SS Ivernia, bound for Boston, carrying next to nothing. He would build a life on Chicago's South Side, work the railroads, marry Julia Sheehan from Waterville, and raise seven children at 7748 S. Langley Avenue — one block from where the O'Reilly boy lived.",
         pullQuote: "Jeremiah Coffey married Janet Clifford on June 10, 1875 — the very day their son John Joseph was born.",
       },
       {
@@ -733,7 +733,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         title: "The Sheehan Family of Waterville",
-        content: "Julia Sheehan's family came from the Dromod Parish near Waterville — a remote and beautiful stretch of the Ring of Kerry where the mountains meet the Atlantic. Her father Patrick Sheehan was born in 1846. Her mother, Mary Fitzgerald, came from the same area. Together they had 12 children, including Julia and her sister Deborah — who would live to 97 — and Nellie Thompson, who made it to 102.\n\nLongevity was in the Sheehan blood. Julia herself lived to 76 despite the hardship of emigrating at 18 with $10 in her pocket. Her mother Mary died in Kerry in 1931. Her grandparents Daniel Sheehan (1798–1870) and Ellen Fitzgerald Sheehan (1810–1887) are the oldest confirmed ancestors on this branch of the family.\n\nJulia came to America on the SS Arabic in 1906, the same ship that would be torpedoed by a German submarine nine years later. She married John J. Coffey in 1913. Their daughter Eileen — born May 18, 1923, a twin — would grow up to marry Edward 'Bud' O'Reilly and become Dave's grandmother.",
+        content: "Julia Sheehan's family came from the Dromod Parish near Waterville — a remote and beautiful stretch of the Ring of Kerry where the mountains meet the Atlantic. Her father Patrick Sheehan was born in 1846. Her mother, Mary Fitzgerald, came from the same area. Together they had 12 children, including Julia and her sister Deborah — who would live to 97 — and Nellie Thompson, who made it to 102.\n\nLongevity was in the Sheehan blood. Julia herself lived to 76 despite the hardship of emigrating at 18 with $10 in her pocket. Her mother Mary died in Kerry in 1931. Her grandparents Daniel Sheehan (1798–1870) and Ellen Fitzgerald Sheehan (1810–1887) are the oldest confirmed ancestors on this branch of the family.\n\nJulia came to America on the SS Arabic in 1906, the same ship that would be torpedoed by a German submarine nine years later. She married John J. Coffey in 1913. Their daughter Eileen — born May 18, 1923, a twin — would grow up to marry Edward 'Bud' O'Reilly — the couple who became Generation 4's grandparents on the paternal side.",
       },
     ],
   },
@@ -782,7 +782,7 @@ export const familyLines: FamilyLine[] = [
     generations: [
       {
         label: "Generation 0",
-        relation: "Dave's 3× Great-Grandparents (Lee/Sørensen line)",
+        relation: "Generation 1 — 3× Great-Grandparents (Lee/Sørensen line)",
         people: [
           {
             name: "Søren Sørensen",
@@ -791,7 +791,7 @@ export const familyLines: FamilyLine[] = [
             spouse: "Gubjør Olsdatter",
             notes: [
               "1865 Census: Head of household at Gylterud farm, Vinger/Austmarka, Hedmark",
-              "His mother Sigri Andersdatter (born ~1797) lived with the family — Dave's 5× great-grandmother",
+              "His mother Sigri Andersdatter (born ~1797) lived with the family — 5× great-grandmother, Generation 0",
               "Children: Anne (~1854), Sigvard/Sigvart (~1858), Ole (~1860), Gunder (~1863)",
             ],
           },
@@ -805,7 +805,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 1",
-        relation: "Dave's 2× Great-Grandparents",
+        relation: "Generation 2 — 2× Great-Grandparents",
         people: [
           {
             name: "Anders Pedersen",
@@ -858,7 +858,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 2",
-        relation: "Dave's Great-Grandparents",
+        relation: "Generation 3 — Great-Grandparents",
         people: [
           {
             name: "Andrew Olaus Linnerud",
@@ -904,7 +904,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 3",
-        relation: "Dave's Grandparents",
+        relation: "Generation 4 — Grandparents",
         people: [
           {
             name: "Lyle Andrew Linnerud",
@@ -924,9 +924,9 @@ export const familyLines: FamilyLine[] = [
               "Japan surrendered while he was at sea (August 14, 1945)",
               "Honorably discharged May 1946",
               "Married Helen Marie Jakubicek on January 20, 1951",
-              "5 children: Alan (firstborn), Calvin, twins Cary & Cheryl, Andrea (youngest — Dave's mom)",
+              "5 children: Alan (firstborn), Calvin, twins Cary & Cheryl, Andrea (youngest, Generation 5)",
               "Valedictorian of Gage Park High School, 1940",
-              "Post-war career: Printer Foreman at R.R. Donnelley & Sons, Chicago (per Dave O'Reilly — family oral history, not yet confirmed in public records)",
+              "Post-war career: Printer Foreman at R.R. Donnelley & Sons, Chicago (per family oral history, not yet confirmed in public records)",
               "Author of memoir: 'The Rime of an Ancient Mariner'",
             ],
           },
@@ -964,7 +964,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         title: "Lyle Conway — The Puppeteer",
-        content: "Dave's mom's first cousin Lyle Conway — son of Evelyn Bernice Linnerud Conway — became one of Hollywood's most acclaimed puppet and creature designers. He sculpted Miss Piggy for The Muppet Show. He created the terrifying Audrey II plant puppet for Little Shop of Horrors, earning an Academy Award nomination. He was the design and fabrication supervisor on Jim Henson's The Dark Crystal, bringing Aughra and the Skeksis to life. He created Jack Pumpkinhead for Return to Oz. The Muppet character 'Lyle the Dog' was literally named after him. He was found dead in his California apartment in March 2026. Those who knew him called him 'a very private man.'",
+        content: "Andrea's first cousin Lyle Conway — son of Evelyn Bernice Linnerud Conway — became one of Hollywood's most acclaimed puppet and creature designers. He sculpted Miss Piggy for The Muppet Show. He created the terrifying Audrey II plant puppet for Little Shop of Horrors, earning an Academy Award nomination. He was the design and fabrication supervisor on Jim Henson's The Dark Crystal, bringing Aughra and the Skeksis to life. He created Jack Pumpkinhead for Return to Oz. The Muppet character 'Lyle the Dog' was literally named after him. He was found dead in his California apartment in March 2026. Those who knew him called him 'a very private man.'",
       },
     ],
   },
@@ -1013,7 +1013,7 @@ export const familyLines: FamilyLine[] = [
     generations: [
       {
         label: "Generation 0",
-        relation: "Dave's 2× Great-Grandparents",
+        relation: "Generation 2 — 2× Great-Grandparents",
         people: [
           {
             name: "George Jakubicek",
@@ -1030,7 +1030,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 1",
-        relation: "Dave's Great-Grandparents",
+        relation: "Generation 3 — Great-Grandparents",
         people: [
           {
             name: "Thomas Joseph Jakubicek",
@@ -1066,7 +1066,7 @@ export const familyLines: FamilyLine[] = [
               "Father: Ludvik Melka; Mother: Klara Marc/Marč",
               "Sailed on the SAME FAMOUS SHIP as Thomas, a decade later",
               "Lived to age 92",
-              "3 children: Helen (Dave's grandmother), Marie/Mary (married Novak), Tommy",
+              "3 children: Helen (Generation 4, married Lyle Linnerud), Marie/Mary (married Novak), Tommy",
             ],
           },
         ],
@@ -1106,7 +1106,7 @@ export const maddenLine = {
   },
   generations: [
     {
-      label: "Dave's 3× Great-Grandparents",
+      label: "Generation 1 — 3× Great-Grandparents",
       people: [
         { name: "Thomas Madden", origin: "Templederry, Tipperary" },
         { name: "Mary Griffin", origin: "Tipperary" },
@@ -1115,7 +1115,7 @@ export const maddenLine = {
       ],
     },
     {
-      label: "Dave's 2× Great-Grandparents",
+      label: "Generation 2 — 2× Great-Grandparents",
       people: [
         {
           name: "Michael G. Madden",

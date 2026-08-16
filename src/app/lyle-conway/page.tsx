@@ -131,7 +131,7 @@ export default function LyleConwayPage() {
             The Man Who Built Miss Piggy and Brought Audrey II to Life
           </p>
           <p className="text-ink-muted max-w-2xl mx-auto text-lg leading-relaxed" style={{ fontFamily: "var(--font-serif)" }}>
-            Dave O&apos;Reilly&apos;s mom&apos;s first cousin. Son of Evelyn Bernice Linnerud Conway. A kid from
+            Andrea&apos;s first cousin (Generation 5). Son of Evelyn Bernice Linnerud Conway. A kid from
             Chicago&apos;s Southwest Side who became one of Hollywood&apos;s most brilliant puppet and creature
             designers — working alongside Jim Henson, Frank Oz, and Walter Murch.
           </p>
@@ -187,8 +187,8 @@ export default function LyleConwayPage() {
               <p className="pl-4">├── Albert Siegel (1913–1933) — <em>killed in storm at 19</em></p>
               <p className="pl-4">├── <strong>Evelyn Bernice</strong> (1915–1969) — <em>married a Conway</em></p>
               <p className="pl-8">└── <strong>Lyle Conway</strong> (~1945–2026) — <em>the puppeteer</em></p>
-              <p className="pl-4">└── <strong>Lyle Andrew</strong> (1922–2015) — <em>Dave&apos;s grandfather</em></p>
-              <p className="mt-3 text-ink-muted">Lyle Conway was named after his uncle — Dave&apos;s grandfather Lyle Andrew Linnerud.</p>
+              <p className="pl-4">└── <strong>Lyle Andrew</strong> (1922–2015) — <em>maternal grandfather, Generation 4</em></p>
+              <p className="mt-3 text-ink-muted">Lyle Conway was named after his uncle — Lyle Andrew Linnerud (maternal grandfather, Generation 4).</p>
               <p className="text-ink-muted">Conway and Grandpa Lyle were first cousins. Conway&apos;s mom Evelyn was Grandpa Lyle&apos;s sister.</p>
             </div>
           </div>

@@ -432,7 +432,7 @@ export default function HomePage() {
             draft card lists his address as 7141 Vernon Avenue — literally one block away. The
             Coffey household at 7748 S. Langley was six blocks from Capone. John Coffey was a
             railroad freight clerk raising seven children in the same neighborhood as the most
-            famous gangster in American history. Patrick Joseph O&apos;Reilly — Dave&apos;s great-grandfather —
+            famous gangster in American history. Patrick Joseph O&apos;Reilly — great-grandfather (Generation 3) —
             was living just a few miles north at 727 E 50th Street.
           </p>
         </div>
@@ -511,7 +511,7 @@ export default function HomePage() {
             Find a Grave · irishgenealogy.ie
           </p>
           <p className="text-ink-muted text-xs mt-4" style={{ fontFamily: "var(--font-sans)" }}>
-            Researched &amp; built for Dave O&apos;Reilly
+            Researched &amp; built for the O&apos;Reilly-Linnerud family
           </p>
         </div>
       </footer>

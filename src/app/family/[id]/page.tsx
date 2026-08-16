@@ -218,22 +218,16 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
                 {l.flag} {l.name}
               </Link>
             ))}
-            <Link
-              href="/tree"
-              className="hidden md:block text-gold font-medium hover:text-gold-dark transition-colors"
-            >
-              🌳 Tree
-            </Link>
-            {/* Mobile: show current family + tree link */}
+            <Link href="/tree" className="hidden md:block text-gold font-medium hover:text-gold-dark transition-colors">🌳 Tree</Link>
+            <Link href="/stories" className="hidden md:block text-ink-muted hover:text-ink transition-colors">📖 Stories</Link>
+            <Link href="/map" className="hidden md:block text-ink-muted hover:text-ink transition-colors">🗺️ Map</Link>
+            <Link href="/documents" className="hidden md:block text-ink-muted hover:text-ink transition-colors">🗂️ Docs</Link>
+            {/* Mobile: show current family + key links */}
             <span className="md:hidden text-gold font-medium text-xs">
               {line.flag} {line.name}
             </span>
-            <Link
-              href="/tree"
-              className="md:hidden text-gold font-medium hover:text-gold-dark transition-colors"
-            >
-              🌳
-            </Link>
+            <Link href="/tree" className="md:hidden text-gold font-medium hover:text-gold-dark transition-colors">🌳</Link>
+            <Link href="/documents" className="md:hidden text-ink-muted hover:text-ink transition-colors text-xs">🗂️</Link>
           </div>
         </div>
       </nav>

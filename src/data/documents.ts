@@ -41,7 +41,7 @@ export const personDocuments: PersonDocuments[] = [
     personName: "Patrick Joseph O'Reilly",
     familyId: "oreilly",
     docs: [
-      // Note: Documents for Patrick are on Uncle Tom's ourclann.org site (marriage certificate, photos, bio)
+      // Note: Documents for Patrick are on O'Reilly family archive (ourclann.org) (marriage certificate, photos, bio)
       // Ancestry records confirmed: WWI Draft Card (Chicago, Catherine O'Reilly as relative), SSDI, 1920/1940 Census, Irish Civil Registration
       // Physical document images to be added when obtained from Tom's site
     ],
@@ -56,7 +56,7 @@ export const personDocuments: PersonDocuments[] = [
     familyId: "coffey",
     docs: [
       { file: "coffey/John-J-Coffey-WWI-Draft-Card-Born-Jun17-1875-Ireland.png", caption: "WWI Draft Card — John J. Coffey (b. Jun 17, 1875, Ireland)" },
-      { file: "coffey/John-J-Coffey-WWI-Draft-Card-HANDWRITTEN-Original.png", caption: "WWI Draft Card — Handwritten Original" },
+
       { file: "coffey/John-Coffey-SS-Ivernia-Boston-Apr24-1902-Immigration-Record.png", caption: "Immigration Record — SS Ivernia, Boston, Apr 24 1902" },
       { file: "coffey/John-Coffey-SS-Ivernia-1902-HANDWRITTEN-Manifest-Cunard-Line.png", caption: "SS Ivernia 1902 — Handwritten Cunard Manifest" },
       { file: "coffey/Ancestry-Trees-John-Coffey-Julia-Sheehan-Marriage-Jun25-1913-Cook-County.png", caption: "Marriage Record — John Coffey & Julia Sheehan, Jun 25 1913" },
@@ -74,7 +74,7 @@ export const personDocuments: PersonDocuments[] = [
     familyId: "coffey",
     docs: [
       { file: "coffey/Julia-Sheehan-SS-Arabic-Boston-May5-1906-Record.png", caption: "Immigration Record — SS Arabic, Boston, May 5 1906" },
-      { file: "coffey/SS-Arabic-1906-Manifest-HANDWRITTEN-Julia-Sheehan-Boston.png", caption: "SS Arabic 1906 — Handwritten Manifest" },
+
       { file: "coffey/1913-Adriatic-Detained-Aliens-Julia-Coffey.png", caption: "1913 Detained Aliens Record — SS Adriatic" },
       { file: "coffey/1901-Census-Florence-Debbie-JULIA-Sheehan-Old-Road-Caher-Kerry.png", caption: "1901 Irish Census — Florence, Debbie & Julia Sheehan, Cahirciveen" },
       { file: "coffey/Julia-Coffey-Sheehan-Obituary-ChicagoTribune-Apr27-1965.png", caption: "Obituary — Julia Coffey (Sheehan), Chicago Tribune, Apr 27 1965" },
@@ -142,7 +142,7 @@ export const personDocuments: PersonDocuments[] = [
     personName: "Sigvart S. Lee",
     familyId: "linnerud",
     docs: [
-      { file: "lee/PHOTO-Sigvart-Lee-Sorensen-Portrait-2xGreatGrandfather.png", caption: "PHOTO — Sigvart Lee (Sørensen), Dave's 2× Great-Grandfather", isPhoto: true },
+      { file: "lee/PHOTO-Sigvart-Lee-Sorensen-Portrait-2xGreatGrandfather.png", caption: "PHOTO — Sigvart Lee (Sørensen), 2× Great-Grandfather (Generation 2)", isPhoto: true },
       { file: "lee/PHOTO-Lee-Family-Full-Portrait-Sigvart-Berthea-8-Children-CLEAN.png", caption: "PHOTO — Lee Family Portrait: Sigvart, Berthea & Their 8 Children", isPhoto: true },
       { file: "lee/Baptism-Record-Sigvard-Sorensen-Dec30-1859-Vinger-Hedmark.png", caption: "Baptism Record — Sigvard Sørensen, Dec 30 1859, Vinger, Norway" },
       { file: "lee/1865-Norway-Census-Sigvard-Sorensen-Vinger-Hedmark.png", caption: "1865 Norwegian Census — Sigvard Sørensen, Vinger, Hedmark" },
@@ -222,6 +222,178 @@ export const personDocuments: PersonDocuments[] = [
     docs: [
       { file: "madden/FindAGrave-Bridget-Biddie-Powell-Madden-1869-1940-Tipperary.png", caption: "Find a Grave — Bridget 'Biddie' Powell Madden (1869–1940)" },
       { file: "madden/1910-Census-Michael-Bridget-Madden-Family-W-Superior-St-Chicago.png", caption: "1910 Census — Michael & Bridget Madden Family, W. Superior St" },
+    ],
+  },
+
+  // ═══════════════════════════
+  // ADDITIONAL O'REILLY DOCUMENTS
+  // ═══════════════════════════
+
+  {
+    personName: "William O'Reilly (Generation 2)",
+    familyId: "oreilly",
+    docs: [
+      { file: "oreilly/William-OReilly-SS-New-York-Liverpool-1915-Age22-Cork.png", caption: "Ship Record — SS New York, Liverpool, 1915, Age 22, Cork" },
+      { file: "oreilly/William-OReilly-SS-Franconia-Cobh-1927-Return-From-Ireland.png", caption: "Ship Record — SS Franconia, Cobh, 1927 (Return from Ireland)" },
+      { file: "oreilly/William-OReilly-WWI-Draft-Card-Born-Aug12-1893-Ireland.png", caption: "WWI Draft Card — William O'Reilly (b. Aug 12, 1893, Ireland)" },
+      { file: "oreilly/1901-Census-Willie-OReilly-Newmarket-Cork.png", caption: "1901 Irish Census — Willie O'Reilly, Newmarket, Cork" },
+      { file: "oreilly/1911-Census-William-OReilly-Church-St-Newmarket-Cork.png", caption: "1911 Irish Census — William O'Reilly, Church St, Newmarket, Cork" },
+      { file: "oreilly/1920-Census-William-Anna-Baby-Edward-Daniel-OReilly-Madison-St.png", caption: "1920 Census — William, Anna, Baby Edward & Daniel O'Reilly" },
+      { file: "oreilly/1930-Census-William-OReilly-Head-Ferdinand-St.png", caption: "1930 Census — William O'Reilly, Ferdinand St, Chicago" },
+    ],
+  },
+
+  {
+    personName: "Ann M. O'Reilly (née Madden)",
+    familyId: "oreilly",
+    docs: [
+      { file: "oreilly/William-Oreilly-Anna-Madden-Marriage-1918-Cook-County.png", caption: "Marriage Record — William O'Reilly & Anna Madden, 1918, Cook County" },
+      { file: "oreilly/Ann-M-OReilly-Obituary-ChicagoTribune-Apr13-1971.png", caption: "Obituary — Ann M. O'Reilly, Chicago Tribune, Apr 13 1971" },
+      { file: "oreilly/Ann-M-OReilly-nee-Madden-Obituary-1971-ChicagoTribune.png", caption: "Obituary Detail — Ann M. O'Reilly (née Madden), 1971" },
+      { file: "oreilly/1930-Census-Edward-William-Ann-OReilly-Chicago.png", caption: "1930 Census — Edward, William & Ann O'Reilly, Chicago" },
+      { file: "oreilly/1930-Census-Edward-William-Ann-OReilly-Ferdinand-St.png", caption: "1930 Census — Ferdinand St Detail" },
+      { file: "oreilly/1940-Census-Ann-OReilly-Madden-Ferdinand-St.png", caption: "1940 Census — Ann O'Reilly Madden, Ferdinand St" },
+    ],
+  },
+
+  {
+    personName: "Michael O'Reilly & Ellen Ryan (Cork)",
+    familyId: "oreilly",
+    docs: [
+      { file: "oreilly/1888-Civil-Marriage-Michael-OReilly-Ellen-Ryan-Kanturk-Cork.png", caption: "Civil Marriage Record — Michael O'Reilly & Ellen Ryan, 1888, Kanturk, Cork" },
+      { file: "oreilly/1888-HANDWRITTEN-Marriage-Certificate-Michael-OReilly-Ellen-Ryan-Meelin-Cork.png", caption: "Handwritten Marriage Certificate — 1888, Meelin, Cork" },
+    ],
+  },
+
+  {
+    personName: "James & Isabella Reilly",
+    familyId: "oreilly",
+    docs: [
+      { file: "oreilly/1900-Census-James-Bell-Riely-Dickson-St.png", caption: "1900 Census — James & 'Bell' Riely, Dickson St" },
+      { file: "oreilly/1910-Census-James-Isabelle-Reilly-Dickson-St.png", caption: "1910 Census — James & Isabelle Reilly, Dickson St" },
+    ],
+  },
+
+  // ═══════════════════════════
+  // ADDITIONAL COFFEY DOCUMENTS
+  // ═══════════════════════════
+
+  {
+    personName: "Coffey Family — Irish Census (Kerry)",
+    familyId: "coffey",
+    docs: [
+      { file: "coffey/1901-Irish-Census-Coffey-Family-Farran-Kerry.png", caption: "1901 Irish Census — Coffey Family, Farran, Kerry" },
+      { file: "coffey/1901-HANDWRITTEN-Census-Coffey-Family-Farran-Kerry-FormA.png", caption: "1901 Census — Handwritten Form A, Farran, Kerry" },
+      { file: "coffey/1901-Farm-Steadings-Return-Farran-Kerry.png", caption: "1901 Farm Steadings Return — Farran, Kerry" },
+      { file: "coffey/1901-House-Building-Return-Coffey-Farran-Kerry.png", caption: "1901 House & Building Return — Coffey, Farran, Kerry" },
+      { file: "coffey/1911-Census-Michael-Coffey-Farran-Castleisland-Kerry.png", caption: "1911 Census — Michael Coffey, Farran, Castleisland, Kerry" },
+      { file: "coffey/1940-Census-Eileen-Coffey-Family.png", caption: "1940 Census — Eileen Coffey Family" },
+    ],
+  },
+
+  {
+    personName: "John J. Coffey — Additional Records",
+    familyId: "coffey",
+    docs: [
+      { file: "coffey/Ancestry-Tree-John-J-Coffey-Death-Jan4-1951-Burial-Alsip-HolySepulchre.png", caption: "Ancestry Tree — Death Jan 4, 1951, Burial at Holy Sepulchre, Alsip" },
+      { file: "coffey/Ancestry-Tree-John-J-Coffey-More-Children-Father-Death-1927-Kerry.png", caption: "Ancestry Tree — More Children, Father's Death 1927, Kerry" },
+      { file: "coffey/Ancestry-Tree-John-J-Coffey-Timeline-1930-1950.png", caption: "Ancestry Tree — Timeline 1930–1950" },
+      { file: "coffey/Ancestry-Tree-John-J-Coffey-Timeline-Marriage-Children-Scrolled.png", caption: "Ancestry Tree — Marriage & Children Timeline" },
+    ],
+  },
+
+  // ═══════════════════════════
+  // ADDITIONAL LINNERUD DOCUMENTS
+  // ═══════════════════════════
+
+  {
+    personName: "Anna Gudrun Lee — Additional",
+    familyId: "linnerud",
+    docs: [
+      { file: "linnerud/Emigration-Gudrun-Martinsen-Linnerud-1913-Oslo.png", caption: "Emigration Record — Gudrun Martinsen (Linnerud), 1913, Oslo" },
+      { file: "linnerud/FindAGrave-Anna-Gudrun-Lee-Linnerud-Full-Page.png", caption: "Find a Grave — Full Memorial Page" },
+    ],
+  },
+
+  // ═══════════════════════════
+  // ADDITIONAL LEE DOCUMENTS
+  // ═══════════════════════════
+
+  {
+    personName: "Sigvart S. Lee — Additional",
+    familyId: "linnerud",
+    docs: [
+      { file: "lee/FindAGrave-Sigvart-S-Lee-FULL-PAGE-With-Photos.png", caption: "Find a Grave — Full Page with Photos" },
+      { file: "lee/Lutheran-Church-Record-Sigvart-Lee-Sorenson-Spouse-Berthea.png", caption: "Lutheran Church Record — Sigvart Lee Sorenson & Spouse Berthea" },
+      { file: "lee/Norwegian-Church-Book-Sigvard-Sorensen-BIRTH-Record-Dec30-1859-Vinger.png", caption: "Norwegian Church Book — Birth Record, Dec 30 1859, Vinger" },
+      { file: "lee/PHOTO-Lee-Family-Portrait-Sigvart-Berthea-Children.png", caption: "PHOTO — Lee Family Portrait, Sigvart, Berthea & Children", isPhoto: true },
+    ],
+  },
+
+  // ═══════════════════════════
+  // LYLE CONWAY — PHOTOS & CREATIONS
+  // ═══════════════════════════
+
+  {
+    personName: "Lyle Conway — Hollywood Career",
+    familyId: "linnerud",
+    docs: [
+      { file: "conway/creations/miss-piggy-1979.jpg", caption: "Miss Piggy — sculpted by Lyle Conway (1979)", isPhoto: true },
+      { file: "conway/creations/dark-crystal-poster.jpg", caption: "The Dark Crystal — Design & Fabrication Supervisor", isPhoto: true },
+      { file: "conway/creations/little-shop-poster.jpg", caption: "Little Shop of Horrors — Academy Award Nominated (Audrey II)", isPhoto: true },
+      { file: "conway/creations/return-to-oz-poster.jpg", caption: "Return to Oz — Jack Pumpkinhead Creator", isPhoto: true },
+      { file: "conway/creations/skeksis-display.jpg", caption: "Skeksis Display — The Dark Crystal Creatures", isPhoto: true },
+      { file: "conway/lyle-the-dog-muppet.png", caption: "'Lyle the Dog' — Muppet character named after him", isPhoto: true },
+      { file: "conway/lyle-the-dog-2.png", caption: "Lyle the Dog — Additional Image", isPhoto: true },
+      { file: "conway/lyle-claghound.webp", caption: "Cla'Ghound — Conway Creation", isPhoto: true },
+      { file: "conway/lyle-dogginit.webp", caption: "Dog City — Conway Creation", isPhoto: true },
+      { file: "conway/lyle-peace-pipe.webp", caption: "Peace Pipe — Conway Creation", isPhoto: true },
+      { file: "conway/newspaper/chicago-tribune-1967-article.png", caption: "Chicago Tribune Article, 1967" },
+      { file: "conway/newspaper/chicago-tribune-1967-context.png", caption: "Chicago Tribune 1967 — Context" },
+      { file: "conway/newspaper/chicago-tribune-1967-lyle-name.png", caption: "Chicago Tribune 1967 — Lyle Name Mention" },
+    ],
+  },
+
+  // ═══════════════════════════
+  // FAMILY PHOTOS (cross-family)
+  // ═══════════════════════════
+
+  {
+    personName: "Family Photos",
+    familyId: "oreilly",
+    docs: [
+      { file: "family-photos/Grandpa O.jpg", caption: "PHOTO — Grandpa O (Edward Joseph O'Reilly)", isPhoto: true },
+      { file: "family-photos/Wedding photo.jpg", caption: "PHOTO — Wedding Photo", isPhoto: true },
+    ],
+  },
+
+  // ═══════════════════════════
+  // USS EBERLE — WWII SHIP (Bud's transport)
+  // ═══════════════════════════
+
+  {
+    personName: "USS Eberle (DD-430) — WWII Transport",
+    familyId: "oreilly",
+    docs: [
+      { file: "eberle/eberle-aerial-underway.jpg", caption: "USS Eberle — Aerial View Underway", isPhoto: true },
+      { file: "eberle/eberle-ap123-wwii.jpg", caption: "USS Eberle (AP-123) — WWII Transport Configuration", isPhoto: true },
+      { file: "eberle/eberle-color-1950s.jpg", caption: "USS Eberle — Color Photo, 1950s", isPhoto: true },
+      { file: "eberle/eberle-usat-broadside.jpg", caption: "USAT Eberle — Broadside View", isPhoto: true },
+    ],
+  },
+
+  // ═══════════════════════════
+  // MIKE THE HEADLESS CHICKEN (Bonus)
+  // ═══════════════════════════
+
+  {
+    personName: "Mike the Headless Chicken — Fruita, CO",
+    familyId: "linnerud",
+    docs: [
+      { file: "mike-chicken/mike-official-1200.jpg", caption: "Mike the Headless Chicken — Official Photo", isPhoto: true },
+      { file: "mike-chicken/mike-official-site.jpg", caption: "Mike — Official Site Image", isPhoto: true },
+      { file: "mike-chicken/mike-on-display.png", caption: "Mike — On Display", isPhoto: true },
+      { file: "mike-chicken/mike-with-head.jpg", caption: "Mike — With Head", isPhoto: true },
     ],
   },
 ];
