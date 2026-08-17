@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import ScopedNav from "@/components/ScopedNav";
+import ScopedFooter from "@/components/ScopedFooter";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -54,10 +57,12 @@ const fastFacts = [
 ];
 
 export default function LyleStoryPage() {
+  const searchParams = useSearchParams();
+  const side = searchParams.get("side") as "dad" | "mom" | null;
   return (
     <main className="min-h-screen">
       {/* Nav */}
-      <SiteNav />
+      {side === "mom" ? <ScopedNav side="mom" /> : <SiteNav />}
 
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 text-center">
@@ -504,7 +509,7 @@ export default function LyleStoryPage() {
         </div>
       </section>
 
-      <SiteFooter />
+      {side === "mom" ? <ScopedFooter side="mom" /> : <SiteFooter />}
     </main>
   );
 }
