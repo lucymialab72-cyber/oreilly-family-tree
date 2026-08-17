@@ -88,7 +88,7 @@ function PersonPhotoDisplay({ personName }: { personName: string }) {
   const photos = personPhotos[personName];
   if (!photos || photos.length === 0) return null;
   return (
-    <div className="flex gap-4 mb-6 flex-wrap">
+    <div className="flex gap-4 mb-6 flex-wrap justify-center">
       {photos.map((photo, i) => (
         <div key={i} className="border-2 border-border rounded-sm overflow-hidden bg-white shadow-md" style={{ width: 160, height: 200 }}>
           <img
@@ -117,14 +117,14 @@ function PersonCard({ person, index }: { person: Person; index: number }) {
       variants={fadeIn}
       custom={index}
       id={slugify(person.name)}
-      className="border border-border rounded-sm p-6 bg-white/50 hover:bg-white transition-colors scroll-mt-20"
+      className="border border-border rounded-sm p-6 bg-white/50 hover:bg-white transition-colors scroll-mt-20 max-w-2xl mx-auto w-full"
     >
       <PersonPhotoDisplay personName={person.name} />
-      <h4 className="text-xl font-bold mb-1" style={{ fontFamily: "var(--font-display)" }}>
+      <h4 className="text-xl font-bold mb-1 text-center" style={{ fontFamily: "var(--font-display)" }}>
         {person.name}
       </h4>
       {person.birthName && (
-        <p className="text-ink-muted text-sm italic mb-3">
+        <p className="text-ink-muted text-sm italic mb-3 text-center">
           Born: {person.birthName}
         </p>
       )}
@@ -287,10 +287,12 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
 
       {/* ═══ PEDIGREE CHART ═══ */}
       {pedigreeTrees[id] && (
-        <PedigreeChart
-          tree={pedigreeTrees[id]}
-          colorAccent={line.colorAccent}
-        />
+        <div id="pedigree-chart" className="scroll-mt-20">
+          <PedigreeChart
+            tree={pedigreeTrees[id]}
+            colorAccent={line.colorAccent}
+          />
+        </div>
       )}
 
       {/* ═══ THE VILLAGE ═══ */}
@@ -385,24 +387,42 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
         </motion.h2>
 
         {line.generations.map((gen, gi) => (
-          <div key={gi} className="mb-16 last:mb-0">
+          <div key={gi} className="mb-16 last:mb-0" id={`gen-${gi}`}>
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeIn}
               custom={0}
-              className="mb-6"
+              className="mb-6 max-w-2xl mx-auto"
             >
-              <h3 className="text-lg font-bold" style={{ fontFamily: "var(--font-display)" }}>
-                {gen.label}
-              </h3>
+              <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
+                <h3 className="text-lg font-bold" style={{ fontFamily: "var(--font-display)" }}>
+                  {gen.label}
+                </h3>
+                <div className="flex items-center gap-3 text-xs" style={{ fontFamily: "var(--font-sans)" }}>
+                  <a href="#pedigree-chart" className="text-gold hover:text-gold-dark transition-colors flex items-center gap-1">
+                    ↑ Back to Tree
+                  </a>
+                  <span className="text-border">|</span>
+                  {familyLines.map((fl) => (
+                    <Link
+                      key={fl.id}
+                      href={`/family/${fl.id}`}
+                      className={`hover:text-gold transition-colors ${fl.id === id ? "text-gold font-semibold" : "text-ink-muted"}`}
+                      title={fl.name}
+                    >
+                      {fl.flag}
+                    </Link>
+                  ))}
+                </div>
+              </div>
               <p className="text-ink-muted text-sm" style={{ fontFamily: "var(--font-sans)" }}>
                 {gen.relation}
               </p>
             </motion.div>
 
-            <div className="space-y-4">
+            <div className="space-y-4 max-w-2xl mx-auto">
               {gen.people.map((person, pi) => (
                 <PersonCard key={pi} person={person} index={pi} />
               ))}
