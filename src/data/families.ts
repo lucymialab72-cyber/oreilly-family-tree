@@ -793,7 +793,7 @@ export const familyLines: FamilyLine[] = [
     generations: [
       {
         label: "Generation 0",
-        relation: "Generation 1 — 3× Great-Grandparents (Lee/Sørensen line)",
+        relation: "3× Great-Grandparents (Lee/Sørensen & Arneson lines)",
         people: [
           {
             name: "Søren Sørensen",
@@ -802,8 +802,9 @@ export const familyLines: FamilyLine[] = [
             spouse: "Gubjør Olsdatter",
             notes: [
               "1865 Census: Head of household at Gylterud farm, Vinger/Austmarka, Hedmark",
-              "His mother Sigri Andersdatter (born ~1797) lived with the family — 5× great-grandmother, Generation 0",
+              "His mother Sigri Andersdatter (born ~1797) lived with the family — 5× great-grandmother",
               "Children: Anne (~1854), Sigvard/Sigvart (~1858), Ole (~1860), Gunder (~1863)",
+              "Father of Sigvart S. Lee (born Sigvard Sørensen)",
             ],
           },
           {
@@ -811,6 +812,30 @@ export const familyLines: FamilyLine[] = [
             born: "~1824",
             bornPlace: "Norway",
             spouse: "Søren Sørensen",
+            notes: [
+              "Mother of Sigvart S. Lee (born Sigvard Sørensen)",
+              "Grew up at Gylterud farm, same parish as the Arneson family",
+            ],
+          },
+          {
+            name: "Arne",
+            bornPlace: "Vinger, Hedmark, Norway",
+            notes: [
+              "Father of Berthea Arnesdatter (Berthea S. Lee) — 3× great-grandmother",
+              "Full name unknown — known only from Berthea's patronymic surname 'Arnesdatter' (daughter of Arne)",
+              "Grew up at Kjærret farm, Vinger parish — same area as the Sørensen family at Gylterud",
+              "No further records found",
+            ],
+          },
+          {
+            name: "Anne Gundersdatter",
+            bornPlace: "Vinger, Hedmark, Norway",
+            spouse: "Arne",
+            notes: [
+              "Mother of Berthea Arnesdatter (Berthea S. Lee)",
+              "Known from Berthea's notes — 'Mother: Anne Gundersdatter'",
+              "No dates or further records found",
+            ],
           },
         ],
       },
@@ -1024,24 +1049,53 @@ export const familyLines: FamilyLine[] = [
     generations: [
       {
         label: "Generation 0",
-        relation: "Generation 2 — 2× Great-Grandparents",
+        relation: "2× Great-Grandparents (Thomas & Marie's parents)",
         people: [
           {
             name: "George Jakubicek",
             bornPlace: "Mähren (Moravia)",
-            notes: ["Known only from Thomas's death record", "Both he and wife Marie were from Moravia"],
+            notes: [
+              "Known only from Thomas's death record",
+              "Father of Thomas Joseph Jakubicek",
+              "Both he and wife Marie were from Moravia",
+            ],
+          },
+          {
+            name: "Marie Jakubicek",
+            bornPlace: "Mähren (Moravia)",
+            spouse: "George Jakubicek",
+            notes: [
+              "Mother of Thomas Joseph Jakubicek",
+              "Known from Thomas's death record — both parents from Moravia",
+              "No further details known",
+            ],
           },
           {
             name: "Ludvik Melka",
             bornPlace: "Czech Republic",
             spouse: "Klara Marc/Marč",
-            notes: ["Marie's father — from Ancestry tree match", "Wife Klara's maiden name: Marc or Marč (from death record)"],
+            notes: [
+              "Marie's father — from Ancestry tree match",
+              "Wife Klara's maiden name: Marc or Marč (from death record)",
+              "Father of Marie E. Melka Jakubicek",
+            ],
+          },
+          {
+            name: "Klara Marc",
+            bornPlace: "Czech Republic",
+            spouse: "Ludvik Melka",
+            notes: [
+              "Mother of Marie E. Melka Jakubicek",
+              "Maiden name: Marc or Marč — recorded on Marie's death record",
+              "Confirmed from Find A Grave: Mary (Marie) Jakubicek née Melka, parents listed as Ludvig Melka and Clara Marc",
+              "No further details known",
+            ],
           },
         ],
       },
       {
         label: "Generation 1",
-        relation: "Generation 3 — Great-Grandparents",
+        relation: "Great-Grandparents (Helen's parents)",
         people: [
           {
             name: "Thomas Joseph Jakubicek",
@@ -1077,7 +1131,34 @@ export const familyLines: FamilyLine[] = [
               "Father: Ludvik Melka; Mother: Klara Marc/Marč",
               "Sailed on the SAME FAMOUS SHIP as Thomas, a decade later",
               "Lived to age 92",
-              "3 children: Helen (Generation 4, married Lyle Linnerud), Marie/Mary (married Novak), Tommy",
+              "3 children: Helen (married Lyle Linnerud), Marie/Mary (married Novak), Tommy",
+            ],
+          },
+        ],
+      },
+      {
+        label: "Generation 2",
+        relation: "Grandparents (Andrea's mother)",
+        people: [
+          {
+            name: "Helen Marie Jakubicek",
+            born: "September 14, 1925",
+            bornPlace: "Chicago, Illinois",
+            died: "April 5, 2010",
+            diedPlace: "Illinois",
+            spouse: "Lyle Andrew Linnerud",
+            notes: [
+              "Parents: Thomas Joseph Jakubicek (b.1886, Moravia) & Marie E. Melka (b.1896, Bohemia)",
+              "Married Lyle Andrew Linnerud on January 20, 1951 — Norwegian meets Czech on Chicago's South Side",
+              "5 children: Alan (firstborn), Calvin, twins Cary & Cheryl, Andrea (youngest — Dave's mother)",
+              "Known for her contagious JOY — the defining word used in her eulogy",
+              "Kept Bible verses all around the house, including by the ironing board: 'The Joy of the Lord is my strength' (Nehemiah 8:10)",
+              "Bohemian dishes and desserts were her specialty — used Joy dish soap as a 'secret ingredient'",
+              "Member of Maranatha's 'Merry Heart's Club' — delivered hearts of joy to the sick",
+              "Loved games: horseshoes, ping pong, bowling, bean bags, cards",
+              "Her son Cary became a church organist for 20+ years, including at the Old Cadet Chapel at West Point — he credits Helen for instilling his love of music",
+              "Died April 5, 2010, during the Easter season — celebrated as a season of joy and resurrection",
+              "Eulogy delivered by son Cary: 'Let us all try to maintain a joyful heart and to remember Mom every time we laugh or hear the word JOY!'",
             ],
           },
         ],

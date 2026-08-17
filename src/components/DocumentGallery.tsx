@@ -44,14 +44,17 @@ function Lightbox({ doc, allDocs, onClose, onNext, onPrev }: LightboxProps) {
         className="relative max-w-7xl w-full mx-2 flex flex-col items-center"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Close button */}
-        <button
-          onClick={onClose}
-          className="absolute -top-12 right-0 text-white/70 hover:text-white text-2xl font-light transition-colors z-10"
-          aria-label="Close"
-        >
-          ✕
-        </button>
+        {/* Close bar — always visible at top */}
+        <div className="flex items-center justify-between w-full mb-3 px-1">
+          <p className="text-white/40 text-xs">Tap outside to close</p>
+          <button
+            onClick={onClose}
+            className="text-white/80 hover:text-white text-2xl font-light transition-colors bg-black/40 rounded-full w-10 h-10 flex items-center justify-center"
+            aria-label="Close"
+          >
+            ✕
+          </button>
+        </div>
 
         {/* Navigation arrows */}
         {allDocs.length > 1 && (

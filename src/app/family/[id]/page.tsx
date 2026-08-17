@@ -551,6 +551,36 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
             </motion.div>
           )}
 
+          {/* Lyle Conway CTA for Linnerud page */}
+          {id === "linnerud" && (
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeIn}
+              custom={1}
+              className="mb-12 p-6 border border-sepia/30 bg-sepia/5 rounded-sm"
+            >
+              <span className="text-2xl mb-2 block">🎭</span>
+              <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "var(--font-display)" }}>
+                Lyle Conway — The Hollywood Puppeteer
+              </h3>
+              <p className="text-ink-light mb-4">
+                Evelyn's son Lyle Conway became one of Hollywood's most celebrated puppet and creature designers.
+                He sculpted Miss Piggy for The Muppet Show, built the Skeksis for The Dark Crystal,
+                and created Audrey II for Little Shop of Horrors — earning an Academy Award nomination.
+                The Muppet character "Lyle the Dog" was named after him.
+              </p>
+              <Link
+                href="/lyle-conway"
+                className="inline-flex items-center gap-2 text-sepia font-semibold hover:opacity-75 transition-colors text-sm"
+                style={{ fontFamily: "var(--font-sans)" }}
+              >
+                Read Lyle Conway's full story →
+              </Link>
+            </motion.div>
+          )}
+
           {line.stories.map((story, i) => (
             <motion.div
               key={i}
