@@ -3,6 +3,7 @@
 import { use } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { familyLines } from "@/data/families";
 import type { Person } from "@/data/families";
 import { notFound } from "next/navigation";
@@ -10,6 +11,8 @@ import DocumentGallery from "@/components/DocumentGallery";
 import { getDocsByFamily } from "@/data/documents";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import ScopedNav from "@/components/ScopedNav";
+import ScopedFooter from "@/components/ScopedFooter";
 import PedigreeChart from "@/components/PedigreeChart";
 import { pedigreeTrees } from "@/data/pedigree-data";
 
@@ -204,6 +207,9 @@ function PersonCard({ person, index }: { person: Person; index: number }) {
 
 export default function FamilyLinePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
+  const searchParams = useSearchParams();
+  const side = searchParams.get("side") as "dad" | "mom" | null;
+
   const line = familyLines.find((l) => l.id === id);
   if (!line) return notFound();
 
@@ -213,7 +219,11 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
 
   return (
     <main className="min-h-screen pb-20 md:pb-0">
-      <SiteNav />
+      {side === "dad" || side === "mom" ? (
+        <ScopedNav side={side} />
+      ) : (
+        <SiteNav />
+      )}
 
       {/* ═══ HERO ═══ */}
       <section className="pt-32 pb-16 px-6">
@@ -542,7 +552,7 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
                 He sailed 85,000 miles in approximately one year.
               </p>
               <Link
-                href="/lyle-story"
+                href={`/lyle-story${side ? `?side=${side}` : ""}`}
                 className="inline-flex items-center gap-2 text-gold font-semibold hover:text-gold-dark transition-colors text-sm"
                 style={{ fontFamily: "var(--font-sans)" }}
               >
@@ -572,7 +582,7 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
                 The Muppet character "Lyle the Dog" was named after him.
               </p>
               <Link
-                href="/lyle-conway"
+                href={`/lyle-conway${side ? `?side=${side}` : ""}`}
                 className="inline-flex items-center gap-2 text-sepia font-semibold hover:opacity-75 transition-colors text-sm"
                 style={{ fontFamily: "var(--font-sans)" }}
               >
@@ -627,37 +637,41 @@ export default function FamilyLinePage({ params }: { params: Promise<{ id: strin
         <div className="flex justify-between items-center mt-12" style={{ fontFamily: "var(--font-sans)" }}>
           {prevLine ? (
             <Link
-              href={`/family/${prevLine.id}`}
+              href={`/family/${prevLine.id}${side ? `?side=${side}` : ""}`}
               className="text-sm text-ink-muted hover:text-gold transition-colors"
             >
               ← {prevLine.flag} {prevLine.name}
             </Link>
           ) : (
-            <Link href="/" className="text-sm text-ink-muted hover:text-gold transition-colors">
+            <Link href={side ? `/${side}` : "/"} className="text-sm text-ink-muted hover:text-gold transition-colors">
               ← Home
             </Link>
           )}
 
-          <Link href="/" className="text-sm text-ink-muted hover:text-gold transition-colors">
-            All Lines
+          <Link href={side ? `/${side}` : "/"} className="text-sm text-ink-muted hover:text-gold transition-colors">
+            {side ? (side === "dad" ? "Dad's Side" : "Mom's Side") : "All Lines"}
           </Link>
 
           {nextLine ? (
             <Link
-              href={`/family/${nextLine.id}`}
+              href={`/family/${nextLine.id}${side ? `?side=${side}` : ""}`}
               className="text-sm text-ink-muted hover:text-gold transition-colors"
             >
               {nextLine.flag} {nextLine.name} →
             </Link>
           ) : (
-            <Link href="/tree" className="text-sm text-ink-muted hover:text-gold transition-colors">
-              Full Tree →
+            <Link href={side ? `/${side}` : "/tree"} className="text-sm text-ink-muted hover:text-gold transition-colors">
+              {side ? "← Back to Home" : "Full Tree →"}
             </Link>
           )}
         </div>
       </section>
 
-      <SiteFooter />
+      {side === "dad" || side === "mom" ? (
+        <ScopedFooter side={side} />
+      ) : (
+        <SiteFooter />
+      )}
     </main>
   );
 }

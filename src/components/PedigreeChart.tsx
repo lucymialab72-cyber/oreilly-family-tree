@@ -113,9 +113,9 @@ function PersonBox({
   };
 
   const sizeStyles = {
-    focal: { padding: "12px 16px", minWidth: "170px", maxWidth: "210px" },
-    normal: { padding: "8px 12px", minWidth: "140px", maxWidth: "175px" },
-    small: { padding: "6px 8px", minWidth: "115px", maxWidth: "145px" },
+    focal: { padding: "12px 16px", width: "190px" },
+    normal: { padding: "8px 12px", width: "155px" },
+    small: { padding: "6px 8px", width: "125px" },
   };
 
   const style = sizeStyles[size];
@@ -133,8 +133,8 @@ function PersonBox({
         backgroundColor: bgColor,
         borderColor,
         padding: style.padding,
-        minWidth: style.minWidth,
-        maxWidth: style.maxWidth,
+        width: style.width,
+        flexShrink: 0,
       }}
       title={node.scrollId ? `Click to see ${node.name}'s details` : node.name}
     >

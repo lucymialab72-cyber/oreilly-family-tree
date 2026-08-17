@@ -48,7 +48,7 @@ export default function ScopedNav({ side }: { side: Side }) {
             {families.map((l) => (
               <Link
                 key={l.id}
-                href={`/family/${l.id}`}
+                href={`/family/${l.id}?side=${side}`}
                 className={linkClass(isFamilyActive(l.id))}
               >
                 {l.flag} {l.name}
@@ -63,12 +63,6 @@ export default function ScopedNav({ side }: { side: Side }) {
             <Link href={`/documents?side=${side}`} className={linkClass(isActive("/documents"))}>
               🗂️ Documents
             </Link>
-            <Link
-              href="/"
-              className="hidden md:block text-ink-muted hover:text-ink transition-colors text-xs"
-            >
-              🏠 Full Tree
-            </Link>
           </div>
         </div>
       </nav>
@@ -82,7 +76,7 @@ export default function ScopedNav({ side }: { side: Side }) {
           {families.map((l) => (
             <Link
               key={l.id}
-              href={`/family/${l.id}`}
+              href={`/family/${l.id}?side=${side}`}
               className={`flex flex-col items-center justify-center py-2 px-1 rounded-sm transition-colors min-w-0 flex-1 ${
                 isFamilyActive(l.id)
                   ? "text-gold"

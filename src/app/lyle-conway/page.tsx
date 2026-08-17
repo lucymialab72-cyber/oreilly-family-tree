@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
+import ScopedNav from "@/components/ScopedNav";
+import ScopedFooter from "@/components/ScopedFooter";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -104,10 +107,12 @@ const awards = [
 ];
 
 export default function LyleConwayPage() {
+  const searchParams = useSearchParams();
+  const side = searchParams.get("side") as "dad" | "mom" | null;
   return (
     <main className="min-h-screen">
       {/* Nav */}
-      <SiteNav />
+      {side === "mom" ? <ScopedNav side="mom" /> : <SiteNav />}
 
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 text-center">
@@ -604,7 +609,7 @@ export default function LyleConwayPage() {
         </div>
       </section>
 
-      <SiteFooter />
+      {side === "mom" ? <ScopedFooter side="mom" /> : <SiteFooter />}
     </main>
   );
 }
