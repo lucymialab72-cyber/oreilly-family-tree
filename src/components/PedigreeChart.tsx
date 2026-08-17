@@ -1,8 +1,88 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { motion } from "framer-motion";
 import type { PedigreeNode, PedigreeTree } from "@/data/pedigree-data";
+
+// ═══════════════════════════════════════════════
+// FLATTEN TREE INTO POSITIONED NODES
+// ═══════════════════════════════════════════════
+
+interface PositionedNode {
+  node: PedigreeNode;
+  col: number;       // generation column (0 = focal)
+  row: number;       // vertical position
+  rowSpan: number;   // how many rows this node spans for centering
+  parentRow?: number; // row of the child this connects to
+}
+
+interface ConnectorLine {
+  fromCol: number;
+  fromRow: number;
+  fromSpan: number;
+  toCol: number;
+  toRow: number;
+  toSpan: number;
+}
+
+function flattenTree(tree: PedigreeTree) {
+  const nodes: PositionedNode[] = [];
+  const lines: ConnectorLine[] = [];
+
+  // Calculate max depth
+  function getDepth(n: PedigreeNode | undefined, d: number): number {
+    if (!n) return d;
+    return Math.max(
+      getDepth(n.father, d + 1),
+      getDepth(n.mother, d + 1)
+    );
+  }
+  const maxDepth = Math.min(getDepth(tree.focal, 0), 4);
+  const totalRows = Math.pow(2, maxDepth); // e.g., 8 rows for 3 ancestor generations
+
+  // Recursively place nodes
+  function placeNode(
+    node: PedigreeNode | undefined,
+    col: number,
+    startRow: number,
+    rowSpan: number
+  ) {
+    if (!node || col > maxDepth) return;
+
+    nodes.push({
+      node,
+      col,
+      row: startRow,
+      rowSpan,
+    });
+
+    if (col < maxDepth) {
+      const halfSpan = rowSpan / 2;
+
+      // Father in top half
+      if (node.father) {
+        placeNode(node.father, col + 1, startRow, halfSpan);
+        lines.push({
+          fromCol: col, fromRow: startRow, fromSpan: rowSpan,
+          toCol: col + 1, toRow: startRow, toSpan: halfSpan,
+        });
+      }
+
+      // Mother in bottom half
+      if (node.mother) {
+        placeNode(node.mother, col + 1, startRow + halfSpan, halfSpan);
+        lines.push({
+          fromCol: col, fromRow: startRow, fromSpan: rowSpan,
+          toCol: col + 1, toRow: startRow + halfSpan, toSpan: halfSpan,
+        });
+      }
+    }
+  }
+
+  placeNode(tree.focal, 0, 0, totalRows);
+
+  return { nodes, lines, maxDepth, totalRows };
+}
 
 // ═══════════════════════════════════════════════
 // PERSON BOX
@@ -16,10 +96,9 @@ function PersonBox({
   size?: "focal" | "normal" | "small";
 }) {
   const isMale = node.gender === "M";
-
   const bgColor = isMale ? "#F0F6FF" : "#FFF0F5";
   const borderColor = isMale ? "#B0C8E8" : "#E8B0C8";
-  const accentColor = isMale ? "#4A7AB5" : "#B54A7A";
+  const nameColor = isMale ? "#3A6A9F" : "#9F3A6A";
 
   const years = [node.born, node.died].filter(Boolean).join("–") || "dates unknown";
 
@@ -28,52 +107,48 @@ function PersonBox({
     const el = document.getElementById(node.scrollId);
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
-      // Flash highlight
       el.classList.add("pedigree-highlight");
       setTimeout(() => el.classList.remove("pedigree-highlight"), 2000);
     }
   };
 
-  const paddingClass =
-    size === "focal"
-      ? "px-4 py-3"
-      : size === "small"
-      ? "px-2 py-1.5"
-      : "px-3 py-2";
+  const sizeStyles = {
+    focal: { padding: "12px 16px", minWidth: "170px", maxWidth: "210px" },
+    normal: { padding: "8px 12px", minWidth: "140px", maxWidth: "175px" },
+    small: { padding: "6px 8px", minWidth: "115px", maxWidth: "145px" },
+  };
 
-  const widthClass =
-    size === "focal"
-      ? "min-w-[180px] max-w-[220px]"
-      : size === "small"
-      ? "min-w-[120px] max-w-[150px]"
-      : "min-w-[140px] max-w-[180px]";
+  const style = sizeStyles[size];
 
   return (
     <button
       onClick={handleClick}
       disabled={!node.scrollId}
-      className={`${paddingClass} ${widthClass} rounded-md border-2 text-left transition-all duration-200 ${
+      className={`rounded-md border-2 text-left transition-all duration-200 shrink-0 ${
         node.scrollId
-          ? "cursor-pointer hover:shadow-md hover:scale-[1.03] active:scale-[0.98]"
+          ? "cursor-pointer hover:shadow-md hover:scale-[1.02]"
           : "cursor-default"
       }`}
       style={{
         backgroundColor: bgColor,
-        borderColor: borderColor,
+        borderColor,
+        padding: style.padding,
+        minWidth: style.minWidth,
+        maxWidth: style.maxWidth,
       }}
       title={node.scrollId ? `Click to see ${node.name}'s details` : node.name}
     >
       <p
         className={`font-bold leading-tight ${
-          size === "focal" ? "text-sm" : size === "small" ? "text-[10px]" : "text-xs"
+          size === "focal" ? "text-[13px]" : size === "small" ? "text-[10px]" : "text-[11px]"
         }`}
-        style={{ color: accentColor, fontFamily: "var(--font-sans)" }}
+        style={{ color: nameColor, fontFamily: "var(--font-sans)" }}
       >
         {node.name}
       </p>
       <p
         className={`text-ink-muted leading-tight mt-0.5 ${
-          size === "focal" ? "text-xs" : "text-[10px]"
+          size === "focal" ? "text-[11px]" : "text-[9px]"
         }`}
         style={{ fontFamily: "var(--font-sans)" }}
       >
@@ -81,8 +156,8 @@ function PersonBox({
       </p>
       {node.birthPlace && (
         <p
-          className={`text-ink-muted/70 leading-tight ${
-            size === "focal" ? "text-[11px]" : "text-[9px]"
+          className={`text-ink-muted/60 leading-tight ${
+            size === "focal" ? "text-[10px]" : "text-[8px]"
           }`}
           style={{ fontFamily: "var(--font-sans)" }}
         >
@@ -94,147 +169,7 @@ function PersonBox({
 }
 
 // ═══════════════════════════════════════════════
-// CONNECTOR LINES
-// ═══════════════════════════════════════════════
-
-function HorizontalLine({ width = 24 }: { width?: number }) {
-  return (
-    <div
-      className="shrink-0"
-      style={{
-        width: `${width}px`,
-        height: "2px",
-        backgroundColor: "#B8860B",
-      }}
-    />
-  );
-}
-
-function VerticalBracket() {
-  return (
-    <div className="flex flex-col items-center shrink-0" style={{ width: "2px" }}>
-      <div className="flex-1" style={{ width: "2px", backgroundColor: "#B8860B" }} />
-    </div>
-  );
-}
-
-// ═══════════════════════════════════════════════
-// PAIR GROUP — Renders a father-mother pair with bracket
-// ═══════════════════════════════════════════════
-
-function PairGroup({
-  father,
-  mother,
-  size = "normal",
-  showChildren = true,
-}: {
-  father?: PedigreeNode;
-  mother?: PedigreeNode;
-  size?: "normal" | "small";
-  showChildren?: boolean;
-}) {
-  if (!father && !mother) return null;
-
-  return (
-    <div className="flex items-center">
-      {showChildren && <HorizontalLine width={16} />}
-      <div className="flex flex-col gap-2">
-        {father && <PersonBox node={father} size={size} />}
-        {mother && <PersonBox node={mother} size={size} />}
-      </div>
-    </div>
-  );
-}
-
-// ═══════════════════════════════════════════════
-// ANCESTOR BRANCH — Recursive render of a person + their ancestors
-// ═══════════════════════════════════════════════
-
-function AncestorBranch({
-  node,
-  depth = 0,
-  maxDepth = 3,
-}: {
-  node: PedigreeNode;
-  depth?: number;
-  maxDepth?: number;
-}) {
-  const hasParents = node.father || node.mother;
-  const size = depth >= 2 ? "small" : "normal";
-
-  if (depth >= maxDepth || !hasParents) {
-    return <PersonBox node={node} size={size} />;
-  }
-
-  return (
-    <div className="flex items-center">
-      <PersonBox node={node} size={size} />
-      <HorizontalLine width={depth >= 2 ? 12 : 20} />
-      {/* Vertical bracket connecting father/mother */}
-      <div className="relative flex flex-col">
-        {/* Top half - father side */}
-        <div className="flex items-end">
-          <div className="flex flex-col items-start">
-            <div style={{ height: "1px" }} />
-            <div
-              className="self-start"
-              style={{
-                width: depth >= 2 ? "12px" : "20px",
-                height: "2px",
-                backgroundColor: "#B8860B",
-              }}
-            />
-          </div>
-          <div className="flex items-center">
-            {node.father ? (
-              <AncestorBranch node={node.father} depth={depth + 1} maxDepth={maxDepth} />
-            ) : (
-              <div className="min-w-[120px] px-2 py-1 text-[10px] text-ink-muted italic" style={{ fontFamily: "var(--font-sans)" }}>
-                Unknown
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Vertical connector */}
-        <div
-          className="self-start"
-          style={{
-            width: "2px",
-            height: "8px",
-            backgroundColor: "#B8860B",
-          }}
-        />
-
-        {/* Bottom half - mother side */}
-        <div className="flex items-start">
-          <div className="flex flex-col items-start">
-            <div
-              className="self-start"
-              style={{
-                width: depth >= 2 ? "12px" : "20px",
-                height: "2px",
-                backgroundColor: "#B8860B",
-              }}
-            />
-          </div>
-          <div className="flex items-center">
-            {node.mother ? (
-              <AncestorBranch node={node.mother} depth={depth + 1} maxDepth={maxDepth} />
-            ) : (
-              <div className="min-w-[120px] px-2 py-1 text-[10px] text-ink-muted italic" style={{ fontFamily: "var(--font-sans)" }}>
-                Unknown
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// ═══════════════════════════════════════════════
-// MAIN PEDIGREE CHART COMPONENT
+// MAIN CHART — Grid-based layout
 // ═══════════════════════════════════════════════
 
 export default function PedigreeChart({
@@ -262,25 +197,21 @@ export default function PedigreeChart({
 
   const scrollToChart = () => {
     const el = document.getElementById(chartId);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  // Compute max depth based on tree
-  const getMaxDepth = (node: PedigreeNode, d: number): number => {
-    const fatherDepth = node.father ? getMaxDepth(node.father, d + 1) : d;
-    const motherDepth = node.mother ? getMaxDepth(node.mother, d + 1) : d;
-    return Math.max(fatherDepth, motherDepth);
-  };
-  const maxDepth = Math.min(getMaxDepth(tree.focal, 0), 4);
+  const { nodes, lines, maxDepth, totalRows } = useMemo(
+    () => flattenTree(tree),
+    [tree]
+  );
 
-  // Determine generations label
-  const genLabels: string[] = [];
-  if (maxDepth >= 0) genLabels.push("Grandparent");
-  if (maxDepth >= 1) genLabels.push("Great-Grandparents");
-  if (maxDepth >= 2) genLabels.push("2× Great-Grandparents");
-  if (maxDepth >= 3) genLabels.push("3× Great-Grandparents");
+  // Calculate row height based on depth
+  const ROW_HEIGHT = maxDepth >= 3 ? 60 : 70;
+  const COL_WIDTH = maxDepth >= 3 ? 200 : 220;
+  const GAP = maxDepth >= 3 ? 40 : 50;
+
+  const chartHeight = totalRows * ROW_HEIGHT;
+  const chartWidth = (maxDepth + 1) * COL_WIDTH + maxDepth * GAP + 60; // extra for spouse
 
   return (
     <>
@@ -299,102 +230,94 @@ export default function PedigreeChart({
             >
               {tree.title}
             </h2>
-            <p
-              className="text-sm text-ink-muted"
-              style={{ fontFamily: "var(--font-sans)" }}
-            >
+            <p className="text-sm text-ink-muted" style={{ fontFamily: "var(--font-sans)" }}>
               Click any ancestor to jump to their details below
             </p>
-            {/* Generation legend */}
-            <div className="flex items-center justify-center gap-4 mt-3 flex-wrap">
+            <div className="flex items-center justify-center gap-4 mt-3">
               <span className="flex items-center gap-1.5 text-[11px]" style={{ fontFamily: "var(--font-sans)" }}>
-                <span
-                  className="inline-block w-3 h-3 rounded-sm border"
-                  style={{ backgroundColor: "#F0F6FF", borderColor: "#B0C8E8" }}
-                />
+                <span className="inline-block w-3 h-3 rounded-sm border" style={{ backgroundColor: "#F0F6FF", borderColor: "#B0C8E8" }} />
                 Male
               </span>
               <span className="flex items-center gap-1.5 text-[11px]" style={{ fontFamily: "var(--font-sans)" }}>
-                <span
-                  className="inline-block w-3 h-3 rounded-sm border"
-                  style={{ backgroundColor: "#FFF0F5", borderColor: "#E8B0C8" }}
-                />
+                <span className="inline-block w-3 h-3 rounded-sm border" style={{ backgroundColor: "#FFF0F5", borderColor: "#E8B0C8" }} />
                 Female
               </span>
             </div>
           </div>
 
-          {/* Chart container — horizontal scroll on mobile */}
+          {/* Chart — horizontal scroll on mobile */}
           <div className="overflow-x-auto pb-4 -mx-4 px-4">
-            <div className="inline-flex items-center min-w-max">
-              {/* Focal person + spouse */}
-              <div className="flex flex-col items-center gap-1 mr-1">
-                <PersonBox node={tree.focal} size="focal" />
-                <div className="flex items-center gap-1">
-                  <span className="text-[10px] text-gold font-medium" style={{ fontFamily: "var(--font-sans)" }}>
-                    m.
-                  </span>
-                  <PersonBox node={tree.spouse} size="small" />
-                </div>
-              </div>
+            <svg
+              width={chartWidth}
+              height={chartHeight + 80}
+              viewBox={`0 0 ${chartWidth} ${chartHeight + 80}`}
+              className="block mx-auto"
+              style={{ minWidth: `${chartWidth}px` }}
+            >
+              {/* Connecting lines */}
+              {lines.map((line, i) => {
+                const fromX = line.fromCol * (COL_WIDTH + GAP) + COL_WIDTH;
+                const fromY = line.fromRow * ROW_HEIGHT + (line.fromSpan * ROW_HEIGHT) / 2 + 40;
+                const toX = line.toCol * (COL_WIDTH + GAP);
+                const toY = line.toRow * ROW_HEIGHT + (line.toSpan * ROW_HEIGHT) / 2 + 40;
+                const midX = (fromX + toX) / 2;
 
-              {/* Connector to parents */}
-              <HorizontalLine width={20} />
+                return (
+                  <g key={`line-${i}`}>
+                    {/* Horizontal from parent */}
+                    <line x1={fromX} y1={fromY} x2={midX} y2={fromY} stroke="#B8860B" strokeWidth="2" />
+                    {/* Vertical connector */}
+                    <line x1={midX} y1={fromY} x2={midX} y2={toY} stroke="#B8860B" strokeWidth="2" />
+                    {/* Horizontal to child */}
+                    <line x1={midX} y1={toY} x2={toX} y2={toY} stroke="#B8860B" strokeWidth="2" />
+                  </g>
+                );
+              })}
 
-              {/* Ancestor tree */}
-              <div className="relative flex flex-col">
-                {/* Father branch */}
-                <div className="flex items-end">
-                  <div className="flex flex-col items-start">
-                    <div style={{ height: "1px" }} />
-                    <div
-                      style={{
-                        width: "20px",
-                        height: "2px",
-                        backgroundColor: "#B8860B",
-                      }}
-                    />
-                  </div>
-                  {tree.focal.father && (
-                    <AncestorBranch
-                      node={tree.focal.father}
-                      depth={1}
-                      maxDepth={maxDepth}
-                    />
-                  )}
-                </div>
+              {/* Person nodes */}
+              {nodes.map((pos, i) => {
+                const x = pos.col * (COL_WIDTH + GAP);
+                const y = pos.row * ROW_HEIGHT + (pos.rowSpan * ROW_HEIGHT) / 2 + 40;
+                const size: "focal" | "normal" | "small" =
+                  pos.col === 0 ? "focal" : pos.col >= maxDepth ? "small" : "normal";
 
-                {/* Vertical connector */}
-                <div
-                  className="self-start"
-                  style={{
-                    width: "2px",
-                    height: "8px",
-                    backgroundColor: "#B8860B",
-                  }}
-                />
+                return (
+                  <foreignObject
+                    key={`node-${i}`}
+                    x={x}
+                    y={y - (size === "focal" ? 35 : size === "small" ? 22 : 28)}
+                    width={COL_WIDTH}
+                    height={size === "focal" ? 70 : size === "small" ? 44 : 56}
+                    overflow="visible"
+                  >
+                    <div className="flex items-center h-full">
+                      <PersonBox node={pos.node} size={size} />
+                    </div>
+                  </foreignObject>
+                );
+              })}
 
-                {/* Mother branch */}
-                <div className="flex items-start">
-                  <div className="flex flex-col items-start">
-                    <div
-                      style={{
-                        width: "20px",
-                        height: "2px",
-                        backgroundColor: "#B8860B",
-                      }}
-                    />
-                  </div>
-                  {tree.focal.mother && (
-                    <AncestorBranch
-                      node={tree.focal.mother}
-                      depth={1}
-                      maxDepth={maxDepth}
-                    />
-                  )}
-                </div>
-              </div>
-            </div>
+              {/* Spouse box — below focal person */}
+              {(() => {
+                const focalY = (totalRows * ROW_HEIGHT) / 2 + 40;
+                return (
+                  <foreignObject
+                    x={0}
+                    y={focalY + 40}
+                    width={COL_WIDTH}
+                    height={50}
+                    overflow="visible"
+                  >
+                    <div className="flex items-center gap-1">
+                      <span className="text-[10px] text-gold font-medium shrink-0" style={{ fontFamily: "var(--font-sans)" }}>
+                        m.
+                      </span>
+                      <PersonBox node={tree.spouse} size="small" />
+                    </div>
+                  </foreignObject>
+                );
+              })()}
+            </svg>
           </div>
         </motion.div>
       </section>
@@ -404,13 +327,9 @@ export default function PedigreeChart({
         <motion.button
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
           onClick={scrollToChart}
           className="fixed bottom-20 md:bottom-6 right-4 z-40 flex items-center gap-2 px-4 py-2.5 bg-white/95 border border-border-light rounded-full shadow-lg hover:shadow-xl hover:bg-white transition-all text-sm font-medium"
-          style={{
-            fontFamily: "var(--font-sans)",
-            color: colorAccent,
-          }}
+          style={{ fontFamily: "var(--font-sans)", color: colorAccent }}
         >
           ↑ Back to Chart
         </motion.button>
