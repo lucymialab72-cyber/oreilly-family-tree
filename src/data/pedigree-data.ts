@@ -193,6 +193,7 @@ const coffeyTree: PedigreeTree = {
           name: "Jeremiah Coffey Sr.",
           birthPlace: "Kerry, Ireland",
           gender: "M",
+          scrollId: slugify("Jeremiah Coffey Sr."),
         },
         mother: {
           name: "Mary Cronin",
@@ -404,6 +405,7 @@ const jakubicekTree: PedigreeTree = {
         name: "Marie Jakubicek",
         birthPlace: "Moravia",
         gender: "F",
+        scrollId: slugify("Marie Jakubicek"),
       },
     },
     mother: {
@@ -422,6 +424,7 @@ const jakubicekTree: PedigreeTree = {
       mother: {
         name: "Klara Marc",
         gender: "F",
+        scrollId: slugify("Klara Marc"),
       },
     },
   },
