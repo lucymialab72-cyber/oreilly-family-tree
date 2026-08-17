@@ -200,6 +200,15 @@ export const personDocuments: PersonDocuments[] = [
       { file: "jakubicek/Mary-Marie-Jakubicek-nee-Melka-1896-1989-FindAGrave-Parents-Ludvig-Melka-Clara-Marc.png", caption: "Find a Grave — Marie (Melka) Jakubicek (1896–1989)" },
     ],
   },
+  {
+    personName: "Helen Marie Jakubicek",
+    familyId: "jakubicek",
+    docs: [
+      { file: "jakubicek/1930-Census-Helen-Jakubicek-Family-Chicago.png", caption: "1930 Census — Helen Jakubicek Family, Chicago (age 4)" },
+      { file: "linnerud/Lyle-Linnerud-Helen-Jakubicek-Marriage-Jan20-1951-Winnebago-County.png", caption: "Marriage Record — Lyle Linnerud & Helen Jakubicek, Jan 20, 1951" },
+      { file: "linnerud/Helen-Marie-Jakubicek-Linnerud-1925-2010-OBITUARY-FindAGrave.png", caption: "Obituary — Helen Marie Jakubicek-Linnerud (1925–2010)" },
+    ],
+  },
 
   // ═══════════════════════════
   // MADDEN LINE (shown on oreilly page)
