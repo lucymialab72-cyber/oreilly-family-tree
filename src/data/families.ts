@@ -518,7 +518,87 @@ export const familyLines: FamilyLine[] = [
     generations: [
       {
         label: "Generation 0",
-        relation: "Generation 1 — 3× Great-Grandparents",
+        relation: "3× Great-Grandparents (Eileen's great-grandparents)",
+        people: [
+          {
+            name: "Mary Cronin",
+            born: "March 18, 1805",
+            bornPlace: "Killorglin, Kerry, Ireland",
+            died: "1885",
+            diedPlace: "Killorglin, Kerry, Ireland",
+            notes: [
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I29)",
+              "Christened March 18, 1805 at Killarney, Kerry",
+              "Parents: Mary and Michael Cronin",
+              "Married Jeremiah Coffey Sr. on February 7, 1824 in Killorglin, Kerry",
+              "Had 10 children in 22 years",
+              "Mother of Jeremiah Coffey (b.1836) — Eileen's grandfather",
+              "Died 1885 in Killorglin, Kerry, age ~80",
+            ],
+          },
+          {
+            name: "James Clifford",
+            bornPlace: "County Kerry, Ireland",
+            notes: [
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P68)",
+              "Father of Janet Clifford, who married Jeremiah Coffey",
+              "Grandfather of John J. Coffey",
+              "No dates or further details known",
+            ],
+          },
+          {
+            name: "Jeremia Sheehan",
+            born: "1820",
+            spouse: "Genita Thomas",
+            notes: [
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I41)",
+              "Father of Patrick Sheehan (b.1846, Waterville) — Eileen's grandfather",
+              "Grandfather of Julia Sheehan",
+            ],
+          },
+          {
+            name: "Genita Thomas",
+            born: "1820",
+            bornPlace: "Waterville, County Kerry, Ireland",
+            spouse: "Jeremia Sheehan",
+            notes: [
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I40)",
+              "Mother of Patrick Sheehan (b.1846, Waterville) — Eileen's grandfather",
+              "Grandmother of Julia Sheehan",
+            ],
+          },
+          {
+            name: "Daniel Sheehan",
+            born: "1798",
+            bornPlace: "County Kerry, Ireland",
+            died: "August 20, 1870",
+            diedPlace: "County Kerry, Ireland",
+            spouse: "Ellen Fitzgerald Sheehan",
+            notes: [
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I38)",
+              "Father of Mary Fitzgerald Sheehan — Eileen's grandmother",
+              "Grandfather of Julia Sheehan",
+              "Died August 20, 1870, County Kerry, age 72",
+            ],
+          },
+          {
+            name: "Ellen Fitzgerald Sheehan",
+            born: "1810",
+            died: "1887",
+            diedPlace: "Tralee, Kerry, Ireland (per notes)",
+            spouse: "Daniel Sheehan",
+            notes: [
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I39)",
+              "Mother of Mary Fitzgerald Sheehan — Eileen's grandmother",
+              "Grandmother of Julia Sheehan",
+              "Died 1887, age 77",
+            ],
+          },
+        ],
+      },
+      {
+        label: "Generation 1",
+        relation: "2× Great-Grandparents (Eileen's grandparents)",
         people: [
           {
             name: "Jeremiah (Jerry) Coffey",
@@ -550,31 +630,6 @@ export const familyLines: FamilyLine[] = [
             ],
           },
           {
-            name: "James Clifford",
-            bornPlace: "County Kerry, Ireland",
-            notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P68)",
-              "Father of Janet Clifford, who married Jeremiah Coffey",
-              "No dates or further details known",
-            ],
-          },
-          {
-            name: "Mary Cronin",
-            born: "March 18, 1805",
-            bornPlace: "Killorglin, Kerry, Ireland",
-            died: "1885",
-            diedPlace: "Killorglin, Kerry, Ireland",
-            notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I29)",
-              "Christened March 18, 1805 at Killarney, Kerry",
-              "Parents: Mary and Michael Cronin",
-              "Married Jeremiah Coffey Sr. on February 7, 1824 in Killorglin, Kerry",
-              "Had 10 children in 22 years",
-              "Mother of Jeremiah Coffey (b.1836), grandfather of John J. Coffey",
-              "Died 1885 in Killorglin, Kerry, age ~80",
-            ],
-          },
-          {
             name: "Patrick Sheehan",
             born: "February 20, 1846",
             bornPlace: "Waterville, County Kerry, Ireland",
@@ -603,55 +658,11 @@ export const familyLines: FamilyLine[] = [
               "⚠️ Note: one source lists death place as 'Londonderry, Northern Ireland' — likely a data entry error for a Kerry farming family",
             ],
           },
-          {
-            name: "Jeremia Sheehan",
-            born: "1820",
-            spouse: "Genita Thomas",
-            notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I41)",
-              "Father of Patrick Sheehan (b.1846, Waterville) — Julia Sheehan's grandfather",
-            ],
-          },
-          {
-            name: "Genita Thomas",
-            born: "1820",
-            bornPlace: "Waterville, County Kerry, Ireland",
-            spouse: "Jeremia Sheehan",
-            notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I40)",
-              "Mother of Patrick Sheehan (b.1846, Waterville) — Julia Sheehan's grandmother",
-            ],
-          },
-          {
-            name: "Daniel Sheehan",
-            born: "1798",
-            bornPlace: "County Kerry, Ireland",
-            died: "August 20, 1870",
-            diedPlace: "County Kerry, Ireland",
-            spouse: "Ellen Fitzgerald Sheehan",
-            notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I38)",
-              "Father of Mary Fitzgerald Sheehan — Julia Sheehan's great-grandfather",
-              "Died August 20, 1870, County Kerry, age 72",
-            ],
-          },
-          {
-            name: "Ellen Fitzgerald Sheehan",
-            born: "1810",
-            died: "1887",
-            diedPlace: "Tralee, Kerry, Ireland (per notes)",
-            spouse: "Daniel Sheehan",
-            notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I39)",
-              "Mother of Mary Fitzgerald Sheehan — Julia Sheehan's great-grandmother",
-              "Died 1887, age 77",
-            ],
-          },
         ],
       },
       {
-        label: "Generation 1",
-        relation: "Generation 3 — Great-Grandparents",
+        label: "Generation 2",
+        relation: "Great-Grandparents (Eileen's parents)",
         people: [
           {
             name: "John J. Coffey",
