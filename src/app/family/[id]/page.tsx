@@ -435,9 +435,11 @@ function FamilyLineContent({ params }: { params: Promise<{ id: string }> }) {
                   ))}
                 </div>
               </div>
-              <p className="text-ink-muted text-sm" style={{ fontFamily: "var(--font-sans)" }}>
-                {gen.relation}
-              </p>
+              {gen.relation && (
+                <p className="text-ink-muted text-sm" style={{ fontFamily: "var(--font-sans)" }}>
+                  {gen.relation}
+                </p>
+              )}
             </motion.div>
 
             <div className="space-y-4 max-w-2xl mx-auto">

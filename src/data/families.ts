@@ -91,7 +91,7 @@ export const familyLines: FamilyLine[] = [
     generations: [
       {
         label: "Generation 0",
-        relation: "Generation 1 — 3× Great-Grandparents",
+        relation: "",
         people: [
           {
             name: "James O'Reilly",
@@ -202,7 +202,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 1",
-        relation: "Generation 2 — 2× Great-Grandparents",
+        relation: "",
         people: [
           {
             name: "Edward (Edmond) O'Reilly",
@@ -284,7 +284,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 2",
-        relation: "Generation 3 — Great-Grandparents",
+        relation: "",
         people: [
           {
             name: "Patrick Joseph O'Reilly",
@@ -308,7 +308,7 @@ export const familyLines: FamilyLine[] = [
               "At some point between 1906 and 1918, moved to Chicago where he married Catherine",
               "Married Catherine Loretta Sheehy on August 28, 1918 in Chicago",
               "WWI Draft Card (1917-1918): registered at 727 E 50th St, Chicago, Draft Board 13. Medium build, medium height, black hair, blue eyes. Listed wife Catherine O'Reilly as relative. Registered in the September 12, 1918 'Old Man's Registration' at age 35 — the war ended just 2 months later. Likely never served.",
-              "Lived to age 89 — his grandson Terrence (Generation 5) would have been ~16 when Patrick died",
+              "Lived to age 89 — his grandson Terrence (Generation 4) would have been ~16 when Patrick died",
               "Ancestry sources: Irish Civil Registration (Mar 1883), Church baptism, 1920 Census, 1940 Census, SSDI (SSN 319-07-3900), Cook County Marriage Index, WWI Draft Card",
               "5 children: Loretta Josephine (1919-2000), Edward 'Bud' (1921-2002), Richard Joseph (1923-1980), James Patrick 'Uncle Jay' (1924-2012), Jerome (b.1932, possibly still living)",
             ],
@@ -326,7 +326,7 @@ export const familyLines: FamilyLine[] = [
               "Born in Chicago — an Irish-American, not an immigrant",
               "Father: Richard Joseph Sheehy (1860-1931); Mother: Anna Woulfe (1875-1967)",
               "Home address: 2821 W. 85th Place, Chicago, IL",
-              "Lived to age 96 — her grandson Terrence (Generation 5) would have known her well",
+              "Lived to age 96 — her grandson Terrence (Generation 4) would have known her well",
               "Married Patrick on August 28, 1918 in Chicago",
               "Sisters: Marie Sheehy (b.1898, d.1993, age 94) and Anna V. Sheehy (b.1902, d.1975, Chicago, age 73)",
               "Ancestry sources: Cook County Marriage Index, 1920/1940 Census, SSDI (722-03-2283), 1910 Census",
@@ -339,7 +339,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 3",
-        relation: "Generation 4 — Grandparents",
+        relation: "",
         people: [
           {
             name: 'Edward Joseph "Bud" O\'Reilly',
@@ -359,7 +359,7 @@ export const familyLines: FamilyLine[] = [
               "Family says Patton's 3rd Army, Battle of the Bulge (unverified — Army personnel files largely destroyed in 1973 NPRC fire)",
               "Brought home a captured German pistol",
               "Post-war career details pending family verification",
-              "Children (per O'Reilly family archive): MarySue, JoAnn, Tom, Terry, Patrick, Hugh. Terrence Patrick is Generation 5.",
+              "Children (per O'Reilly family archive): MarySue, JoAnn, Tom, Terry, Patrick, Hugh. Terrence Patrick is Generation 4.",
               "Died April 7, 2002 in Oak Lawn, Illinois, age 81",
               "Funeral at St. Catherine of Alexandria Church, Oak Lawn",
               "Inherited his father Patrick's black hair and blue eyes",
@@ -445,7 +445,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         title: "From Abbeyfeale to Chicago: The Sheehy-Woulfe Line",
-        content: "Catherine Loretta Sheehy was born in Chicago in 1894 — but her roots ran deep into County Limerick. Her father Richard Joseph Sheehy came from Newcastle West, a market town in western Limerick. His father William Joseph Sheehy had married Catherine Barrett there in 1856 at the Immaculate Conception Church. William died young at 33, leaving Richard to grow up fatherless — just as Patrick O'Reilly would lose his father at 9.\n\nRichard emigrated to Chicago sometime in the 1880s and married Anna Woulfe in 1894 — the same year their daughter Catherine was born. Anna came from an even more remote corner of Limerick: Cratloe West, near the town of Abbeyfeale, close to the Kerry border. She had emigrated at age 12 with her parents Patrick Woulfe and Bridget Roche.\n\nAnna lived to 92. She was known to her great-grandchildren as 'Grandma Shug.' She died in 1967 on the south side of Chicago, and is buried at Holy Sepulcher Cemetery in Worth, Illinois — alongside her husband Richard, who preceded her by 36 years.\n\nFour Irish emigrants — from Newcastle West and Abbeyfeale and Cratloe West — converged on Chicago's South Side, married, and produced Catherine Loretta, who married Patrick O'Reilly, who produced Edward 'Bud', who married Eileen Coffey, who produced Terrence (Generation 5).",
+        content: "Catherine Loretta Sheehy was born in Chicago in 1894 — but her roots ran deep into County Limerick. Her father Richard Joseph Sheehy came from Newcastle West, a market town in western Limerick. His father William Joseph Sheehy had married Catherine Barrett there in 1856 at the Immaculate Conception Church. William died young at 33, leaving Richard to grow up fatherless — just as Patrick O'Reilly would lose his father at 9.\n\nRichard emigrated to Chicago sometime in the 1880s and married Anna Woulfe in 1894 — the same year their daughter Catherine was born. Anna came from an even more remote corner of Limerick: Cratloe West, near the town of Abbeyfeale, close to the Kerry border. She had emigrated at age 12 with her parents Patrick Woulfe and Bridget Roche.\n\nAnna lived to 92. She was known to her great-grandchildren as 'Grandma Shug.' She died in 1967 on the south side of Chicago, and is buried at Holy Sepulcher Cemetery in Worth, Illinois — alongside her husband Richard, who preceded her by 36 years.\n\nFour Irish emigrants — from Newcastle West and Abbeyfeale and Cratloe West — converged on Chicago's South Side, married, and produced Catherine Loretta, who married Patrick O'Reilly, who produced Edward 'Bud', who married Eileen Coffey, who produced Terrence (Generation 4).",
         pullQuote: "Anna Woulfe was known to her great-grandchildren as 'Grandma Shug.' She died in Chicago at 92, never having forgotten Abbeyfeale.",
       },
       {
@@ -514,7 +514,7 @@ export const familyLines: FamilyLine[] = [
     generations: [
       {
         label: "Generation 0",
-        relation: "3× Great-Grandparents (Eileen's great-grandparents)",
+        relation: "",
         people: [
           {
             name: "Jeremiah Coffey Sr.",
@@ -606,7 +606,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 1",
-        relation: "2× Great-Grandparents (Eileen's grandparents)",
+        relation: "",
         people: [
           {
             name: "Jeremiah (Jerry) Coffey",
@@ -670,7 +670,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 2",
-        relation: "Great-Grandparents (Eileen's parents)",
+        relation: "",
         people: [
           {
             name: "John J. Coffey",
@@ -731,7 +731,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 3",
-        relation: "Grandparents (Eileen's family)",
+        relation: "",
         people: [
           {
             name: "Eileen Marie Coffey",
@@ -782,7 +782,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         title: "Kilkenny Meets Kerry",
-        content: "The Generation 4 grandparents united two different corners of Ireland. The O'Reilly line came from County Kilkenny in the southeast — medieval Norman country, the heart of the Pale's edge. The Coffey and Sheehan lines came from County Kerry in the southwest — deep Gaelic territory, remote and wild. When Edward married Eileen, the southeast met the southwest in a Chicago parish.",
+        content: "The grandparents united two different corners of Ireland. The O'Reilly line came from County Kilkenny in the southeast — medieval Norman country, the heart of the Pale's edge. The Coffey and Sheehan lines came from County Kerry in the southwest — deep Gaelic territory, remote and wild. When Edward married Eileen, the southeast met the southwest in a Chicago parish.",
       },
       {
         title: "From Killorglin to Ballydarrig: The Coffey Roots",
@@ -796,7 +796,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         title: "The Sheehan Family of Waterville",
-        content: "Julia Sheehan's family came from the Dromod Parish near Waterville — a remote and beautiful stretch of the Ring of Kerry where the mountains meet the Atlantic. Her father Patrick Sheehan was born in 1846. Her mother, Mary Fitzgerald, came from the same area. Together they had 12 children, including Julia and her sister Deborah — who would live to 97 — and Nellie Thompson, who made it to 102.\n\nLongevity was in the Sheehan blood. Julia herself lived to 76 despite the hardship of emigrating at 18 with $10 in her pocket. Her mother Mary died in Kerry in 1931. Her grandparents Daniel Sheehan (1798–1870) and Ellen Fitzgerald Sheehan (1810–1887) are the oldest confirmed ancestors on this branch of the family.\n\nJulia came to America on the SS Arabic in 1906, the same ship that would be torpedoed by a German submarine nine years later. She married John J. Coffey in 1913. Their daughter Eileen — born May 18, 1923, a twin — would grow up to marry Edward 'Bud' O'Reilly — the couple who became Generation 4's grandparents on the paternal side.",
+        content: "Julia Sheehan's family came from the Dromod Parish near Waterville — a remote and beautiful stretch of the Ring of Kerry where the mountains meet the Atlantic. Her father Patrick Sheehan was born in 1846. Her mother, Mary Fitzgerald, came from the same area. Together they had 12 children, including Julia and her sister Deborah — who would live to 97 — and Nellie Thompson, who made it to 102.\n\nLongevity was in the Sheehan blood. Julia herself lived to 76 despite the hardship of emigrating at 18 with $10 in her pocket. Her mother Mary died in Kerry in 1931. Her grandparents Daniel Sheehan (1798–1870) and Ellen Fitzgerald Sheehan (1810–1887) are the oldest confirmed ancestors on this branch of the family.\n\nJulia came to America on the SS Arabic in 1906, the same ship that would be torpedoed by a German submarine nine years later. She married John J. Coffey in 1913. Their daughter Eileen — born May 18, 1923, a twin — would grow up to marry Edward 'Bud' O'Reilly — the couple who became the grandparents on the paternal side.",
       },
     ],
   },
@@ -845,7 +845,7 @@ export const familyLines: FamilyLine[] = [
     generations: [
       {
         label: "Generation 0",
-        relation: "3× Great-Grandparents (Lee/Sørensen & Arneson lines)",
+        relation: "",
         people: [
           {
             name: "Søren Sørensen",
@@ -893,7 +893,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 1",
-        relation: "Generation 2 — 2× Great-Grandparents",
+        relation: "",
         people: [
           {
             name: "Anders Pedersen",
@@ -946,7 +946,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 2",
-        relation: "Generation 3 — Great-Grandparents",
+        relation: "",
         people: [
           {
             name: "Andrew Olaus Linnerud",
@@ -992,7 +992,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 3",
-        relation: "Generation 4 — Grandparents",
+        relation: "",
         people: [
           {
             name: "Lyle Andrew Linnerud",
@@ -1107,7 +1107,7 @@ export const familyLines: FamilyLine[] = [
     generations: [
       {
         label: "Generation 0",
-        relation: "2× Great-Grandparents (Thomas & Marie's parents)",
+        relation: "",
         people: [
           {
             name: "George Jakubicek",
@@ -1153,7 +1153,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 1",
-        relation: "Great-Grandparents (Helen's parents)",
+        relation: "",
         people: [
           {
             name: "Thomas Joseph Jakubicek",
@@ -1196,7 +1196,7 @@ export const familyLines: FamilyLine[] = [
       },
       {
         label: "Generation 2",
-        relation: "Grandparents",
+        relation: "",
         people: [
           {
             name: "Lyle Andrew Linnerud",
