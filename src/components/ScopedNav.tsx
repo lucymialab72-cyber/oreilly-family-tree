@@ -11,9 +11,9 @@ const SIDE_FAMILIES: Record<Side, string[]> = {
   mom: ["linnerud", "jakubicek"],
 };
 
-const SIDE_CONFIG: Record<Side, { title: string; emoji: string; home: string }> = {
-  dad: { title: "Dad\u2019s Side", emoji: "\u2618\uFE0F", home: "/dad" },
-  mom: { title: "Mom\u2019s Side", emoji: "\uD83C\uDF3E", home: "/mom" },
+const SIDE_CONFIG: Record<Side, { title: string; emoji: string; home: string; pdf: string; pdfName: string }> = {
+  dad: { title: "Dad\u2019s Side", emoji: "\u2618\uFE0F", home: "/dad", pdf: "/oreilly-family-tree-dad.pdf", pdfName: "OReilly-Dads-Side.pdf" },
+  mom: { title: "Mom\u2019s Side", emoji: "\uD83C\uDF3E", home: "/mom", pdf: "/oreilly-family-tree-mom.pdf", pdfName: "OReilly-Moms-Side.pdf" },
 };
 
 export default function ScopedNav({ side }: { side: Side }) {
@@ -63,6 +63,14 @@ export default function ScopedNav({ side }: { side: Side }) {
             <Link href={`/documents?side=${side}`} className={linkClass(isActive("/documents"))}>
               🗂️ Documents
             </Link>
+            <a
+              href={cfg.pdf}
+              download={cfg.pdfName}
+              className="hidden md:block text-ink-muted hover:text-ink transition-colors"
+              title="Download PDF"
+            >
+              🖨️ Print
+            </a>
           </div>
         </div>
       </nav>
