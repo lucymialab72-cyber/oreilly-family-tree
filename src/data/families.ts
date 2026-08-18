@@ -395,10 +395,6 @@ export const familyLines: FamilyLine[] = [
         pullQuote: "Two Irish families, one block apart on Chicago's South Side. Some things are not coincidence.",
       },
       {
-        title: "Father Remembered",
-        content: "Terrence O'Reilly (Generation 5) remembered his great-grandfather's name as Patrick — not William, as earlier research had incorrectly suggested. He was right. Patrick Joseph O'Reilly was born in 1883 and died in 1972, when Terrence was about 16 years old. Old enough to remember the man, and the name. Sometimes the best genealogical source is the family member who was there.",
-      },
-      {
         title: "Buried at the Abbey",
         content: "Edward O'Reilly — Patrick's father and the family's 2× great-grandfather (Generation 1) — is buried at Jerpoint Abbey in Thomastown, Kilkenny. Founded in 1180 by Cistercian monks, the abbey is one of Ireland's finest medieval ruins. Its carved cloister arcade features knights and saints and dragons. Edward died at 52 in 1892, leaving 9-year-old Patrick fatherless. Fourteen years later, Patrick would leave Thomastown for America.",
         pullQuote: "A medieval abbey in Kilkenny. That's where the O'Reilly story begins — and where it rests.",

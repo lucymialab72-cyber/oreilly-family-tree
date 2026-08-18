@@ -469,8 +469,10 @@ function FamilyLineContent({ params }: { params: Promise<{ id: string }> }) {
       {/* ═══ STORIES ═══ */}
       {line.stories.length > 0 && (
         <section className="max-w-3xl mx-auto px-6 py-16">
-          <div className="heritage-divider">
+          <div className="flex items-center gap-4 my-12">
+            <div className="flex-1 h-px bg-border-light" />
             <span className="text-gold">✦</span>
+            <div className="flex-1 h-px bg-border-light" />
           </div>
 
           <motion.h2
