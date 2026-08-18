@@ -44,7 +44,7 @@ export default function DadSidePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 + i * 0.15, duration: 0.5 }}
             >
-              <Link href={`/family/${family.id}`}>
+              <Link href={`/family/${family.id}?side=dad`}>
                 <div className="bg-white border border-border-light rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer text-left h-full">
                   <div className="text-3xl mb-2">{family.flag}</div>
                   <h2
@@ -73,12 +73,11 @@ export default function DadSidePage() {
           >
             Explore Dad&apos;s Side
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-3 gap-4">
             {[
               { href: "/stories?side=dad", icon: "📖", label: "Stories" },
               { href: "/map?side=dad", icon: "🗺️", label: "Map" },
               { href: "/documents?side=dad", icon: "🗂️", label: "Documents" },
-              { href: "/tree", icon: "🌳", label: "Family Tree" },
             ].map((link, i) => (
               <motion.div
                 key={link.href}
