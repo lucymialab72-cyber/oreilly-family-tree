@@ -1108,6 +1108,14 @@ export const familyLines: FamilyLine[] = [
       {
         label: "Generation 0",
         relation: "",
+        people: [],
+        notes: [
+          "The parents of George Jakubicek and Ludvik Melka remain unknown. No records have been found beyond what Thomas and Marie's immigration and death documents provide. The Jakubicek line traces back to Moravia and the Melka line to Bohemia — both regions of what is now the Czech Republic.",
+        ],
+      },
+      {
+        label: "Generation 1",
+        relation: "",
         people: [
           {
             name: "George Jakubicek",
@@ -1152,7 +1160,7 @@ export const familyLines: FamilyLine[] = [
         ],
       },
       {
-        label: "Generation 1",
+        label: "Generation 2",
         relation: "",
         people: [
           {
@@ -1195,7 +1203,7 @@ export const familyLines: FamilyLine[] = [
         ],
       },
       {
-        label: "Generation 2",
+        label: "Generation 3",
         relation: "",
         people: [
           {
