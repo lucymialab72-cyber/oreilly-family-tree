@@ -472,9 +472,9 @@ function FamilyLineContent({ params }: { params: Promise<{ id: string }> }) {
       {line.stories.length > 0 && (
         <section className="max-w-3xl mx-auto px-6 py-16">
           <div className="flex items-center gap-4 my-12">
-            <div className="flex-1 h-px bg-border-light" />
+            <div style={{flex:1,height:1,background:"#E8DCC8"}} />
             <span className="text-gold">✦</span>
-            <div className="flex-1 h-px bg-border-light" />
+            <div style={{flex:1,height:1,background:"#E8DCC8"}} />
           </div>
 
           <motion.h2
@@ -631,8 +631,10 @@ function FamilyLineContent({ params }: { params: Promise<{ id: string }> }) {
 
       {/* ═══ DOCUMENT GALLERY ═══ */}
       <section className="max-w-5xl mx-auto px-6 py-8">
-        <div className="heritage-divider">
-          <span className="text-gold">✦</span>
+        <div className="flex items-center gap-4 my-12">
+            <div style={{flex:1,height:1,background:"#E8DCC8"}} />
+            <span className="text-gold">✦</span>
+            <div style={{flex:1,height:1,background:"#E8DCC8"}} />
         </div>
         <DocumentGallery
           personDocs={getDocsByFamily(id)}
@@ -642,8 +644,10 @@ function FamilyLineContent({ params }: { params: Promise<{ id: string }> }) {
 
       {/* ═══ NAVIGATION ═══ */}
       <section className="max-w-3xl mx-auto px-6 py-16">
-        <div className="heritage-divider">
-          <span className="text-gold">✦</span>
+        <div className="flex items-center gap-4 my-12">
+            <div style={{flex:1,height:1,background:"#E8DCC8"}} />
+            <span className="text-gold">✦</span>
+            <div style={{flex:1,height:1,background:"#E8DCC8"}} />
         </div>
 
         <div className="flex justify-between items-center mt-12" style={{ fontFamily: "var(--font-sans)" }}>

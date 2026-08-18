@@ -99,7 +99,7 @@ export const familyLines: FamilyLine[] = [
             bornPlace: "Thomastown, Kilkenny, Ireland (Powerswood area)",
             spouse: "Ellen Walsh",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I25)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: I25)",
               "Born c.1780 in the Thomastown/Powerswood area of County Kilkenny",
               "Father of Edward (or Edmond) O'Reilly (b.1839)",
               "Note on Irish naming: the Mac and O prefixes were dropped and added at will — in early records he may appear as 'Reilly' without the O",
@@ -112,7 +112,7 @@ export const familyLines: FamilyLine[] = [
             died: "Thomastown, Kilkenny, Ireland",
             spouse: "James O'Reilly",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P45)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P45)",
               "Born in Inistioge — the village on the River Nore near Thomastown, Co. Kilkenny",
               "Mother of Edward (or Edmond) O'Reilly (b.1839)",
             ],
@@ -125,7 +125,7 @@ export const familyLines: FamilyLine[] = [
             diedPlace: "Callan, Thomastown, Co. Kilkenny, Ireland",
             spouse: "Ellen Cassin",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P48)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P48)",
               "Parents: Thomas Hanrahan (b.1810) and Honora Shunny (b.1810)",
               "Baptism (LDS): 4 Apr 1831, Windgap, Kilkenny",
               "Married Ellen Cassin on February 23, 1840 at Inistioge, Co. Kilkenny",
@@ -142,7 +142,7 @@ export const familyLines: FamilyLine[] = [
             diedPlace: "Thomastown, Co. Kilkenny, Ireland",
             spouse: "Patrick Hanrahan",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P47)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P47)",
               "Baptized 29 Apr 1836 at St. John's, Kilkenny",
               "Married Patrick Hanrahan on February 23, 1840 at Inistioge",
               "Mother of Johanna Hanrahan (b.1858)",
@@ -156,7 +156,7 @@ export const familyLines: FamilyLine[] = [
             died: "September 29, 1868",
             spouse: "Catherine Barrett",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P57)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P57)",
               "Parents: Richard Sheehy and Hanora Hough — both from Newcastle West, Limerick",
               "Married Catherine Barrett on November 16, 1856 at the Immaculate Conception Church, Newcastle West, Co. Limerick",
               "Children: John Sheehy (c.1857), Richard Joseph Sheehy (b.1860), Mary Sheehy",
@@ -170,7 +170,7 @@ export const familyLines: FamilyLine[] = [
             bornPlace: "Newcastle West, Limerick, Ireland",
             spouse: "William Joseph Sheehy",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P56)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P56)",
               "Married William Joseph Sheehy on November 16, 1856 at the Immaculate Conception Church, Newcastle West",
               "Husband William died September 29, 1868 at age 33",
               "Mother of Richard Joseph Sheehy (b.1860), who emigrated to Chicago",
@@ -181,7 +181,7 @@ export const familyLines: FamilyLine[] = [
             bornPlace: "Cratloe West near Abbeyfeale, Limerick, Ireland",
             spouse: "Bridget Roche",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P50)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P50)",
               "Lived in the Cratloe West area of Abbeyfeale, County Limerick",
               "Father of Anna Woulfe (b.1875) — 2× great-grandmother, Generation 2",
               "Brought family to America when Anna was 12 (1887)",
@@ -193,7 +193,7 @@ export const familyLines: FamilyLine[] = [
             bornPlace: "Cratloe West near Abbeyfeale, Limerick, Ireland",
             spouse: "Patrick Woulfe",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P49)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P49)",
               "Mother of Anna Woulfe (b.1875) — 2× great-grandmother, Generation 2",
               "Came to America with family when Anna was 12 (1887)",
             ],
@@ -213,7 +213,7 @@ export const familyLines: FamilyLine[] = [
             burial: "Jerpoint Abbey Graveyard, Thomastown, Kilkenny",
             spouse: "Johanna Hanrahan",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P17)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P17)",
               "Died at age 52 — his son Patrick was only 9 years old",
               "Buried at Jerpoint Abbey — a 12th-century Cistercian monastery, a significant and historic burial site",
               "Married Johanna Hanrahan in 1879 at either the Church of the Assumption in Thomastown or St. Columba's Church in Inistioge",
@@ -231,7 +231,7 @@ export const familyLines: FamilyLine[] = [
             spouse: "Edward (Edmond) O'Reilly",
             burial: "St. Mary Cemetery, Thomastown (new cemetery, road to Dublin)",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P16)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P16)",
               "Nickname: Judy — all certificates list her as Judy",
               "Christened October 13, 1858 at Inistioge, Kilkenny — baptized by Rev. P. Doyle",
               "Birth certificate: parents Pat Hanrahan, Powerswood + Ellen Cassin; sponsors Thomas Rafter and Cathirine Rafter",
@@ -251,7 +251,7 @@ export const familyLines: FamilyLine[] = [
             spouse: "Anna Woulfe",
             burial: "Holy Sepulchre Cemetery, Worth, IL — Lot #39, Section 10",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P22)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P22)",
               "Parents: William Joseph Sheehy (b.Dec 1824) and Catherine Barrett (b.1830), Newcastle West, Limerick",
               "Married Anna Woulfe on September 25, 1894 in Chicago",
               "Arrived in US ~1882-1890 (census sources vary)",
@@ -269,7 +269,7 @@ export const familyLines: FamilyLine[] = [
             spouse: "Richard Joseph Sheehy",
             burial: "Holy Sepulcher Cemetery, Worth, IL (alongside husband Richard)",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P23)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P23)",
               "Nickname: Hanna. Known to great-grandchildren as 'Grandma Shug'",
               "Parents: Patrick Woulfe and Bridget Roche — both from Cratloe West near Abbeyfeale, Limerick",
               "Came to the US with her parents at age 12 (1887)",
@@ -298,7 +298,7 @@ export const familyLines: FamilyLine[] = [
             physical: 'Medium build, black hair, grey eyes (WWI Draft Card 1917-18, Cook County Draft Board 20)',
             burial: "St. Mary's Cemetery, Evergreen Park, IL (buried October 25, 1972)",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P15)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P15)",
               "Christened March 8, 1883 at the Church of the Assumption, Thomastown, by Rev. John Walsh",
               "Baptism sponsors: John Hanrahan and Bridget Hanrahan (his mother's siblings)",
               "Father died when Patrick was 9 — grew up fatherless in Thomastown",
@@ -322,7 +322,7 @@ export const familyLines: FamilyLine[] = [
             spouse: "Patrick Joseph O'Reilly",
             burial: "St. Mary's Cemetery, Evergreen Park, IL",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P14)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P14)",
               "Born in Chicago — an Irish-American, not an immigrant",
               "Father: Richard Joseph Sheehy (1860-1931); Mother: Anna Woulfe (1875-1967)",
               "Home address: 2821 W. 85th Place, Chicago, IL",
@@ -351,7 +351,7 @@ export const familyLines: FamilyLine[] = [
             physical: '5\'11", 165 lbs, black hair, blue eyes, ruddy complexion',
             burial: "Holy Sepulchre Catholic Cemetery, Alsip, Cook County, Illinois — CONFIRMED (Find A Grave memorial #50749310). Same cemetery as John J. Coffey and Julia Coffey. The O'Reilly and Coffey families are buried together at Holy Sepulchre.",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P8)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P8)",
               "Born Edward Francis — adopted confirmation name Joseph, thereafter went by Edward Joseph O'Reilly (EJ O'Reilly)",
               "Second of 5 children — older sister Loretta was born 1919",
               "Leo High School, class of 1938 (yearbook photo confirmed)",
@@ -374,7 +374,7 @@ export const familyLines: FamilyLine[] = [
             spouse: 'Edward Joseph "Bud" O\'Reilly',
             burial: "Holy Sepulchre Cemetery, Alsip, IL — Section 19, Block 19, Lot 22, Grave 1",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P7)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P7)",
               "Had a twin brother Daniel Coffey — both born May 18, 1923, Chicago",
               "Parents were Irish immigrants from County Kerry",
               "Grew up at 7748 S. Langley Ave — ONE BLOCK from Edward's address on St. Lawrence Ave",
@@ -535,7 +535,7 @@ export const familyLines: FamilyLine[] = [
             diedPlace: "Killorglin, Kerry, Ireland",
             spouse: "Jeremiah Coffey Sr.",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I29)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: I29)",
               "Christened March 18, 1805 at Killarney, Kerry",
               "Parents: Mary and Michael Cronin",
               "Married Jeremiah Coffey Sr. on February 7, 1824 in Killorglin, Kerry",
@@ -548,7 +548,7 @@ export const familyLines: FamilyLine[] = [
             name: "James Clifford",
             bornPlace: "County Kerry, Ireland",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P68)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P68)",
               "Father of Janet Clifford, who married Jeremiah Coffey",
               "Grandfather of John J. Coffey",
               "No dates or further details known",
@@ -559,7 +559,7 @@ export const familyLines: FamilyLine[] = [
             born: "1820",
             spouse: "Genita Thomas",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I41)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: I41)",
               "Father of Patrick Sheehan (b.1846, Waterville) — Eileen's grandfather",
               "Grandfather of Julia Sheehan",
             ],
@@ -570,7 +570,7 @@ export const familyLines: FamilyLine[] = [
             bornPlace: "Waterville, County Kerry, Ireland",
             spouse: "Jeremia Sheehan",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I40)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: I40)",
               "Mother of Patrick Sheehan (b.1846, Waterville) — Eileen's grandfather",
               "Grandmother of Julia Sheehan",
             ],
@@ -583,7 +583,7 @@ export const familyLines: FamilyLine[] = [
             diedPlace: "County Kerry, Ireland",
             spouse: "Ellen Fitzgerald Sheehan",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I38)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: I38)",
               "Father of Mary Fitzgerald Sheehan — Eileen's grandmother",
               "Grandfather of Julia Sheehan",
               "Died August 20, 1870, County Kerry, age 72",
@@ -596,7 +596,7 @@ export const familyLines: FamilyLine[] = [
             diedPlace: "Tralee, Kerry, Ireland (per notes)",
             spouse: "Daniel Sheehan",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: I39)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: I39)",
               "Mother of Mary Fitzgerald Sheehan — Eileen's grandmother",
               "Grandmother of Julia Sheehan",
               "Died 1887, age 77",
@@ -615,7 +615,7 @@ export const familyLines: FamilyLine[] = [
             occupation: "Farmer",
             spouse: "Janet Clifford",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P30)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P30)",
               "Mother: Mary Cronin (b.18 Mar 1805, Killorglin; d.1885, Killorglin)",
               "Head of family at Ballydarrig, Castlequin, Kerry in 1901 Census",
               "1911 Census: widowed, had been married 23 years, 12 children born alive, 7 still living",
@@ -629,7 +629,7 @@ export const familyLines: FamilyLine[] = [
             died: "1895",
             spouse: "Jeremiah (Jerry) Coffey",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P29)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P29)",
               "Father: James Clifford (no dates known)",
               "Born in the FILEMORE townland of Kerry",
               "Died 1895 — before the 1901 Census (which shows Jeremiah as widowed)",
@@ -644,7 +644,7 @@ export const familyLines: FamilyLine[] = [
             died: "Waterville, County Kerry, Ireland",
             spouse: "Mary Fitzgerald Sheehan",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P34)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P34)",
               "Parents: Jeremia Sheehan (b.1820) and Genita Thomas (b.1820, Waterville)",
               "Julia's father — from the Waterville/Dromod area of Kerry",
               "12 children including Julia (b.1889), Deborah/Abby (b.1898, d.1995 age 97), Brigid/Brennan (b.1891, d.1972), Nellie/Thompson (b.1891, d.1993 age 102), Patrick John (b.1894, d.1962)",
@@ -658,7 +658,7 @@ export const familyLines: FamilyLine[] = [
             diedPlace: "Kerry, Ireland",
             spouse: "Patrick Sheehan",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P35)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P35)",
               "Parents: Daniel Sheehan (b.1798, d.20 Aug 1870) and Ellen Fitzgerald Sheehan (b.1810, d.1887)",
               "Julia's mother — maiden name Fitzgerald",
               "Had 12 children in ~16 years with Patrick Sheehan",
@@ -685,7 +685,7 @@ export const familyLines: FamilyLine[] = [
             physical: "Medium build, black hair, gray eyes",
             burial: "Holy Sepulchre Catholic Cemetery, Alsip, IL — Sect. 22 Blk. 11 Lot 25 Grave 2 (Find A Grave #74618781 — consistent with 1951 death date). Note: ourclann.org records indicate Mount Olivet — likely an error given the confirmed 1951 death date.",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P25)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P25)",
               "Parents: Jeremiah Coffey (b.28 Aug 1836) and Janet Clifford (b. FILEMORE, Kerry; d.1895)",
               "Parents' marriage: June 10, 1875 at Cahirciveen, Kerry — witnessed by Daniel Clifford and Patrick Coffey",
               "WWI Veteran — registered September 12, 1918 (Old Man's Registration, age 43)",
@@ -712,7 +712,7 @@ export const familyLines: FamilyLine[] = [
             ship: "SS Arabic",
             burial: "Holy Sepulchre Catholic Cemetery, Alsip, IL",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5) — Person ID: P24)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4) — Person ID: P24)",
               "Father: Patrick Sheehan (b.20 Feb 1846, Waterville); Mother: Mary Fitzgerald Sheehan (d. Jun 1931, Kerry)",
               "Born in Dromod Parish, near Waterville — about 30 miles from John's home in Castlequin",
               "Still in Ireland at age 23 in the 1911 Census",
@@ -741,7 +741,7 @@ export const familyLines: FamilyLine[] = [
             diedPlace: "Orland Park, Illinois",
             spouse: 'Edward Joseph "Bud" O\'Reilly',
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4)",
               "Twin of Daniel Coffey (also born May 18, 1923) — CONFIRMED by 1940 Census: both listed age 16",
               "Grew up at 7748 S. Langley Avenue, one block from the O'Reilly home on St. Lawrence Avenue",
               "1930 Census: listed as 'Jean M. Coffey, age 6' — name mangled by census taker. Twin Daniel listed as 'Donald J. Coffey, age 6'",
@@ -763,7 +763,7 @@ export const familyLines: FamilyLine[] = [
             physical: "Black hair, blue eyes, ruddy complexion (from 1942 WWII draft card)",
             burial: "Holy Sepulchre Catholic Cemetery, Alsip, IL — Section 22 Block 15 Lot 56 Grave 2. Buried alongside Eileen (same section).",
             notes: [
-              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 5)",
+              "Source: O'Reilly family archive (ourclann.org, compiled by Thomas O'Reilly, Gen. 4)",
               "Born Edward Francis O'Reilly — took Joseph as confirmation name",
               "Son of Patrick Joseph O'Reilly (1883–1972) and Catherine Loretta Sheehy (1894–1990)",
               "1942 WWII draft card: address 7341 S. St. Lawrence Ave — one block from Eileen's home",
