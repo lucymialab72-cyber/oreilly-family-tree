@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -57,6 +58,14 @@ const fastFacts = [
 ];
 
 export default function LyleStoryPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen" />}>
+      <LyleStoryContent />
+    </Suspense>
+  );
+}
+
+function LyleStoryContent() {
   const searchParams = useSearchParams();
   const side = searchParams.get("side") as "dad" | "mom" | null;
   return (

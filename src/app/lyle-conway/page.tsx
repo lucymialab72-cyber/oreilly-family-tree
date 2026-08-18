@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -107,6 +108,14 @@ const awards = [
 ];
 
 export default function LyleConwayPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen" />}>
+      <LyleConwayContent />
+    </Suspense>
+  );
+}
+
+function LyleConwayContent() {
   const searchParams = useSearchParams();
   const side = searchParams.get("side") as "dad" | "mom" | null;
   return (

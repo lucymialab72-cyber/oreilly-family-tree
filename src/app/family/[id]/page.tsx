@@ -1,6 +1,6 @@
 "use client";
 
-import { use } from "react";
+import { use, Suspense } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -206,6 +206,14 @@ function PersonCard({ person, index }: { person: Person; index: number }) {
 }
 
 export default function FamilyLinePage({ params }: { params: Promise<{ id: string }> }) {
+  return (
+    <Suspense fallback={<div className="min-h-screen" />}>
+      <FamilyLineContent params={params} />
+    </Suspense>
+  );
+}
+
+function FamilyLineContent({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
   const searchParams = useSearchParams();
   const side = searchParams.get("side") as "dad" | "mom" | null;
